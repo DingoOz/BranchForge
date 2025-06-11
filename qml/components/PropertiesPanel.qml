@@ -294,6 +294,46 @@ Rectangle {
                         }
                     }
                     
+                    // Zoom info section
+                    GroupBox {
+                        Layout.fillWidth: true
+                        title: "Navigation"
+                        
+                        background: Rectangle {
+                            color: "#4b4b4b"
+                            radius: 4
+                        }
+                        
+                        label: Label {
+                            text: parent.title
+                            color: "#ffffff"
+                            font.bold: true
+                        }
+                        
+                        ColumnLayout {
+                            anchors.fill: parent
+                            spacing: 8
+                            
+                            RowLayout {
+                                Label {
+                                    text: "Zoom Level:"
+                                    color: "#cccccc"
+                                    Layout.preferredWidth: 80
+                                }
+                                Label {
+                                    text: {
+                                        if (typeof nodeEditor !== 'undefined' && nodeEditor.zoomLevel) {
+                                            return (nodeEditor.zoomLevel * 100).toFixed(0) + "%";
+                                        }
+                                        return "100%";
+                                    }
+                                    color: "#ffffff"
+                                    Layout.fillWidth: true
+                                }
+                            }
+                        }
+                    }
+                    
                     // Instructions section
                     GroupBox {
                         Layout.fillWidth: true
@@ -315,7 +355,7 @@ Rectangle {
                             spacing: 8
                             
                             Text {
-                                text: "Node Creation:\n• Click a node in the library\n• Click in the editor to place it\n• Drag placed nodes to move them\n• Right-click nodes to delete them\n\nConnections:\n• Click orange output port (bottom) to start connection\n• Click yellow input port (top) to finish connection\n• Ports glow and grow when hovered\n• Click empty area to cancel connection\n• Connections update when nodes move"
+                                text: "Node Creation:\n• Click a node in the library\n• Click in the editor to place it\n• Drag placed nodes to move them\n• Right-click nodes to delete them\n\nConnections:\n• Click orange output port (bottom) to start connection\n• Click yellow input port (top) to finish connection\n• Ports glow and grow when hovered\n• Click empty area to cancel connection\n• Connections update when nodes move\n\nNavigation:\n• Mouse wheel to zoom in/out\n• Middle mouse drag to pan\n• Ctrl+Left mouse drag to pan\n• Zoom range: 10% to 300%"
                                 color: "#cccccc"
                                 font.pixelSize: 11
                                 wrapMode: Text.WordWrap

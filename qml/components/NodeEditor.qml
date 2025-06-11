@@ -1,23 +1,49 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
-ScrollView {
+Rectangle {
     id: root
-    
-    property alias canvasWidth: canvas.width
-    property alias canvasHeight: canvas.height
-    
+    color: "#1e1e1e"
     clip: true
+    
+    // Zoom and pan properties
+    property real zoomLevel: 1.0
+    property real minZoom: 0.1
+    property real maxZoom: 3.0
+    property point panOffset: Qt.point(0, 0)
+    property bool isPanning: false
+    property point lastPanPoint: Qt.point(0, 0)
     
     Component.onCompleted: {
         console.log("NodeEditor.qml loaded successfully");
     }
     
-    Rectangle {
-        id: canvas
-        width: Math.max(2000, root.width)
-        height: Math.max(1500, root.height)
-        color: "#1e1e1e"
+    // Main zoom/pan container
+    Item {
+        id: zoomContainer
+        width: canvas.width
+        height: canvas.height
+        
+        transform: [
+            Scale {
+                id: scaleTransform
+                xScale: root.zoomLevel
+                yScale: root.zoomLevel
+                origin.x: root.width / 2
+                origin.y: root.height / 2
+            },
+            Translate {
+                id: translateTransform
+                x: root.panOffset.x
+                y: root.panOffset.y
+            }
+        ]
+        
+        Rectangle {
+            id: canvas
+            width: Math.max(2000, root.width / root.zoomLevel)
+            height: Math.max(1500, root.height / root.zoomLevel)
+            color: "#1e1e1e"
         
         // Grid background
         Canvas {
@@ -54,8 +80,14 @@ ScrollView {
         // Click area for node placement and connection management
         MouseArea {
             anchors.fill: parent
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
             
             onClicked: function(mouse) {
+                // Handle panning mode
+                if (root.isPanning) {
+                    return;
+                }
+                
                 // If we're in connection mode, cancel it
                 if (root.isConnecting) {
                     console.log("*** Canceling connection mode");
@@ -81,11 +113,66 @@ ScrollView {
                 }
             }
             
+            onPressed: function(mouse) {
+                if (mouse.button === Qt.MiddleButton || (mouse.button === Qt.LeftButton && mouse.modifiers & Qt.ControlModifier)) {
+                    root.isPanning = true;
+                    root.lastPanPoint = Qt.point(mouse.x, mouse.y);
+                    console.log("Started panning");
+                }
+            }
+            
+            onReleased: function(mouse) {
+                if (root.isPanning) {
+                    root.isPanning = false;
+                    console.log("Stopped panning");
+                }
+            }
+            
             onPositionChanged: function(mouse) {
-                if (root.isConnecting && root.connectionStart) {
+                if (root.isPanning) {
+                    var delta = Qt.point(mouse.x - root.lastPanPoint.x, mouse.y - root.lastPanPoint.y);
+                    root.panOffset = Qt.point(root.panOffset.x + delta.x, root.panOffset.y + delta.y);
+                    root.lastPanPoint = Qt.point(mouse.x, mouse.y);
+                } else if (root.isConnecting && root.connectionStart) {
                     // Update temporary connection line
                     connectionCanvas.tempConnectionEnd = Qt.point(mouse.x, mouse.y);
                     connectionCanvas.requestPaint();
+                }
+            }
+            
+            onWheel: function(wheel) {
+                var zoomFactor = wheel.angleDelta.y > 0 ? 1.1 : 0.9;
+                var newZoom = root.zoomLevel * zoomFactor;
+                
+                // Clamp zoom level
+                newZoom = Math.max(root.minZoom, Math.min(root.maxZoom, newZoom));
+                
+                if (newZoom !== root.zoomLevel) {
+                    // Calculate zoom center point (mouse position)
+                    var mousePos = Qt.point(wheel.x, wheel.y);
+                    
+                    // Calculate the point in the zoomed coordinate system
+                    var pointInCanvas = Qt.point(
+                        (mousePos.x - root.panOffset.x) / root.zoomLevel,
+                        (mousePos.y - root.panOffset.y) / root.zoomLevel
+                    );
+                    
+                    // Update zoom level
+                    var oldZoom = root.zoomLevel;
+                    root.zoomLevel = newZoom;
+                    
+                    // Adjust pan offset to keep the same point under the mouse
+                    var newPointInScreen = Qt.point(
+                        pointInCanvas.x * root.zoomLevel,
+                        pointInCanvas.y * root.zoomLevel
+                    );
+                    
+                    root.panOffset = Qt.point(
+                        mousePos.x - newPointInScreen.x,
+                        mousePos.y - newPointInScreen.y
+                    );
+                    
+                    console.log("Zoom level:", root.zoomLevel.toFixed(2));
                 }
             }
         }
@@ -244,7 +331,9 @@ ScrollView {
                 ctx.stroke();
             }
         }
+        } // End of zoomContainer
     }
+    
     
     // Dynamic nodes container
     property var dynamicNodes: []
