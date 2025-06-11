@@ -51,11 +51,21 @@ ScrollView {
             }
         }
         
-        // Click area for node placement
+        // Click area for node placement and connection management
         MouseArea {
             anchors.fill: parent
             
             onClicked: function(mouse) {
+                // If we're in connection mode, cancel it
+                if (root.isConnecting) {
+                    console.log("*** Canceling connection mode");
+                    root.isConnecting = false;
+                    root.connectionStart = null;
+                    connectionCanvas.tempConnectionEnd = null;
+                    connectionCanvas.requestPaint();
+                    return;
+                }
+                
                 // Check if a node is selected from the library
                 if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
                     console.log("Creating node at:", mouse.x, mouse.y, "with data:", mainWindow.currentDragData);
@@ -68,6 +78,14 @@ ScrollView {
                     }
                 } else {
                     console.log("No node selected - click a node in the library first");
+                }
+            }
+            
+            onPositionChanged: function(mouse) {
+                if (root.isConnecting && root.connectionStart) {
+                    // Update temporary connection line
+                    connectionCanvas.tempConnectionEnd = Qt.point(mouse.x, mouse.y);
+                    connectionCanvas.requestPaint();
                 }
             }
         }
@@ -178,10 +196,38 @@ ScrollView {
             id: connectionCanvas
             anchors.fill: parent
             
+            property var tempConnectionEnd: null
+            
             onPaint: {
                 var ctx = getContext("2d");
                 ctx.clearRect(0, 0, width, height);
                 
+                ctx.strokeStyle = "#FFC107";
+                ctx.lineWidth = 3;
+                
+                // Draw all established connections
+                for (var i = 0; i < connections.length; i++) {
+                    var conn = connections[i];
+                    if (conn.from && conn.to) {
+                        ctx.beginPath();
+                        ctx.moveTo(conn.from.x, conn.from.y);
+                        ctx.lineTo(conn.to.x, conn.to.y);
+                        ctx.stroke();
+                    }
+                }
+                
+                // Draw temporary connection line while dragging
+                if (root.isConnecting && root.connectionStart && tempConnectionEnd) {
+                    ctx.strokeStyle = "#FFC107";
+                    ctx.setLineDash([5, 5]); // Dashed line for temporary connection
+                    ctx.beginPath();
+                    ctx.moveTo(root.connectionStart.x, root.connectionStart.y);
+                    ctx.lineTo(tempConnectionEnd.x, tempConnectionEnd.y);
+                    ctx.stroke();
+                    ctx.setLineDash([]); // Reset to solid line
+                }
+                
+                // Draw sample connections for existing static nodes
                 ctx.strokeStyle = "#FFC107";
                 ctx.lineWidth = 3;
                 
@@ -202,6 +248,12 @@ ScrollView {
     
     // Dynamic nodes container
     property var dynamicNodes: []
+    
+    // Connection management
+    property var connections: []
+    property int nextNodeId: 1
+    property bool isConnecting: false
+    property var connectionStart: null
     
     function getNodeColor(nodeType) {
         switch(nodeType) {
@@ -242,6 +294,9 @@ ScrollView {
     }
     
     function createSimpleNode(nodeData, x, y) {
+        var nodeId = "node_" + nextNodeId++;
+        var isLeafNode = isNodeTypeLeaf(nodeData.type);
+        
         var nodeComponent = Qt.createQmlObject(`
             import QtQuick 2.15
             Rectangle {
@@ -254,6 +309,7 @@ ScrollView {
                 
                 property string nodeType: "${nodeData.type}"
                 property string nodeName: "${nodeData.name}"
+                property string nodeId: "${nodeId}"
                 
                 Text {
                     anchors.centerIn: parent
@@ -266,33 +322,96 @@ ScrollView {
                 
                 // Input connection point
                 Rectangle {
-                    width: 12
-                    height: 12
-                    radius: 6
+                    id: inputPort
+                    width: 16
+                    height: 16
+                    radius: 8
                     color: "#FFC107"
+                    border.color: "#FFD54F"
+                    border.width: 1
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.topMargin: -6
+                    anchors.topMargin: -8
+                    z: 100
+                    
+                    MouseArea {
+                        anchors.fill: parent
+                        anchors.margins: -4
+                        hoverEnabled: true
+                        z: 101
+                        
+                        onEntered: {
+                            parent.scale = 1.2;
+                            parent.color = "#FFE082";
+                        }
+                        onExited: {
+                            parent.scale = 1.0;
+                            parent.color = "#FFC107";
+                        }
+                        onClicked: {
+                            console.log("Input port clicked on:", parent.parent.nodeName);
+                            finishConnection(parent.parent);
+                        }
+                    }
                 }
                 
                 // Output connection point (for non-leaf nodes)
                 Rectangle {
-                    width: 12
-                    height: 12
-                    radius: 6
-                    color: "#FFC107"
+                    id: outputPort
+                    width: 16
+                    height: 16
+                    radius: 8
+                    color: "#FF9800"
+                    border.color: "#FFB74D"
+                    border.width: 1
                     anchors.bottom: parent.bottom
                     anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.bottomMargin: -6
-                    visible: nodeType !== "Action" && nodeType !== "Condition"
+                    anchors.bottomMargin: -8
+                    visible: ${!isLeafNode}
+                    z: 100
+                    
+                    MouseArea {
+                        anchors.fill: parent
+                        anchors.margins: -4
+                        hoverEnabled: true
+                        z: 101
+                        
+                        onEntered: {
+                            parent.scale = 1.2;
+                            parent.color = "#FFB74D";
+                        }
+                        onExited: {
+                            parent.scale = 1.0;
+                            parent.color = "#FF9800";
+                        }
+                        onClicked: {
+                            console.log("Output port clicked on:", parent.parent.nodeName);
+                            startConnection(parent.parent);
+                        }
+                    }
                 }
                 
                 // Make the node draggable within the canvas
                 MouseArea {
                     anchors.fill: parent
+                    anchors.topMargin: 8
+                    anchors.bottomMargin: 8
                     drag.target: parent
-                    onClicked: {
-                        console.log("Node clicked:", nodeName)
+                    acceptedButtons: Qt.LeftButton | Qt.RightButton
+                    z: 50
+                    
+                    onClicked: function(mouse) {
+                        if (mouse.button === Qt.RightButton) {
+                            console.log("Deleting node:", nodeName);
+                            removeNodeAndConnections(nodeId);
+                            parent.destroy();
+                        } else {
+                            console.log("Node clicked:", nodeName);
+                        }
+                    }
+                    
+                    onPositionChanged: {
+                        updateConnectionsForNode(nodeId);
                     }
                 }
             }
@@ -302,7 +421,142 @@ ScrollView {
             nodeComponent.x = x - 60;
             nodeComponent.y = y - 30;
             dynamicNodes.push(nodeComponent);
-            console.log("Simple node created successfully");
+            console.log("Node created successfully with ID:", nodeId);
         }
+    }
+    
+    // Connection management functions
+    function isNodeTypeLeaf(nodeType) {
+        // Leaf nodes are actions and conditions that don't have children
+        var leafTypes = [
+            "move_to", "rotate", "wait", "go_home", "dock", "set_speed",
+            "at_goal", "battery_check", "obstacle_check", "object_detected", "path_clear", "localized",
+            "grasp_object", "release_object", "move_arm", "open_gripper", "close_gripper",
+            "publish_message", "wait_for_message", "service_call", "action_client", "log_message",
+            "always_success", "always_failure", "random", "set_blackboard", "get_blackboard"
+        ];
+        return leafTypes.includes(nodeType);
+    }
+    
+    function startConnection(fromNode) {
+        root.isConnecting = true;
+        root.connectionStart = {
+            x: fromNode.x + fromNode.width/2,
+            y: fromNode.y + fromNode.height,
+            nodeId: fromNode.nodeId,
+            node: fromNode
+        };
+        console.log("*** CONNECTION STARTED from node:", fromNode.nodeName, "ID:", fromNode.nodeId);
+        console.log("*** Connection mode active, waiting for target...");
+    }
+    
+    function finishConnection(toNode) {
+        console.log("*** CONNECTION FINISH attempted on node:", toNode.nodeName, "ID:", toNode.nodeId);
+        console.log("*** Is connecting:", root.isConnecting);
+        
+        if (root.isConnecting && root.connectionStart) {
+            var fromNode = root.connectionStart.node;
+            console.log("*** Connecting from:", fromNode.nodeName, "to:", toNode.nodeName);
+            
+            // Validate connection (prevent self-connection and cycles)
+            if (fromNode.nodeId === toNode.nodeId) {
+                console.log("*** Cannot connect node to itself");
+                root.isConnecting = false;
+                root.connectionStart = null;
+                return;
+            }
+            
+            // Check if connection already exists
+            for (var i = 0; i < connections.length; i++) {
+                if (connections[i].fromId === fromNode.nodeId && connections[i].toId === toNode.nodeId) {
+                    console.log("*** Connection already exists");
+                    root.isConnecting = false;
+                    root.connectionStart = null;
+                    return;
+                }
+            }
+            
+            // Create the connection
+            var connection = {
+                fromId: fromNode.nodeId,
+                toId: toNode.nodeId,
+                from: {
+                    x: fromNode.x + fromNode.width/2,
+                    y: fromNode.y + fromNode.height
+                },
+                to: {
+                    x: toNode.x + toNode.width/2,
+                    y: toNode.y
+                }
+            };
+            
+            connections.push(connection);
+            console.log("*** Created connection from", fromNode.nodeName, "to", toNode.nodeName);
+            console.log("*** Total connections:", connections.length);
+            
+            // Reset connection state
+            root.isConnecting = false;
+            root.connectionStart = null;
+            connectionCanvas.tempConnectionEnd = null;
+            
+            // Repaint connections
+            connectionCanvas.requestPaint();
+        } else {
+            console.log("*** No active connection to finish");
+        }
+    }
+    
+    function removeNodeAndConnections(nodeId) {
+        // Remove all connections involving this node
+        var newConnections = [];
+        for (var i = 0; i < connections.length; i++) {
+            var conn = connections[i];
+            if (conn.fromId !== nodeId && conn.toId !== nodeId) {
+                newConnections.push(conn);
+            }
+        }
+        connections = newConnections;
+        
+        // Remove from dynamic nodes array
+        var newDynamicNodes = [];
+        for (var j = 0; j < dynamicNodes.length; j++) {
+            if (dynamicNodes[j].nodeId !== nodeId) {
+                newDynamicNodes.push(dynamicNodes[j]);
+            }
+        }
+        dynamicNodes = newDynamicNodes;
+        
+        // Repaint connections
+        connectionCanvas.requestPaint();
+    }
+    
+    function updateConnectionsForNode(nodeId) {
+        // Update connection coordinates when a node is moved
+        for (var i = 0; i < connections.length; i++) {
+            var conn = connections[i];
+            
+            // Find the actual node object
+            var node = null;
+            for (var j = 0; j < dynamicNodes.length; j++) {
+                if (dynamicNodes[j].nodeId === nodeId) {
+                    node = dynamicNodes[j];
+                    break;
+                }
+            }
+            
+            if (node) {
+                if (conn.fromId === nodeId) {
+                    conn.from.x = node.x + node.width/2;
+                    conn.from.y = node.y + node.height;
+                }
+                if (conn.toId === nodeId) {
+                    conn.to.x = node.x + node.width/2;
+                    conn.to.y = node.y;
+                }
+            }
+        }
+        
+        // Repaint connections
+        connectionCanvas.requestPaint();
     }
 }
