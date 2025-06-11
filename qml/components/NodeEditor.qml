@@ -322,16 +322,32 @@ ScrollView {
                 
                 // Input connection point
                 Rectangle {
-                    width: 12
-                    height: 12
-                    radius: 6
+                    id: inputPort
+                    width: 16
+                    height: 16
+                    radius: 8
                     color: "#FFC107"
+                    border.color: "#FFD54F"
+                    border.width: 1
                     anchors.top: parent.top
                     anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.topMargin: -6
+                    anchors.topMargin: -8
+                    z: 100
                     
                     MouseArea {
                         anchors.fill: parent
+                        anchors.margins: -4
+                        hoverEnabled: true
+                        z: 101
+                        
+                        onEntered: {
+                            parent.scale = 1.2;
+                            parent.color = "#FFE082";
+                        }
+                        onExited: {
+                            parent.scale = 1.0;
+                            parent.color = "#FFC107";
+                        }
                         onClicked: {
                             console.log("Input port clicked on:", parent.parent.nodeName);
                             finishConnection(parent.parent);
@@ -341,17 +357,33 @@ ScrollView {
                 
                 // Output connection point (for non-leaf nodes)
                 Rectangle {
-                    width: 12
-                    height: 12
-                    radius: 6
-                    color: "#FFC107"
+                    id: outputPort
+                    width: 16
+                    height: 16
+                    radius: 8
+                    color: "#FF9800"
+                    border.color: "#FFB74D"
+                    border.width: 1
                     anchors.bottom: parent.bottom
                     anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.bottomMargin: -6
+                    anchors.bottomMargin: -8
                     visible: ${!isLeafNode}
+                    z: 100
                     
                     MouseArea {
                         anchors.fill: parent
+                        anchors.margins: -4
+                        hoverEnabled: true
+                        z: 101
+                        
+                        onEntered: {
+                            parent.scale = 1.2;
+                            parent.color = "#FFB74D";
+                        }
+                        onExited: {
+                            parent.scale = 1.0;
+                            parent.color = "#FF9800";
+                        }
                         onClicked: {
                             console.log("Output port clicked on:", parent.parent.nodeName);
                             startConnection(parent.parent);
@@ -362,8 +394,11 @@ ScrollView {
                 // Make the node draggable within the canvas
                 MouseArea {
                     anchors.fill: parent
+                    anchors.topMargin: 8
+                    anchors.bottomMargin: 8
                     drag.target: parent
                     acceptedButtons: Qt.LeftButton | Qt.RightButton
+                    z: 50
                     
                     onClicked: function(mouse) {
                         if (mouse.button === Qt.RightButton) {
@@ -412,17 +447,22 @@ ScrollView {
             nodeId: fromNode.nodeId,
             node: fromNode
         };
-        console.log("Started connection from node:", fromNode.nodeName);
+        console.log("*** CONNECTION STARTED from node:", fromNode.nodeName, "ID:", fromNode.nodeId);
+        console.log("*** Connection mode active, waiting for target...");
     }
     
     function finishConnection(toNode) {
         var editorMouseArea = canvas.children[0];
+        console.log("*** CONNECTION FINISH attempted on node:", toNode.nodeName, "ID:", toNode.nodeId);
+        console.log("*** Is connecting:", editorMouseArea.isConnecting);
+        
         if (editorMouseArea.isConnecting && editorMouseArea.connectionStart) {
             var fromNode = editorMouseArea.connectionStart.node;
+            console.log("*** Connecting from:", fromNode.nodeName, "to:", toNode.nodeName);
             
             // Validate connection (prevent self-connection and cycles)
             if (fromNode.nodeId === toNode.nodeId) {
-                console.log("Cannot connect node to itself");
+                console.log("*** Cannot connect node to itself");
                 editorMouseArea.isConnecting = false;
                 editorMouseArea.connectionStart = null;
                 return;

@@ -315,7 +315,7 @@ Rectangle {
                             spacing: 8
                             
                             Text {
-                                text: "Node Creation:\n• Click a node in the library\n• Click in the editor to place it\n• Drag placed nodes to move them\n• Right-click nodes to delete them\n\nConnections:\n• Click output port (bottom) to start connection\n• Click input port (top) to finish connection\n• Click empty area to cancel connection\n• Connections update when nodes move"
+                                text: "Node Creation:\n• Click a node in the library\n• Click in the editor to place it\n• Drag placed nodes to move them\n• Right-click nodes to delete them\n\nConnections:\n• Click orange output port (bottom) to start connection\n• Click yellow input port (top) to finish connection\n• Ports glow and grow when hovered\n• Click empty area to cancel connection\n• Connections update when nodes move"
                                 color: "#cccccc"
                                 font.pixelSize: 11
                                 wrapMode: Text.WordWrap
