@@ -55,14 +55,13 @@ ScrollView {
         MouseArea {
             anchors.fill: parent
             
-            property var connectionStart: null
-            property bool isConnecting: false
-            
             onClicked: function(mouse) {
                 // If we're in connection mode, cancel it
-                if (isConnecting) {
-                    isConnecting = false;
-                    connectionStart = null;
+                if (root.isConnecting) {
+                    console.log("*** Canceling connection mode");
+                    root.isConnecting = false;
+                    root.connectionStart = null;
+                    connectionCanvas.tempConnectionEnd = null;
                     connectionCanvas.requestPaint();
                     return;
                 }
@@ -83,7 +82,7 @@ ScrollView {
             }
             
             onPositionChanged: function(mouse) {
-                if (isConnecting && connectionStart) {
+                if (root.isConnecting && root.connectionStart) {
                     // Update temporary connection line
                     connectionCanvas.tempConnectionEnd = Qt.point(mouse.x, mouse.y);
                     connectionCanvas.requestPaint();
@@ -218,12 +217,11 @@ ScrollView {
                 }
                 
                 // Draw temporary connection line while dragging
-                var editorMouseArea = canvas.children[0]; // Get the main MouseArea
-                if (editorMouseArea.isConnecting && editorMouseArea.connectionStart && tempConnectionEnd) {
+                if (root.isConnecting && root.connectionStart && tempConnectionEnd) {
                     ctx.strokeStyle = "#FFC107";
                     ctx.setLineDash([5, 5]); // Dashed line for temporary connection
                     ctx.beginPath();
-                    ctx.moveTo(editorMouseArea.connectionStart.x, editorMouseArea.connectionStart.y);
+                    ctx.moveTo(root.connectionStart.x, root.connectionStart.y);
                     ctx.lineTo(tempConnectionEnd.x, tempConnectionEnd.y);
                     ctx.stroke();
                     ctx.setLineDash([]); // Reset to solid line
@@ -254,6 +252,8 @@ ScrollView {
     // Connection management
     property var connections: []
     property int nextNodeId: 1
+    property bool isConnecting: false
+    property var connectionStart: null
     
     function getNodeColor(nodeType) {
         switch(nodeType) {
@@ -439,9 +439,8 @@ ScrollView {
     }
     
     function startConnection(fromNode) {
-        var editorMouseArea = canvas.children[0];
-        editorMouseArea.isConnecting = true;
-        editorMouseArea.connectionStart = {
+        root.isConnecting = true;
+        root.connectionStart = {
             x: fromNode.x + fromNode.width/2,
             y: fromNode.y + fromNode.height,
             nodeId: fromNode.nodeId,
@@ -452,28 +451,27 @@ ScrollView {
     }
     
     function finishConnection(toNode) {
-        var editorMouseArea = canvas.children[0];
         console.log("*** CONNECTION FINISH attempted on node:", toNode.nodeName, "ID:", toNode.nodeId);
-        console.log("*** Is connecting:", editorMouseArea.isConnecting);
+        console.log("*** Is connecting:", root.isConnecting);
         
-        if (editorMouseArea.isConnecting && editorMouseArea.connectionStart) {
-            var fromNode = editorMouseArea.connectionStart.node;
+        if (root.isConnecting && root.connectionStart) {
+            var fromNode = root.connectionStart.node;
             console.log("*** Connecting from:", fromNode.nodeName, "to:", toNode.nodeName);
             
             // Validate connection (prevent self-connection and cycles)
             if (fromNode.nodeId === toNode.nodeId) {
                 console.log("*** Cannot connect node to itself");
-                editorMouseArea.isConnecting = false;
-                editorMouseArea.connectionStart = null;
+                root.isConnecting = false;
+                root.connectionStart = null;
                 return;
             }
             
             // Check if connection already exists
             for (var i = 0; i < connections.length; i++) {
                 if (connections[i].fromId === fromNode.nodeId && connections[i].toId === toNode.nodeId) {
-                    console.log("Connection already exists");
-                    editorMouseArea.isConnecting = false;
-                    editorMouseArea.connectionStart = null;
+                    console.log("*** Connection already exists");
+                    root.isConnecting = false;
+                    root.connectionStart = null;
                     return;
                 }
             }
@@ -493,15 +491,18 @@ ScrollView {
             };
             
             connections.push(connection);
-            console.log("Created connection from", fromNode.nodeName, "to", toNode.nodeName);
+            console.log("*** Created connection from", fromNode.nodeName, "to", toNode.nodeName);
+            console.log("*** Total connections:", connections.length);
             
             // Reset connection state
-            editorMouseArea.isConnecting = false;
-            editorMouseArea.connectionStart = null;
+            root.isConnecting = false;
+            root.connectionStart = null;
             connectionCanvas.tempConnectionEnd = null;
             
             // Repaint connections
             connectionCanvas.requestPaint();
+        } else {
+            console.log("*** No active connection to finish");
         }
     }
     
