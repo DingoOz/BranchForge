@@ -18,9 +18,177 @@ Rectangle {
         console.log("NodeEditor.qml loaded successfully");
     }
     
+    // Toolbar
+    Rectangle {
+        id: toolbar
+        width: parent.width
+        height: 40
+        color: "#2b2b2b"
+        border.color: "#555555"
+        border.width: 1
+        z: 1000
+        
+        Row {
+            anchors.left: parent.left
+            anchors.leftMargin: 8
+            anchors.verticalCenter: parent.verticalCenter
+            spacing: 8
+            
+            // Zoom Out Button
+            Button {
+                text: "−"
+                width: 30
+                height: 30
+                font.pixelSize: 16
+                font.bold: true
+                
+                background: Rectangle {
+                    color: parent.pressed ? "#404040" : (parent.hovered ? "#505050" : "#3b3b3b")
+                    border.color: "#666666"
+                    border.width: 1
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: "#ffffff"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: {
+                    zoomOut();
+                }
+            }
+            
+            // Zoom Level Display/Input
+            Rectangle {
+                width: 80
+                height: 30
+                color: "#3b3b3b"
+                border.color: "#666666"
+                border.width: 1
+                radius: 4
+                
+                TextInput {
+                    id: zoomInput
+                    anchors.centerIn: parent
+                    text: Math.round(root.zoomLevel * 100) + "%"
+                    color: "#ffffff"
+                    font.pixelSize: 12
+                    horizontalAlignment: Text.AlignHCenter
+                    selectByMouse: true
+                    
+                    onEditingFinished: {
+                        var value = parseFloat(text.replace('%', ''));
+                        if (!isNaN(value)) {
+                            setZoomLevel(value / 100);
+                        } else {
+                            text = Math.round(root.zoomLevel * 100) + "%";
+                        }
+                    }
+                }
+            }
+            
+            // Zoom In Button
+            Button {
+                text: "+"
+                width: 30
+                height: 30
+                font.pixelSize: 16
+                font.bold: true
+                
+                background: Rectangle {
+                    color: parent.pressed ? "#404040" : (parent.hovered ? "#505050" : "#3b3b3b")
+                    border.color: "#666666"
+                    border.width: 1
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: "#ffffff"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: {
+                    zoomIn();
+                }
+            }
+            
+            // Separator
+            Rectangle {
+                width: 1
+                height: 24
+                color: "#666666"
+            }
+            
+            // Fit to Content Button
+            Button {
+                text: "Fit"
+                width: 60
+                height: 30
+                font.pixelSize: 12
+                
+                background: Rectangle {
+                    color: parent.pressed ? "#404040" : (parent.hovered ? "#505050" : "#3b3b3b")
+                    border.color: "#666666"
+                    border.width: 1
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: "#ffffff"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: {
+                    fitToContent();
+                }
+            }
+            
+            // Reset Zoom Button
+            Button {
+                text: "100%"
+                width: 50
+                height: 30
+                font.pixelSize: 11
+                
+                background: Rectangle {
+                    color: parent.pressed ? "#404040" : (parent.hovered ? "#505050" : "#3b3b3b")
+                    border.color: "#666666"
+                    border.width: 1
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: "#ffffff"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: {
+                    resetZoom();
+                }
+            }
+        }
+    }
+    
     // Main zoom/pan container
     Item {
         id: zoomContainer
+        anchors.top: toolbar.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
         width: canvas.width
         height: canvas.height
         
@@ -177,106 +345,6 @@ Rectangle {
             }
         }
         
-        // Sample behavior tree nodes (will be dynamically created)
-        Rectangle {
-            id: rootNode
-            x: canvas.width / 2 - width / 2
-            y: 50
-            width: 120
-            height: 60
-            color: "#4CAF50"
-            radius: 8
-            border.color: "#2E7D32"
-            border.width: 2
-            
-            Text {
-                anchors.centerIn: parent
-                text: "Root"
-                color: "white"
-                font.bold: true
-            }
-            
-            // Connection point
-            Rectangle {
-                id: rootOutput
-                width: 12
-                height: 12
-                radius: 6
-                color: "#FFC107"
-                anchors.bottom: parent.bottom
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottomMargin: -6
-            }
-        }
-        
-        Rectangle {
-            id: sequenceNode
-            x: rootNode.x - 60
-            y: rootNode.y + 120
-            width: 120
-            height: 60
-            color: "#2196F3"
-            radius: 8
-            border.color: "#1976D2"
-            border.width: 2
-            
-            Text {
-                anchors.centerIn: parent
-                text: "Sequence"
-                color: "white"
-                font.bold: true
-            }
-            
-            Rectangle {
-                width: 12
-                height: 12
-                radius: 6
-                color: "#FFC107"
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.topMargin: -6
-            }
-            
-            Rectangle {
-                width: 12
-                height: 12
-                radius: 6
-                color: "#FFC107"
-                anchors.bottom: parent.bottom
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottomMargin: -6
-            }
-        }
-        
-        Rectangle {
-            id: actionNode
-            x: sequenceNode.x + 60
-            y: sequenceNode.y + 120
-            width: 120
-            height: 60
-            color: "#FF5722"
-            radius: 8
-            border.color: "#D84315"
-            border.width: 2
-            
-            Text {
-                anchors.centerIn: parent
-                text: "Move Forward"
-                color: "white"
-                font.bold: true
-                wrapMode: Text.WordWrap
-            }
-            
-            Rectangle {
-                width: 12
-                height: 12
-                radius: 6
-                color: "#FFC107"
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.topMargin: -6
-            }
-        }
         
         // Connection lines
         Canvas {
@@ -314,21 +382,6 @@ Rectangle {
                     ctx.setLineDash([]); // Reset to solid line
                 }
                 
-                // Draw sample connections for existing static nodes
-                ctx.strokeStyle = "#FFC107";
-                ctx.lineWidth = 3;
-                
-                // Root to Sequence
-                ctx.beginPath();
-                ctx.moveTo(rootNode.x + rootNode.width/2, rootNode.y + rootNode.height);
-                ctx.lineTo(sequenceNode.x + sequenceNode.width/2, sequenceNode.y);
-                ctx.stroke();
-                
-                // Sequence to Action
-                ctx.beginPath();
-                ctx.moveTo(sequenceNode.x + sequenceNode.width/2, sequenceNode.y + sequenceNode.height);
-                ctx.lineTo(actionNode.x + actionNode.width/2, actionNode.y);
-                ctx.stroke();
             }
         }
         } // End of zoomContainer
@@ -647,5 +700,91 @@ Rectangle {
         
         // Repaint connections
         connectionCanvas.requestPaint();
+    }
+    
+    // Zoom control functions
+    function zoomIn() {
+        var newZoom = root.zoomLevel * 1.2;
+        setZoomLevel(newZoom);
+    }
+    
+    function zoomOut() {
+        var newZoom = root.zoomLevel / 1.2;
+        setZoomLevel(newZoom);
+    }
+    
+    function setZoomLevel(newZoom) {
+        newZoom = Math.max(root.minZoom, Math.min(root.maxZoom, newZoom));
+        if (newZoom !== root.zoomLevel) {
+            root.zoomLevel = newZoom;
+            zoomInput.text = Math.round(root.zoomLevel * 100) + "%";
+            console.log("Zoom level set to:", root.zoomLevel.toFixed(2));
+        }
+    }
+    
+    function resetZoom() {
+        root.zoomLevel = 1.0;
+        root.panOffset = Qt.point(0, 0);
+        zoomInput.text = "100%";
+        console.log("Zoom reset to 100%");
+    }
+    
+    function fitToContent() {
+        if (dynamicNodes.length === 0) {
+            console.log("No nodes to fit to");
+            resetZoom();
+            return;
+        }
+        
+        // Calculate bounding box of all dynamic nodes
+        var minX = Number.MAX_VALUE;
+        var minY = Number.MAX_VALUE;
+        var maxX = Number.MIN_VALUE;
+        var maxY = Number.MIN_VALUE;
+        
+        for (var i = 0; i < dynamicNodes.length; i++) {
+            var node = dynamicNodes[i];
+            if (node && node.x !== undefined) {
+                minX = Math.min(minX, node.x);
+                minY = Math.min(minY, node.y);
+                maxX = Math.max(maxX, node.x + node.width);
+                maxY = Math.max(maxY, node.y + node.height);
+            }
+        }
+        
+        // Add padding
+        var padding = 50;
+        minX -= padding;
+        minY -= padding;
+        maxX += padding;
+        maxY += padding;
+        
+        // Calculate content dimensions
+        var contentWidth = maxX - minX;
+        var contentHeight = maxY - minY;
+        
+        // Calculate zoom level to fit content
+        var availableWidth = zoomContainer.width;
+        var availableHeight = zoomContainer.height;
+        
+        var zoomX = availableWidth / contentWidth;
+        var zoomY = availableHeight / contentHeight;
+        var newZoom = Math.min(zoomX, zoomY);
+        
+        // Clamp zoom level
+        newZoom = Math.max(root.minZoom, Math.min(root.maxZoom, newZoom));
+        
+        // Calculate center offset
+        var centerX = (minX + maxX) / 2;
+        var centerY = (minY + maxY) / 2;
+        
+        root.zoomLevel = newZoom;
+        root.panOffset = Qt.point(
+            availableWidth / 2 - centerX * newZoom,
+            availableHeight / 2 - centerY * newZoom
+        );
+        
+        zoomInput.text = Math.round(root.zoomLevel * 100) + "%";
+        console.log("Fitted to content - Zoom:", root.zoomLevel.toFixed(2), "Pan:", root.panOffset.x.toFixed(0), root.panOffset.y.toFixed(0));
     }
 }
