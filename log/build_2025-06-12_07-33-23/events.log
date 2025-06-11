@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000292] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.002722] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.021159] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.022891] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.025520] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099460] (-) TimerEvent: {}
+[0.199705] (-) TimerEvent: {}
+[0.263135] (branchforge) StdoutLine: {'line': b'-- Configuring done (0.2s)\n'}
+[0.290602] (branchforge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.294727] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[0.299888] (-) TimerEvent: {}
+[0.356488] (branchforge) StdoutLine: {'line': b'[  5%] Built target branchforge_enhanced_qmlimportscan\n'}
+[0.395889] (branchforge) StdoutLine: {'line': b'[  5%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.400052] (-) TimerEvent: {}
+[0.500585] (-) TimerEvent: {}
+[0.586746] (branchforge) StdoutLine: {'line': b'[ 11%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.601989] (-) TimerEvent: {}
+[0.650495] (branchforge) StdoutLine: {'line': b'[ 11%] Built target branchforge_enhanced_autogen\n'}
+[0.702150] (-) TimerEvent: {}
+[0.740034] (branchforge) StdoutLine: {'line': b'[ 16%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o\n'}
+[0.802295] (-) TimerEvent: {}
+[0.902607] (-) TimerEvent: {}
+[1.002995] (-) TimerEvent: {}
+[1.103327] (-) TimerEvent: {}
+[1.203611] (-) TimerEvent: {}
+[1.303878] (-) TimerEvent: {}
+[1.404186] (-) TimerEvent: {}
+[1.504408] (-) TimerEvent: {}
+[1.604680] (-) TimerEvent: {}
+[1.704955] (-) TimerEvent: {}
+[1.805230] (-) TimerEvent: {}
+[1.905836] (-) TimerEvent: {}
+[2.006205] (-) TimerEvent: {}
+[2.106458] (-) TimerEvent: {}
+[2.206828] (-) TimerEvent: {}
+[2.307110] (-) TimerEvent: {}
+[2.407425] (-) TimerEvent: {}
+[2.495294] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:1:\n'}
+[2.495651] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h:21:28: error: field \xe2\x80\x98parameters\xe2\x80\x99 has incomplete type \xe2\x80\x98QMap<QString, QString>\xe2\x80\x99\n'}
+[2.495783] (branchforge) StderrLine: {'line': b'   21 |     QMap<QString, QString> parameters;\n'}
+[2.495902] (branchforge) StderrLine: {'line': b'      |                            ^~~~~~~~~~\n'}
+[2.496014] (branchforge) StderrLine: {'line': b'In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h:6,\n'}
+[2.496127] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h:1397,\n'}
+[2.496332] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:7,\n'}
+[2.496533] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:14,\n'}
+[2.496699] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QString:1,\n'}
+[2.496808] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h:3:\n'}
+[2.496919] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerfwd.h:16:43: note: declaration of \xe2\x80\x98class QMap<QString, QString>\xe2\x80\x99\n'}
+[2.497030] (branchforge) StderrLine: {'line': b'   16 | template <typename Key, typename T> class QMap;\n'}
+[2.497141] (branchforge) StderrLine: {'line': b'      |                                           ^~~~\n'}
+[2.507626] (-) TimerEvent: {}
+[2.608046] (-) TimerEvent: {}
+[2.708362] (-) TimerEvent: {}
+[2.808722] (-) TimerEvent: {}
+[2.908993] (-) TimerEvent: {}
+[2.916356] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp: In member function \xe2\x80\x98bool BranchForge::Project::BehaviorTreeXML::isValidConnection(const QString&, const QString&) const\xe2\x80\x99:\n'}
+[2.916635] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:460:43: error: passing \xe2\x80\x98const BranchForge::Project::BehaviorTreeXML\xe2\x80\x99 as \xe2\x80\x98this\xe2\x80\x99 argument discards qualifiers [-fpermissive]\n'}
+[2.916739] (branchforge) StderrLine: {'line': b'  460 |     return parentId != childId && findNode(parentId) && findNode(childId);\n'}
+[2.916835] (branchforge) StderrLine: {'line': b'      |                                   ~~~~~~~~^~~~~~~~~~\n'}
+[2.916967] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:200:12: note:   in call to \xe2\x80\x98BranchForge::Project::BTXMLNode* BranchForge::Project::BehaviorTreeXML::findNode(const QString&)\xe2\x80\x99\n'}
+[2.917180] (branchforge) StderrLine: {'line': b'  200 | BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) {\n'}
+[2.917336] (branchforge) StderrLine: {'line': b'      |            ^~~~~~~~~~~~~~~\n'}
+[2.917471] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:460:65: error: passing \xe2\x80\x98const BranchForge::Project::BehaviorTreeXML\xe2\x80\x99 as \xe2\x80\x98this\xe2\x80\x99 argument discards qualifiers [-fpermissive]\n'}
+[2.917588] (branchforge) StderrLine: {'line': b'  460 |     return parentId != childId && findNode(parentId) && findNode(childId);\n'}
+[2.917701] (branchforge) StderrLine: {'line': b'      |                                                         ~~~~~~~~^~~~~~~~~\n'}
+[2.917816] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:200:12: note:   in call to \xe2\x80\x98BranchForge::Project::BTXMLNode* BranchForge::Project::BehaviorTreeXML::findNode(const QString&)\xe2\x80\x99\n'}
+[2.917932] (branchforge) StderrLine: {'line': b'  200 | BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) {\n'}
+[2.918043] (branchforge) StderrLine: {'line': b'      |            ^~~~~~~~~~~~~~~\n'}
+[3.009528] (-) TimerEvent: {}
+[3.110185] (-) TimerEvent: {}
+[3.210555] (-) TimerEvent: {}
+[3.310925] (-) TimerEvent: {}
+[3.411304] (-) TimerEvent: {}
+[3.511573] (-) TimerEvent: {}
+[3.576514] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:184: CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o] Error 1\n'}
+[3.577174] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2\n'}
+[3.577394] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:136: all] Error 2\n'}
+[3.580471] (branchforge) CommandEnded: {'returncode': 2}
+[3.605800] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[3.611722] (-) TimerEvent: {}
+[3.616756] (-) EventReactorShutdown: {}

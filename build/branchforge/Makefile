@@ -357,6 +357,78 @@ src/nodes/AdvancedNodeSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.s
 .PHONY : src/nodes/AdvancedNodeSystem.cpp.s
 
+src/project/BTSerializer.o: src/project/BTSerializer.cpp.o
+.PHONY : src/project/BTSerializer.o
+
+# target to build an object file
+src/project/BTSerializer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
+.PHONY : src/project/BTSerializer.cpp.o
+
+src/project/BTSerializer.i: src/project/BTSerializer.cpp.i
+.PHONY : src/project/BTSerializer.i
+
+# target to preprocess a source file
+src/project/BTSerializer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.i
+.PHONY : src/project/BTSerializer.cpp.i
+
+src/project/BTSerializer.s: src/project/BTSerializer.cpp.s
+.PHONY : src/project/BTSerializer.s
+
+# target to generate assembly for a file
+src/project/BTSerializer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.s
+.PHONY : src/project/BTSerializer.cpp.s
+
+src/project/BehaviorTreeXML.o: src/project/BehaviorTreeXML.cpp.o
+.PHONY : src/project/BehaviorTreeXML.o
+
+# target to build an object file
+src/project/BehaviorTreeXML.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o
+.PHONY : src/project/BehaviorTreeXML.cpp.o
+
+src/project/BehaviorTreeXML.i: src/project/BehaviorTreeXML.cpp.i
+.PHONY : src/project/BehaviorTreeXML.i
+
+# target to preprocess a source file
+src/project/BehaviorTreeXML.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.i
+.PHONY : src/project/BehaviorTreeXML.cpp.i
+
+src/project/BehaviorTreeXML.s: src/project/BehaviorTreeXML.cpp.s
+.PHONY : src/project/BehaviorTreeXML.s
+
+# target to generate assembly for a file
+src/project/BehaviorTreeXML.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.s
+.PHONY : src/project/BehaviorTreeXML.cpp.s
+
+src/project/CodeGenerator.o: src/project/CodeGenerator.cpp.o
+.PHONY : src/project/CodeGenerator.o
+
+# target to build an object file
+src/project/CodeGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+.PHONY : src/project/CodeGenerator.cpp.o
+
+src/project/CodeGenerator.i: src/project/CodeGenerator.cpp.i
+.PHONY : src/project/CodeGenerator.i
+
+# target to preprocess a source file
+src/project/CodeGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.i
+.PHONY : src/project/CodeGenerator.cpp.i
+
+src/project/CodeGenerator.s: src/project/CodeGenerator.cpp.s
+.PHONY : src/project/CodeGenerator.s
+
+# target to generate assembly for a file
+src/project/CodeGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.s
+.PHONY : src/project/CodeGenerator.cpp.s
+
 src/project/ProjectManager.o: src/project/ProjectManager.cpp.o
 .PHONY : src/project/ProjectManager.o
 
@@ -535,6 +607,15 @@ help:
 	@echo "... src/nodes/AdvancedNodeSystem.o"
 	@echo "... src/nodes/AdvancedNodeSystem.i"
 	@echo "... src/nodes/AdvancedNodeSystem.s"
+	@echo "... src/project/BTSerializer.o"
+	@echo "... src/project/BTSerializer.i"
+	@echo "... src/project/BTSerializer.s"
+	@echo "... src/project/BehaviorTreeXML.o"
+	@echo "... src/project/BehaviorTreeXML.i"
+	@echo "... src/project/BehaviorTreeXML.s"
+	@echo "... src/project/CodeGenerator.o"
+	@echo "... src/project/CodeGenerator.i"
+	@echo "... src/project/CodeGenerator.s"
 	@echo "... src/project/ProjectManager.o"
 	@echo "... src/project/ProjectManager.i"
 	@echo "... src/project/ProjectManager.s"

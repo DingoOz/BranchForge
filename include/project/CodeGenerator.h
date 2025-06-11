@@ -99,6 +99,23 @@ private:
     QString generateCoroutineHelpers() const;
     QString generateModuleInterface() const;
     
+    // Node type checking
+    bool isActionNode(const BTXMLNode& node) const;
+    bool isConditionNode(const BTXMLNode& node) const;
+    bool isControlNode(const BTXMLNode& node) const;
+    bool isDecoratorNode(const BTXMLNode& node) const;
+    
+    // Code generation helpers
+    QString getBaseClassName(const BTXMLNode& node) const;
+    QString generatePublicMethods(const BTXMLNode& node) const;
+    QString generatePrivateMethods(const BTXMLNode& node) const;
+    QString generateNodeTest(const BTXMLNode& node) const;
+    QString inferTypeFromValue(const QString& value) const;
+    QString inferCppType(const QString& value) const;
+    
+    // File I/O
+    bool writeFile(const QString& filePath, const QString& content);
+    
     // Utility
     QString sanitizeIdentifier(const QString& name) const;
     QString toCamelCase(const QString& name) const;

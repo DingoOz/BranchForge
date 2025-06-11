@@ -2,6 +2,7 @@
 #include "ui/MainWindow.h"
 #include "ros2/ROS2Interface.h"
 #include "project/ProjectManager.h"
+#include "project/BTSerializer.h"
 
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -125,6 +126,14 @@ void Application::setupQmlTypes() {
             Q_UNUSED(scriptEngine)
             return &Project::ProjectManager::instance();
         });
+    qmlRegisterSingletonType<Project::BTSerializer>("BranchForge.Project", 1, 0, "BTSerializer",
+        [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+            Q_UNUSED(engine)
+            Q_UNUSED(scriptEngine)
+            static Project::BTSerializer instance;
+            return &instance;
+        });
+    qmlRegisterType<Project::CodeGenOptionsWrapper>("BranchForge.Project", 1, 0, "CodeGenOptions");
 }
 
 void Application::initializeROS2() {

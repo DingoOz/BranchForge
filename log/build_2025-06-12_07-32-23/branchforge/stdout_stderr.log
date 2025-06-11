@@ -1,0 +1,182 @@
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  5%] Built target branchforge_enhanced_qmlimportscan
+[  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[ 11%] Built target branchforge_enhanced_autogen
+[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[ 23%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[ 58%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[ 76%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 82%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘QString BranchForge::Project::CodeGenerator::generateNodeImplementation(const BranchForge::Project::BTXMLNode&) const’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:129:40: error: ‘isActionNode’ was not declared in this scope
+  129 |     if (nodeType.contains("action") || isActionNode(node)) {
+      |                                        ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:131:50: error: ‘isConditionNode’ was not declared in this scope
+  131 |     } else if (nodeType.contains("condition") || isConditionNode(node)) {
+      |                                                  ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:133:16: error: ‘isControlNode’ was not declared in this scope
+  133 |     } else if (isControlNode(node)) {
+      |                ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:135:16: error: ‘isDecoratorNode’ was not declared in this scope
+  135 |     } else if (isDecoratorNode(node)) {
+      |                ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘QString BranchForge::Project::CodeGenerator::generateNodeHeader(const BranchForge::Project::BTXMLNode&) const’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:176:25: error: ‘getBaseClassName’ was not declared in this scope
+  176 |     QString baseClass = getBaseClassName(node);
+      |                         ^~~~~~~~~~~~~~~~
+[ 88%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:177:29: error: ‘generatePublicMethods’ was not declared in this scope
+  177 |     QString publicMethods = generatePublicMethods(node);
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:178:30: error: ‘generatePrivateMethods’ was not declared in this scope
+  178 |     QString privateMethods = generatePrivateMethods(node);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘QString BranchForge::Project::CodeGenerator::generateBlackboardTypes(const BranchForge::Project::BehaviorTreeXML&) const’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:229:38: error: ‘inferTypeFromValue’ was not declared in this scope
+  229 |                 requiredTypes.insert(inferTypeFromValue(it.value()));
+      |                                      ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘QString BranchForge::Project::CodeGenerator::generateTests(const BranchForge::Project::BehaviorTreeXML&) const’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:264:22: error: ‘generateNodeTest’ was not declared in this scope; did you mean ‘generateNodeHeader’?
+  264 |         nodeTests += generateNodeTest(node);
+      |                      ^~~~~~~~~~~~~~~~
+      |                      generateNodeHeader
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘bool BranchForge::Project::CodeGenerator::writeToDirectory(const BranchForge::Project::GeneratedCode&, const QString&)’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:290:10: error: ‘writeFile’ was not declared in this scope
+  290 |     if (!writeFile(dir.absoluteFilePath("main.cpp"), code.mainCpp)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:291:10: error: ‘writeFile’ was not declared in this scope
+  291 |     if (!writeFile(dir.absoluteFilePath(m_options.projectName.toLower() + ".h"), code.headerFile)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:292:10: error: ‘writeFile’ was not declared in this scope
+  292 |     if (!writeFile(dir.absoluteFilePath("CMakeLists.txt"), code.cmakeFile)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:293:10: error: ‘writeFile’ was not declared in this scope
+  293 |     if (!writeFile(dir.absoluteFilePath("package.xml"), code.packageXml)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:305:14: error: ‘writeFile’ was not declared in this scope
+  305 |         if (!writeFile(dir.absoluteFilePath(nodeFileName), it.value())) return false;
+      |              ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:310:14: error: ‘writeFile’ was not declared in this scope
+  310 |         if (!writeFile(dir.absoluteFilePath(headerFileName), it.value())) return false;
+      |              ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:314:10: error: ‘writeFile’ was not declared in this scope
+  314 |     if (!writeFile(dir.absoluteFilePath("include/blackboard_types.h"), code.blackboardTypes)) return false;
+      |          ^~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+  193 |     AdvancedNodeTemplate m_template;
+      |                          ^~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+  190 |     QString m_id;
+      |             ^~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:315:10: error: ‘writeFile’ was not declared in this scope
+  315 |     if (!writeFile(dir.absoluteFilePath("launch/launch.py"), code.launchFile)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:316:10: error: ‘writeFile’ was not declared in this scope
+  316 |     if (!writeFile(dir.absoluteFilePath("test/test_behavior_tree.cpp"), code.testFile)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:317:10: error: ‘writeFile’ was not declared in this scope
+  317 |     if (!writeFile(dir.absoluteFilePath("README.md"), code.readmeFile)) return false;
+      |          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: At global scope:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:401:6: error: no declaration matches ‘bool BranchForge::Project::CodeGenerator::isActionNode(const BranchForge::Project::BTXMLNode&) const’
+  401 | bool CodeGenerator::isActionNode(const BTXMLNode& node) const {
+      |      ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:401:6: note: no functions named ‘bool BranchForge::Project::CodeGenerator::isActionNode(const BranchForge::Project::BTXMLNode&) const’
+In file included from /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:1:
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:406:6: error: no declaration matches ‘bool BranchForge::Project::CodeGenerator::isConditionNode(const BranchForge::Project::BTXMLNode&) const’
+  406 | bool CodeGenerator::isConditionNode(const BTXMLNode& node) const {
+      |      ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:406:6: note: no functions named ‘bool BranchForge::Project::CodeGenerator::isConditionNode(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:411:6: error: no declaration matches ‘bool BranchForge::Project::CodeGenerator::isControlNode(const BranchForge::Project::BTXMLNode&) const’
+  411 | bool CodeGenerator::isControlNode(const BTXMLNode& node) const {
+      |      ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:411:6: note: no functions named ‘bool BranchForge::Project::CodeGenerator::isControlNode(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:416:6: error: no declaration matches ‘bool BranchForge::Project::CodeGenerator::isDecoratorNode(const BranchForge::Project::BTXMLNode&) const’
+  416 | bool CodeGenerator::isDecoratorNode(const BTXMLNode& node) const {
+      |      ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:416:6: note: no functions named ‘bool BranchForge::Project::CodeGenerator::isDecoratorNode(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:421:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::getBaseClassName(const BranchForge::Project::BTXMLNode&) const’
+  421 | QString CodeGenerator::getBaseClassName(const BTXMLNode& node) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:421:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::getBaseClassName(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:429:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::generatePublicMethods(const BranchForge::Project::BTXMLNode&) const’
+  429 | QString CodeGenerator::generatePublicMethods(const BTXMLNode& node) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:429:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::generatePublicMethods(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:438:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::generatePrivateMethods(const BranchForge::Project::BTXMLNode&) const’
+  438 | QString CodeGenerator::generatePrivateMethods(const BTXMLNode& node) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:438:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::generatePrivateMethods(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:442:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::generateNodeTest(const BranchForge::Project::BTXMLNode&) const’
+  442 | QString CodeGenerator::generateNodeTest(const BTXMLNode& node) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:442:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::generateNodeTest(const BranchForge::Project::BTXMLNode&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:465:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::inferTypeFromValue(const QString&) const’
+  465 | QString CodeGenerator::inferTypeFromValue(const QString& value) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:465:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::inferTypeFromValue(const QString&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:481:6: error: no declaration matches ‘bool BranchForge::Project::CodeGenerator::writeFile(const QString&, const QString&)’
+  481 | bool CodeGenerator::writeFile(const QString& filePath, const QString& content) {
+      |      ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:481:6: note: no functions named ‘bool BranchForge::Project::CodeGenerator::writeFile(const QString&, const QString&)’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function ‘QString BranchForge::Project::CodeGenerator::generateActionNode(const BranchForge::Project::BTXMLNode&) const’:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:544:30: error: ‘inferCppType’ was not declared in this scope
+  544 |                         .arg(inferCppType(it.value()))
+      |                              ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: At global scope:
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:606:9: error: no declaration matches ‘QString BranchForge::Project::CodeGenerator::inferCppType(const QString&) const’
+  606 | QString CodeGenerator::inferCppType(const QString& value) const {
+      |         ^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:606:9: note: no functions named ‘QString BranchForge::Project::CodeGenerator::inferCppType(const QString&) const’
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: ‘class BranchForge::Project::CodeGenerator’ defined here
+   53 | class CodeGenerator {
+      |       ^~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:184: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

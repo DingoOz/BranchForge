@@ -1,0 +1,299 @@
+[0.000000] (-) TimerEvent: {}
+[0.000203] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.002362] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.015901] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.018352] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.018458] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099650] (-) TimerEvent: {}
+[0.199948] (-) TimerEvent: {}
+[0.300258] (-) TimerEvent: {}
+[0.319322] (branchforge) StdoutLine: {'line': b'-- Configuring done (0.3s)\n'}
+[0.356948] (branchforge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.365569] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[0.400492] (-) TimerEvent: {}
+[0.425656] (branchforge) StdoutLine: {'line': b'[  5%] Built target branchforge_enhanced_qmlimportscan\n'}
+[0.455358] (branchforge) StdoutLine: {'line': b'[  5%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.500622] (-) TimerEvent: {}
+[0.565135] (branchforge) StdoutLine: {'line': b'[ 11%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.600768] (-) TimerEvent: {}
+[0.701043] (-) TimerEvent: {}
+[0.802501] (-) TimerEvent: {}
+[0.902835] (-) TimerEvent: {}
+[1.003181] (-) TimerEvent: {}
+[1.103499] (-) TimerEvent: {}
+[1.112746] (branchforge) StdoutLine: {'line': b'[ 11%] Built target branchforge_enhanced_autogen\n'}
+[1.196568] (branchforge) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o\n'}
+[1.196955] (branchforge) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o\n'}
+[1.197142] (branchforge) StdoutLine: {'line': b'[ 23%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o\n'}
+[1.197311] (branchforge) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o\n'}
+[1.197493] (branchforge) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o\n'}
+[1.199003] (branchforge) StdoutLine: {'line': b'[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[1.199362] (branchforge) StdoutLine: {'line': b'[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o\n'}
+[1.203670] (-) TimerEvent: {}
+[1.209102] (branchforge) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o\n'}
+[1.210245] (branchforge) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o\n'}
+[1.210603] (branchforge) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o\n'}
+[1.214719] (branchforge) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[1.223226] (branchforge) StdoutLine: {'line': b'[ 82%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[1.315488] (-) TimerEvent: {}
+[1.415762] (-) TimerEvent: {}
+[1.516044] (-) TimerEvent: {}
+[1.616326] (-) TimerEvent: {}
+[1.716809] (-) TimerEvent: {}
+[1.817308] (-) TimerEvent: {}
+[1.920518] (-) TimerEvent: {}
+[2.020841] (-) TimerEvent: {}
+[2.128528] (-) TimerEvent: {}
+[2.232507] (-) TimerEvent: {}
+[2.332810] (-) TimerEvent: {}
+[2.433124] (-) TimerEvent: {}
+[2.533445] (-) TimerEvent: {}
+[2.634459] (-) TimerEvent: {}
+[2.736508] (-) TimerEvent: {}
+[2.838507] (-) TimerEvent: {}
+[2.938804] (-) TimerEvent: {}
+[3.039110] (-) TimerEvent: {}
+[3.142684] (-) TimerEvent: {}
+[3.247507] (-) TimerEvent: {}
+[3.347821] (-) TimerEvent: {}
+[3.448130] (-) TimerEvent: {}
+[3.548457] (-) TimerEvent: {}
+[3.648766] (-) TimerEvent: {}
+[3.749059] (-) TimerEvent: {}
+[3.852040] (-) TimerEvent: {}
+[3.952332] (-) TimerEvent: {}
+[4.052660] (-) TimerEvent: {}
+[4.152950] (-) TimerEvent: {}
+[4.253489] (-) TimerEvent: {}
+[4.362534] (-) TimerEvent: {}
+[4.462875] (-) TimerEvent: {}
+[4.563189] (-) TimerEvent: {}
+[4.663518] (-) TimerEvent: {}
+[4.763832] (-) TimerEvent: {}
+[4.869518] (-) TimerEvent: {}
+[4.969814] (-) TimerEvent: {}
+[5.071524] (-) TimerEvent: {}
+[5.171846] (-) TimerEvent: {}
+[5.272144] (-) TimerEvent: {}
+[5.374514] (-) TimerEvent: {}
+[5.474829] (-) TimerEvent: {}
+[5.575410] (-) TimerEvent: {}
+[5.677676] (-) TimerEvent: {}
+[5.779459] (-) TimerEvent: {}
+[5.879758] (-) TimerEvent: {}
+[5.981512] (-) TimerEvent: {}
+[6.081825] (-) TimerEvent: {}
+[6.184676] (-) TimerEvent: {}
+[6.284992] (-) TimerEvent: {}
+[6.390106] (-) TimerEvent: {}
+[6.490431] (-) TimerEvent: {}
+[6.593521] (-) TimerEvent: {}
+[6.693830] (-) TimerEvent: {}
+[6.797700] (-) TimerEvent: {}
+[6.861660] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateNodeImplementation(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99:\n'}
+[6.862129] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:129:40: error: \xe2\x80\x98isActionNode\xe2\x80\x99 was not declared in this scope\n'}
+[6.862322] (branchforge) StderrLine: {'line': b'  129 |     if (nodeType.contains("action") || isActionNode(node)) {\n'}
+[6.862510] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~\n'}
+[6.887494] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:131:50: error: \xe2\x80\x98isConditionNode\xe2\x80\x99 was not declared in this scope\n'}
+[6.887903] (branchforge) StderrLine: {'line': b'  131 |     } else if (nodeType.contains("condition") || isConditionNode(node)) {\n'}
+[6.888085] (branchforge) StderrLine: {'line': b'      |                                                  ^~~~~~~~~~~~~~~\n'}
+[6.900502] (-) TimerEvent: {}
+[6.914717] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:133:16: error: \xe2\x80\x98isControlNode\xe2\x80\x99 was not declared in this scope\n'}
+[6.915055] (branchforge) StderrLine: {'line': b'  133 |     } else if (isControlNode(node)) {\n'}
+[6.915193] (branchforge) StderrLine: {'line': b'      |                ^~~~~~~~~~~~~\n'}
+[6.941718] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:135:16: error: \xe2\x80\x98isDecoratorNode\xe2\x80\x99 was not declared in this scope\n'}
+[6.942031] (branchforge) StderrLine: {'line': b'  135 |     } else if (isDecoratorNode(node)) {\n'}
+[6.942175] (branchforge) StderrLine: {'line': b'      |                ^~~~~~~~~~~~~~~\n'}
+[6.961576] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateNodeHeader(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99:\n'}
+[6.962030] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:176:25: error: \xe2\x80\x98getBaseClassName\xe2\x80\x99 was not declared in this scope\n'}
+[6.962229] (branchforge) StderrLine: {'line': b'  176 |     QString baseClass = getBaseClassName(node);\n'}
+[6.962415] (branchforge) StderrLine: {'line': b'      |                         ^~~~~~~~~~~~~~~~\n'}
+[6.970488] (branchforge) StdoutLine: {'line': b'[ 88%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o\n'}
+[6.984467] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:177:29: error: \xe2\x80\x98generatePublicMethods\xe2\x80\x99 was not declared in this scope\n'}
+[6.984963] (branchforge) StderrLine: {'line': b'  177 |     QString publicMethods = generatePublicMethods(node);\n'}
+[6.985100] (branchforge) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.001486] (-) TimerEvent: {}
+[7.006608] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:178:30: error: \xe2\x80\x98generatePrivateMethods\xe2\x80\x99 was not declared in this scope\n'}
+[7.010524] (branchforge) StderrLine: {'line': b'  178 |     QString privateMethods = generatePrivateMethods(node);\n'}
+[7.010857] (branchforge) StderrLine: {'line': b'      |                              ^~~~~~~~~~~~~~~~~~~~~~\n'}
+[7.048133] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateBlackboardTypes(const BranchForge::Project::BehaviorTreeXML&) const\xe2\x80\x99:\n'}
+[7.048541] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:229:38: error: \xe2\x80\x98inferTypeFromValue\xe2\x80\x99 was not declared in this scope\n'}
+[7.048756] (branchforge) StderrLine: {'line': b'  229 |                 requiredTypes.insert(inferTypeFromValue(it.value()));\n'}
+[7.048925] (branchforge) StderrLine: {'line': b'      |                                      ^~~~~~~~~~~~~~~~~~\n'}
+[7.090757] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateTests(const BranchForge::Project::BehaviorTreeXML&) const\xe2\x80\x99:\n'}
+[7.091136] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:264:22: error: \xe2\x80\x98generateNodeTest\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98generateNodeHeader\xe2\x80\x99?\n'}
+[7.091286] (branchforge) StderrLine: {'line': b'  264 |         nodeTests += generateNodeTest(node);\n'}
+[7.091431] (branchforge) StderrLine: {'line': b'      |                      ^~~~~~~~~~~~~~~~\n'}
+[7.091569] (branchforge) StderrLine: {'line': b'      |                      generateNodeHeader\n'}
+[7.101624] (-) TimerEvent: {}
+[7.110503] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98bool BranchForge::Project::CodeGenerator::writeToDirectory(const BranchForge::Project::GeneratedCode&, const QString&)\xe2\x80\x99:\n'}
+[7.111913] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:290:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.112084] (branchforge) StderrLine: {'line': b'  290 |     if (!writeFile(dir.absoluteFilePath("main.cpp"), code.mainCpp)) return false;\n'}
+[7.112212] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.129714] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:291:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.130800] (branchforge) StderrLine: {'line': b'  291 |     if (!writeFile(dir.absoluteFilePath(m_options.projectName.toLower() + ".h"), code.headerFile)) return false;\n'}
+[7.131775] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.158311] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:292:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.158717] (branchforge) StderrLine: {'line': b'  292 |     if (!writeFile(dir.absoluteFilePath("CMakeLists.txt"), code.cmakeFile)) return false;\n'}
+[7.158918] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.170596] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:293:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.170970] (branchforge) StderrLine: {'line': b'  293 |     if (!writeFile(dir.absoluteFilePath("package.xml"), code.packageXml)) return false;\n'}
+[7.171119] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.184889] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:305:14: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.185235] (branchforge) StderrLine: {'line': b'  305 |         if (!writeFile(dir.absoluteFilePath(nodeFileName), it.value())) return false;\n'}
+[7.185377] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~\n'}
+[7.198728] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:310:14: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.199075] (branchforge) StderrLine: {'line': b'  310 |         if (!writeFile(dir.absoluteFilePath(headerFileName), it.value())) return false;\n'}
+[7.199213] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~\n'}
+[7.201757] (-) TimerEvent: {}
+[7.212085] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:314:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.212467] (branchforge) StderrLine: {'line': b'  314 |     if (!writeFile(dir.absoluteFilePath("include/blackboard_types.h"), code.blackboardTypes)) return false;\n'}
+[7.212632] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.217494] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:\n'}
+[7.217871] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99:\n'}
+[7.218026] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::m_template\xe2\x80\x99 will be initialized after [-Wreorder]\n'}
+[7.218179] (branchforge) StderrLine: {'line': b'  193 |     AdvancedNodeTemplate m_template;\n'}
+[7.218310] (branchforge) StderrLine: {'line': b'      |                          ^~~~~~~~~~\n'}
+[7.218463] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   \xe2\x80\x98QString BranchForge::Nodes::AdvancedNodeInstance::m_id\xe2\x80\x99 [-Wreorder]\n'}
+[7.218600] (branchforge) StderrLine: {'line': b'  190 |     QString m_id;\n'}
+[7.218726] (branchforge) StderrLine: {'line': b'      |             ^~~~\n'}
+[7.218849] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]\n'}
+[7.218977] (branchforge) StderrLine: {'line': b'  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)\n'}
+[7.219102] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[7.232711] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:315:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.233106] (branchforge) StderrLine: {'line': b'  315 |     if (!writeFile(dir.absoluteFilePath("launch/launch.py"), code.launchFile)) return false;\n'}
+[7.233284] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.247495] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:316:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.247922] (branchforge) StderrLine: {'line': b'  316 |     if (!writeFile(dir.absoluteFilePath("test/test_behavior_tree.cpp"), code.testFile)) return false;\n'}
+[7.248093] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.262755] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:317:10: error: \xe2\x80\x98writeFile\xe2\x80\x99 was not declared in this scope\n'}
+[7.263133] (branchforge) StderrLine: {'line': b'  317 |     if (!writeFile(dir.absoluteFilePath("README.md"), code.readmeFile)) return false;\n'}
+[7.263295] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~\n'}
+[7.291130] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: At global scope:\n'}
+[7.293094] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:401:6: error: no declaration matches \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isActionNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.296808] (branchforge) StderrLine: {'line': b'  401 | bool CodeGenerator::isActionNode(const BTXMLNode& node) const {\n'}
+[7.297034] (branchforge) StderrLine: {'line': b'      |      ^~~~~~~~~~~~~\n'}
+[7.297190] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:401:6: note: no functions named \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isActionNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.297362] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:1:\n'}
+[7.297543] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.297683] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.297812] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.297939] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:406:6: error: no declaration matches \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isConditionNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.298071] (branchforge) StderrLine: {'line': b'  406 | bool CodeGenerator::isConditionNode(const BTXMLNode& node) const {\n'}
+[7.298222] (branchforge) StderrLine: {'line': b'      |      ^~~~~~~~~~~~~\n'}
+[7.302493] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:406:6: note: no functions named \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isConditionNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.302902] (-) TimerEvent: {}
+[7.302943] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.303112] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.303251] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.303397] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:411:6: error: no declaration matches \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isControlNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.303555] (branchforge) StderrLine: {'line': b'  411 | bool CodeGenerator::isControlNode(const BTXMLNode& node) const {\n'}
+[7.303678] (branchforge) StderrLine: {'line': b'      |      ^~~~~~~~~~~~~\n'}
+[7.303802] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:411:6: note: no functions named \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isControlNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.303922] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.304042] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.304161] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.304278] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:416:6: error: no declaration matches \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isDecoratorNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.304436] (branchforge) StderrLine: {'line': b'  416 | bool CodeGenerator::isDecoratorNode(const BTXMLNode& node) const {\n'}
+[7.304579] (branchforge) StderrLine: {'line': b'      |      ^~~~~~~~~~~~~\n'}
+[7.304695] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:416:6: note: no functions named \xe2\x80\x98bool BranchForge::Project::CodeGenerator::isDecoratorNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.304814] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.304928] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.305041] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.305154] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:421:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::getBaseClassName(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.305287] (branchforge) StderrLine: {'line': b'  421 | QString CodeGenerator::getBaseClassName(const BTXMLNode& node) const {\n'}
+[7.305417] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.305547] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:421:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::getBaseClassName(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.305662] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.305791] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.305905] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.306017] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:429:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generatePublicMethods(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.306134] (branchforge) StderrLine: {'line': b'  429 | QString CodeGenerator::generatePublicMethods(const BTXMLNode& node) const {\n'}
+[7.306249] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.306361] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:429:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generatePublicMethods(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.316784] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.316970] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.317101] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.317225] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:438:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generatePrivateMethods(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.317352] (branchforge) StderrLine: {'line': b'  438 | QString CodeGenerator::generatePrivateMethods(const BTXMLNode& node) const {\n'}
+[7.317518] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.317645] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:438:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generatePrivateMethods(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.317770] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.317892] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.318042] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.318164] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:442:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateNodeTest(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.318287] (branchforge) StderrLine: {'line': b'  442 | QString CodeGenerator::generateNodeTest(const BTXMLNode& node) const {\n'}
+[7.318430] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.318561] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:442:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateNodeTest(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99\n'}
+[7.318701] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.318821] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.318940] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.319056] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:465:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::inferTypeFromValue(const QString&) const\xe2\x80\x99\n'}
+[7.319187] (branchforge) StderrLine: {'line': b'  465 | QString CodeGenerator::inferTypeFromValue(const QString& value) const {\n'}
+[7.319305] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.326652] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:465:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::inferTypeFromValue(const QString&) const\xe2\x80\x99\n'}
+[7.326869] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.327001] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.327123] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.327245] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:481:6: error: no declaration matches \xe2\x80\x98bool BranchForge::Project::CodeGenerator::writeFile(const QString&, const QString&)\xe2\x80\x99\n'}
+[7.327368] (branchforge) StderrLine: {'line': b'  481 | bool CodeGenerator::writeFile(const QString& filePath, const QString& content) {\n'}
+[7.327519] (branchforge) StderrLine: {'line': b'      |      ^~~~~~~~~~~~~\n'}
+[7.327635] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:481:6: note: no functions named \xe2\x80\x98bool BranchForge::Project::CodeGenerator::writeFile(const QString&, const QString&)\xe2\x80\x99\n'}
+[7.327753] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.327873] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.328001] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.345178] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: In member function \xe2\x80\x98QString BranchForge::Project::CodeGenerator::generateActionNode(const BranchForge::Project::BTXMLNode&) const\xe2\x80\x99:\n'}
+[7.345512] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:544:30: error: \xe2\x80\x98inferCppType\xe2\x80\x99 was not declared in this scope\n'}
+[7.345692] (branchforge) StderrLine: {'line': b'  544 |                         .arg(inferCppType(it.value()))\n'}
+[7.345823] (branchforge) StderrLine: {'line': b'      |                              ^~~~~~~~~~~~\n'}
+[7.352857] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp: At global scope:\n'}
+[7.353188] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:606:9: error: no declaration matches \xe2\x80\x98QString BranchForge::Project::CodeGenerator::inferCppType(const QString&) const\xe2\x80\x99\n'}
+[7.353342] (branchforge) StderrLine: {'line': b'  606 | QString CodeGenerator::inferCppType(const QString& value) const {\n'}
+[7.353497] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~\n'}
+[7.365527] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:606:9: note: no functions named \xe2\x80\x98QString BranchForge::Project::CodeGenerator::inferCppType(const QString&) const\xe2\x80\x99\n'}
+[7.365953] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:53:7: note: \xe2\x80\x98class BranchForge::Project::CodeGenerator\xe2\x80\x99 defined here\n'}
+[7.366108] (branchforge) StderrLine: {'line': b'   53 | class CodeGenerator {\n'}
+[7.366238] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~\n'}
+[7.403065] (-) TimerEvent: {}
+[7.503369] (-) TimerEvent: {}
+[7.605501] (-) TimerEvent: {}
+[7.708510] (-) TimerEvent: {}
+[7.808821] (-) TimerEvent: {}
+[7.909124] (-) TimerEvent: {}
+[8.009452] (-) TimerEvent: {}
+[8.109744] (-) TimerEvent: {}
+[8.210035] (-) TimerEvent: {}
+[8.310505] (-) TimerEvent: {}
+[8.368437] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:184: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o] Error 1\n'}
+[8.371229] (branchforge) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[8.412492] (-) TimerEvent: {}
+[8.512783] (-) TimerEvent: {}
+[8.613077] (-) TimerEvent: {}
+[8.713376] (-) TimerEvent: {}
+[8.813902] (-) TimerEvent: {}
+[8.914309] (-) TimerEvent: {}
+[9.014600] (-) TimerEvent: {}
+[9.114915] (-) TimerEvent: {}
+[9.215238] (-) TimerEvent: {}
+[9.315605] (-) TimerEvent: {}
+[9.415940] (-) TimerEvent: {}
+[9.516208] (-) TimerEvent: {}
+[9.616486] (-) TimerEvent: {}
+[9.720130] (-) TimerEvent: {}
+[9.822482] (-) TimerEvent: {}
+[9.922781] (-) TimerEvent: {}
+[10.023025] (-) TimerEvent: {}
+[10.123377] (-) TimerEvent: {}
+[10.223645] (-) TimerEvent: {}
+[10.324076] (-) TimerEvent: {}
+[10.424346] (-) TimerEvent: {}
+[10.524654] (-) TimerEvent: {}
+[10.624946] (-) TimerEvent: {}
+[10.725319] (-) TimerEvent: {}
+[10.825585] (-) TimerEvent: {}
+[10.925869] (-) TimerEvent: {}
+[10.931087] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2\n'}
+[10.931627] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:136: all] Error 2\n'}
+[10.934579] (branchforge) CommandEnded: {'returncode': 2}
+[10.954703] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[10.965196] (-) EventReactorShutdown: {}

@@ -1,0 +1,19 @@
+[0.016s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.125s] [  5%] Built target branchforge_enhanced_qmlimportscan
+[0.162s] [  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.323s] [ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[0.409s] [ 11%] Built target branchforge_enhanced_autogen
+[0.495s] [ 17%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[4.009s] [ 23%] Linking CXX executable branchforge_enhanced
+[4.880s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: in function `BranchForge::Project::CodeGenerator::generateFromXMLFile(QString const&)':
+[4.880s] CodeGenerator.cpp:(.text+0x87d): undefined reference to `BranchForge::Project::BehaviorTreeXML::BehaviorTreeXML()'
+[4.880s] /usr/bin/ld: CodeGenerator.cpp:(.text+0x896): undefined reference to `BranchForge::Project::BehaviorTreeXML::importFromFile(QString const&)'
+[4.880s] /usr/bin/ld: CodeGenerator.cpp:(.text+0x9b4): undefined reference to `BranchForge::Project::BehaviorTreeXML::~BehaviorTreeXML()'
+[4.881s] /usr/bin/ld: CodeGenerator.cpp:(.text+0x9f3): undefined reference to `BranchForge::Project::BehaviorTreeXML::~BehaviorTreeXML()'
+[4.881s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: in function `BranchForge::Project::CodeGenerator::generateTreeXML(BranchForge::Project::BehaviorTreeXML const&) const':
+[4.881s] CodeGenerator.cpp:(.text+0x4abc): undefined reference to `BranchForge::Project::BehaviorTreeXML::exportToBehaviorTreeCPP() const'
+[4.943s] collect2: error: ld returned 1 exit status
+[4.946s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:311: branchforge_enhanced] Error 1
+[4.946s] gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+[4.947s] gmake: *** [Makefile:136: all] Error 2
+[4.950s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

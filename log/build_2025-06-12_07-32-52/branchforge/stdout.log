@@ -1,0 +1,6 @@
+[  5%] Built target branchforge_enhanced_qmlimportscan
+[  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[ 11%] Built target branchforge_enhanced_autogen
+[ 17%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[ 23%] Linking CXX executable branchforge_enhanced

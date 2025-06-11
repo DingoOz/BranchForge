@@ -1,0 +1,17 @@
+[  5%] Built target branchforge_enhanced_qmlimportscan
+[  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[ 11%] Built target branchforge_enhanced_autogen
+[ 17%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[ 23%] Linking CXX executable branchforge_enhanced
+/usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: in function `BranchForge::Project::CodeGenerator::generateFromXMLFile(QString const&)':
+CodeGenerator.cpp:(.text+0x87d): undefined reference to `BranchForge::Project::BehaviorTreeXML::BehaviorTreeXML()'
+/usr/bin/ld: CodeGenerator.cpp:(.text+0x896): undefined reference to `BranchForge::Project::BehaviorTreeXML::importFromFile(QString const&)'
+/usr/bin/ld: CodeGenerator.cpp:(.text+0x9b4): undefined reference to `BranchForge::Project::BehaviorTreeXML::~BehaviorTreeXML()'
+/usr/bin/ld: CodeGenerator.cpp:(.text+0x9f3): undefined reference to `BranchForge::Project::BehaviorTreeXML::~BehaviorTreeXML()'
+/usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: in function `BranchForge::Project::CodeGenerator::generateTreeXML(BranchForge::Project::BehaviorTreeXML const&) const':
+CodeGenerator.cpp:(.text+0x4abc): undefined reference to `BranchForge::Project::BehaviorTreeXML::exportToBehaviorTreeCPP() const'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:311: branchforge_enhanced] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

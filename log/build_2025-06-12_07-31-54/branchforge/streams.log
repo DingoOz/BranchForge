@@ -1,0 +1,42 @@
+[0.017s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.285s] -- Configuring done (0.2s)
+[0.314s] -- Generating done (0.0s)
+[0.317s] -- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[0.375s] [  5%] Built target branchforge_enhanced_qmlimportscan
+[0.435s] [  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.573s] [ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[1.084s] [ 11%] Built target branchforge_enhanced_autogen
+[1.101s] [ 17%] Generating qrc_resources.cpp
+[1.244s] [ 23%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[1.246s] [ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[1.247s] [ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[1.256s] [ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[1.261s] [ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[1.262s] [ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[1.265s] [ 58%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[1.270s] [ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[1.271s] [ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[1.271s] [ 82%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[1.271s] [ 82%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[1.286s] [ 88%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[1.888s] In file included from /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp:2:
+[1.891s] /home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h:6:10: fatal error: QDomDocument: No such file or directory
+[1.891s]     6 | #include <QDomDocument>
+[1.892s]       |          ^~~~~~~~~~~~~~
+[1.892s] compilation terminated.
+[1.896s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:184: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o] Error 1
+[1.897s] gmake[2]: *** Waiting for unfinished jobs....
+[6.322s] In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+[6.322s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+[6.322s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+[6.322s]   193 |     AdvancedNodeTemplate m_template;
+[6.322s]       |                          ^~~~~~~~~~
+[6.329s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+[6.330s]   190 |     QString m_id;
+[6.330s]       |             ^~~~
+[6.330s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+[6.330s]   306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+[6.331s]       | ^~~~~~~~~~~~~~~~~~~~
+[10.750s] gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+[10.751s] gmake: *** [Makefile:136: all] Error 2
+[10.754s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

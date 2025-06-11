@@ -1,0 +1,20 @@
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  5%] Built target branchforge_enhanced_qmlimportscan
+[  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[ 11%] Built target branchforge_enhanced_autogen
+[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[ 29%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[ 23%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 52%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[ 58%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 70%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[ 76%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 82%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[ 88%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o
