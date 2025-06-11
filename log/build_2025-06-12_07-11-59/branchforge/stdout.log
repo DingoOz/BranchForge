@@ -1,0 +1,7 @@
+[  6%] Built target branchforge_enhanced_qmlimportscan
+[  6%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Built target branchforge_enhanced_autogen
+[100%] Built target branchforge_enhanced
+-- Install configuration: ""
+-- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"
