@@ -1,0 +1,12 @@
+[0.024s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.337s] -- Configuring done (0.3s)
+[0.373s] -- Generating done (0.0s)
+[0.387s] -- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[0.470s] [  7%] Built target branchforge_enhanced_qmlimportscan
+[0.528s] [  7%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.589s] [ 14%] Automatic MOC and UIC for target branchforge_enhanced
+[0.661s] [ 14%] Built target branchforge_enhanced_autogen
+[0.735s] gmake[2]: *** No rule to make target 'qrc_resources.cpp', needed by 'branchforge_enhanced'.  Stop.
+[0.735s] gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+[0.735s] gmake: *** [Makefile:136: all] Error 2
+[0.743s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

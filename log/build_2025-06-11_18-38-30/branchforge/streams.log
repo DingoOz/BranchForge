@@ -1,0 +1,22 @@
+[0.034s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.279s] -- Configuring done (0.2s)
+[0.323s] -- Generating done (0.0s)
+[0.339s] -- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[0.421s] [  6%] Running qmlimportscanner for branchforge_enhanced
+[0.460s] qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+[0.508s] qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+[0.508s] qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+[0.566s] [  6%] Built target branchforge_enhanced_qmlimportscan
+[0.600s] [  6%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.671s] [ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[0.730s] [ 12%] Built target branchforge_enhanced_autogen
+[0.747s] [ 18%] Running rcc for resource qml_resources
+[0.841s] [ 25%] Building CXX object CMakeFiles/branchforge_enhanced.dir/build/branchforge/.rcc/qrc_qml_resources.cpp.o
+[0.920s] [ 31%] Linking CXX executable branchforge_enhanced
+[1.812s] [100%] Built target branchforge_enhanced
+[1.828s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[1.843s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[1.854s] -- Install configuration: ""
+[1.854s] -- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+[1.856s] -- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"
+[1.862s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge

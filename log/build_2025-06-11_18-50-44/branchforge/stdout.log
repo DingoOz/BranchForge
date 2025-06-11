@@ -1,0 +1,7 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  6%] Built target branchforge_enhanced_qmlimportscan
+[  6%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[ 12%] Built target branchforge_enhanced_autogen

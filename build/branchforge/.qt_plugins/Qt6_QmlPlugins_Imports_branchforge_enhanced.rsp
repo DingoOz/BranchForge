@@ -1,0 +1,9 @@
+-rootPath
+/home/dingo/Programming/BranchForge
+-cmake-output
+-output-file
+/home/dingo/Programming/BranchForge/build/branchforge/.qt_plugins/Qt6_QmlPlugins_Imports_branchforge_enhanced.cmake
+-importPath
+/home/dingo/Programming/BranchForge/build/branchforge
+-importPath
+/usr/lib/x86_64-linux-gnu/qt6/qml

@@ -1,0 +1,146 @@
+[0.000000] (-) TimerEvent: {}
+[0.000094] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.000357] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.009807] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.010347] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.011052] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.056954] (branchforge) StdoutLine: {'line': b'[  0%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.083902] (branchforge) StdoutLine: {'line': b'[ 12%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.099872] (-) TimerEvent: {}
+[0.200106] (-) TimerEvent: {}
+[0.300315] (-) TimerEvent: {}
+[0.361134] (branchforge) StdoutLine: {'line': b'[ 12%] Built target branchforge_enhanced_autogen\n'}
+[0.400444] (-) TimerEvent: {}
+[0.405731] (branchforge) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o\n'}
+[0.405941] (branchforge) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o\n'}
+[0.406753] (branchforge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[0.408812] (branchforge) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[0.408998] (branchforge) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[0.504073] (-) TimerEvent: {}
+[0.604307] (-) TimerEvent: {}
+[0.704513] (-) TimerEvent: {}
+[0.804710] (-) TimerEvent: {}
+[0.907599] (-) TimerEvent: {}
+[1.007807] (-) TimerEvent: {}
+[1.108041] (-) TimerEvent: {}
+[1.208232] (-) TimerEvent: {}
+[1.308416] (-) TimerEvent: {}
+[1.408641] (-) TimerEvent: {}
+[1.508827] (-) TimerEvent: {}
+[1.609033] (-) TimerEvent: {}
+[1.711322] (-) TimerEvent: {}
+[1.811798] (-) TimerEvent: {}
+[1.896345] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:\n'}
+[1.896630] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99:\n'}
+[1.896751] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::m_template\xe2\x80\x99 will be initialized after [-Wreorder]\n'}
+[1.896851] (branchforge) StderrLine: {'line': b'  193 |     AdvancedNodeTemplate m_template;\n'}
+[1.896947] (branchforge) StderrLine: {'line': b'      |                          ^~~~~~~~~~\n'}
+[1.897053] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   \xe2\x80\x98QString BranchForge::Nodes::AdvancedNodeInstance::m_id\xe2\x80\x99 [-Wreorder]\n'}
+[1.897144] (branchforge) StderrLine: {'line': b'  190 |     QString m_id;\n'}
+[1.897227] (branchforge) StderrLine: {'line': b'      |             ^~~~\n'}
+[1.897309] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]\n'}
+[1.897395] (branchforge) StderrLine: {'line': b'  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)\n'}
+[1.897490] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.901492] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: At global scope:\n'}
+[1.901750] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:424:1: error: no declaration matches \xe2\x80\x98BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const QString&, const QString&, QObject*)\xe2\x80\x99\n'}
+[1.901875] (branchforge) StderrLine: {'line': b'  424 | ROS2ActionClientNode::ROS2ActionClientNode(const QString& actionName, const QString& actionType, QObject* parent)\n'}
+[1.901974] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.902087] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:287:7: note: candidates are: \xe2\x80\x98BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const BranchForge::Nodes::ROS2ActionClientNode&)\xe2\x80\x99\n'}
+[1.902190] (branchforge) StderrLine: {'line': b'  287 | class ROS2ActionClientNode : public AdvancedNodeInstance {\n'}
+[1.902295] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.902406] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:291:14: note:                 \xe2\x80\x98BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99\n'}
+[1.902519] (branchforge) StderrLine: {'line': b'  291 |     explicit ROS2ActionClientNode(const AdvancedNodeTemplate& template_, QObject* parent = nullptr);\n'}
+[1.902612] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.902693] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:287:7: note: \xe2\x80\x98class BranchForge::Nodes::ROS2ActionClientNode\xe2\x80\x99 defined here\n'}
+[1.902773] (branchforge) StderrLine: {'line': b'  287 | class ROS2ActionClientNode : public AdvancedNodeInstance {\n'}
+[1.902865] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.907744] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98void BranchForge::Nodes::ROS2ActionClientNode::onActionTimeout()\xe2\x80\x99:\n'}
+[1.907979] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:438:5: error: \xe2\x80\x98m_timeoutTimer\xe2\x80\x99 was not declared in this scope\n'}
+[1.908106] (branchforge) StderrLine: {'line': b'  438 |     m_timeoutTimer->stop();\n'}
+[1.908204] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~\n'}
+[1.911937] (-) TimerEvent: {}
+[1.913726] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:440:10: error: \xe2\x80\x98actionFailed\xe2\x80\x99 was not declared in this scope\n'}
+[1.913987] (branchforge) StderrLine: {'line': b'  440 |     emit actionFailed("Action timed out");\n'}
+[1.914097] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~\n'}
+[1.919706] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98void BranchForge::Nodes::ROS2ActionClientNode::simulateActionProgress()\xe2\x80\x99:\n'}
+[1.919932] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:450:9: error: \xe2\x80\x98m_timeoutTimer\xe2\x80\x99 was not declared in this scope\n'}
+[1.920041] (branchforge) StderrLine: {'line': b'  450 |         m_timeoutTimer->stop();\n'}
+[1.920138] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~~\n'}
+[1.926037] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:452:14: error: \xe2\x80\x98actionCompleted\xe2\x80\x99 was not declared in this scope\n'}
+[1.926272] (branchforge) StderrLine: {'line': b'  452 |         emit actionCompleted();\n'}
+[1.926375] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~~\n'}
+[1.934254] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:454:14: error: \xe2\x80\x98actionProgress\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98getGoalProgress\xe2\x80\x99?\n'}
+[1.934475] (branchforge) StderrLine: {'line': b'  454 |         emit actionProgress(progress);\n'}
+[1.934561] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~\n'}
+[1.934640] (branchforge) StderrLine: {'line': b'      |              getGoalProgress\n'}
+[1.934717] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: At global scope:\n'}
+[1.934792] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:459:1: error: no declaration matches \xe2\x80\x98BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const QString&, const QString&, QObject*)\xe2\x80\x99\n'}
+[1.934887] (branchforge) StderrLine: {'line': b'  459 | ROS2ServiceClientNode::ROS2ServiceClientNode(const QString& serviceName, const QString& serviceType, QObject* parent)\n'}
+[1.934966] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~\n'}
+[1.935058] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:332:7: note: candidates are: \xe2\x80\x98BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const BranchForge::Nodes::ROS2ServiceClientNode&)\xe2\x80\x99\n'}
+[1.935145] (branchforge) StderrLine: {'line': b'  332 | class ROS2ServiceClientNode : public AdvancedNodeInstance {\n'}
+[1.935221] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~~~~~~~~~\n'}
+[1.935297] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:336:14: note:                 \xe2\x80\x98BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99\n'}
+[1.935378] (branchforge) StderrLine: {'line': b'  336 |     explicit ROS2ServiceClientNode(const AdvancedNodeTemplate& template_, QObject* parent = nullptr);\n'}
+[1.935471] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~~~~~~~~\n'}
+[1.935556] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:332:7: note: \xe2\x80\x98class BranchForge::Nodes::ROS2ServiceClientNode\xe2\x80\x99 defined here\n'}
+[1.935633] (branchforge) StderrLine: {'line': b'  332 | class ROS2ServiceClientNode : public AdvancedNodeInstance {\n'}
+[1.935711] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~~~~~~~~~~~\n'}
+[1.943341] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98void BranchForge::Nodes::ROS2ServiceClientNode::onServiceTimeout()\xe2\x80\x99:\n'}
+[1.944000] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:470:5: error: \xe2\x80\x98m_timeoutTimer\xe2\x80\x99 was not declared in this scope\n'}
+[1.944102] (branchforge) StderrLine: {'line': b'  470 |     m_timeoutTimer->stop();\n'}
+[1.944180] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~\n'}
+[1.950536] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:471:10: error: \xe2\x80\x98serviceCallFailed\xe2\x80\x99 was not declared in this scope\n'}
+[1.950737] (branchforge) StderrLine: {'line': b'  471 |     emit serviceCallFailed("Service call timed out");\n'}
+[1.950825] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~~~\n'}
+[1.958149] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In lambda function:\n'}
+[1.958353] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:477:14: error: \xe2\x80\x98serviceCallCompleted\xe2\x80\x99 was not declared in this scope\n'}
+[1.958444] (branchforge) StderrLine: {'line': b'  477 |         emit serviceCallCompleted();\n'}
+[1.958520] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~~~~~~~\n'}
+[2.012054] (-) TimerEvent: {}
+[2.112278] (-) TimerEvent: {}
+[2.212471] (-) TimerEvent: {}
+[2.313082] (-) TimerEvent: {}
+[2.339765] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp: In member function \xe2\x80\x98void BranchForge::Recording::DataPlayer::processNextMessage()\xe2\x80\x99:\n'}
+[2.339985] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp:214:10: error: \xe2\x80\x98messageProcessed\xe2\x80\x99 was not declared in this scope\n'}
+[2.340113] (branchforge) StderrLine: {'line': b'  214 |     emit messageProcessed("Next message processed");\n'}
+[2.340213] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~~\n'}
+[2.348439] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp: In member function \xe2\x80\x98void BranchForge::Recording::DataPlayer::updatePlaybackPosition()\xe2\x80\x99:\n'}
+[2.348651] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp:220:10: error: \xe2\x80\x98positionChanged\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98playbackPositionChanged\xe2\x80\x99?\n'}
+[2.348752] (branchforge) StderrLine: {'line': b'  220 |     emit positionChanged(m_currentPosition);\n'}
+[2.348836] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[2.348914] (branchforge) StderrLine: {'line': b'      |          playbackPositionChanged\n'}
+[2.352040] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:132: CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o] Error 1\n'}
+[2.352276] (branchforge) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.401243] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In constructor \xe2\x80\x98BranchForge::Visualization::SensorDataSynchronizer::SensorDataSynchronizer(QObject*)\xe2\x80\x99:\n'}
+[2.401436] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:407:7: error: class \xe2\x80\x98BranchForge::Visualization::SensorDataSynchronizer\xe2\x80\x99 does not have any field named \xe2\x80\x98m_syncTimer\xe2\x80\x99\n'}
+[2.401535] (branchforge) StderrLine: {'line': b'  407 |     , m_syncTimer(std::make_unique<QTimer>(this))\n'}
+[2.401612] (branchforge) StderrLine: {'line': b'      |       ^~~~~~~~~~~\n'}
+[2.410289] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:411:5: error: \xe2\x80\x98m_syncTimer\xe2\x80\x99 was not declared in this scope\n'}
+[2.410468] (branchforge) StderrLine: {'line': b'  411 |     m_syncTimer->setInterval(33); // ~30 FPS synchronization\n'}
+[2.410547] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[2.413177] (-) TimerEvent: {}
+[2.415989] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataSynchronizer::processSynchronization()\xe2\x80\x99:\n'}
+[2.416201] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:420:10: error: \xe2\x80\x98synchronizedFrameReady\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98synchronizedFramesReady\xe2\x80\x99?\n'}
+[2.416287] (branchforge) StderrLine: {'line': b'  420 |     emit synchronizedFrameReady();\n'}
+[2.416362] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.416433] (branchforge) StderrLine: {'line': b'      |          synchronizedFramesReady\n'}
+[2.513278] (-) TimerEvent: {}
+[2.613491] (-) TimerEvent: {}
+[2.713675] (-) TimerEvent: {}
+[2.749647] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:118: CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o] Error 1\n'}
+[2.813822] (-) TimerEvent: {}
+[2.909718] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:146: CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o] Error 1\n'}
+[2.914082] (-) TimerEvent: {}
+[3.014258] (-) TimerEvent: {}
+[3.114422] (-) TimerEvent: {}
+[3.214581] (-) TimerEvent: {}
+[3.314741] (-) TimerEvent: {}
+[3.414942] (-) TimerEvent: {}
+[3.515100] (-) TimerEvent: {}
+[3.613122] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:86: CMakeFiles/branchforge_enhanced.dir/all] Error 2\n'}
+[3.613393] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:136: all] Error 2\n'}
+[3.614722] (branchforge) CommandEnded: {'returncode': 2}
+[3.615175] (-) TimerEvent: {}
+[3.626067] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[3.636543] (-) EventReactorShutdown: {}

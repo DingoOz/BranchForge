@@ -1,0 +1,14 @@
+[0.026s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.119s] [  7%] Built target branchforge_enhanced_qmlimportscan
+[0.152s] [  7%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.216s] [ 14%] Automatic MOC and UIC for target branchforge_enhanced
+[0.280s] [ 14%] Built target branchforge_enhanced_autogen
+[0.408s] [ 21%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[4.329s] [ 28%] Linking CXX executable branchforge_enhanced
+[5.071s] [100%] Built target branchforge_enhanced
+[5.087s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[5.104s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[5.115s] -- Install configuration: ""
+[5.119s] -- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+[5.119s] -- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"
+[5.124s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge

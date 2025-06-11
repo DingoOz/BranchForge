@@ -1,0 +1,26 @@
+[0.013s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.056s] [  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.085s] [ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[0.116s] [ 12%] Built target branchforge_enhanced_autogen
+[0.154s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[0.154s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[0.154s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[1.362s] In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+[1.363s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+[1.363s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+[1.363s]   193 |     AdvancedNodeTemplate m_template;
+[1.363s]       |                          ^~~~~~~~~~
+[1.363s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+[1.363s]   190 |     QString m_id;
+[1.363s]       |             ^~~~
+[1.363s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+[1.363s]   306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+[1.364s]       | ^~~~~~~~~~~~~~~~~~~~
+[2.755s] [ 62%] Linking CXX executable branchforge_enhanced
+[3.177s] [100%] Built target branchforge_enhanced
+[3.186s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[3.195s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[3.203s] -- Install configuration: ""
+[3.205s] -- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+[3.207s] -- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"
+[3.211s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge

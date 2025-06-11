@@ -1,0 +1,59 @@
+[0.012s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.092s] -- Configuring done (0.1s)
+[0.107s] -- Generating done (0.0s)
+[0.110s] -- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[0.142s] [  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.168s] [ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[0.497s] [ 12%] Built target branchforge_enhanced_autogen
+[0.532s] [ 25%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
+[0.534s] [ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[0.538s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[0.538s] [ 62%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[3.211s] In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+[3.211s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+[3.211s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+[3.211s]   193 |     AdvancedNodeTemplate m_template;
+[3.212s]       |                          ^~~~~~~~~~
+[3.212s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+[3.212s]   190 |     QString m_id;
+[3.212s]       |             ^~~~
+[3.212s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+[3.212s]   306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+[3.212s]       | ^~~~~~~~~~~~~~~~~~~~
+[5.494s] [ 75%] Linking CXX executable branchforge_enhanced
+[5.836s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `BranchForge::Nodes::ROS2ActionClientNode::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)':
+[5.837s] mocs_compilation.cpp:(.text+0x225f): undefined reference to `BranchForge::Nodes::ROS2ActionClientNode::onActionTimeout()'
+[5.837s] /usr/bin/ld: mocs_compilation.cpp:(.text+0x2270): undefined reference to `BranchForge::Nodes::ROS2ActionClientNode::simulateActionProgress()'
+[5.837s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `BranchForge::Nodes::ROS2ServiceClientNode::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)':
+[5.837s] mocs_compilation.cpp:(.text+0x2870): undefined reference to `BranchForge::Nodes::ROS2ServiceClientNode::onServiceTimeout()'
+[5.837s] /usr/bin/ld: mocs_compilation.cpp:(.text+0x2881): undefined reference to `BranchForge::Nodes::ROS2ServiceClientNode::simulateServiceCall()'
+[5.837s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `BranchForge::Recording::DataPlayer::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)':
+[5.837s] mocs_compilation.cpp:(.text+0x3605): undefined reference to `BranchForge::Recording::DataPlayer::processNextMessage()'
+[5.837s] /usr/bin/ld: mocs_compilation.cpp:(.text+0x3616): undefined reference to `BranchForge::Recording::DataPlayer::updatePlaybackPosition()'
+[5.837s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `BranchForge::Visualization::SensorDataSynchronizer::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)':
+[5.838s] mocs_compilation.cpp:(.text+0x5919): undefined reference to `BranchForge::Visualization::SensorDataSynchronizer::processSynchronization()'
+[5.838s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `QtPrivate::QMetaTypeForType<BranchForge::Recording::DataPlayer>::getDefaultCtr()::{lambda(QtPrivate::QMetaTypeInterface const*, void*)#1}::operator()(QtPrivate::QMetaTypeInterface const*, void*) const':
+[5.838s] mocs_compilation.cpp:(.text._ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording10DataPlayerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_[_ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording10DataPlayerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_]+0x42): undefined reference to `BranchForge::Recording::DataPlayer::DataPlayer(QObject*)'
+[5.838s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `QtPrivate::QMetaTypeForType<BranchForge::Recording::DataConverter>::getDefaultCtr()::{lambda(QtPrivate::QMetaTypeInterface const*, void*)#1}::operator()(QtPrivate::QMetaTypeInterface const*, void*) const':
+[5.838s] mocs_compilation.cpp:(.text._ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording13DataConverterEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_[_ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording13DataConverterEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_]+0x42): undefined reference to `BranchForge::Recording::DataConverter::DataConverter(QObject*)'
+[5.838s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `QtPrivate::QMetaTypeForType<BranchForge::Recording::RecordingSessionManager>::getDefaultCtr()::{lambda(QtPrivate::QMetaTypeInterface const*, void*)#1}::operator()(QtPrivate::QMetaTypeInterface const*, void*) const':
+[5.839s] mocs_compilation.cpp:(.text._ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording23RecordingSessionManagerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_[_ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge9Recording23RecordingSessionManagerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_]+0x42): undefined reference to `BranchForge::Recording::RecordingSessionManager::RecordingSessionManager(QObject*)'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o: in function `QtPrivate::QMetaTypeForType<BranchForge::Visualization::SensorDataSynchronizer>::getDefaultCtr()::{lambda(QtPrivate::QMetaTypeInterface const*, void*)#1}::operator()(QtPrivate::QMetaTypeInterface const*, void*) const':
+[5.839s] mocs_compilation.cpp:(.text._ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge13Visualization22SensorDataSynchronizerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_[_ZZN9QtPrivate16QMetaTypeForTypeIN11BranchForge13Visualization22SensorDataSynchronizerEE13getDefaultCtrEvENKUlPKNS_18QMetaTypeInterfaceEPvE_clES7_S8_]+0x42): undefined reference to `BranchForge::Visualization::SensorDataSynchronizer::SensorDataSynchronizer(QObject*)'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge13Visualization22SensorDataSynchronizerE[_ZTVN11BranchForge13Visualization22SensorDataSynchronizerE]+0x28): undefined reference to `BranchForge::Visualization::SensorDataSynchronizer::~SensorDataSynchronizer()'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge13Visualization22SensorDataSynchronizerE[_ZTVN11BranchForge13Visualization22SensorDataSynchronizerE]+0x30): undefined reference to `BranchForge::Visualization::SensorDataSynchronizer::~SensorDataSynchronizer()'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording23RecordingSessionManagerE[_ZTVN11BranchForge9Recording23RecordingSessionManagerE]+0x28): undefined reference to `BranchForge::Recording::RecordingSessionManager::~RecordingSessionManager()'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording23RecordingSessionManagerE[_ZTVN11BranchForge9Recording23RecordingSessionManagerE]+0x30): undefined reference to `BranchForge::Recording::RecordingSessionManager::~RecordingSessionManager()'
+[5.839s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording13DataConverterE[_ZTVN11BranchForge9Recording13DataConverterE]+0x28): undefined reference to `BranchForge::Recording::DataConverter::~DataConverter()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording13DataConverterE[_ZTVN11BranchForge9Recording13DataConverterE]+0x30): undefined reference to `BranchForge::Recording::DataConverter::~DataConverter()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording10DataPlayerE[_ZTVN11BranchForge9Recording10DataPlayerE]+0x28): undefined reference to `BranchForge::Recording::DataPlayer::~DataPlayer()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge9Recording10DataPlayerE[_ZTVN11BranchForge9Recording10DataPlayerE]+0x30): undefined reference to `BranchForge::Recording::DataPlayer::~DataPlayer()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge5Nodes21ROS2ServiceClientNodeE[_ZTVN11BranchForge5Nodes21ROS2ServiceClientNodeE]+0x28): undefined reference to `BranchForge::Nodes::ROS2ServiceClientNode::~ROS2ServiceClientNode()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge5Nodes21ROS2ServiceClientNodeE[_ZTVN11BranchForge5Nodes21ROS2ServiceClientNodeE]+0x30): undefined reference to `BranchForge::Nodes::ROS2ServiceClientNode::~ROS2ServiceClientNode()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge5Nodes20ROS2ActionClientNodeE[_ZTVN11BranchForge5Nodes20ROS2ActionClientNodeE]+0x28): undefined reference to `BranchForge::Nodes::ROS2ActionClientNode::~ROS2ActionClientNode()'
+[5.840s] /usr/bin/ld: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o:(.data.rel.ro._ZTVN11BranchForge5Nodes20ROS2ActionClientNodeE[_ZTVN11BranchForge5Nodes20ROS2ActionClientNodeE]+0x30): undefined reference to `BranchForge::Nodes::ROS2ActionClientNode::~ROS2ActionClientNode()'
+[5.873s] collect2: error: ld returned 1 exit status
+[5.875s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:183: branchforge_enhanced] Error 1
+[5.875s] gmake[1]: *** [CMakeFiles/Makefile2:86: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+[5.875s] gmake: *** [Makefile:136: all] Error 2
+[5.877s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

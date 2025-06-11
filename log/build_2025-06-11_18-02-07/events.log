@@ -1,0 +1,401 @@
+[0.000000] (-) TimerEvent: {}
+[0.000366] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.000487] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.009287] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.010119] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '/home/dingo/Programming/BranchForge', '-DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.093031] (branchforge) StdoutLine: {'line': b'-- Configuring done (0.1s)\n'}
+[0.100734] (-) TimerEvent: {}
+[0.112215] (branchforge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.114664] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[0.117894] (branchforge) CommandEnded: {'returncode': 0}
+[0.119610] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.119655] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.163073] (branchforge) StdoutLine: {'line': b'[  0%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.184291] (branchforge) StdoutLine: {'line': b'[ 12%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.200840] (-) TimerEvent: {}
+[0.301047] (-) TimerEvent: {}
+[0.401286] (-) TimerEvent: {}
+[0.502069] (-) TimerEvent: {}
+[0.535681] (branchforge) StdoutLine: {'line': b'[ 12%] Built target branchforge_enhanced_autogen\n'}
+[0.553846] (branchforge) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o\n'}
+[0.554193] (branchforge) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[0.556724] (branchforge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[0.556959] (branchforge) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o\n'}
+[0.557222] (branchforge) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[0.557341] (branchforge) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o\n'}
+[0.602189] (-) TimerEvent: {}
+[0.702472] (-) TimerEvent: {}
+[0.802694] (-) TimerEvent: {}
+[0.903181] (-) TimerEvent: {}
+[1.003371] (-) TimerEvent: {}
+[1.103547] (-) TimerEvent: {}
+[1.204007] (-) TimerEvent: {}
+[1.304253] (-) TimerEvent: {}
+[1.404539] (-) TimerEvent: {}
+[1.504893] (-) TimerEvent: {}
+[1.605284] (-) TimerEvent: {}
+[1.705520] (-) TimerEvent: {}
+[1.806053] (-) TimerEvent: {}
+[1.906940] (-) TimerEvent: {}
+[2.007172] (-) TimerEvent: {}
+[2.107019] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/QD4VZUV5DM/moc_AdvancedNodeSystem.cpp:10,\n'}
+[2.107248] (-) TimerEvent: {}
+[2.107270] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:3:\n'}
+[2.107360] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/QD4VZUV5DM/../../../../include/nodes/AdvancedNodeSystem.h:84:12: error: field \xe2\x80\x98color\xe2\x80\x99 has incomplete type \xe2\x80\x98QColor\xe2\x80\x99\n'}
+[2.107443] (branchforge) StderrLine: {'line': b'   84 |     QColor color;\n'}
+[2.107521] (branchforge) StderrLine: {'line': b'      |            ^~~~~\n'}
+[2.107640] (branchforge) StderrLine: {'line': b'In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,\n'}
+[2.107732] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,\n'}
+[2.107814] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/WLQGO73KP3/../../../../include/monitoring/BTExecutionMonitor.h:3,\n'}
+[2.107897] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/WLQGO73KP3/moc_BTExecutionMonitor.cpp:10,\n'}
+[2.107976] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:2:\n'}
+[2.108052] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.108128] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.108205] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.186899] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:1:\n'}
+[2.187109] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:30:15: error: field \xe2\x80\x98timestamp\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.187215] (branchforge) StderrLine: {'line': b'   30 |     QDateTime timestamp;\n'}
+[2.187304] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~\n'}
+[2.187390] (branchforge) StderrLine: {'line': b'In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,\n'}
+[2.187477] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,\n'}
+[2.187559] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:3:\n'}
+[2.187653] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.187733] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.187830] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.187906] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:46:15: error: field \xe2\x80\x98processingTime\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.187984] (branchforge) StderrLine: {'line': b'   46 |     QDateTime processingTime;\n'}
+[2.188058] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~\n'}
+[2.188134] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.188216] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.188296] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.191973] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:78:15: error: field \xe2\x80\x98timestamp\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.192530] (branchforge) StderrLine: {'line': b'   78 |     QDateTime timestamp;\n'}
+[2.192656] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~\n'}
+[2.192880] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.192985] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.193066] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.194348] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:97:15: error: field \xe2\x80\x98timestamp\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.194529] (branchforge) StderrLine: {'line': b'   97 |     QDateTime timestamp;\n'}
+[2.194623] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~\n'}
+[2.194706] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:\n'}
+[2.194783] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:84:12: error: field \xe2\x80\x98color\xe2\x80\x99 has incomplete type \xe2\x80\x98QColor\xe2\x80\x99\n'}
+[2.194864] (branchforge) StderrLine: {'line': b'   84 |     QColor color;\n'}
+[2.194941] (branchforge) StderrLine: {'line': b'      |            ^~~~~\n'}
+[2.195018] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.195093] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.195171] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.195248] (branchforge) StderrLine: {'line': b'In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,\n'}
+[2.197032] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,\n'}
+[2.197162] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:3:\n'}
+[2.197262] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.197382] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.197469] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.207417] (-) TimerEvent: {}
+[2.207971] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:108:15: error: field \xe2\x80\x98createdDate\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.208126] (branchforge) StderrLine: {'line': b'  108 |     QDateTime createdDate;\n'}
+[2.208170] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[2.208207] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.208243] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.208277] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.208310] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:109:15: error: field \xe2\x80\x98modifiedDate\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.208346] (branchforge) StderrLine: {'line': b'  109 |     QDateTime modifiedDate;\n'}
+[2.208380] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~\n'}
+[2.208412] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.208446] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.208479] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.211273] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:221:15: error: field \xe2\x80\x98m_lastProcessingTime\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.211528] (branchforge) StderrLine: {'line': b'  221 |     QDateTime m_lastProcessingTime;\n'}
+[2.211678] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~~~~~~\n'}
+[2.211780] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.211880] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.211977] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.213427] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:212:15: error: field \xe2\x80\x98m_executionStartTime\xe2\x80\x99 has incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99\n'}
+[2.213668] (branchforge) StderrLine: {'line': b'  212 |     QDateTime m_executionStartTime;\n'}
+[2.213801] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~~~~~~\n'}
+[2.213908] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of \xe2\x80\x98class QDateTime\xe2\x80\x99\n'}
+[2.214005] (branchforge) StderrLine: {'line': b' 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.214097] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.219722] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:309:15: error: field \xe2\x80\x98m_cameraPosition\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.219947] (branchforge) StderrLine: {'line': b'  309 |     QVector3D m_cameraPosition{0, 0, 10};\n'}
+[2.220057] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~~\n'}
+[2.220154] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.220261] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.220358] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.220460] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:310:15: error: field \xe2\x80\x98m_cameraTarget\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.220577] (branchforge) StderrLine: {'line': b'  310 |     QVector3D m_cameraTarget{0, 0, 0};\n'}
+[2.220706] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~\n'}
+[2.220808] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.220902] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.221000] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.221100] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:311:15: error: field \xe2\x80\x98m_cameraUp\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.221202] (branchforge) StderrLine: {'line': b'  311 |     QVector3D m_cameraUp{0, 0, 1};\n'}
+[2.221303] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~\n'}
+[2.221407] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.221520] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.221648] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.227769] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createSequenceTemplate() const\xe2\x80\x99:\n'}
+[2.227987] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:68:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.228102] (branchforge) StderrLine: {'line': b'   68 |     template_.color = QColor("#2196F3");\n'}
+[2.228212] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.228324] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.228414] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.228499] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.228602] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:71:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.228730] (branchforge) StderrLine: {'line': b'   71 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.228822] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.229110] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createSelectorTemplate() const\xe2\x80\x99:\n'}
+[2.229412] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:82:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.229545] (branchforge) StderrLine: {'line': b'   82 |     template_.color = QColor("#9C27B0");\n'}
+[2.229826] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.230102] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.230221] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.230330] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.230450] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:85:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.230553] (branchforge) StderrLine: {'line': b'   85 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.230696] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.230796] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createParallelTemplate() const\xe2\x80\x99:\n'}
+[2.231106] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:96:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.231232] (branchforge) StderrLine: {'line': b'   96 |     template_.color = QColor("#FF9800");\n'}
+[2.231337] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.231440] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.231733] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.231854] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.232156] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:99:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.232300] (branchforge) StderrLine: {'line': b'   99 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.232375] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.232454] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createInverterTemplate() const\xe2\x80\x99:\n'}
+[2.232530] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:110:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.232762] (branchforge) StderrLine: {'line': b'  110 |     template_.color = QColor("#607D8B");\n'}
+[2.232863] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.232931] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.232999] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.233072] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.233138] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:113:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.233211] (branchforge) StderrLine: {'line': b'  113 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.233278] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.233341] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createRepeaterTemplate() const\xe2\x80\x99:\n'}
+[2.233600] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:124:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.233879] (branchforge) StderrLine: {'line': b'  124 |     template_.color = QColor("#795548");\n'}
+[2.234019] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.234242] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.234352] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.234447] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.234559] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:127:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.234705] (branchforge) StderrLine: {'line': b'  127 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.234816] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.234918] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTimeoutTemplate() const\xe2\x80\x99:\n'}
+[2.235031] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:146:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.235130] (branchforge) StderrLine: {'line': b'  146 |     template_.color = QColor("#E91E63");\n'}
+[2.235230] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.235325] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.235428] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.235521] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.235639] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:149:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.235746] (branchforge) StderrLine: {'line': b'  149 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.235836] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.235930] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createRetryTemplate() const\xe2\x80\x99:\n'}
+[2.236029] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:168:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.236122] (branchforge) StderrLine: {'line': b'  168 |     template_.color = QColor("#009688");\n'}
+[2.236213] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.236303] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.236392] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.236475] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.236558] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:171:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.236665] (branchforge) StderrLine: {'line': b'  171 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.236762] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.236848] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createNavigationActionTemplate() const\xe2\x80\x99:\n'}
+[2.236954] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:190:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.237037] (branchforge) StderrLine: {'line': b'  190 |     template_.color = QColor("#4CAF50");\n'}
+[2.237118] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.237202] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.237294] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.237377] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.237467] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:193:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.237552] (branchforge) StderrLine: {'line': b'  193 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.237655] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.237742] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createMoveBaseActionTemplate() const\xe2\x80\x99:\n'}
+[2.237831] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:209:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.237923] (branchforge) StderrLine: {'line': b'  209 |     template_.color = QColor("#FF6B6B");\n'}
+[2.238007] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.238086] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.238176] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.238254] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.238333] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:212:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.238414] (branchforge) StderrLine: {'line': b'  212 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.238494] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.238571] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createServiceCallTemplate() const\xe2\x80\x99:\n'}
+[2.238675] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:228:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.238763] (branchforge) StderrLine: {'line': b'  228 |     template_.color = QColor("#FFB74D");\n'}
+[2.238846] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.238934] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.239033] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.239121] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.239208] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:231:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.239291] (branchforge) StderrLine: {'line': b'  231 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.239372] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.239450] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTopicPublisherTemplate() const\xe2\x80\x99:\n'}
+[2.239541] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:245:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.239657] (branchforge) StderrLine: {'line': b'  245 |     template_.color = QColor("#81C784");\n'}
+[2.239754] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.239848] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.239952] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.240038] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.240126] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:248:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.240224] (branchforge) StderrLine: {'line': b'  248 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.240324] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.240422] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTopicSubscriberTemplate() const\xe2\x80\x99:\n'}
+[2.240518] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:261:39: error: invalid use of incomplete type \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.240630] (branchforge) StderrLine: {'line': b'  261 |     template_.color = QColor("#64B5F6");\n'}
+[2.240719] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.240801] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QColor\xe2\x80\x99\n'}
+[2.240884] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.240978] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.241068] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:264:40: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.241162] (branchforge) StderrLine: {'line': b'  264 |     template_.createdDate = QDateTime::currentDateTime();\n'}
+[2.241251] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~~~~~~~\n'}
+[2.243283] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99:\n'}
+[2.243505] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:191:26: warning: \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::m_template\xe2\x80\x99 will be initialized after [-Wreorder]\n'}
+[2.243632] (branchforge) StderrLine: {'line': b'  191 |     AdvancedNodeTemplate m_template;\n'}
+[2.243754] (branchforge) StderrLine: {'line': b'      |                          ^~~~~~~~~~\n'}
+[2.243862] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:188:13: warning:   \xe2\x80\x98QString BranchForge::Nodes::AdvancedNodeInstance::m_id\xe2\x80\x99 [-Wreorder]\n'}
+[2.243979] (branchforge) StderrLine: {'line': b'  188 |     QString m_id;\n'}
+[2.244090] (branchforge) StderrLine: {'line': b'      |             ^~~~\n'}
+[2.244187] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]\n'}
+[2.244295] (branchforge) StderrLine: {'line': b'  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)\n'}
+[2.244412] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[2.248972] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98void BranchForge::Nodes::AdvancedNodeInstance::start()\xe2\x80\x99:\n'}
+[2.249182] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:359:39: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.249271] (branchforge) StderrLine: {'line': b'  359 |     m_executionStartTime = QDateTime::currentDateTime();\n'}
+[2.249352] (branchforge) StderrLine: {'line': b'      |                                       ^~~~~~~~~~~~~~~\n'}
+[2.249431] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function \xe2\x80\x98void BranchForge::Nodes::AdvancedNodeInstance::stop()\xe2\x80\x99:\n'}
+[2.249512] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:376:68: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.249830] (branchforge) StderrLine: {'line': b'  376 |     qint64 executionTime = m_executionStartTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.250041] (branchforge) StderrLine: {'line': b'      |                                                                    ^~~~~~~~~~~~~~~\n'}
+[2.307537] (-) TimerEvent: {}
+[2.324957] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98double BranchForge::Visualization::SensorDataPipeline::getProcessingRate() const\xe2\x80\x99:\n'}
+[2.325204] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:147:64: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.325314] (branchforge) StderrLine: {'line': b'  147 |     qint64 elapsedMs = m_lastProcessingTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.325404] (branchforge) StderrLine: {'line': b'      |                                                                ^~~~~~~~~~~~~~~\n'}
+[2.330662] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::processNextFrame()\xe2\x80\x99:\n'}
+[2.330880] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:204:39: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.330968] (branchforge) StderrLine: {'line': b'  204 |     m_lastProcessingTime = QDateTime::currentDateTime();\n'}
+[2.331047] (branchforge) StderrLine: {'line': b'      |                                       ^~~~~~~~~~~~~~~\n'}
+[2.331128] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::processPointCloudFrame(BranchForge::Visualization::SensorDataFrame&)\xe2\x80\x99:\n'}
+[2.331228] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:210:33: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.331307] (branchforge) StderrLine: {'line': b'  210 |     auto startTime = QDateTime::currentDateTime();\n'}
+[2.331386] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~\n'}
+[2.331464] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:228:59: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.331543] (branchforge) StderrLine: {'line': b'  228 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.331646] (branchforge) StderrLine: {'line': b'      |                                                           ^~~~~~~~~~~~~~~\n'}
+[2.334707] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::processImageFrame(BranchForge::Visualization::SensorDataFrame&)\xe2\x80\x99:\n'}
+[2.334837] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:232:33: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.334922] (branchforge) StderrLine: {'line': b'  232 |     auto startTime = QDateTime::currentDateTime();\n'}
+[2.335001] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~\n'}
+[2.335079] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:247:59: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.335160] (branchforge) StderrLine: {'line': b'  247 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.335242] (branchforge) StderrLine: {'line': b'      |                                                           ^~~~~~~~~~~~~~~\n'}
+[2.335322] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::processLaserScanFrame(BranchForge::Visualization::SensorDataFrame&)\xe2\x80\x99:\n'}
+[2.335402] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:251:33: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.335478] (branchforge) StderrLine: {'line': b'  251 |     auto startTime = QDateTime::currentDateTime();\n'}
+[2.335555] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~\n'}
+[2.335671] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:261:59: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.335753] (branchforge) StderrLine: {'line': b'  261 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.335831] (branchforge) StderrLine: {'line': b'      |                                                           ^~~~~~~~~~~~~~~\n'}
+[2.335908] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::processIMUFrame(BranchForge::Visualization::SensorDataFrame&)\xe2\x80\x99:\n'}
+[2.335987] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:265:33: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.336065] (branchforge) StderrLine: {'line': b'  265 |     auto startTime = QDateTime::currentDateTime();\n'}
+[2.336142] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~\n'}
+[2.336241] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:274:59: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.336332] (branchforge) StderrLine: {'line': b'  274 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());\n'}
+[2.336408] (branchforge) StderrLine: {'line': b'      |                                                           ^~~~~~~~~~~~~~~\n'}
+[2.336483] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::SensorDataPipeline::cleanupOldFrames()\xe2\x80\x99:\n'}
+[2.336560] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:15: error: variable \xe2\x80\x98QDateTime cutoff\xe2\x80\x99 has initializer but incomplete type\n'}
+[2.336664] (branchforge) StderrLine: {'line': b'  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);\n'}
+[2.336745] (branchforge) StderrLine: {'line': b'      |               ^~~~~~\n'}
+[2.336824] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:35: error: incomplete type \xe2\x80\x98QDateTime\xe2\x80\x99 used in nested name specifier\n'}
+[2.336903] (branchforge) StderrLine: {'line': b'  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);\n'}
+[2.336985] (branchforge) StderrLine: {'line': b'      |                                   ^~~~~~~~~~~~~~~\n'}
+[2.337063] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In lambda function:\n'}
+[2.337142] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:298:67: error: \xe2\x80\x98cutoff\xe2\x80\x99 is not captured\n'}
+[2.337222] (branchforge) StderrLine: {'line': b'  298 |                                 return frame.metadata.timestamp < cutoff;\n'}
+[2.337305] (branchforge) StderrLine: {'line': b'      |                                                                   ^~~~~~\n'}
+[2.337387] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:297:36: note: the lambda has no capture-default\n'}
+[2.337464] (branchforge) StderrLine: {'line': b'  297 |                             [cutoff](const SensorDataFrame& frame) {\n'}
+[2.337539] (branchforge) StderrLine: {'line': b'      |                                    ^\n'}
+[2.338250] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:15: note: \xe2\x80\x98<typeprefixerror>cutoff\xe2\x80\x99 declared here\n'}
+[2.338318] (branchforge) StderrLine: {'line': b'  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);\n'}
+[2.338358] (branchforge) StderrLine: {'line': b'      |               ^~~~~~\n'}
+[2.339676] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function \xe2\x80\x98void BranchForge::Visualization::Visualization3DEngine::resetCamera()\xe2\x80\x99:\n'}
+[2.339848] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:346:42: error: invalid use of incomplete type \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.339933] (branchforge) StderrLine: {'line': b'  346 |     m_cameraPosition = QVector3D(0, 0, 10);\n'}
+[2.340016] (branchforge) StderrLine: {'line': b'      |                                          ^\n'}
+[2.340107] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.340284] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.340393] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.340490] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:347:39: error: invalid use of incomplete type \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.340652] (branchforge) StderrLine: {'line': b'  347 |     m_cameraTarget = QVector3D(0, 0, 0);\n'}
+[2.340787] (branchforge) StderrLine: {'line': b'      |                                       ^\n'}
+[2.340889] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.341600] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.341761] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.341850] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:348:35: error: invalid use of incomplete type \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.341934] (branchforge) StderrLine: {'line': b'  348 |     m_cameraUp = QVector3D(0, 0, 1);\n'}
+[2.342016] (branchforge) StderrLine: {'line': b'      |                                   ^\n'}
+[2.342111] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.342192] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.342270] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.409856] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/moc_SensorDataPipeline.cpp:10,\n'}
+[2.410103] (-) TimerEvent: {}
+[2.410128] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:5:\n'}
+[2.410244] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:309:15: error: field \xe2\x80\x98m_cameraPosition\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.410342] (branchforge) StderrLine: {'line': b'  309 |     QVector3D m_cameraPosition{0, 0, 10};\n'}
+[2.410431] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~~\n'}
+[2.410515] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.410624] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.410713] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.410794] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:310:15: error: field \xe2\x80\x98m_cameraTarget\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.410877] (branchforge) StderrLine: {'line': b'  310 |     QVector3D m_cameraTarget{0, 0, 0};\n'}
+[2.410955] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~\n'}
+[2.411033] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.411506] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.411625] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.411716] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:311:15: error: field \xe2\x80\x98m_cameraUp\xe2\x80\x99 has incomplete type \xe2\x80\x98QVector3D\xe2\x80\x99\n'}
+[2.411807] (branchforge) StderrLine: {'line': b'  311 |     QVector3D m_cameraUp{0, 0, 1};\n'}
+[2.411882] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~\n'}
+[2.411959] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of \xe2\x80\x98class QVector3D\xe2\x80\x99\n'}
+[2.412037] (branchforge) StderrLine: {'line': b' 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)\n'}
+[2.412118] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[2.510226] (-) TimerEvent: {}
+[2.611139] (-) TimerEvent: {}
+[2.699007] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:132: CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o] Error 1\n'}
+[2.699212] (branchforge) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[2.711260] (-) TimerEvent: {}
+[2.811491] (-) TimerEvent: {}
+[2.839068] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:146: CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o] Error 1\n'}
+[2.911643] (-) TimerEvent: {}
+[2.961611] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:76: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o] Error 1\n'}
+[3.011757] (-) TimerEvent: {}
+[3.111945] (-) TimerEvent: {}
+[3.212171] (-) TimerEvent: {}
+[3.312368] (-) TimerEvent: {}
+[3.412618] (-) TimerEvent: {}
+[3.512861] (-) TimerEvent: {}
+[3.608697] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp: In lambda function:\n'}
+[3.608906] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp:617:34: error: \xe2\x80\x98class QStatusBar\xe2\x80\x99 has no member named \xe2\x80\x98changeMessage\xe2\x80\x99; did you mean \xe2\x80\x98showMessage\xe2\x80\x99?\n'}
+[3.609004] (branchforge) StderrLine: {'line': b'  617 |                     statusBar()->changeMessage("Recording: " + QFileInfo(filePath).baseName());\n'}
+[3.609088] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~\n'}
+[3.609170] (branchforge) StderrLine: {'line': b'      |                                  showMessage\n'}
+[3.612993] (-) TimerEvent: {}
+[3.713176] (-) TimerEvent: {}
+[3.813399] (-) TimerEvent: {}
+[3.913601] (-) TimerEvent: {}
+[4.013787] (-) TimerEvent: {}
+[4.113958] (-) TimerEvent: {}
+[4.214138] (-) TimerEvent: {}
+[4.223879] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:90: CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o] Error 1\n'}
+[4.314235] (-) TimerEvent: {}
+[4.357689] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:86: CMakeFiles/branchforge_enhanced.dir/all] Error 2\n'}
+[4.358146] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:136: all] Error 2\n'}
+[4.359564] (branchforge) CommandEnded: {'returncode': 2}
+[4.367261] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[4.377824] (-) EventReactorShutdown: {}

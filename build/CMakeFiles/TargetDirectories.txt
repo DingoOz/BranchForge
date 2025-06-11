@@ -1,9 +1,0 @@
-/home/dingo/Programming/BranchForge/build/CMakeFiles/branchforge_enhanced.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/edit_cache.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/rebuild_cache.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/list_install_components.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/install.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/install/local.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/install/strip.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir
-/home/dingo/Programming/BranchForge/build/CMakeFiles/branchforge_enhanced_autogen.dir

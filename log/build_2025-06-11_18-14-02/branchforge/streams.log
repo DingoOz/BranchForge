@@ -1,0 +1,9 @@
+[0.013s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.058s] [  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.088s] [ 12%] Built target branchforge_enhanced_autogen
+[0.129s] [100%] Built target branchforge_enhanced
+[0.141s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.149s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[0.157s] -- Install configuration: ""
+[0.157s] -- Up-to-date: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+[0.159s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge

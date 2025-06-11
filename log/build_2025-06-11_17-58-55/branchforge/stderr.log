@@ -1,0 +1,14 @@
+CMake Error at CMakeLists.txt:38 (target_link_libraries):
+  Target "branchforge_enhanced" links to:
+
+    Qt6::Concurrent
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

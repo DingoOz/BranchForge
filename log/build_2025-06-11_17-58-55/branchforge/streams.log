@@ -1,0 +1,34 @@
+[0.011s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
+[0.077s] -- The CXX compiler identification is GNU 13.3.0
+[0.092s] -- Detecting CXX compiler ABI info
+[0.197s] -- Detecting CXX compiler ABI info - done
+[0.207s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.207s] -- Detecting CXX compile features
+[0.207s] -- Detecting CXX compile features - done
+[0.215s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.308s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.308s] -- Found Threads: TRUE  
+[0.310s] -- Performing Test HAVE_STDATOMIC
+[0.448s] -- Performing Test HAVE_STDATOMIC - Success
+[0.449s] -- Found WrapAtomic: TRUE  
+[0.488s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[0.488s] -- Found WrapOpenGL: TRUE  
+[0.536s] -- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0") 
+[0.566s] -- Found WrapVulkanHeaders: /usr/include  
+[0.576s] -- Configuring done (0.6s)
+[0.590s] CMake Error at CMakeLists.txt:38 (target_link_libraries):
+[0.590s]   Target "branchforge_enhanced" links to:
+[0.590s] 
+[0.591s]     Qt6::Concurrent
+[0.591s] 
+[0.591s]   but the target was not found.  Possible reasons include:
+[0.591s] 
+[0.591s]     * There is a typo in the target name.
+[0.591s]     * A find_package call is missing for an IMPORTED target.
+[0.591s]     * An ALIAS target is missing.
+[0.591s] 
+[0.591s] 
+[0.591s] 
+[0.591s] -- Generating done (0.0s)
+[0.592s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[0.599s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge

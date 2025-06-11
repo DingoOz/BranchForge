@@ -1,0 +1,48 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  7%] Running qmlimportscanner for branchforge_enhanced
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+[  7%] Built target branchforge_enhanced_qmlimportscan
+[  7%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 14%] Automatic MOC and UIC for target branchforge_enhanced
+[ 14%] Built target branchforge_enhanced_autogen
+[ 21%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[ 42%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[ 57%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 57%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[ 78%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[ 78%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[ 78%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 85%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[ 92%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+  193 |     AdvancedNodeTemplate m_template;
+      |                          ^~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+  190 |     QString m_id;
+      |             ^~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/ros2/ROS2TopicBrowser.cpp: In lambda function:
+/home/dingo/Programming/BranchForge/src/ros2/ROS2TopicBrowser.cpp:283:34: error: invalid use of incomplete type ‘class QClipboard’
+  283 |         QApplication::clipboard()->setText(topicName);
+      |                                  ^~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:8,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget:1,
+                 from /home/dingo/Programming/BranchForge/include/ros2/ROS2TopicBrowser.h:3,
+                 from /home/dingo/Programming/BranchForge/src/ros2/ROS2TopicBrowser.cpp:1:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h:42:7: note: forward declaration of ‘class QClipboard’
+   42 | class QClipboard;
+      |       ^~~~~~~~~~
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:146: CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

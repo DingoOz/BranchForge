@@ -1,0 +1,103 @@
+[0.011s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.056s] [  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.083s] [ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[0.360s] [ 12%] Built target branchforge_enhanced_autogen
+[0.405s] [ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
+[0.405s] [ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[0.406s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[0.408s] [ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[0.408s] [ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[1.895s] In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+[1.895s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+[1.895s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+[1.896s]   193 |     AdvancedNodeTemplate m_template;
+[1.896s]       |                          ^~~~~~~~~~
+[1.896s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+[1.896s]   190 |     QString m_id;
+[1.896s]       |             ^~~~
+[1.896s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+[1.896s]   306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+[1.896s]       | ^~~~~~~~~~~~~~~~~~~~
+[1.900s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: At global scope:
+[1.901s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:424:1: error: no declaration matches ‘BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const QString&, const QString&, QObject*)’
+[1.901s]   424 | ROS2ActionClientNode::ROS2ActionClientNode(const QString& actionName, const QString& actionType, QObject* parent)
+[1.901s]       | ^~~~~~~~~~~~~~~~~~~~
+[1.901s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:287:7: note: candidates are: ‘BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const BranchForge::Nodes::ROS2ActionClientNode&)’
+[1.901s]   287 | class ROS2ActionClientNode : public AdvancedNodeInstance {
+[1.901s]       |       ^~~~~~~~~~~~~~~~~~~~
+[1.901s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:291:14: note:                 ‘BranchForge::Nodes::ROS2ActionClientNode::ROS2ActionClientNode(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’
+[1.901s]   291 |     explicit ROS2ActionClientNode(const AdvancedNodeTemplate& template_, QObject* parent = nullptr);
+[1.901s]       |              ^~~~~~~~~~~~~~~~~~~~
+[1.901s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:287:7: note: ‘class BranchForge::Nodes::ROS2ActionClientNode’ defined here
+[1.902s]   287 | class ROS2ActionClientNode : public AdvancedNodeInstance {
+[1.902s]       |       ^~~~~~~~~~~~~~~~~~~~
+[1.907s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘void BranchForge::Nodes::ROS2ActionClientNode::onActionTimeout()’:
+[1.907s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:438:5: error: ‘m_timeoutTimer’ was not declared in this scope
+[1.907s]   438 |     m_timeoutTimer->stop();
+[1.907s]       |     ^~~~~~~~~~~~~~
+[1.913s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:440:10: error: ‘actionFailed’ was not declared in this scope
+[1.913s]   440 |     emit actionFailed("Action timed out");
+[1.913s]       |          ^~~~~~~~~~~~
+[1.919s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘void BranchForge::Nodes::ROS2ActionClientNode::simulateActionProgress()’:
+[1.919s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:450:9: error: ‘m_timeoutTimer’ was not declared in this scope
+[1.919s]   450 |         m_timeoutTimer->stop();
+[1.919s]       |         ^~~~~~~~~~~~~~
+[1.925s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:452:14: error: ‘actionCompleted’ was not declared in this scope
+[1.925s]   452 |         emit actionCompleted();
+[1.925s]       |              ^~~~~~~~~~~~~~~
+[1.933s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:454:14: error: ‘actionProgress’ was not declared in this scope; did you mean ‘getGoalProgress’?
+[1.933s]   454 |         emit actionProgress(progress);
+[1.933s]       |              ^~~~~~~~~~~~~~
+[1.933s]       |              getGoalProgress
+[1.933s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: At global scope:
+[1.934s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:459:1: error: no declaration matches ‘BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const QString&, const QString&, QObject*)’
+[1.934s]   459 | ROS2ServiceClientNode::ROS2ServiceClientNode(const QString& serviceName, const QString& serviceType, QObject* parent)
+[1.934s]       | ^~~~~~~~~~~~~~~~~~~~~
+[1.934s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:332:7: note: candidates are: ‘BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const BranchForge::Nodes::ROS2ServiceClientNode&)’
+[1.934s]   332 | class ROS2ServiceClientNode : public AdvancedNodeInstance {
+[1.934s]       |       ^~~~~~~~~~~~~~~~~~~~~
+[1.934s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:336:14: note:                 ‘BranchForge::Nodes::ROS2ServiceClientNode::ROS2ServiceClientNode(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’
+[1.934s]   336 |     explicit ROS2ServiceClientNode(const AdvancedNodeTemplate& template_, QObject* parent = nullptr);
+[1.934s]       |              ^~~~~~~~~~~~~~~~~~~~~
+[1.934s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:332:7: note: ‘class BranchForge::Nodes::ROS2ServiceClientNode’ defined here
+[1.934s]   332 | class ROS2ServiceClientNode : public AdvancedNodeInstance {
+[1.934s]       |       ^~~~~~~~~~~~~~~~~~~~~
+[1.943s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘void BranchForge::Nodes::ROS2ServiceClientNode::onServiceTimeout()’:
+[1.943s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:470:5: error: ‘m_timeoutTimer’ was not declared in this scope
+[1.943s]   470 |     m_timeoutTimer->stop();
+[1.943s]       |     ^~~~~~~~~~~~~~
+[1.949s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:471:10: error: ‘serviceCallFailed’ was not declared in this scope
+[1.949s]   471 |     emit serviceCallFailed("Service call timed out");
+[1.950s]       |          ^~~~~~~~~~~~~~~~~
+[1.957s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In lambda function:
+[1.957s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:477:14: error: ‘serviceCallCompleted’ was not declared in this scope
+[1.957s]   477 |         emit serviceCallCompleted();
+[1.957s]       |              ^~~~~~~~~~~~~~~~~~~~
+[2.339s] /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp: In member function ‘void BranchForge::Recording::DataPlayer::processNextMessage()’:
+[2.339s] /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp:214:10: error: ‘messageProcessed’ was not declared in this scope
+[2.339s]   214 |     emit messageProcessed("Next message processed");
+[2.339s]       |          ^~~~~~~~~~~~~~~~
+[2.347s] /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp: In member function ‘void BranchForge::Recording::DataPlayer::updatePlaybackPosition()’:
+[2.347s] /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp:220:10: error: ‘positionChanged’ was not declared in this scope; did you mean ‘playbackPositionChanged’?
+[2.347s]   220 |     emit positionChanged(m_currentPosition);
+[2.348s]       |          ^~~~~~~~~~~~~~~
+[2.348s]       |          playbackPositionChanged
+[2.351s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:132: CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o] Error 1
+[2.351s] gmake[2]: *** Waiting for unfinished jobs....
+[2.400s] /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In constructor ‘BranchForge::Visualization::SensorDataSynchronizer::SensorDataSynchronizer(QObject*)’:
+[2.400s] /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:407:7: error: class ‘BranchForge::Visualization::SensorDataSynchronizer’ does not have any field named ‘m_syncTimer’
+[2.400s]   407 |     , m_syncTimer(std::make_unique<QTimer>(this))
+[2.400s]       |       ^~~~~~~~~~~
+[2.409s] /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:411:5: error: ‘m_syncTimer’ was not declared in this scope
+[2.409s]   411 |     m_syncTimer->setInterval(33); // ~30 FPS synchronization
+[2.409s]       |     ^~~~~~~~~~~
+[2.415s] /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataSynchronizer::processSynchronization()’:
+[2.415s] /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:420:10: error: ‘synchronizedFrameReady’ was not declared in this scope; did you mean ‘synchronizedFramesReady’?
+[2.415s]   420 |     emit synchronizedFrameReady();
+[2.415s]       |          ^~~~~~~~~~~~~~~~~~~~~~
+[2.415s]       |          synchronizedFramesReady
+[2.748s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:118: CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o] Error 1
+[2.909s] gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:146: CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o] Error 1
+[3.612s] gmake[1]: *** [CMakeFiles/Makefile2:86: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+[3.612s] gmake: *** [Makefile:136: all] Error 2
+[3.614s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

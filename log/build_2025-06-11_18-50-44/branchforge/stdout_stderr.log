@@ -1,0 +1,10 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  6%] Built target branchforge_enhanced_qmlimportscan
+[  6%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[ 12%] Built target branchforge_enhanced_autogen
+gmake[2]: *** No rule to make target '/home/dingo/Programming/BranchForge/main.qml', needed by 'qrc_resources.cpp'.  Stop.
+gmake[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
