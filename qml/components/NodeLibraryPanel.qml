@@ -163,7 +163,7 @@ Rectangle {
                     anchors.left: parent.left
                     anchors.leftMargin: 8
                     anchors.verticalCenter: parent.verticalCenter
-                    text: categoryName
+                    text: modelData.categoryName
                     color: "#ffffff"
                     font.bold: true
                 }
@@ -183,11 +183,11 @@ Rectangle {
                 visible: true
                 
                 Repeater {
-                    model: nodes
+                    model: modelData.nodes
                     delegate: Rectangle {
                         width: categoryRepeater.width
                         height: 50
-                        color: dragArea.containsMouse ? "#4b4b4b" : "transparent"
+                        color: clickArea.containsMouse ? "#4b4b4b" : "transparent"
                         radius: 4
                         
                         Rectangle {
