@@ -1,3 +1,5 @@
+![BranchForge Logo](BranchForgeLogo.jpg)
+
 # BranchForge
 
 A comprehensive open-source development platform for designing, visualizing, testing, and debugging Behaviour Trees (BTs) for ROS2 robotics applications.
