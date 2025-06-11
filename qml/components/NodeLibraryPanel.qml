@@ -11,8 +11,18 @@ Rectangle {
     property string selectedNodeType: ""
     property var filteredCategories: nodeCategories
     
+    // Force ListView to update when filteredCategories changes
+    onFilteredCategoriesChanged: {
+        nodeList.model = null
+        nodeList.model = filteredCategories
+    }
+    
     Component.onCompleted: {
         console.log("NodeLibraryPanel.qml loaded successfully");
+        console.log("Total categories:", nodeCategories.length);
+        for (var i = 0; i < nodeCategories.length; i++) {
+            console.log("Category:", nodeCategories[i].categoryName, "- Nodes:", nodeCategories[i].nodes.length);
+        }
     }
     
     ColumnLayout {
@@ -226,6 +236,9 @@ Rectangle {
                                     color: modelData.color,
                                     description: modelData.description
                                 });
+                                
+                                // Clear previous selection first
+                                root.selectedNodeType = "";
                                 
                                 // Set the selected node data on the main window
                                 if (typeof mainWindow !== 'undefined') {

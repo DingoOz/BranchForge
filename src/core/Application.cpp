@@ -46,15 +46,15 @@ int Application::run() {
         qCInfo(appCore) << "Resource:" << it.next();
     }
 
-    // Try simple version first to test basic functionality
+    // Try main application first, fallback to simple test version
     QStringList possiblePaths = {
-        QDir::currentPath() + "/qml/main_simple.qml",            // Simple test version
         QDir::currentPath() + "/qml/main.qml",                    // Current directory
         QCoreApplication::applicationDirPath() + "/qml/main.qml", // Application directory
         QCoreApplication::applicationDirPath() + "/../qml/main.qml", // Parent directory
         "qml/main.qml",                                           // Relative path
         "qrc:/BranchForge/qml/main.qml",                         // Resource path
-        "qrc:/qml/main.qml"                                      // Alternative resource path
+        "qrc:/qml/main.qml",                                      // Alternative resource path
+        QDir::currentPath() + "/qml/main_simple.qml"             // Simple test version fallback
     };
     
     QUrl url;
