@@ -83,30 +83,30 @@ CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilatio
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/build/branchforge_enhanced_autogen/mocs_compilation.cpp -o CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
-CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o: /home/dingo/Programming/BranchForge/src/main_enhanced.cpp
-CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o -c /home/dingo/Programming/BranchForge/src/main_enhanced.cpp
+CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
+CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o: /home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp
+CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o -c /home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp
 
-CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dingo/Programming/BranchForge/src/main_enhanced.cpp > CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.i
+CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp > CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.i
 
-CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/main_enhanced.cpp -o CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.s
+CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp -o CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.s
 
 # Object files for target branchforge_enhanced
 branchforge_enhanced_OBJECTS = \
 "CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o"
+"CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o"
 
 # External object files for target branchforge_enhanced
 branchforge_enhanced_EXTERNAL_OBJECTS =
 
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
-branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o
+branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/build.make
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2

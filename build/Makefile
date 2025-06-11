@@ -224,29 +224,29 @@ branchforge_enhanced_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.s
 .PHONY : branchforge_enhanced_autogen/mocs_compilation.cpp.s
 
-src/main_enhanced.o: src/main_enhanced.cpp.o
-.PHONY : src/main_enhanced.o
+src/main_enhanced_fixed.o: src/main_enhanced_fixed.cpp.o
+.PHONY : src/main_enhanced_fixed.o
 
 # target to build an object file
-src/main_enhanced.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o
-.PHONY : src/main_enhanced.cpp.o
+src/main_enhanced_fixed.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
+.PHONY : src/main_enhanced_fixed.cpp.o
 
-src/main_enhanced.i: src/main_enhanced.cpp.i
-.PHONY : src/main_enhanced.i
+src/main_enhanced_fixed.i: src/main_enhanced_fixed.cpp.i
+.PHONY : src/main_enhanced_fixed.i
 
 # target to preprocess a source file
-src/main_enhanced.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.i
-.PHONY : src/main_enhanced.cpp.i
+src/main_enhanced_fixed.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.i
+.PHONY : src/main_enhanced_fixed.cpp.i
 
-src/main_enhanced.s: src/main_enhanced.cpp.s
-.PHONY : src/main_enhanced.s
+src/main_enhanced_fixed.s: src/main_enhanced_fixed.cpp.s
+.PHONY : src/main_enhanced_fixed.s
 
 # target to generate assembly for a file
-src/main_enhanced.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.s
-.PHONY : src/main_enhanced.cpp.s
+src/main_enhanced_fixed.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.s
+.PHONY : src/main_enhanced_fixed.cpp.s
 
 # Help Target
 help:
@@ -266,9 +266,9 @@ help:
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.o"
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.i"
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.s"
-	@echo "... src/main_enhanced.o"
-	@echo "... src/main_enhanced.i"
-	@echo "... src/main_enhanced.s"
+	@echo "... src/main_enhanced_fixed.o"
+	@echo "... src/main_enhanced_fixed.i"
+	@echo "... src/main_enhanced_fixed.s"
 .PHONY : help
 
 

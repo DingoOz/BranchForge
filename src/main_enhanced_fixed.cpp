@@ -32,6 +32,12 @@
 #include <QThread>
 #include <memory>
 
+// Phase 2 includes
+#include "monitoring/BTExecutionMonitor.h"
+#include "recording/DataRecorder.h"
+#include "nodes/AdvancedNodeSystem.h"
+#include "visualization/SensorDataPipeline.h"
+
 // Custom BT Node for the graphics scene
 class BTNode : public QGraphicsRectItem {
 public:
@@ -310,7 +316,7 @@ class EnhancedBranchForge : public QMainWindow {
 
 public:
     EnhancedBranchForge() {
-        setWindowTitle("BranchForge - Enhanced Behavior Tree Editor");
+        setWindowTitle("BranchForge - Enhanced Behavior Tree Editor with Phase 2 Features");
         setMinimumSize(1400, 900);
         
         setupMenus();
@@ -318,6 +324,7 @@ public:
         setupDockWidgets();
         setupCentralWidget();
         setupStatusBar();
+        initializePhase2Components();
         
         // Restore geometry from settings
         QSettings settings;
@@ -405,14 +412,77 @@ private:
         ros2Menu->addAction("&Topic Browser");
         ros2Menu->addAction("&Node Inspector");
         
+        // Phase 2 Menus
+        // Monitoring Menu
+        auto monitoringMenu = menuBar()->addMenu("&Monitoring");
+        auto startMonitoringAction = monitoringMenu->addAction("&Start BT Monitoring");
+        connect(startMonitoringAction, &QAction::triggered, [this]() {
+            m_monitor->startMonitoring("Sample Tree");
+            statusBar()->showMessage("BT Monitoring started", 2000);
+        });
+        
+        auto stopMonitoringAction = monitoringMenu->addAction("Sto&p BT Monitoring");
+        connect(stopMonitoringAction, &QAction::triggered, [this]() {
+            m_monitor->stopMonitoring();
+            statusBar()->showMessage("BT Monitoring stopped", 2000);
+        });
+        
+        monitoringMenu->addSeparator();
+        monitoringMenu->addAction("&Performance Analysis");
+        monitoringMenu->addAction("&Execution Timeline");
+        
+        // Recording Menu
+        auto recordingMenu = menuBar()->addMenu("&Recording");
+        auto startRecordingAction = recordingMenu->addAction("&Start Recording");
+        connect(startRecordingAction, &QAction::triggered, [this]() {
+            QString fileName = QFileDialog::getSaveFileName(this,
+                "Save Recording", "", "MCAP Files (*.mcap);;ROS Bag Files (*.bag)");
+            if (!fileName.isEmpty()) {
+                m_recorder->startRecording(fileName);
+            }
+        });
+        
+        auto stopRecordingAction = recordingMenu->addAction("Sto&p Recording");
+        connect(stopRecordingAction, &QAction::triggered, [this]() {
+            m_recorder->stopRecording();
+        });
+        
+        recordingMenu->addSeparator();
+        recordingMenu->addAction("&Playback Session");
+        recordingMenu->addAction("&Session Manager");
+        
+        // Visualization Menu
+        auto visualizationMenu = menuBar()->addMenu("&Visualization");
+        auto show3DViewAction = visualizationMenu->addAction("&3D Visualization");
+        connect(show3DViewAction, &QAction::triggered, [this]() {
+            m_visualizationEngine->initializeScene();
+            statusBar()->showMessage("3D Visualization initialized", 2000);
+        });
+        
+        auto sensorDataAction = visualizationMenu->addAction("&Sensor Data Pipeline");
+        connect(sensorDataAction, &QAction::triggered, [this]() {
+            m_sensorPipeline->startProcessing();
+            statusBar()->showMessage("Sensor data processing started", 2000);
+        });
+        
+        visualizationMenu->addSeparator();
+        visualizationMenu->addAction("&Point Cloud Viewer");
+        visualizationMenu->addAction("&Robot Model Loader");
+        
         // Help Menu
         auto helpMenu = menuBar()->addMenu("&Help");
         helpMenu->addAction("&Documentation");
         auto aboutAction = helpMenu->addAction("&About BranchForge");
         connect(aboutAction, &QAction::triggered, [this]() {
             QMessageBox::about(this, "About BranchForge",
-                "BranchForge v0.1.0\n\n"
+                "BranchForge v0.1.0 - Phase 2 Edition\n\n"
                 "A comprehensive behavior tree development platform for ROS2.\n\n"
+                "Features:\n"
+                "• Real-time BT execution monitoring\n"
+                "• Data recording and playback (MCAP/ROS bag)\n"
+                "• Advanced node system with ROS2 integration\n"
+                "• 3D visualization with URDF/SDF support\n"
+                "• Sensor data processing pipeline\n\n"
                 "Built with modern C++20 and Qt6.");
         });
     }
@@ -510,9 +580,47 @@ private:
     }
     
     void setupStatusBar() {
-        statusBar()->showMessage("Ready - BranchForge Enhanced Edition");
+        statusBar()->showMessage("Ready - BranchForge Enhanced Edition with Phase 2 Features");
         statusBar()->addPermanentWidget(new QLabel("ROS2: Disconnected"));
         statusBar()->addPermanentWidget(new QLabel("Nodes: 4"));
+        statusBar()->addPermanentWidget(new QLabel("Monitoring: Ready"));
+        statusBar()->addPermanentWidget(new QLabel("Recording: Idle"));
+    }
+    
+    void initializePhase2Components() {
+        // Initialize BT execution monitor
+        m_monitor = std::make_unique<BranchForge::Monitoring::BTExecutionMonitor>(this);
+        
+        // Initialize data recorder
+        m_recorder = std::make_unique<BranchForge::Recording::DataRecorder>(this);
+        
+        // Initialize advanced node registry and register built-in templates
+        auto& registry = BranchForge::Nodes::AdvancedNodeRegistry::instance();
+        registry.registerBuiltInTemplates();
+        registry.registerROS2Templates();
+        
+        // Initialize sensor data pipeline
+        m_sensorPipeline = std::make_unique<BranchForge::Visualization::SensorDataPipeline>(this);
+        
+        // Initialize 3D visualization engine
+        m_visualizationEngine = std::make_unique<BranchForge::Visualization::Visualization3DEngine>(this);
+        
+        // Connect signals for integrated workflow
+        connect(m_monitor.get(), &BranchForge::Monitoring::BTExecutionMonitor::eventRecorded,
+                [this](const auto& event) {
+                    statusBar()->showMessage(QString("BT Event: %1 -> %2")
+                        .arg(event.nodeId).arg(static_cast<int>(event.currentState)), 2000);
+                });
+        
+        connect(m_recorder.get(), &BranchForge::Recording::DataRecorder::recordingStarted,
+                [this](const QString& filePath) {
+                    statusBar()->changeMessage("Recording: " + QFileInfo(filePath).baseName());
+                });
+        
+        connect(m_sensorPipeline.get(), &BranchForge::Visualization::SensorDataPipeline::frameProcessed,
+                [this](const auto& frame) {
+                    // Optionally update UI with sensor data info
+                });
     }
 
 private:
@@ -521,6 +629,12 @@ private:
     QDockWidget* m_projectExplorerDock;
     BTEditorScene* m_btScene;
     QGraphicsView* m_btView;
+    
+    // Phase 2 components
+    std::unique_ptr<BranchForge::Monitoring::BTExecutionMonitor> m_monitor;
+    std::unique_ptr<BranchForge::Recording::DataRecorder> m_recorder;
+    std::unique_ptr<BranchForge::Visualization::SensorDataPipeline> m_sensorPipeline;
+    std::unique_ptr<BranchForge::Visualization::Visualization3DEngine> m_visualizationEngine;
 };
 
 int main(int argc, char *argv[]) {

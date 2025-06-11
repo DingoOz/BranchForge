@@ -16,16 +16,29 @@ include_directories(
 
 set(SOURCES
     src/main_enhanced_fixed.cpp
+    src/monitoring/BTExecutionMonitor.cpp
+    src/recording/DataRecorder.cpp
+    src/nodes/AdvancedNodeSystem.cpp
+    src/visualization/SensorDataPipeline.cpp
 )
 
 set(HEADERS
+    include/monitoring/BTExecutionMonitor.h
+    include/recording/DataRecorder.h
+    include/nodes/AdvancedNodeSystem.h
+    include/visualization/SensorDataPipeline.h
 )
 
-add_executable(branchforge_enhanced ${SOURCES} ${HEADERS})
+# Process Qt6 MOC for headers
+qt6_add_executable(branchforge_enhanced ${SOURCES} ${HEADERS})
+
+# Handle MOC for custom headers
+qt6_add_resources(branchforge_enhanced "resources" PREFIX "/")
 
 target_link_libraries(branchforge_enhanced PRIVATE
     Qt6::Core
     Qt6::Widgets
+    Qt6::Concurrent
 )
 
 target_compile_options(branchforge_enhanced PRIVATE

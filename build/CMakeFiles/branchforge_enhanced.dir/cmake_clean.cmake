@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "branchforge_enhanced_autogen"
   "CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o.d"
-  "CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o"
-  "CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o.d"
   "branchforge_enhanced"
   "branchforge_enhanced.pdb"
 )

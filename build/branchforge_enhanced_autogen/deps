@@ -3,7 +3,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/home/dingo/Programming/BranchForge/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/dingo/Programming/BranchForge/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/dingo/Programming/BranchForge/build/branchforge_enhanced_autogen/moc_predefs.h \
-	/home/dingo/Programming/BranchForge/src/main_enhanced.cpp \
+	/home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -150,6 +150,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/c++/13/ext/type_traits.h \
 	/usr/include/c++/13/filesystem \
 	/usr/include/c++/13/functional \
+	/usr/include/c++/13/future \
 	/usr/include/c++/13/initializer_list \
 	/usr/include/c++/13/iomanip \
 	/usr/include/c++/13/ios \
@@ -314,6 +315,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QThread \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h \
@@ -343,8 +345,10 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdeadlinetimer.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
@@ -410,6 +414,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtcore-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qthread.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
@@ -476,6 +481,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsRectItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsSceneDragDropEvent \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
@@ -503,6 +509,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicssceneevent.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
