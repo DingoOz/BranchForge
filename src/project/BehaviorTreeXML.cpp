@@ -206,6 +206,15 @@ BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) {
     return nullptr;
 }
 
+const BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) const {
+    for (const auto& node : m_nodes) {
+        if (node.id == nodeId) {
+            return &node;
+        }
+    }
+    return nullptr;
+}
+
 bool BehaviorTreeXML::validateTree() const {
     m_validationErrors.clear();
     

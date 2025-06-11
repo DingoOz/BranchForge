@@ -7,6 +7,9 @@
 #include <QDomElement>
 #include <QList>
 #include <QPointF>
+#include <QMap>
+#include <QStringList>
+#include <QSet>
 #include <memory>
 
 namespace BranchForge::Project {
@@ -59,6 +62,7 @@ public:
     void removeNode(const QString& nodeId);
     void updateNode(const QString& nodeId, const BTXMLNode& updatedNode);
     BTXMLNode* findNode(const QString& nodeId);
+    const BTXMLNode* findNode(const QString& nodeId) const;
     
     // Tree validation
     bool validateTree() const;

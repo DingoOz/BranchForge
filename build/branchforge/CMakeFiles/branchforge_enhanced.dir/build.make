@@ -74,6 +74,7 @@ qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/main.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/NodeEditor.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/NodeLibraryPanel.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/PropertiesPanel.qml
+qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/CodeGenDialog.qml
 qrc_resources.cpp: resources.qrc.depends
 qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
@@ -177,10 +178,52 @@ CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/project/ProjectManager.cpp -o CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.s
 
+CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
+CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o: /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp
+CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o -c /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp
+
+CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp > CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.i
+
+CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp -o CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.s
+
+CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
+CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp
+CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o -c /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp
+
+CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp > CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.i
+
+CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp -o CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.s
+
+CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
+CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o: /home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp
+CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o -c /home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp
+
+CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp > CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.i
+
+CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp -o CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.s
+
 CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
 CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o: /home/dingo/Programming/BranchForge/src/monitoring/BTExecutionMonitor.cpp
 CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o -c /home/dingo/Programming/BranchForge/src/monitoring/BTExecutionMonitor.cpp
 
 CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.i: cmake_force
@@ -194,7 +237,7 @@ CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.s: cma
 CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
 CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o: /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp
 CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o -c /home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp
 
 CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.i: cmake_force
@@ -208,7 +251,7 @@ CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.s: cmake_forc
 CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
 CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o: /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp
 CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o -c /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp
 
 CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.i: cmake_force
@@ -222,7 +265,7 @@ CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.s: cmake_fo
 CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
 CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o: /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp
 CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o -c /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp
 
 CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.i: cmake_force
@@ -236,7 +279,7 @@ CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.s: 
 CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o: CMakeFiles/branchforge_enhanced.dir/flags.make
 CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o: qrc_resources.cpp
 CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o: CMakeFiles/branchforge_enhanced.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o -MF CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o.d -o CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o -c /home/dingo/Programming/BranchForge/build/branchforge/qrc_resources.cpp
 
 CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.i: cmake_force
@@ -256,6 +299,9 @@ branchforge_enhanced_OBJECTS = \
 "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o" \
 "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o" \
 "CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o" \
+"CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o" \
+"CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o" \
+"CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o" \
 "CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o" \
 "CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o" \
 "CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o" \
@@ -272,6 +318,9 @@ branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o
+branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
@@ -281,16 +330,17 @@ branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/build.make
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Concurrent.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
+branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Xml.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
-branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libGLX.so
 branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+branchforge_enhanced: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 branchforge_enhanced: CMakeFiles/branchforge_enhanced.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable branchforge_enhanced"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable branchforge_enhanced"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/branchforge_enhanced.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

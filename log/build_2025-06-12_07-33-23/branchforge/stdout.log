@@ -1,0 +1,8 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  5%] Built target branchforge_enhanced_qmlimportscan
+[  5%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 11%] Automatic MOC and UIC for target branchforge_enhanced
+[ 11%] Built target branchforge_enhanced_autogen
+[ 16%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o

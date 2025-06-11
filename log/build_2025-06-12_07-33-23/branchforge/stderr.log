@@ -1,0 +1,29 @@
+In file included from /home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:1:
+/home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h:21:28: error: field ‘parameters’ has incomplete type ‘QMap<QString, QString>’
+   21 |     QMap<QString, QString> parameters;
+      |                            ^~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h:6,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h:1397,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:7,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:14,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QString:1,
+                 from /home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h:3:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerfwd.h:16:43: note: declaration of ‘class QMap<QString, QString>’
+   16 | template <typename Key, typename T> class QMap;
+      |                                           ^~~~
+/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp: In member function ‘bool BranchForge::Project::BehaviorTreeXML::isValidConnection(const QString&, const QString&) const’:
+/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:460:43: error: passing ‘const BranchForge::Project::BehaviorTreeXML’ as ‘this’ argument discards qualifiers [-fpermissive]
+  460 |     return parentId != childId && findNode(parentId) && findNode(childId);
+      |                                   ~~~~~~~~^~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:200:12: note:   in call to ‘BranchForge::Project::BTXMLNode* BranchForge::Project::BehaviorTreeXML::findNode(const QString&)’
+  200 | BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) {
+      |            ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:460:65: error: passing ‘const BranchForge::Project::BehaviorTreeXML’ as ‘this’ argument discards qualifiers [-fpermissive]
+  460 |     return parentId != childId && findNode(parentId) && findNode(childId);
+      |                                                         ~~~~~~~~^~~~~~~~~
+/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp:200:12: note:   in call to ‘BranchForge::Project::BTXMLNode* BranchForge::Project::BehaviorTreeXML::findNode(const QString&)’
+  200 | BTXMLNode* BehaviorTreeXML::findNode(const QString& nodeId) {
+      |            ^~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:184: CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:88: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

@@ -339,6 +339,15 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick/Qt6QuickTargets-none.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick/Qt6QuickVersionlessTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfig.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlDependencies.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets-none.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake",
 		"/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake",
 		"/home/dingo/Programming/BranchForge/resources.qrc"
 	],
@@ -363,6 +372,24 @@
 			"/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h",
 			"MU",
 			"QD4VZUV5DM/moc_AdvancedNodeSystem.cpp",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/include/project/BTSerializer.h",
+			"MU",
+			"YQ6IUZR2IF/moc_BTSerializer.cpp",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h",
+			"MU",
+			"YQ6IUZR2IF/moc_BehaviorTreeXML.cpp",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h",
+			"MU",
+			"YQ6IUZR2IF/moc_CodeGenerator.cpp",
 			null
 		],
 		[
@@ -417,7 +444,8 @@
 		"QT_QMLMODELS_LIB",
 		"QT_QML_LIB",
 		"QT_QUICK_LIB",
-		"QT_WIDGETS_LIB"
+		"QT_WIDGETS_LIB",
+		"QT_XML_LIB"
 	],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -441,6 +469,7 @@
 		"/usr/include/x86_64-linux-gnu/qt6/QtQuick",
 		"/usr/include/x86_64-linux-gnu/qt6/QtQmlModels",
 		"/usr/include/x86_64-linux-gnu/qt6/QtOpenGL",
+		"/usr/include/x86_64-linux-gnu/qt6/QtXml",
 		"/usr/include",
 		"/usr/include/c++/13",
 		"/usr/include/x86_64-linux-gnu/c++/13",
@@ -497,6 +526,21 @@
 		],
 		[
 			"/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp",
 			"MU",
 			null
 		],

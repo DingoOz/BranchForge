@@ -6,6 +6,9 @@ branchforge_enhanced_autogen/timestamp: \
 	/home/dingo/Programming/BranchForge/include/core/Application.h \
 	/home/dingo/Programming/BranchForge/include/monitoring/BTExecutionMonitor.h \
 	/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h \
+	/home/dingo/Programming/BranchForge/include/project/BTSerializer.h \
+	/home/dingo/Programming/BranchForge/include/project/BehaviorTreeXML.h \
+	/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h \
 	/home/dingo/Programming/BranchForge/include/project/ProjectManager.h \
 	/home/dingo/Programming/BranchForge/include/recording/DataRecorder.h \
 	/home/dingo/Programming/BranchForge/include/ros2/ROS2Interface.h \
@@ -17,6 +20,9 @@ branchforge_enhanced_autogen/timestamp: \
 	/home/dingo/Programming/BranchForge/src/main.cpp \
 	/home/dingo/Programming/BranchForge/src/monitoring/BTExecutionMonitor.cpp \
 	/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp \
+	/home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp \
+	/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp \
+	/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp \
 	/home/dingo/Programming/BranchForge/src/project/ProjectManager.cpp \
 	/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp \
 	/home/dingo/Programming/BranchForge/src/ros2/ROS2Interface.cpp \
@@ -310,17 +316,23 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QQueue \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QThread \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QVariantList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QVariantMap \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QXmlStreamReader \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QXmlStreamWriter \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h \
@@ -365,6 +377,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonarray.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
@@ -430,6 +443,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qversionnumber.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
@@ -467,6 +481,7 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtQml/QJSValue \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/QQmlEngine \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/qjsengine.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/qjsmanagedvalue.h \
@@ -524,6 +539,12 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/QDomDocument \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/QDomElement \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/qdom.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/qtxml-config.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/qtxmlexports.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtXml/qtxmlglobal.h \
 	/usr/include/x86_64-linux-gnu/sys/cdefs.h \
 	/usr/include/x86_64-linux-gnu/sys/select.h \
 	/usr/include/x86_64-linux-gnu/sys/syscall.h \
@@ -761,6 +782,14 @@ branchforge_enhanced_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlDependencies.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets-none.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlTargets.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \

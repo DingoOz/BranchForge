@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Find Qt6 packages
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Qml Quick)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Qml Quick Xml)
 
 qt6_standard_project_setup()
 
@@ -24,6 +24,9 @@ set(SOURCES
     src/ros2/ROS2Interface.cpp
     src/ros2/ROS2TopicBrowser.cpp
     src/project/ProjectManager.cpp
+    src/project/BehaviorTreeXML.cpp
+    src/project/CodeGenerator.cpp
+    src/project/BTSerializer.cpp
     src/monitoring/BTExecutionMonitor.cpp
     src/recording/DataRecorder.cpp
     src/nodes/AdvancedNodeSystem.cpp
@@ -37,6 +40,9 @@ set(HEADERS
     include/ros2/ROS2Interface.h
     include/ros2/ROS2TopicBrowser.h
     include/project/ProjectManager.h
+    include/project/BehaviorTreeXML.h
+    include/project/CodeGenerator.h
+    include/project/BTSerializer.h
     include/monitoring/BTExecutionMonitor.h
     include/recording/DataRecorder.h
     include/nodes/AdvancedNodeSystem.h
@@ -57,6 +63,7 @@ target_link_libraries(branchforge_enhanced PRIVATE
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
+    Qt6::Xml
 )
 
 target_compile_options(branchforge_enhanced PRIVATE
