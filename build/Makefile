@@ -162,41 +162,91 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named branchforge_simple
+# Target rules for targets named branchforge_enhanced
 
 # Build rule for target.
-branchforge_simple: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_simple
-.PHONY : branchforge_simple
+branchforge_enhanced: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_enhanced
+.PHONY : branchforge_enhanced
 
 # fast build rule for target.
-branchforge_simple/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_simple.dir/build.make CMakeFiles/branchforge_simple.dir/build
-.PHONY : branchforge_simple/fast
+branchforge_enhanced/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/build
+.PHONY : branchforge_enhanced/fast
 
-src/main_simple.o: src/main_simple.cpp.o
-.PHONY : src/main_simple.o
+#=============================================================================
+# Target rules for targets named branchforge_enhanced_autogen_timestamp_deps
+
+# Build rule for target.
+branchforge_enhanced_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_enhanced_autogen_timestamp_deps
+.PHONY : branchforge_enhanced_autogen_timestamp_deps
+
+# fast build rule for target.
+branchforge_enhanced_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir/build.make CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir/build
+.PHONY : branchforge_enhanced_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named branchforge_enhanced_autogen
+
+# Build rule for target.
+branchforge_enhanced_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_enhanced_autogen
+.PHONY : branchforge_enhanced_autogen
+
+# fast build rule for target.
+branchforge_enhanced_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced_autogen.dir/build.make CMakeFiles/branchforge_enhanced_autogen.dir/build
+.PHONY : branchforge_enhanced_autogen/fast
+
+branchforge_enhanced_autogen/mocs_compilation.o: branchforge_enhanced_autogen/mocs_compilation.cpp.o
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.o
 
 # target to build an object file
-src/main_simple.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_simple.dir/build.make CMakeFiles/branchforge_simple.dir/src/main_simple.cpp.o
-.PHONY : src/main_simple.cpp.o
+branchforge_enhanced_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.cpp.o
 
-src/main_simple.i: src/main_simple.cpp.i
-.PHONY : src/main_simple.i
+branchforge_enhanced_autogen/mocs_compilation.i: branchforge_enhanced_autogen/mocs_compilation.cpp.i
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-src/main_simple.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_simple.dir/build.make CMakeFiles/branchforge_simple.dir/src/main_simple.cpp.i
-.PHONY : src/main_simple.cpp.i
+branchforge_enhanced_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.i
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.cpp.i
 
-src/main_simple.s: src/main_simple.cpp.s
-.PHONY : src/main_simple.s
+branchforge_enhanced_autogen/mocs_compilation.s: branchforge_enhanced_autogen/mocs_compilation.cpp.s
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-src/main_simple.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_simple.dir/build.make CMakeFiles/branchforge_simple.dir/src/main_simple.cpp.s
-.PHONY : src/main_simple.cpp.s
+branchforge_enhanced_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.s
+.PHONY : branchforge_enhanced_autogen/mocs_compilation.cpp.s
+
+src/main_enhanced.o: src/main_enhanced.cpp.o
+.PHONY : src/main_enhanced.o
+
+# target to build an object file
+src/main_enhanced.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.o
+.PHONY : src/main_enhanced.cpp.o
+
+src/main_enhanced.i: src/main_enhanced.cpp.i
+.PHONY : src/main_enhanced.i
+
+# target to preprocess a source file
+src/main_enhanced.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.i
+.PHONY : src/main_enhanced.cpp.i
+
+src/main_enhanced.s: src/main_enhanced.cpp.s
+.PHONY : src/main_enhanced.s
+
+# target to generate assembly for a file
+src/main_enhanced.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/main_enhanced.cpp.s
+.PHONY : src/main_enhanced.cpp.s
 
 # Help Target
 help:
@@ -210,10 +260,15 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... branchforge_simple"
-	@echo "... src/main_simple.o"
-	@echo "... src/main_simple.i"
-	@echo "... src/main_simple.s"
+	@echo "... branchforge_enhanced_autogen"
+	@echo "... branchforge_enhanced_autogen_timestamp_deps"
+	@echo "... branchforge_enhanced"
+	@echo "... branchforge_enhanced_autogen/mocs_compilation.o"
+	@echo "... branchforge_enhanced_autogen/mocs_compilation.i"
+	@echo "... branchforge_enhanced_autogen/mocs_compilation.s"
+	@echo "... src/main_enhanced.o"
+	@echo "... src/main_enhanced.i"
+	@echo "... src/main_enhanced.s"
 .PHONY : help
 
 

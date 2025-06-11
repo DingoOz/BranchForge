@@ -8,33 +8,35 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Find Qt6 packages - start simple
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
+qt6_standard_project_setup()
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 set(SOURCES
-    src/main_simple.cpp
+    src/main_enhanced_fixed.cpp
 )
 
 set(HEADERS
 )
 
-add_executable(branchforge_simple ${SOURCES} ${HEADERS})
+add_executable(branchforge_enhanced ${SOURCES} ${HEADERS})
 
-target_link_libraries(branchforge_simple PRIVATE
+target_link_libraries(branchforge_enhanced PRIVATE
     Qt6::Core
     Qt6::Widgets
 )
 
-target_compile_options(branchforge_simple PRIVATE
+target_compile_options(branchforge_enhanced PRIVATE
     -Wall -Wextra -Wpedantic
     -Wno-unused-parameter
 )
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_definitions(branchforge_simple PRIVATE DEBUG_BUILD)
+    target_compile_definitions(branchforge_enhanced PRIVATE DEBUG_BUILD)
 endif()
 
-install(TARGETS branchforge_simple
+install(TARGETS branchforge_enhanced
     DESTINATION bin
 )
