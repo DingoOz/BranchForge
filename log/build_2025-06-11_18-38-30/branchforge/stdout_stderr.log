@@ -1,0 +1,18 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  6%] Running qmlimportscanner for branchforge_enhanced
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"
+[  6%] Built target branchforge_enhanced_qmlimportscan
+[  6%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[ 12%] Built target branchforge_enhanced_autogen
+[ 18%] Running rcc for resource qml_resources
+[ 25%] Building CXX object CMakeFiles/branchforge_enhanced.dir/build/branchforge/.rcc/qrc_qml_resources.cpp.o
+[ 31%] Linking CXX executable branchforge_enhanced
+[100%] Built target branchforge_enhanced
+-- Install configuration: ""
+-- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"

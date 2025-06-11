@@ -1,0 +1,11 @@
+CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:1668 (message):
+  _qt_internal_process_resource() was called without a PREFIX and the target
+  does not provide QT_RESOURCE_PREFIX.  Please either add a PREFIX or make
+  the target branchforge_enhanced provide a default.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:342 (_qt_internal_process_resource)
+  CMakeLists.txt:46 (qt6_add_resources)
+
+
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:540: cmake_check_build_system] Error 1

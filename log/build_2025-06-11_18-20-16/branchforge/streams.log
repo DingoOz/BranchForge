@@ -1,0 +1,15 @@
+[0.009s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.118s] CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:266 (configure_file):
+[0.118s]   configure_file input location
+[0.118s] 
+[0.118s]     /home/dingo/Programming/BranchForge/qml
+[0.118s] 
+[0.118s]   is a directory but a file was expected.
+[0.118s] Call Stack (most recent call first):
+[0.118s]   /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:369 (_qt6_parse_qrc_file)
+[0.118s]   CMakeLists.txt:43 (qt6_add_resources)
+[0.118s] 
+[0.118s] 
+[0.124s] -- Configuring incomplete, errors occurred!
+[0.128s] gmake: *** [Makefile:391: cmake_check_build_system] Error 1
+[0.130s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

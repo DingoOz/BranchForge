@@ -1,0 +1,13 @@
+CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:266 (configure_file):
+  configure_file input location
+
+    /home/dingo/Programming/BranchForge/qml
+
+  is a directory but a file was expected.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:369 (_qt6_parse_qrc_file)
+  CMakeLists.txt:43 (qt6_add_resources)
+
+
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:391: cmake_check_build_system] Error 1

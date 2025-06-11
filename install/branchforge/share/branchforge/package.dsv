@@ -1,0 +1,11 @@
+source;share/branchforge/hook/path.ps1
+source;share/branchforge/hook/path.dsv
+source;share/branchforge/hook/path.sh
+source;share/branchforge/hook/pythonscriptspath.ps1
+source;share/branchforge/hook/pythonscriptspath.dsv
+source;share/branchforge/hook/pythonscriptspath.sh
+source;share/branchforge/local_setup.bash
+source;share/branchforge/local_setup.dsv
+source;share/branchforge/local_setup.ps1
+source;share/branchforge/local_setup.sh
+source;share/branchforge/local_setup.zsh

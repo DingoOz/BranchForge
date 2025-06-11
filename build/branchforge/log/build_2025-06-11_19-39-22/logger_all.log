@@ -1,0 +1,496 @@
+[0.398s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'branchforge']
+[0.398s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['branchforge'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71640e390bf0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71640e4a71a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71640e4a71a0>>, mixin_verb=('build',))
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.457s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.457s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dingo/Programming/BranchForge/build/branchforge'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['ignore', 'ignore_ament_install']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'ignore'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'ignore_ament_install'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['colcon_pkg']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'colcon_pkg'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['colcon_meta']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'colcon_meta'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['ros']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'ros'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['cmake', 'python']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'cmake'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'python'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extensions ['python_setup_py']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles) by extension 'python_setup_py'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['ignore', 'ignore_ament_install']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'ignore'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'ignore_ament_install'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['colcon_pkg']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'colcon_pkg'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['colcon_meta']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'colcon_meta'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['ros']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'ros'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['cmake', 'python']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'cmake'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'python'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extensions ['python_setup_py']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3) by extension 'python_setup_py'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['ignore', 'ignore_ament_install']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'ignore'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'ignore_ament_install'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['colcon_pkg']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'colcon_pkg'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['colcon_meta']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'colcon_meta'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['ros']
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'ros'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['cmake', 'python']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'cmake'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'python'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extensions ['python_setup_py']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX) by extension 'python_setup_py'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'ignore'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'ignore_ament_install'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['colcon_pkg']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'colcon_pkg'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['colcon_meta']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'colcon_meta'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['ros']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'ros'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['cmake', 'python']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'cmake'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'python'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extensions ['python_setup_py']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/3.28.3/CompilerIdCXX/tmp) by extension 'python_setup_py'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'ignore'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'ignore_ament_install'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['colcon_pkg']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'colcon_pkg'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['colcon_meta']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'colcon_meta'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['ros']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'ros'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['cmake', 'python']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'cmake'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'python'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extensions ['python_setup_py']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir) by extension 'python_setup_py'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['ignore', 'ignore_ament_install']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'ignore'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'ignore_ament_install'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['colcon_pkg']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'colcon_pkg'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['colcon_meta']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'colcon_meta'
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['ros']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'ros'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['cmake', 'python']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'cmake'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'python'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extensions ['python_setup_py']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen) by extension 'python_setup_py'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['ignore', 'ignore_ament_install']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'ignore'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'ignore_ament_install'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['colcon_pkg']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'colcon_pkg'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['colcon_meta']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'colcon_meta'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['ros']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'ros'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['cmake', 'python']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'cmake'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'python'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extensions ['python_setup_py']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build) by extension 'python_setup_py'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['ignore', 'ignore_ament_install']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'ignore'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'ignore_ament_install'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['colcon_pkg']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'colcon_pkg'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['colcon_meta']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'colcon_meta'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['ros']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'ros'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['cmake', 'python']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'cmake'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'python'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extensions ['python_setup_py']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/build/branchforge) by extension 'python_setup_py'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['ignore', 'ignore_ament_install']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'ignore'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'ignore_ament_install'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['colcon_pkg']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'colcon_pkg'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['colcon_meta']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'colcon_meta'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['ros']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'ros'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['cmake', 'python']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'cmake'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'python'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extensions ['python_setup_py']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src) by extension 'python_setup_py'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['ignore', 'ignore_ament_install']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'ignore'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'ignore_ament_install'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['colcon_pkg']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'colcon_pkg'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['colcon_meta']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'colcon_meta'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['ros']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'ros'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['cmake', 'python']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'cmake'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'python'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extensions ['python_setup_py']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/core) by extension 'python_setup_py'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['ignore', 'ignore_ament_install']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'ignore'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'ignore_ament_install'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['colcon_pkg']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'colcon_pkg'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['colcon_meta']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'colcon_meta'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['ros']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'ros'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['cmake', 'python']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'cmake'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'python'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extensions ['python_setup_py']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/monitoring) by extension 'python_setup_py'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'ignore'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'ignore_ament_install'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['colcon_pkg']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'colcon_pkg'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['colcon_meta']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'colcon_meta'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['ros']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'ros'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['cmake', 'python']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'cmake'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'python'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extensions ['python_setup_py']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/nodes) by extension 'python_setup_py'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['ignore', 'ignore_ament_install']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'ignore'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'ignore_ament_install'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['colcon_pkg']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'colcon_pkg'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['colcon_meta']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'colcon_meta'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['ros']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'ros'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['cmake', 'python']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'cmake'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'python'
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extensions ['python_setup_py']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/project) by extension 'python_setup_py'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['ignore', 'ignore_ament_install']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'ignore'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'ignore_ament_install'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['colcon_pkg']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'colcon_pkg'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['colcon_meta']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'colcon_meta'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['ros']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'ros'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['cmake', 'python']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'cmake'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'python'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extensions ['python_setup_py']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/recording) by extension 'python_setup_py'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'ignore'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'ignore_ament_install'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['colcon_pkg']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'colcon_pkg'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['colcon_meta']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'colcon_meta'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['ros']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'ros'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['cmake', 'python']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'cmake'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'python'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extensions ['python_setup_py']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ros2) by extension 'python_setup_py'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['ignore', 'ignore_ament_install']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'ignore'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'ignore_ament_install'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['colcon_pkg']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'colcon_pkg'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['colcon_meta']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'colcon_meta'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['ros']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'ros'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['cmake', 'python']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'cmake'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'python'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extensions ['python_setup_py']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/ui) by extension 'python_setup_py'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'ignore'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'ignore_ament_install'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['colcon_pkg']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'colcon_pkg'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['colcon_meta']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'colcon_meta'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['ros']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'ros'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['cmake', 'python']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'cmake'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'python'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extensions ['python_setup_py']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced.dir/src/visualization) by extension 'python_setup_py'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'ignore_ament_install'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['colcon_pkg']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'colcon_pkg'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['colcon_meta']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'colcon_meta'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['ros']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'ros'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['cmake', 'python']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'cmake'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'python'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extensions ['python_setup_py']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen.dir) by extension 'python_setup_py'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'ignore_ament_install'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['colcon_pkg']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'colcon_pkg'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['colcon_meta']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'colcon_meta'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['ros']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'ros'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['cmake', 'python']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'cmake'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'python'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extensions ['python_setup_py']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir) by extension 'python_setup_py'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'ignore'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'ignore_ament_install'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['colcon_pkg']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'colcon_pkg'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['colcon_meta']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'colcon_meta'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['ros']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'ros'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['cmake', 'python']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'cmake'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'python'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extensions ['python_setup_py']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_other_files.dir) by extension 'python_setup_py'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['ignore', 'ignore_ament_install']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'ignore'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'ignore_ament_install'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['colcon_pkg']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'colcon_pkg'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['colcon_meta']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'colcon_meta'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['ros']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'ros'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['cmake', 'python']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'cmake'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'python'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extensions ['python_setup_py']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/branchforge_enhanced_qmlimportscan.dir) by extension 'python_setup_py'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['ignore', 'ignore_ament_install']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'ignore'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'ignore_ament_install'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['colcon_pkg']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'colcon_pkg'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['colcon_meta']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'colcon_meta'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['ros']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'ros'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['cmake', 'python']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'cmake'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'python'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extensions ['python_setup_py']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(CMakeFiles/pkgRedirects) by extension 'python_setup_py'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['ignore', 'ignore_ament_install']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'ignore'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'ignore_ament_install'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['colcon_pkg']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'colcon_pkg'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['colcon_meta']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'colcon_meta'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['ros']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'ros'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['cmake', 'python']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'cmake'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'python'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extensions ['python_setup_py']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen) by extension 'python_setup_py'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['ignore', 'ignore_ament_install']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'ignore'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'ignore_ament_install'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['colcon_pkg']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'colcon_pkg'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['colcon_meta']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'colcon_meta'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['ros']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'ros'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['cmake', 'python']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'cmake'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'python'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extensions ['python_setup_py']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/3Q5D754IUN) by extension 'python_setup_py'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['ignore', 'ignore_ament_install']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'ignore'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'ignore_ament_install'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['colcon_pkg']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'colcon_pkg'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['colcon_meta']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'colcon_meta'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['ros']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'ros'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['cmake', 'python']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'cmake'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'python'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extensions ['python_setup_py']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/4FUEZNKSHM) by extension 'python_setup_py'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['ignore', 'ignore_ament_install']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'ignore'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'ignore_ament_install'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['colcon_pkg']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'colcon_pkg'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['colcon_meta']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'colcon_meta'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['ros']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'ros'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['cmake', 'python']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'cmake'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'python'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extensions ['python_setup_py']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/JCP2AIONHY) by extension 'python_setup_py'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['ignore', 'ignore_ament_install']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'ignore'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'ignore_ament_install'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['colcon_pkg']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'colcon_pkg'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['colcon_meta']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'colcon_meta'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['ros']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'ros'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['cmake', 'python']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'cmake'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'python'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extensions ['python_setup_py']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/K7U2THO6V7) by extension 'python_setup_py'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['ignore', 'ignore_ament_install']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'ignore'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'ignore_ament_install'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['colcon_pkg']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'colcon_pkg'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['colcon_meta']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'colcon_meta'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['ros']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'ros'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['cmake', 'python']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'cmake'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'python'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extensions ['python_setup_py']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/QD4VZUV5DM) by extension 'python_setup_py'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['ignore', 'ignore_ament_install']
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'ignore'
+[0.519s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'ignore_ament_install'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['colcon_pkg']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'colcon_pkg'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['colcon_meta']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'colcon_meta'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['ros']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'ros'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['cmake', 'python']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'cmake'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'python'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extensions ['python_setup_py']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/WLQGO73KP3) by extension 'python_setup_py'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['ignore', 'ignore_ament_install']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'ignore'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'ignore_ament_install'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['colcon_pkg']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'colcon_pkg'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['colcon_meta']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'colcon_meta'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['ros']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'ros'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['cmake', 'python']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'cmake'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'python'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extensions ['python_setup_py']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/YQ6IUZR2IF) by extension 'python_setup_py'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['ignore', 'ignore_ament_install']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'ignore'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'ignore_ament_install'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['colcon_pkg']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'colcon_pkg'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['colcon_meta']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'colcon_meta'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['ros']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'ros'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['cmake', 'python']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'cmake'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'python'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extensions ['python_setup_py']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(branchforge_enhanced_autogen/include) by extension 'python_setup_py'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.522s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.522s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.522s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.522s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.522s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.522s] WARNING:colcon.colcon_core.package_selection:ignoring unknown package 'branchforge' in --packages-select
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.557s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.560s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.562s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.562s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.562s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.562s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.562s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.577s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.621s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.642s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.643s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/build/branchforge/install/local_setup.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dingo/Programming/BranchForge/build/branchforge/install/_local_setup_util_ps1.py'
+[0.649s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/build/branchforge/install/setup.ps1'
+[0.651s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/build/branchforge/install/local_setup.sh'
+[0.652s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dingo/Programming/BranchForge/build/branchforge/install/_local_setup_util_sh.py'
+[0.653s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/build/branchforge/install/setup.sh'
+[0.655s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/build/branchforge/install/local_setup.bash'
+[0.656s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/build/branchforge/install/setup.bash'
+[0.657s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/build/branchforge/install/local_setup.zsh'
+[0.659s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/build/branchforge/install/setup.zsh'

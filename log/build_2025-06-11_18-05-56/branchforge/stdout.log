@@ -1,0 +1,8 @@
+[  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[ 12%] Built target branchforge_enhanced_autogen
+[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
+[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o

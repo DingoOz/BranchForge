@@ -1,0 +1,347 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  0%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 12%] Automatic MOC and UIC for target branchforge_enhanced
+[ 12%] Built target branchforge_enhanced_autogen
+[ 25%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o
+[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 62%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 75%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 87%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+In file included from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/QD4VZUV5DM/moc_AdvancedNodeSystem.cpp:10,
+                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:3:
+/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/QD4VZUV5DM/../../../../include/nodes/AdvancedNodeSystem.h:84:12: error: field ‘color’ has incomplete type ‘QColor’
+   84 |     QColor color;
+      |            ^~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,
+                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/WLQGO73KP3/../../../../include/monitoring/BTExecutionMonitor.h:3,
+                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/WLQGO73KP3/moc_BTExecutionMonitor.cpp:10,
+                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:2:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:1:
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:30:15: error: field ‘timestamp’ has incomplete type ‘QDateTime’
+   30 |     QDateTime timestamp;
+      |               ^~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,
+                 from /home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:3:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:46:15: error: field ‘processingTime’ has incomplete type ‘QDateTime’
+   46 |     QDateTime processingTime;
+      |               ^~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:78:15: error: field ‘timestamp’ has incomplete type ‘QDateTime’
+   78 |     QDateTime timestamp;
+      |               ^~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:97:15: error: field ‘timestamp’ has incomplete type ‘QDateTime’
+   97 |     QDateTime timestamp;
+      |               ^~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:84:12: error: field ‘color’ has incomplete type ‘QColor’
+   84 |     QColor color;
+      |            ^~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:18,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,
+                 from /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:3:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:108:15: error: field ‘createdDate’ has incomplete type ‘QDateTime’
+  108 |     QDateTime createdDate;
+      |               ^~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:109:15: error: field ‘modifiedDate’ has incomplete type ‘QDateTime’
+  109 |     QDateTime modifiedDate;
+      |               ^~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:221:15: error: field ‘m_lastProcessingTime’ has incomplete type ‘QDateTime’
+  221 |     QDateTime m_lastProcessingTime;
+      |               ^~~~~~~~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:212:15: error: field ‘m_executionStartTime’ has incomplete type ‘QDateTime’
+  212 |     QDateTime m_executionStartTime;
+      |               ^~~~~~~~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1440:1: note: forward declaration of ‘class QDateTime’
+ 1440 | QT_FOR_EACH_STATIC_CORE_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:309:15: error: field ‘m_cameraPosition’ has incomplete type ‘QVector3D’
+  309 |     QVector3D m_cameraPosition{0, 0, 10};
+      |               ^~~~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:310:15: error: field ‘m_cameraTarget’ has incomplete type ‘QVector3D’
+  310 |     QVector3D m_cameraTarget{0, 0, 0};
+      |               ^~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/visualization/SensorDataPipeline.h:311:15: error: field ‘m_cameraUp’ has incomplete type ‘QVector3D’
+  311 |     QVector3D m_cameraUp{0, 0, 1};
+      |               ^~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createSequenceTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:68:39: error: invalid use of incomplete type ‘class QColor’
+   68 |     template_.color = QColor("#2196F3");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:71:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+   71 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createSelectorTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:82:39: error: invalid use of incomplete type ‘class QColor’
+   82 |     template_.color = QColor("#9C27B0");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:85:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+   85 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createParallelTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:96:39: error: invalid use of incomplete type ‘class QColor’
+   96 |     template_.color = QColor("#FF9800");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:99:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+   99 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createInverterTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:110:39: error: invalid use of incomplete type ‘class QColor’
+  110 |     template_.color = QColor("#607D8B");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:113:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  113 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createRepeaterTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:124:39: error: invalid use of incomplete type ‘class QColor’
+  124 |     template_.color = QColor("#795548");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:127:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  127 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTimeoutTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:146:39: error: invalid use of incomplete type ‘class QColor’
+  146 |     template_.color = QColor("#E91E63");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:149:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  149 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createRetryTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:168:39: error: invalid use of incomplete type ‘class QColor’
+  168 |     template_.color = QColor("#009688");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:171:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  171 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createNavigationActionTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:190:39: error: invalid use of incomplete type ‘class QColor’
+  190 |     template_.color = QColor("#4CAF50");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:193:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  193 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createMoveBaseActionTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:209:39: error: invalid use of incomplete type ‘class QColor’
+  209 |     template_.color = QColor("#FF6B6B");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:212:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  212 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createServiceCallTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:228:39: error: invalid use of incomplete type ‘class QColor’
+  228 |     template_.color = QColor("#FFB74D");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:231:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  231 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTopicPublisherTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:245:39: error: invalid use of incomplete type ‘class QColor’
+  245 |     template_.color = QColor("#81C784");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:248:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  248 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘BranchForge::Nodes::AdvancedNodeTemplate BranchForge::Nodes::AdvancedNodeRegistry::createTopicSubscriberTemplate() const’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:261:39: error: invalid use of incomplete type ‘class QColor’
+  261 |     template_.color = QColor("#64B5F6");
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QColor’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:264:40: error: incomplete type ‘QDateTime’ used in nested name specifier
+  264 |     template_.createdDate = QDateTime::currentDateTime();
+      |                                        ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:191:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+  191 |     AdvancedNodeTemplate m_template;
+      |                          ^~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:188:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+  188 |     QString m_id;
+      |             ^~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘void BranchForge::Nodes::AdvancedNodeInstance::start()’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:359:39: error: incomplete type ‘QDateTime’ used in nested name specifier
+  359 |     m_executionStartTime = QDateTime::currentDateTime();
+      |                                       ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp: In member function ‘void BranchForge::Nodes::AdvancedNodeInstance::stop()’:
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:376:68: error: incomplete type ‘QDateTime’ used in nested name specifier
+  376 |     qint64 executionTime = m_executionStartTime.msecsTo(QDateTime::currentDateTime());
+      |                                                                    ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘double BranchForge::Visualization::SensorDataPipeline::getProcessingRate() const’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:147:64: error: incomplete type ‘QDateTime’ used in nested name specifier
+  147 |     qint64 elapsedMs = m_lastProcessingTime.msecsTo(QDateTime::currentDateTime());
+      |                                                                ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::processNextFrame()’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:204:39: error: incomplete type ‘QDateTime’ used in nested name specifier
+  204 |     m_lastProcessingTime = QDateTime::currentDateTime();
+      |                                       ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::processPointCloudFrame(BranchForge::Visualization::SensorDataFrame&)’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:210:33: error: incomplete type ‘QDateTime’ used in nested name specifier
+  210 |     auto startTime = QDateTime::currentDateTime();
+      |                                 ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:228:59: error: incomplete type ‘QDateTime’ used in nested name specifier
+  228 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());
+      |                                                           ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::processImageFrame(BranchForge::Visualization::SensorDataFrame&)’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:232:33: error: incomplete type ‘QDateTime’ used in nested name specifier
+  232 |     auto startTime = QDateTime::currentDateTime();
+      |                                 ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:247:59: error: incomplete type ‘QDateTime’ used in nested name specifier
+  247 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());
+      |                                                           ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::processLaserScanFrame(BranchForge::Visualization::SensorDataFrame&)’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:251:33: error: incomplete type ‘QDateTime’ used in nested name specifier
+  251 |     auto startTime = QDateTime::currentDateTime();
+      |                                 ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:261:59: error: incomplete type ‘QDateTime’ used in nested name specifier
+  261 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());
+      |                                                           ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::processIMUFrame(BranchForge::Visualization::SensorDataFrame&)’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:265:33: error: incomplete type ‘QDateTime’ used in nested name specifier
+  265 |     auto startTime = QDateTime::currentDateTime();
+      |                                 ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:274:59: error: incomplete type ‘QDateTime’ used in nested name specifier
+  274 |     frame.processingTimeMs = startTime.msecsTo(QDateTime::currentDateTime());
+      |                                                           ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::SensorDataPipeline::cleanupOldFrames()’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:15: error: variable ‘QDateTime cutoff’ has initializer but incomplete type
+  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);
+      |               ^~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:35: error: incomplete type ‘QDateTime’ used in nested name specifier
+  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);
+      |                                   ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In lambda function:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:298:67: error: ‘cutoff’ is not captured
+  298 |                                 return frame.metadata.timestamp < cutoff;
+      |                                                                   ^~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:297:36: note: the lambda has no capture-default
+  297 |                             [cutoff](const SensorDataFrame& frame) {
+      |                                    ^
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:294:15: note: ‘<typeprefixerror>cutoff’ declared here
+  294 |     QDateTime cutoff = QDateTime::currentDateTime().addSecs(-30);
+      |               ^~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp: In member function ‘void BranchForge::Visualization::Visualization3DEngine::resetCamera()’:
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:346:42: error: invalid use of incomplete type ‘class QVector3D’
+  346 |     m_cameraPosition = QVector3D(0, 0, 10);
+      |                                          ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:347:39: error: invalid use of incomplete type ‘class QVector3D’
+  347 |     m_cameraTarget = QVector3D(0, 0, 0);
+      |                                       ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp:348:35: error: invalid use of incomplete type ‘class QVector3D’
+  348 |     m_cameraUp = QVector3D(0, 0, 1);
+      |                                   ^
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/moc_SensorDataPipeline.cpp:10,
+                 from /home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/mocs_compilation.cpp:5:
+/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:309:15: error: field ‘m_cameraPosition’ has incomplete type ‘QVector3D’
+  309 |     QVector3D m_cameraPosition{0, 0, 10};
+      |               ^~~~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:310:15: error: field ‘m_cameraTarget’ has incomplete type ‘QVector3D’
+  310 |     QVector3D m_cameraTarget{0, 0, 0};
+      |               ^~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/K7U2THO6V7/../../../../include/visualization/SensorDataPipeline.h:311:15: error: field ‘m_cameraUp’ has incomplete type ‘QVector3D’
+  311 |     QVector3D m_cameraUp{0, 0, 1};
+      |               ^~~~~~~~~~
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:1441:1: note: forward declaration of ‘class QVector3D’
+ 1441 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:132: CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:146: CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:76: CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o] Error 1
+/home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp: In lambda function:
+/home/dingo/Programming/BranchForge/src/main_enhanced_fixed.cpp:617:34: error: ‘class QStatusBar’ has no member named ‘changeMessage’; did you mean ‘showMessage’?
+  617 |                     statusBar()->changeMessage("Recording: " + QFileInfo(filePath).baseName());
+      |                                  ^~~~~~~~~~~~~
+      |                                  showMessage
+gmake[2]: *** [CMakeFiles/branchforge_enhanced.dir/build.make:90: CMakeFiles/branchforge_enhanced.dir/src/main_enhanced_fixed.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:86: CMakeFiles/branchforge_enhanced.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2

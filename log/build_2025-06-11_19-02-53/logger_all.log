@@ -1,0 +1,108 @@
+[0.354s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.354s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x70508c791070>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70508d177530>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70508d177530>>, mixin_verb=('build',))
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.437s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dingo/Programming/BranchForge'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.495s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'branchforge'
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.531s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.531s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.535s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_args' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_target' from command line to 'None'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.538s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_clean_first' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'cmake_force_configure' from command line to 'False'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'ament_cmake_args' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.539s] Level 5:colcon.colcon_core.verb:set package 'branchforge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.539s] DEBUG:colcon.colcon_core.verb:Building package 'branchforge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dingo/Programming/BranchForge/build/branchforge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dingo/Programming/BranchForge/install/branchforge', 'merge_install': False, 'path': '/home/dingo/Programming/BranchForge', 'symlink_install': False, 'test_result_base': None}
+[0.539s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.541s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.542s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dingo/Programming/BranchForge' with build type 'ament_cmake'
+[0.542s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dingo/Programming/BranchForge'
+[0.551s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.552s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.552s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[1.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[1.949s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[1.978s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(branchforge)
+[1.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dingo/Programming/BranchForge/build/branchforge
+[2.004s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge' for CMake module files
+[2.006s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge' for CMake config files
+[2.008s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/bin'
+[2.008s] Level 1:colcon.colcon_core.shell:create_environment_hook('branchforge', 'path')
+[2.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.ps1'
+[2.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.dsv'
+[2.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.sh'
+[2.016s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/lib/pkgconfig/branchforge.pc'
+[2.020s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/lib/python3.12/site-packages'
+[2.021s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/bin'
+[2.022s] Level 1:colcon.colcon_core.shell:create_environment_hook('branchforge', 'pythonscriptspath')
+[2.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.ps1'
+[2.024s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.dsv'
+[2.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.sh'
+[2.026s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.ps1'
+[2.030s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.dsv'
+[2.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.sh'
+[2.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.bash'
+[2.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.zsh'
+[2.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dingo/Programming/BranchForge/install/branchforge/share/colcon-core/packages/branchforge)
+[2.041s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(branchforge)
+[2.043s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge' for CMake module files
+[2.044s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge' for CMake config files
+[2.047s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/bin'
+[2.047s] Level 1:colcon.colcon_core.shell:create_environment_hook('branchforge', 'path')
+[2.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.ps1'
+[2.050s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.dsv'
+[2.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/path.sh'
+[2.053s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/lib/pkgconfig/branchforge.pc'
+[2.053s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/lib/python3.12/site-packages'
+[2.054s] Level 1:colcon.colcon_core.environment:checking '/home/dingo/Programming/BranchForge/install/branchforge/bin'
+[2.055s] Level 1:colcon.colcon_core.shell:create_environment_hook('branchforge', 'pythonscriptspath')
+[2.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.ps1'
+[2.056s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.dsv'
+[2.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/hook/pythonscriptspath.sh'
+[2.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.ps1'
+[2.060s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.dsv'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.sh'
+[2.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.bash'
+[2.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/dingo/Programming/BranchForge/install/branchforge/share/branchforge/package.zsh'
+[2.067s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dingo/Programming/BranchForge/install/branchforge/share/colcon-core/packages/branchforge)
+[2.068s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.069s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.069s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.085s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.085s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.085s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.119s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/install/local_setup.ps1'
+[2.123s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dingo/Programming/BranchForge/install/_local_setup_util_ps1.py'
+[2.129s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/install/setup.ps1'
+[2.132s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/install/local_setup.sh'
+[2.134s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dingo/Programming/BranchForge/install/_local_setup_util_sh.py'
+[2.138s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/install/setup.sh'
+[2.142s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/install/local_setup.bash'
+[2.144s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/install/setup.bash'
+[2.147s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dingo/Programming/BranchForge/install/local_setup.zsh'
+[2.150s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dingo/Programming/BranchForge/install/setup.zsh'

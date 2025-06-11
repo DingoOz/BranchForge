@@ -1,0 +1,13 @@
+[0.020s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.246s] CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:1668 (message):
+[0.246s]   _qt_internal_process_resource() was called without a PREFIX and the target
+[0.246s]   does not provide QT_RESOURCE_PREFIX.  Please either add a PREFIX or make
+[0.246s]   the target branchforge_enhanced provide a default.
+[0.246s] Call Stack (most recent call first):
+[0.247s]   /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:342 (_qt_internal_process_resource)
+[0.247s]   CMakeLists.txt:46 (qt6_add_resources)
+[0.247s] 
+[0.247s] 
+[0.247s] -- Configuring incomplete, errors occurred!
+[0.254s] gmake: *** [Makefile:540: cmake_check_build_system] Error 1
+[0.257s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

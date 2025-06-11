@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
+import QtQuick.Controls.Material 2.15
 import BranchForge.UI 1.0
 import BranchForge.ROS2 1.0
 import BranchForge.Project 1.0
@@ -19,14 +19,18 @@ ApplicationWindow {
     title: mainWindowInstance.title
     
     property bool darkMode: mainWindowInstance.isDarkMode
+    property string currentDragData: ""
+    
+    Component.onCompleted: {
+        console.log("Main QML window loaded successfully!");
+    }
     
     MainWindow {
         id: mainWindowInstance
     }
     
-    Material.theme: darkMode ? Material.Dark : Material.Light
-    Material.primary: "#2196F3"
-    Material.accent: "#FF5722"
+    // Use simple color styling instead of Material
+    color: darkMode ? "#2b2b2b" : "#ffffff"
     
     menuBar: MenuBar {
         Menu {

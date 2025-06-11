@@ -1,0 +1,37 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/branchforge_enhanced_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/branchforge_enhanced_autogen.dir/ParseCache.txt"
+  "branchforge_enhanced_autogen"
+  "CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o.d"
+  "CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o"
+  "CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o.d"
+  "branchforge_enhanced"
+  "branchforge_enhanced.pdb"
+  "qrc_resources.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/branchforge_enhanced.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,13 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  7%] Built target branchforge_enhanced_qmlimportscan
+[  7%] Built target branchforge_enhanced_autogen_timestamp_deps
+[ 14%] Automatic MOC and UIC for target branchforge_enhanced
+[ 14%] Built target branchforge_enhanced_autogen
+[ 21%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 28%] Linking CXX executable branchforge_enhanced
+[100%] Built target branchforge_enhanced
+-- Install configuration: ""
+-- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"

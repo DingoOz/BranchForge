@@ -22,6 +22,77 @@ Rectangle {
             color: "#ffffff"
         }
         
+        GroupBox {
+            Layout.fillWidth: true
+            title: "Selected Node"
+            
+            background: Rectangle {
+                color: "#4b4b4b"
+                radius: 4
+            }
+            
+            label: Label {
+                text: parent.title
+                color: "#ffffff"
+                font.bold: true
+            }
+            
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 8
+                
+                Label {
+                    text: {
+                        if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
+                            try {
+                                var nodeData = JSON.parse(mainWindow.currentDragData);
+                                return nodeData.name || "Unknown Node";
+                            } catch (e) {
+                                return "Invalid Node Data";
+                            }
+                        }
+                        return "No node selected";
+                    }
+                    color: "#ffffff"
+                    font.bold: true
+                    font.pixelSize: 14
+                    Layout.fillWidth: true
+                }
+                
+                Label {
+                    text: {
+                        if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
+                            try {
+                                var nodeData = JSON.parse(mainWindow.currentDragData);
+                                return nodeData.description || "No description available";
+                            } catch (e) {
+                                return "Invalid Node Data";
+                            }
+                        }
+                        return "Select a node from the library to see details";
+                    }
+                    color: "#cccccc"
+                    font.pixelSize: 12
+                    wrapMode: Text.WordWrap
+                    Layout.fillWidth: true
+                }
+                
+                Label {
+                    text: {
+                        if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
+                            return "Click in the editor to place this node";
+                        }
+                        return "";
+                    }
+                    color: "#FFC107"
+                    font.pixelSize: 11
+                    font.italic: true
+                    Layout.fillWidth: true
+                    visible: typeof mainWindow !== 'undefined' && mainWindow.currentDragData
+                }
+            }
+        }
+        
         Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -137,8 +208,12 @@ Rectangle {
                                     from: 0
                                     to: 100
                                     value: 5
-                                    suffix: "s"
                                     Layout.fillWidth: true
+                                    
+                                    // Custom suffix display
+                                    textFromValue: function(value, locale) {
+                                        return value + "s"
+                                    }
                                 }
                             }
                             

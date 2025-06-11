@@ -1,0 +1,185 @@
+[0.000000] (-) TimerEvent: {}
+[0.000175] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.001206] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.019320] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.020330] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '/home/dingo/Programming/BranchForge', '-DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099621] (-) TimerEvent: {}
+[0.153820] (branchforge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.192910] (branchforge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199714] (-) TimerEvent: {}
+[0.300004] (-) TimerEvent: {}
+[0.397503] (branchforge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.401269] (-) TimerEvent: {}
+[0.416273] (branchforge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.417234] (branchforge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.418035] (branchforge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.431650] (branchforge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.502762] (-) TimerEvent: {}
+[0.603081] (-) TimerEvent: {}
+[0.644349] (branchforge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.645574] (branchforge) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.647969] (branchforge) StdoutLine: {'line': b'-- Performing Test HAVE_STDATOMIC\n'}
+[0.703309] (-) TimerEvent: {}
+[0.803654] (-) TimerEvent: {}
+[0.904067] (-) TimerEvent: {}
+[0.928262] (branchforge) StdoutLine: {'line': b'-- Performing Test HAVE_STDATOMIC - Success\n'}
+[0.929772] (branchforge) StdoutLine: {'line': b'-- Found WrapAtomic: TRUE  \n'}
+[0.987895] (branchforge) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[0.992747] (branchforge) StdoutLine: {'line': b'-- Found WrapOpenGL: TRUE  \n'}
+[1.005370] (-) TimerEvent: {}
+[1.069346] (branchforge) StdoutLine: {'line': b'-- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0") \n'}
+[1.105551] (-) TimerEvent: {}
+[1.137517] (branchforge) StdoutLine: {'line': b'-- Found WrapVulkanHeaders: /usr/include  \n'}
+[1.205888] (-) TimerEvent: {}
+[1.259636] (branchforge) StdoutLine: {'line': b'-- Configuring done (1.2s)\n'}
+[1.291534] (branchforge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.295911] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[1.306126] (-) TimerEvent: {}
+[1.310821] (branchforge) CommandEnded: {'returncode': 0}
+[1.312175] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[1.313373] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[1.406275] (-) TimerEvent: {}
+[1.425631] (branchforge) StdoutLine: {'line': b'[  7%] Running qmlimportscanner for branchforge_enhanced\n'}
+[1.446258] (branchforge) StderrLine: {'line': b'qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"\n'}
+[1.481496] (branchforge) StderrLine: {'line': b'qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"\n'}
+[1.481830] (branchforge) StderrLine: {'line': b'qmldir file not found at "/usr/lib/x86_64-linux-gnu/qt6/qml/QtQml"\n'}
+[1.506458] (-) TimerEvent: {}
+[1.522868] (branchforge) StdoutLine: {'line': b'[  7%] Built target branchforge_enhanced_qmlimportscan\n'}
+[1.570359] (branchforge) StdoutLine: {'line': b'[  7%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[1.606610] (-) TimerEvent: {}
+[1.612249] (branchforge) StdoutLine: {'line': b'[ 14%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[1.706856] (-) TimerEvent: {}
+[1.808739] (-) TimerEvent: {}
+[1.910297] (-) TimerEvent: {}
+[2.010622] (-) TimerEvent: {}
+[2.110966] (-) TimerEvent: {}
+[2.194875] (branchforge) StdoutLine: {'line': b'[ 14%] Built target branchforge_enhanced_autogen\n'}
+[2.211144] (-) TimerEvent: {}
+[2.225779] (branchforge) StdoutLine: {'line': b'[ 21%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o\n'}
+[2.226137] (branchforge) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o\n'}
+[2.226342] (branchforge) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o\n'}
+[2.226454] (branchforge) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o\n'}
+[2.226575] (branchforge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o\n'}
+[2.226689] (branchforge) StdoutLine: {'line': b'[ 57%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o\n'}
+[2.228172] (branchforge) StdoutLine: {'line': b'[ 64%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o\n'}
+[2.229970] (branchforge) StdoutLine: {'line': b'[ 78%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o\n'}
+[2.230719] (branchforge) StdoutLine: {'line': b'[ 78%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[2.231541] (branchforge) StdoutLine: {'line': b'[ 85%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[2.232913] (branchforge) StdoutLine: {'line': b'[ 92%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[2.315307] (-) TimerEvent: {}
+[2.415585] (-) TimerEvent: {}
+[2.515870] (-) TimerEvent: {}
+[2.616155] (-) TimerEvent: {}
+[2.717356] (-) TimerEvent: {}
+[2.817691] (-) TimerEvent: {}
+[2.918006] (-) TimerEvent: {}
+[3.018317] (-) TimerEvent: {}
+[3.118633] (-) TimerEvent: {}
+[3.218966] (-) TimerEvent: {}
+[3.323325] (-) TimerEvent: {}
+[3.423616] (-) TimerEvent: {}
+[3.523910] (-) TimerEvent: {}
+[3.624229] (-) TimerEvent: {}
+[3.724522] (-) TimerEvent: {}
+[3.828989] (-) TimerEvent: {}
+[3.929319] (-) TimerEvent: {}
+[4.038236] (-) TimerEvent: {}
+[4.138570] (-) TimerEvent: {}
+[4.238903] (-) TimerEvent: {}
+[4.339248] (-) TimerEvent: {}
+[4.442330] (-) TimerEvent: {}
+[4.542653] (-) TimerEvent: {}
+[4.642967] (-) TimerEvent: {}
+[4.743477] (-) TimerEvent: {}
+[4.844033] (-) TimerEvent: {}
+[4.946447] (-) TimerEvent: {}
+[5.052371] (-) TimerEvent: {}
+[5.152676] (-) TimerEvent: {}
+[5.254185] (-) TimerEvent: {}
+[5.354502] (-) TimerEvent: {}
+[5.454827] (-) TimerEvent: {}
+[5.555336] (-) TimerEvent: {}
+[5.657506] (-) TimerEvent: {}
+[5.760332] (-) TimerEvent: {}
+[5.860647] (-) TimerEvent: {}
+[5.960956] (-) TimerEvent: {}
+[6.061312] (-) TimerEvent: {}
+[6.165894] (-) TimerEvent: {}
+[6.270325] (-) TimerEvent: {}
+[6.370640] (-) TimerEvent: {}
+[6.470955] (-) TimerEvent: {}
+[6.571287] (-) TimerEvent: {}
+[6.672507] (-) TimerEvent: {}
+[6.775324] (-) TimerEvent: {}
+[6.878324] (-) TimerEvent: {}
+[6.978637] (-) TimerEvent: {}
+[7.078934] (-) TimerEvent: {}
+[7.179260] (-) TimerEvent: {}
+[7.283328] (-) TimerEvent: {}
+[7.296653] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:\n'}
+[7.297051] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99:\n'}
+[7.297231] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::m_template\xe2\x80\x99 will be initialized after [-Wreorder]\n'}
+[7.297385] (branchforge) StderrLine: {'line': b'  193 |     AdvancedNodeTemplate m_template;\n'}
+[7.297539] (branchforge) StderrLine: {'line': b'      |                          ^~~~~~~~~~\n'}
+[7.297669] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   \xe2\x80\x98QString BranchForge::Nodes::AdvancedNodeInstance::m_id\xe2\x80\x99 [-Wreorder]\n'}
+[7.297801] (branchforge) StderrLine: {'line': b'  190 |     QString m_id;\n'}
+[7.297930] (branchforge) StderrLine: {'line': b'      |             ^~~~\n'}
+[7.298057] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]\n'}
+[7.298187] (branchforge) StderrLine: {'line': b'  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)\n'}
+[7.298336] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[7.384554] (-) TimerEvent: {}
+[7.488786] (-) TimerEvent: {}
+[7.590546] (-) TimerEvent: {}
+[7.694313] (-) TimerEvent: {}
+[7.794621] (-) TimerEvent: {}
+[7.894943] (-) TimerEvent: {}
+[7.995293] (-) TimerEvent: {}
+[8.100330] (-) TimerEvent: {}
+[8.200661] (-) TimerEvent: {}
+[8.300986] (-) TimerEvent: {}
+[8.401321] (-) TimerEvent: {}
+[8.501817] (-) TimerEvent: {}
+[8.603687] (-) TimerEvent: {}
+[8.704001] (-) TimerEvent: {}
+[8.804314] (-) TimerEvent: {}
+[8.904630] (-) TimerEvent: {}
+[9.006326] (-) TimerEvent: {}
+[9.106999] (-) TimerEvent: {}
+[9.209289] (-) TimerEvent: {}
+[9.310500] (-) TimerEvent: {}
+[9.410824] (-) TimerEvent: {}
+[9.511108] (-) TimerEvent: {}
+[9.611856] (-) TimerEvent: {}
+[9.712134] (-) TimerEvent: {}
+[9.812892] (-) TimerEvent: {}
+[9.913312] (-) TimerEvent: {}
+[10.013623] (-) TimerEvent: {}
+[10.113883] (-) TimerEvent: {}
+[10.214138] (-) TimerEvent: {}
+[10.314453] (-) TimerEvent: {}
+[10.414701] (-) TimerEvent: {}
+[10.515519] (-) TimerEvent: {}
+[10.616469] (-) TimerEvent: {}
+[10.719159] (-) TimerEvent: {}
+[10.819470] (-) TimerEvent: {}
+[10.919723] (-) TimerEvent: {}
+[11.020102] (-) TimerEvent: {}
+[11.045982] (branchforge) StdoutLine: {'line': b'[100%] Linking CXX executable branchforge_enhanced\n'}
+[11.120258] (-) TimerEvent: {}
+[11.220526] (-) TimerEvent: {}
+[11.320787] (-) TimerEvent: {}
+[11.421585] (-) TimerEvent: {}
+[11.521942] (-) TimerEvent: {}
+[11.622277] (-) TimerEvent: {}
+[11.722662] (-) TimerEvent: {}
+[11.822956] (-) TimerEvent: {}
+[11.830248] (branchforge) StdoutLine: {'line': b'[100%] Built target branchforge_enhanced\n'}
+[11.848119] (branchforge) CommandEnded: {'returncode': 0}
+[11.848785] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'install'}
+[11.862623] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dingo/Programming/BranchForge/build/branchforge'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[11.874976] (branchforge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.875642] (branchforge) StdoutLine: {'line': b'-- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced\n'}
+[11.877745] (branchforge) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"\n'}
+[11.880262] (branchforge) CommandEnded: {'returncode': 0}
+[11.920338] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 0}
+[11.921035] (-) EventReactorShutdown: {}
