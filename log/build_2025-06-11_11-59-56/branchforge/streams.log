@@ -1,0 +1,41 @@
+[0.021s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
+[0.289s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.534s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.719s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.802s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.824s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.846s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.877s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.002s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.013s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.143s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.180s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.238s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.355s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.449s] CMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries):
+[1.449s]   The keyword signature for target_link_libraries has already been used with
+[1.449s]   the target "BranchForge".  All uses of target_link_libraries with a target
+[1.449s]   must be either all-keyword or all-plain.
+[1.449s] 
+[1.449s]   The uses of the keyword signature are here:
+[1.449s] 
+[1.450s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:549 (target_link_libraries)
+[1.450s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:388 (target_link_libraries)
+[1.450s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:980 (target_link_libraries)
+[1.450s]    * CMakeLists.txt:65 (target_link_libraries)
+[1.450s] 
+[1.450s] Call Stack (most recent call first):
+[1.450s]   CMakeLists.txt:97 (ament_target_dependencies)
+[1.450s] 
+[1.450s] 
+[1.597s] CMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[1.597s]   ament_package_xml() package name 'branchforge' in '/package.xml' does not
+[1.598s]   match current PROJECT_NAME 'BranchForge'.  You must call project() with the
+[1.598s]   same package name before.
+[1.598s] Call Stack (most recent call first):
+[1.598s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[1.598s]   CMakeLists.txt:106 (ament_package)
+[1.598s] 
+[1.598s] 
+[1.598s] -- Configuring incomplete, errors occurred!
+[1.621s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge

@@ -1,0 +1,44 @@
+[0.018s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
+[0.116s] -- The CXX compiler identification is GNU 13.3.0
+[0.141s] -- Detecting CXX compiler ABI info
+[0.273s] -- Detecting CXX compiler ABI info - done
+[0.287s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.288s] -- Detecting CXX compile features
+[0.288s] -- Detecting CXX compile features - done
+[0.299s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.442s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.443s] -- Found Threads: TRUE  
+[0.446s] -- Performing Test HAVE_STDATOMIC
+[0.662s] -- Performing Test HAVE_STDATOMIC - Success
+[0.664s] -- Found WrapAtomic: TRUE  
+[0.713s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[0.715s] -- Found WrapOpenGL: TRUE  
+[0.780s] -- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0") 
+[0.839s] -- Found WrapVulkanHeaders: /usr/include  
+[0.852s] -- Could NOT find Qt6Quick (missing: Qt6Quick_DIR)
+[0.852s] [31mCMake Error at CMakeLists.txt:8 (find_package):
+[0.852s]   Found package configuration file:
+[0.853s] 
+[0.853s]     /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake
+[0.853s] 
+[0.853s]   but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+[0.853s]   FOUND.  Reason given by package:
+[0.853s] 
+[0.853s]   Failed to find required Qt component "Quick".
+[0.853s] 
+[0.853s]   Expected Config file at
+[0.854s]   "/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick/Qt6QuickConfig.cmake" does NOT
+[0.854s]   exist
+[0.854s] 
+[0.854s] 
+[0.854s] 
+[0.854s]   Configuring with --debug-find-pkg=Qt6Quick might reveal details why the
+[0.854s]   package was not found.
+[0.854s] 
+[0.854s]   Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+[0.855s]   of the path variables that find_package uses to try and find the package.
+[0.855s] 
+[0.855s] 
+[0.855s] [0m
+[0.855s] -- Configuring incomplete, errors occurred!
+[0.862s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge

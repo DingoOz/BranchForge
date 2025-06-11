@@ -1,0 +1,26 @@
+CMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries):
+  The keyword signature for target_link_libraries has already been used with
+  the target "branchforge".  All uses of target_link_libraries with a target
+  must be either all-keyword or all-plain.
+
+  The uses of the keyword signature are here:
+
+   * /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:549 (target_link_libraries)
+   * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:388 (target_link_libraries)
+   * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:980 (target_link_libraries)
+
+Call Stack (most recent call first):
+  CMakeLists.txt:70 (ament_target_dependencies)
+
+
+CMake Error at CMakeLists.txt:76 (target_link_libraries):
+  The plain signature for target_link_libraries has already been used with
+  the target "branchforge".  All uses of target_link_libraries with a target
+  must be either all-keyword or all-plain.
+
+  The uses of the plain signature are here:
+
+   * /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:146 (target_link_libraries)
+
+
+

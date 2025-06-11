@@ -1,0 +1,26 @@
+[0.041s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
+[0.308s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.697s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.767s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.785s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.807s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.845s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.975s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.979s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.105s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.241s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.369s] CMake Error at CMakeLists.txt:69 (target_link_libraries):
+[1.369s]   The keyword signature for target_link_libraries has already been used with
+[1.369s]   the target "branchforge".  All uses of target_link_libraries with a target
+[1.369s]   must be either all-keyword or all-plain.
+[1.369s] 
+[1.369s]   The uses of the keyword signature are here:
+[1.369s] 
+[1.370s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake:549 (target_link_libraries)
+[1.370s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:388 (target_link_libraries)
+[1.370s]    * /usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake:980 (target_link_libraries)
+[1.370s] 
+[1.370s] 
+[1.370s] 
+[1.703s] -- Configuring incomplete, errors occurred!
+[1.725s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge

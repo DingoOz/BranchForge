@@ -1,0 +1,7 @@
+/home/dingo/Programming/BranchForge/build/CMakeFiles/branchforge_simple.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/edit_cache.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/rebuild_cache.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/list_install_components.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/install.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/install/local.dir
+/home/dingo/Programming/BranchForge/build/CMakeFiles/install/strip.dir

@@ -1,0 +1,70 @@
+CMake Warning at /usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package):
+  Found package configuration file:
+
+    /usr/lib/x86_64-linux-gnu/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderConfig.cmake
+
+  but it set Qt6Quick3DRuntimeRender_FOUND to FALSE so package
+  "Qt6Quick3DRuntimeRender" is considered to be NOT FOUND.  Reason given by
+  package:
+
+  Qt6Quick3DRuntimeRender could not be found because dependency
+  Qt6ShaderTools could not be found.
+
+  Configuring with --debug-find-pkg=Qt6ShaderTools might reveal details why
+  the package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake:108 (find_dependency)
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6Quick3D/Qt6Quick3DDependencies.cmake:39 (_qt_internal_find_qt_dependencies)
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6Quick3D/Qt6Quick3DConfig.cmake:50 (include)
+  /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:167 (find_package)
+  CMakeLists.txt:8 (find_package)
+
+
+CMake Warning at /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:167 (find_package):
+  Found package configuration file:
+
+    /usr/lib/x86_64-linux-gnu/cmake/Qt6Quick3D/Qt6Quick3DConfig.cmake
+
+  but it set Qt6Quick3D_FOUND to FALSE so package "Qt6Quick3D" is considered
+  to be NOT FOUND.  Reason given by package:
+
+  Qt6Quick3D could not be found because dependency Qt6Quick3DRuntimeRender
+  could not be found.
+
+  Configuring with --debug-find-pkg=Qt6Quick3DRuntimeRender might reveal
+  details why the package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (find_package)
+
+
+CMake Error at CMakeLists.txt:8 (find_package):
+  Found package configuration file:
+
+    /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "Quick3D".
+
+  Expected Config file at
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick3D/Qt6Quick3DConfig.cmake" exists
+
+
+
+  Configuring with --debug-find-pkg=Qt6Quick3D might reveal details why the
+  package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+
+

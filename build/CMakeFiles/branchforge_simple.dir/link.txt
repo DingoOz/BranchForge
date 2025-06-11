@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/branchforge_simple.dir/src/main_simple.cpp.o -o branchforge_simple  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 

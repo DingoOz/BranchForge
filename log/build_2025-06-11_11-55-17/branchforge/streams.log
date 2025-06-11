@@ -1,0 +1,28 @@
+[0.020s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
+[0.178s] -- Could NOT find Qt6Quick (missing: Qt6Quick_DIR)
+[0.178s] CMake Error at CMakeLists.txt:8 (find_package):
+[0.178s]   Found package configuration file:
+[0.178s] 
+[0.178s]     /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake
+[0.179s] 
+[0.179s]   but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+[0.179s]   FOUND.  Reason given by package:
+[0.179s] 
+[0.179s]   Failed to find required Qt component "Quick".
+[0.179s] 
+[0.179s]   Expected Config file at
+[0.180s]   "/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick/Qt6QuickConfig.cmake" does NOT
+[0.180s]   exist
+[0.180s] 
+[0.180s] 
+[0.180s] 
+[0.180s]   Configuring with --debug-find-pkg=Qt6Quick might reveal details why the
+[0.180s]   package was not found.
+[0.180s] 
+[0.181s]   Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+[0.181s]   of the path variables that find_package uses to try and find the package.
+[0.181s] 
+[0.181s] 
+[0.181s] 
+[0.181s] -- Configuring incomplete, errors occurred!
+[0.184s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dingo/Programming/BranchForge -DCMAKE_INSTALL_PREFIX=/home/dingo/Programming/BranchForge/install/branchforge
