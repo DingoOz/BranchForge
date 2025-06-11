@@ -3,6 +3,7 @@
 #include <QHeaderView>
 #include <QMessageBox>
 #include <QApplication>
+#include <QClipboard>
 #include <QLoggingCategory>
 
 Q_LOGGING_CATEGORY(ros2Browser, "branchforge.ros2.browser")

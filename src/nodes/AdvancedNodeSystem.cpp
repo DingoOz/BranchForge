@@ -420,4 +420,36 @@ void AdvancedNodeInstance::updateExecutionStatistics(NodeExecutionState result, 
     }
 }
 
+// ROS2ActionClientNode Implementation
+ROS2ActionClientNode::ROS2ActionClientNode(const AdvancedNodeTemplate& template_, QObject* parent)
+    : AdvancedNodeInstance(template_, parent)
+{
+}
+
+ROS2ActionClientNode::~ROS2ActionClientNode() = default;
+
+void ROS2ActionClientNode::onActionTimeout() {
+    // Stub implementation for timeout handling
+}
+
+void ROS2ActionClientNode::simulateActionProgress() {
+    // Stub implementation for progress simulation
+}
+
+// ROS2ServiceClientNode Implementation
+ROS2ServiceClientNode::ROS2ServiceClientNode(const AdvancedNodeTemplate& template_, QObject* parent)
+    : AdvancedNodeInstance(template_, parent)
+{
+}
+
+ROS2ServiceClientNode::~ROS2ServiceClientNode() = default;
+
+void ROS2ServiceClientNode::onServiceTimeout() {
+    // Stub implementation for service timeout handling
+}
+
+void ROS2ServiceClientNode::simulateServiceCall() {
+    // Stub implementation for service call simulation
+}
+
 } // namespace BranchForge::Nodes

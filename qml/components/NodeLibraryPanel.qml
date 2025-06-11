@@ -8,6 +8,10 @@ Rectangle {
     border.color: "#555555"
     border.width: 1
     
+    Component.onCompleted: {
+        console.log("NodeLibraryPanel.qml loaded successfully");
+    }
+    
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 8
@@ -40,45 +44,41 @@ Rectangle {
         }
     }
     
-    ListModel {
-        id: nodeCategories
-        
-        ListElement {
-            categoryName: "Control Flow"
+    // Node categories data - using JavaScript objects instead of ListModel
+    property var nodeCategories: [
+        {
+            categoryName: "Control Flow",
             nodes: [
                 { name: "Sequence", type: "sequence", color: "#2196F3", description: "Execute children in order until one fails" },
                 { name: "Selector", type: "selector", color: "#9C27B0", description: "Execute children until one succeeds" },
                 { name: "Parallel", type: "parallel", color: "#FF9800", description: "Execute children simultaneously" }
             ]
-        }
-        
-        ListElement {
-            categoryName: "Decorators"
+        },
+        {
+            categoryName: "Decorators",
             nodes: [
                 { name: "Inverter", type: "inverter", color: "#607D8B", description: "Invert child result" },
                 { name: "Repeater", type: "repeater", color: "#795548", description: "Repeat child N times" },
                 { name: "Retry", type: "retry", color: "#E91E63", description: "Retry child on failure" }
             ]
-        }
-        
-        ListElement {
-            categoryName: "Actions"
+        },
+        {
+            categoryName: "Actions",
             nodes: [
                 { name: "Move To", type: "move_to", color: "#FF5722", description: "Move robot to target position" },
                 { name: "Rotate", type: "rotate", color: "#F44336", description: "Rotate robot by angle" },
                 { name: "Wait", type: "wait", color: "#9E9E9E", description: "Wait for specified duration" }
             ]
-        }
-        
-        ListElement {
-            categoryName: "Conditions"
+        },
+        {
+            categoryName: "Conditions",
             nodes: [
                 { name: "At Goal", type: "at_goal", color: "#4CAF50", description: "Check if robot is at goal" },
                 { name: "Battery Check", type: "battery_check", color: "#CDDC39", description: "Check battery level" },
                 { name: "Obstacle Check", type: "obstacle_check", color: "#FFC107", description: "Check for obstacles" }
             ]
         }
-    }
+    ]
     
     Component {
         id: nodeCategory
@@ -163,57 +163,30 @@ Rectangle {
                         }
                         
                         MouseArea {
-                            id: dragArea
+                            id: clickArea
                             anchors.fill: parent
                             hoverEnabled: true
                             
-                            drag.target: draggableNode
-                            
-                            onPressed: {
-                                draggableNode.nodeType = modelData.type
-                                draggableNode.nodeName = modelData.name
-                                draggableNode.nodeColor = modelData.color
-                                draggableNode.visible = true
-                                draggableNode.x = mouse.x
-                                draggableNode.y = mouse.y
-                            }
-                            
-                            onReleased: {
-                                draggableNode.visible = false
+                            onClicked: {
+                                console.log("NodeLibrary: Node selected:", modelData.name, modelData.type);
+                                var dragData = JSON.stringify({
+                                    type: modelData.type,
+                                    name: modelData.name,
+                                    color: modelData.color
+                                });
+                                
+                                // Set the selected node data on the main window
+                                if (typeof mainWindow !== 'undefined') {
+                                    mainWindow.currentDragData = dragData;
+                                    console.log("NodeLibrary: Drag data set:", dragData);
+                                } else {
+                                    console.log("NodeLibrary: mainWindow not accessible");
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
-    
-    Rectangle {
-        id: draggableNode
-        width: 100
-        height: 40
-        color: nodeColor
-        radius: 6
-        border.color: Qt.darker(nodeColor, 1.3)
-        border.width: 2
-        visible: false
-        z: 1000
-        
-        property string nodeType: ""
-        property string nodeName: ""
-        property string nodeColor: "#ffffff"
-        
-        Text {
-            anchors.centerIn: parent
-            text: nodeName
-            color: "white"
-            font.bold: true
-            font.pixelSize: 10
-        }
-        
-        Drag.active: true
-        Drag.hotSpot.x: width / 2
-        Drag.hotSpot.y: height / 2
-        Drag.mimeData: { "text/plain": nodeType }
     }
 }

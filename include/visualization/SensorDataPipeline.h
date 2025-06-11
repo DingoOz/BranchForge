@@ -6,6 +6,8 @@
 #include <QMutex>
 #include <QQueue>
 #include <QVariantMap>
+#include <QDateTime>
+#include <QVector3D>
 #include <memory>
 
 namespace BranchForge::Visualization {

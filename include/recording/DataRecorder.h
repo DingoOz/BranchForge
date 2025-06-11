@@ -277,6 +277,9 @@ private:
     // Timers
     std::unique_ptr<QTimer> m_playbackTimer;
     std::unique_ptr<QTimer> m_positionTimer;
+    
+    // Position tracking
+    int m_currentPosition{0};
 };
 
 // Data conversion utilities

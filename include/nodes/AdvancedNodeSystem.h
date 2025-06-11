@@ -5,6 +5,8 @@
 #include <QVariantMap>
 #include <QTimer>
 #include <QMutex>
+#include <QColor>
+#include <QDateTime>
 #include <memory>
 
 namespace BranchForge::Nodes {

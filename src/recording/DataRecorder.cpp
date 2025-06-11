@@ -195,4 +195,46 @@ bool DataRecorder::shouldRecordTopic(const QString& topic) const {
     return false;
 }
 
+// DataPlayer Implementation
+DataPlayer::DataPlayer(QObject* parent)
+    : QObject(parent)
+    , m_playbackTimer(std::make_unique<QTimer>(this))
+    , m_currentPosition(0)
+{
+    qCInfo(dataRecorder) << "DataPlayer created";
+    
+    m_playbackTimer->setSingleShot(false);
+    connect(m_playbackTimer.get(), &QTimer::timeout, this, &DataPlayer::processNextMessage);
+}
+
+DataPlayer::~DataPlayer() = default;
+
+void DataPlayer::processNextMessage() {
+    // Stub implementation - process next message in playback
+}
+
+void DataPlayer::updatePlaybackPosition() {
+    // Stub implementation - update playback position
+    m_currentPosition++;
+    emit playbackPositionChanged(QDateTime::currentDateTime(), m_currentPosition);
+}
+
+// DataConverter Implementation
+DataConverter::DataConverter(QObject* parent)
+    : QObject(parent)
+{
+    qCInfo(dataRecorder) << "DataConverter created";
+}
+
+DataConverter::~DataConverter() = default;
+
+// RecordingSessionManager Implementation
+RecordingSessionManager::RecordingSessionManager(QObject* parent)
+    : QObject(parent)
+{
+    qCInfo(dataRecorder) << "RecordingSessionManager created";
+}
+
+RecordingSessionManager::~RecordingSessionManager() = default;
+
 } // namespace BranchForge::Recording

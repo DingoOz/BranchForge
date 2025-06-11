@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/BranchForge">
+        <file>qml/main.qml</file>
+        <file>qml/components/NodeEditor.qml</file>
+        <file>qml/components/NodeLibraryPanel.qml</file>
+        <file>qml/components/PropertiesPanel.qml</file>
+    </qresource>
+</RCC>

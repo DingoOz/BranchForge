@@ -401,4 +401,24 @@ void Visualization3DEngine::updatePerformanceMetrics() {
     emit renderingPerformanceChanged(m_averageFPS, m_lastFrameTime);
 }
 
+// SensorDataSynchronizer Implementation
+SensorDataSynchronizer::SensorDataSynchronizer(QObject* parent)
+    : QObject(parent)
+    , m_synchronizationTimer(std::make_unique<QTimer>(this))
+{
+    qCInfo(sensorPipeline) << "SensorDataSynchronizer created";
+    
+    m_synchronizationTimer->setInterval(33); // ~30 FPS synchronization
+    m_synchronizationTimer->setSingleShot(false);
+    connect(m_synchronizationTimer.get(), &QTimer::timeout, this, &SensorDataSynchronizer::processSynchronization);
+}
+
+SensorDataSynchronizer::~SensorDataSynchronizer() = default;
+
+void SensorDataSynchronizer::processSynchronization() {
+    // Stub implementation - synchronize sensor data streams
+    QMap<QString, SensorDataFrame> frames;
+    emit synchronizedFramesReady(frames);
+}
+
 } // namespace BranchForge::Visualization

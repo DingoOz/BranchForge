@@ -614,7 +614,7 @@ private:
         
         connect(m_recorder.get(), &BranchForge::Recording::DataRecorder::recordingStarted,
                 [this](const QString& filePath) {
-                    statusBar()->changeMessage("Recording: " + QFileInfo(filePath).baseName());
+                    statusBar()->showMessage("Recording: " + QFileInfo(filePath).baseName());
                 });
         
         connect(m_sensorPipeline.get(), &BranchForge::Visualization::SensorDataPipeline::frameProcessed,

@@ -22,6 +22,15 @@ Rectangle {
             color: "#ffffff"
         }
         
+        Label {
+            text: (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) ? 
+                  "Node selected: Click in editor to place" : "No node selected"
+            color: "#cccccc"
+            font.pixelSize: 12
+            wrapMode: Text.WordWrap
+            Layout.fillWidth: true
+        }
+        
         Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -137,8 +146,12 @@ Rectangle {
                                     from: 0
                                     to: 100
                                     value: 5
-                                    suffix: "s"
                                     Layout.fillWidth: true
+                                    
+                                    // Custom suffix display
+                                    textFromValue: function(value, locale) {
+                                        return value + "s"
+                                    }
                                 }
                             }
                             
