@@ -33,11 +33,23 @@ jobs:
           python3-setuptools
         
         # Install Qt6 with correct package names for Ubuntu 24.04
+        echo "=== Installing Qt6 packages ==="
         sudo apt-get install -y \
           qt6-base-dev \
           qt6-declarative-dev \
           libqt6xml6 \
-          qt6-tools-dev || echo "⚠️ Some Qt6 packages failed to install"
+          qt6-tools-dev \
+          qt6-base-dev-tools \
+          qmake6 \
+          libqt6core6 \
+          libqt6gui6 \
+          libqt6widgets6 || echo "⚠️ Some Qt6 packages failed to install"
+        
+        # Debug: Check what Qt6 files are actually installed
+        echo "=== Checking Qt6 installation ==="
+        find /usr -name "*Qt6*" -type f 2>/dev/null | grep -i cmake | head -10 || echo "No Qt6 cmake files found"
+        ls -la /usr/lib/x86_64-linux-gnu/cmake/ 2>/dev/null || echo "No cmake directory found"
+        dpkg -l | grep qt6 || echo "No qt6 packages found"
 
     - name: Install colcon
       run: |
@@ -92,12 +104,19 @@ jobs:
         # Clean any existing build cache
         rm -rf build/ install/ log/
         
+        # Try to find Qt6 and set environment
+        export QT_SELECT=6
+        export Qt6_DIR=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1 | xargs dirname 2>/dev/null || echo "/usr/lib/x86_64-linux-gnu/cmake/Qt6")
+        echo "Using Qt6_DIR: $Qt6_DIR"
+        
         # Build with fresh cache
         colcon build --packages-select branchforge \
           --cmake-args \
             -DCMAKE_BUILD_TYPE=Release \
             -DBUILD_TESTING=ON \
-            -DQt6_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt6"
+            -DQt6_DIR="$Qt6_DIR" \
+            -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake:/usr/lib/cmake" \
+            --verbose
 
     - name: Run Core Tests
       run: |
