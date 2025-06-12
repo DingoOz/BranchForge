@@ -60,11 +60,23 @@ jobs:
 
     - name: Install BehaviorTree.CPP
       run: |
+        # Install from source using catkin build instead of conan
         cd /tmp
         git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch 4.5.2
         cd BehaviorTree.CPP
         mkdir build && cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DBUILD_SHARED_LIBS=ON
+        
+        # Set catkin environment to avoid conan dependency
+        export CATKIN_DEVEL_PREFIX=/opt/ros/jazzy
+        
+        cmake .. \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DBUILD_TESTING=OFF \
+          -DBTCPP_EXAMPLES=OFF \
+          -DBTCPP_UNIT_TESTS=OFF \
+          -DBTCPP_GROOT_INTERFACE=OFF \
+          -DBTCPP_SQLITE_LOGGING=OFF \
+          -DBUILD_SHARED_LIBS=ON
         make -j$(nproc)
         sudo make install
         sudo ldconfig
