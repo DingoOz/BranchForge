@@ -8,8 +8,8 @@ on:
 
 jobs:
   core-tests:
-    name: Core Unit Tests
-    runs-on: ubuntu-22.04  # Use 22.04 for better ROS2 support
+    name: Core Unit Tests (ROS2 Jazzy)
+    runs-on: ubuntu-24.04  # Use 24.04 for ROS2 Jazzy
     
     steps:
     - name: Checkout code
@@ -27,18 +27,18 @@ jobs:
           qt6-declarative-dev \
           libqt6xml6-dev
 
-    - name: Setup minimal ROS2 (Humble - Ubuntu 22.04)
+    - name: Setup ROS2 Jazzy (Ubuntu 24.04)
       run: |
         # Add ROS 2 apt repository
         sudo apt-get install -y software-properties-common curl
         curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         
         sudo apt-get update
         sudo apt-get install -y \
-          ros-humble-ros-core \
-          ros-humble-rclcpp \
-          ros-humble-ament-cmake \
+          ros-jazzy-ros-core \
+          ros-jazzy-rclcpp \
+          ros-jazzy-ament-cmake \
           python3-colcon-common-extensions
 
     - name: Install BehaviorTree.CPP
@@ -54,13 +54,13 @@ jobs:
 
     - name: Build BranchForge
       run: |
-        source /opt/ros/humble/setup.bash
+        source /opt/ros/jazzy/setup.bash
         colcon build --packages-select branchforge \
           --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 
     - name: Run Core Tests
       run: |
-        source /opt/ros/humble/setup.bash
+        source /opt/ros/jazzy/setup.bash
         source install/setup.bash
         
         echo "=== Running BranchForge Core Tests ==="

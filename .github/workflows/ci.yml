@@ -232,17 +232,11 @@ jobs:
 
   build-matrix:
     name: Build Matrix
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        ros_distro: [humble, iron, jazzy]
+        ros_distro: [jazzy]
         build_type: [Release, Debug]
-        exclude:
-          # Exclude some combinations to reduce CI time
-          - ros_distro: humble
-            build_type: Debug
-          - ros_distro: iron
-            build_type: Debug
 
     steps:
     - name: Checkout repository
