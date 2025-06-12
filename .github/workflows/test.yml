@@ -8,8 +8,8 @@ on:
 
 jobs:
   test-ubuntu:
-    name: Test on Ubuntu 22.04
-    runs-on: ubuntu-22.04
+    name: Test on Ubuntu 24.04 (ROS2 Jazzy)
+    runs-on: ubuntu-24.04
     
     steps:
     - name: Checkout code
@@ -18,30 +18,37 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
+        
+        # Install core dependencies
         sudo apt-get install -y \
           build-essential \
           cmake \
           pkg-config \
           libgtest-dev \
-          qt6-base-dev \
-          qt6-declarative-dev \
-          libqt6xml6-dev \
           python3-pip \
           python3-colcon-common-extensions
+        
+        # Install Qt6 packages (check availability first)
+        echo "=== Installing Qt6 packages ==="
+        sudo apt-get install -y \
+          qt6-base-dev \
+          qt6-declarative-dev \
+          libqt6xml6 \
+          qt6-tools-dev || echo "⚠️ Some Qt6 packages may not be available"
 
-    - name: Setup ROS 2 Humble
+    - name: Setup ROS 2 Jazzy
       run: |
         # Add ROS 2 apt repository
         sudo apt-get update
         sudo apt-get install -y software-properties-common curl
         curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         
         sudo apt-get update
         sudo apt-get install -y \
-          ros-humble-ros-core \
-          ros-humble-rclcpp \
-          ros-humble-ament-cmake \
+          ros-jazzy-ros-core \
+          ros-jazzy-rclcpp \
+          ros-jazzy-ament-cmake \
           python3-rosdep \
           python3-colcon-common-extensions
           
@@ -62,13 +69,13 @@ jobs:
 
     - name: Build BranchForge
       run: |
-        source /opt/ros/humble/setup.bash
+        source /opt/ros/jazzy/setup.bash
         colcon build --packages-select branchforge \
           --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 
     - name: Run Tests
       run: |
-        source /opt/ros/humble/setup.bash
+        source /opt/ros/jazzy/setup.bash
         source install/setup.bash
         
         echo "=== Running BranchForge Unit Tests ==="
