@@ -26,7 +26,7 @@ jobs:
           pkg-config \
           libgtest-dev \
           python3-pip \
-          python3-colcon-common-extensions
+          python3-setuptools
         
         # Install Qt6 packages (check availability first)
         echo "=== Installing Qt6 packages ==="
@@ -35,6 +35,12 @@ jobs:
           qt6-declarative-dev \
           libqt6xml6 \
           qt6-tools-dev || echo "⚠️ Some Qt6 packages may not be available"
+
+    - name: Install colcon
+      run: |
+        # Install colcon via pip since apt package doesn't exist on Ubuntu 24.04
+        python3 -m pip install --user --upgrade pip
+        python3 -m pip install --user colcon-common-extensions
 
     - name: Setup ROS 2 Jazzy
       run: |
@@ -49,8 +55,7 @@ jobs:
           ros-jazzy-ros-core \
           ros-jazzy-rclcpp \
           ros-jazzy-ament-cmake \
-          python3-rosdep \
-          python3-colcon-common-extensions
+          python3-rosdep
           
         # Initialize rosdep
         sudo rosdep init || true
@@ -70,6 +75,7 @@ jobs:
     - name: Clean and Build BranchForge
       run: |
         source /opt/ros/jazzy/setup.bash
+        export PATH=$HOME/.local/bin:$PATH
         
         # Clean any existing build cache
         rm -rf build/ install/ log/
@@ -81,6 +87,7 @@ jobs:
     - name: Run Tests
       run: |
         source /opt/ros/jazzy/setup.bash
+        export PATH=$HOME/.local/bin:$PATH
         source install/setup.bash
         
         echo "=== Running BranchForge Unit Tests ==="
