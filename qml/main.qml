@@ -102,6 +102,15 @@ ApplicationWindow {
             id: nodeEditor
             Layout.fillWidth: true
             Layout.fillHeight: true
+            
+            onNodeSelected: function(nodeId, nodeName, nodeType) {
+                propertiesPanel.selectedNode = {
+                    "id": nodeId,
+                    "name": nodeName,
+                    "type": nodeType,
+                    "status": "Idle"
+                }
+            }
         }
         
         // Right panel - Properties
