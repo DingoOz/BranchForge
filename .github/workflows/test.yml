@@ -98,7 +98,7 @@ jobs:
           --cmake-args \
             -DCMAKE_BUILD_TYPE=Release \
             -DBUILD_TESTING=ON \
-            -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake"
+            -DQt6_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt6"
 
     - name: Run Tests
       run: |

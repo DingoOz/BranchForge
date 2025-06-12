@@ -84,7 +84,7 @@ jobs:
         cmake .. \
           -DCMAKE_BUILD_TYPE=Release \
           -DBUILD_TESTING=ON \
-          -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake" \
+          -DQt6_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt6" \
           -DSKIP_QT_DEPENDENCIES=ON || echo "⚠️ CMake configuration failed"
         
         # Check if we can at least find core components
