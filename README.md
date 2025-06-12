@@ -13,6 +13,8 @@ A comprehensive open-source development platform for designing, visualizing, tes
 - **Real-time Monitoring**: Live BT execution visualization (planned)
 - **Code Generation**: Export to production-ready C++20 code
 
+![BranchForge](BranchForgev03.png)
+
 ## Quick Start
 
 ### Prerequisites
