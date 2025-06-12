@@ -43,13 +43,8 @@ Rectangle {
                 
                 Label {
                     text: {
-                        if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
-                            try {
-                                var nodeData = JSON.parse(mainWindow.currentDragData);
-                                return nodeData.name || "Unknown Node";
-                            } catch (e) {
-                                return "Invalid Node Data";
-                            }
+                        if (selectedNode) {
+                            return selectedNode.name || "Unknown Node";
                         }
                         return "No node selected";
                     }
@@ -61,15 +56,10 @@ Rectangle {
                 
                 Label {
                     text: {
-                        if (typeof mainWindow !== 'undefined' && mainWindow.currentDragData) {
-                            try {
-                                var nodeData = JSON.parse(mainWindow.currentDragData);
-                                return nodeData.description || "No description available";
-                            } catch (e) {
-                                return "Invalid Node Data";
-                            }
+                        if (selectedNode) {
+                            return "Type: " + (selectedNode.type || "Unknown") + "\nID: " + (selectedNode.id || "Unknown");
                         }
-                        return "Select a node from the library to see details";
+                        return "Click a node in the editor to see its properties";
                     }
                     color: "#cccccc"
                     font.pixelSize: 12

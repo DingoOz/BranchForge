@@ -21,6 +21,11 @@ ApplicationWindow {
     property bool darkMode: mainWindowInstance.isDarkMode
     property string currentDragData: ""
     
+    // Panel visibility properties
+    property bool showNodeLibrary: true
+    property bool showProperties: true
+    property bool showProjectExplorer: true
+    
     Component.onCompleted: {
         console.log("Main QML window loaded successfully!");
     }
@@ -66,9 +71,24 @@ ApplicationWindow {
                 onTriggered: mainWindowInstance.isDarkMode = !mainWindowInstance.isDarkMode
             }
             MenuSeparator {}
-            MenuItem { text: "Node &Library"; checkable: true; checked: true }
-            MenuItem { text: "&Properties"; checkable: true; checked: true }
-            MenuItem { text: "&Project Explorer"; checkable: true; checked: true }
+            MenuItem { 
+                text: "Node &Library"
+                checkable: true
+                checked: showNodeLibrary
+                onTriggered: showNodeLibrary = !showNodeLibrary
+            }
+            MenuItem { 
+                text: "&Properties"
+                checkable: true
+                checked: showProperties
+                onTriggered: showProperties = !showProperties
+            }
+            MenuItem { 
+                text: "&Project Explorer"
+                checkable: true
+                checked: showProjectExplorer
+                onTriggered: showProjectExplorer = !showProjectExplorer
+            }
         }
         
         Menu {
@@ -85,30 +105,64 @@ ApplicationWindow {
         }
     }
     
-    RowLayout {
+    SplitView {
         anchors.fill: parent
         anchors.margins: 4
-        spacing: 4
+        orientation: Qt.Horizontal
         
-        // Left panel - Node Library
-        NodeLibraryPanel {
-            id: nodeLibrary
-            Layout.preferredWidth: 250
-            Layout.fillHeight: true
+        // Left column - Node Library and Project Explorer
+        Item {
+            SplitView.preferredWidth: 250
+            SplitView.minimumWidth: showNodeLibrary || showProjectExplorer ? 200 : 0
+            SplitView.maximumWidth: 400
+            visible: showNodeLibrary || showProjectExplorer
+            
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 4
+                
+                // Node Library Panel
+                NodeLibraryPanel {
+                    id: nodeLibrary
+                    Layout.fillWidth: true
+                    Layout.fillHeight: showProjectExplorer ? false : true
+                    Layout.preferredHeight: showProjectExplorer ? 400 : -1
+                    visible: showNodeLibrary
+                }
+                
+                // Project Explorer Panel  
+                ProjectExplorer {
+                    id: projectExplorer
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    visible: showProjectExplorer
+                }
+            }
         }
         
         // Center - Node Editor
         NodeEditor {
             id: nodeEditor
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            SplitView.fillWidth: true
+            SplitView.minimumWidth: 400
+            
+            onNodeSelected: function(nodeId, nodeName, nodeType) {
+                propertiesPanel.selectedNode = {
+                    "id": nodeId,
+                    "name": nodeName,
+                    "type": nodeType,
+                    "status": "Idle"
+                }
+            }
         }
         
         // Right panel - Properties
         PropertiesPanel {
             id: propertiesPanel
-            Layout.preferredWidth: 300
-            Layout.fillHeight: true
+            SplitView.preferredWidth: 300
+            SplitView.minimumWidth: showProperties ? 250 : 0
+            SplitView.maximumWidth: 500
+            visible: showProperties
         }
     }
     

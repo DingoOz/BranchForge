@@ -15,6 +15,9 @@ Rectangle {
     property bool isPanning: false
     property point lastPanPoint: Qt.point(0, 0)
     
+    // Signal for node selection
+    signal nodeSelected(string nodeId, string nodeName, string nodeType)
+    
     Component.onCompleted: {
         console.log("NodeEditor.qml loaded successfully");
     }
@@ -584,6 +587,7 @@ Rectangle {
                             parent.destroy();
                         } else {
                             console.log("Node clicked:", nodeName);
+                            root.nodeSelected(nodeId, nodeName, nodeType);
                         }
                     }
                     
