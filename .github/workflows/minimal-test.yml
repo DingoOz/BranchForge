@@ -48,7 +48,7 @@ jobs:
     - name: Install BehaviorTree.CPP
       run: |
         cd /tmp
-        git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch v4.6
+        git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch 4.7.2
         cd BehaviorTree.CPP
         mkdir build && cd build
         cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF
