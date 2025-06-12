@@ -1,0 +1,92 @@
+name: BranchForge Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test-ubuntu:
+    name: Test on Ubuntu 24.04
+    runs-on: ubuntu-24.04
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          cmake \
+          pkg-config \
+          libgtest-dev \
+          qt6-base-dev \
+          qt6-declarative-dev \
+          libqt6xml6-dev \
+          python3-pip \
+          python3-colcon-common-extensions
+
+    - name: Setup ROS 2 Jazzy
+      run: |
+        # Add ROS 2 apt repository
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository universe
+        sudo apt-get update && sudo apt-get install -y curl
+        curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+        
+        sudo apt-get update
+        sudo apt-get install -y \
+          ros-jazzy-ros-core \
+          ros-jazzy-rclcpp \
+          ros-jazzy-ament-cmake
+
+    - name: Install BehaviorTree.CPP
+      run: |
+        cd /tmp
+        git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch v4.6
+        cd BehaviorTree.CPP
+        mkdir build && cd build
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF
+        make -j$(nproc)
+        sudo make install
+        sudo ldconfig
+
+    - name: Build BranchForge
+      run: |
+        source /opt/ros/jazzy/setup.bash
+        colcon build --packages-select branchforge \
+          --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
+
+    - name: Run Tests
+      run: |
+        source /opt/ros/jazzy/setup.bash
+        source install/setup.bash
+        
+        echo "=== Running BranchForge Unit Tests ==="
+        
+        # Find and run all test executables
+        find build/branchforge/tests -name "test_*" -type f -executable | while read test_exe; do
+          echo "Running $(basename $test_exe)..."
+          if $test_exe; then
+            echo "✅ $(basename $test_exe) PASSED"
+          else
+            echo "❌ $(basename $test_exe) FAILED"
+            exit 1
+          fi
+        done
+
+    - name: Run specific BehaviorTreeXML test
+      run: |
+        echo "=== Running Core BehaviorTreeXML Tests ==="
+        ./build/branchforge/tests/unit/test_behavior_tree_xml --gtest_output=xml:test_results.xml
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: test_results.xml
