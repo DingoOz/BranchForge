@@ -24,7 +24,7 @@ jobs:
           cmake \
           libgtest-dev \
           qt6-base-dev \
-          qt6-qmake \
+          qt6-tools-dev \
           pkg-config
 
     - name: Quick build test (no ROS)

@@ -32,7 +32,6 @@ jobs:
         echo "=== Installing Qt6 packages ==="
         sudo apt-get install -y \
           qt6-base-dev \
-          qt6-qmake \
           qt6-tools-dev || echo "⚠️ Some Qt6 packages may not be available"
 
     - name: Install colcon
@@ -93,11 +92,22 @@ jobs:
         rm -rf build/ install/ log/
         
         # Build with fresh cache
+        # Find Qt6 installation
+        QT6_CONFIG=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1)
+        if [ -n "$QT6_CONFIG" ]; then
+          QT6_DIR=$(dirname "$QT6_CONFIG")
+          echo "Found Qt6Config.cmake at: $QT6_DIR"
+          BUILD_ARGS="-DQt6_DIR=$QT6_DIR"
+        else
+          echo "No Qt6Config.cmake found"
+          BUILD_ARGS=""
+        fi
+        
         colcon build --packages-select branchforge \
           --cmake-args \
             -DCMAKE_BUILD_TYPE=Release \
             -DBUILD_TESTING=ON \
-            -DQt6_DIR="/usr/lib/x86_64-linux-gnu/cmake/Qt6"
+            $BUILD_ARGS
 
     - name: Run Tests
       run: |
