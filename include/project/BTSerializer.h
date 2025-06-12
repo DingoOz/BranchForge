@@ -1,8 +1,10 @@
 #pragma once
 
 #include <QObject>
+#ifdef QT6_QML_AVAILABLE
 #include <QQmlEngine>
 #include <QJSValue>
+#endif
 #include <QString>
 #include <QVariantMap>
 #include <QVariantList>
@@ -19,8 +21,10 @@ namespace BranchForge::Project {
  */
 class BTSerializer : public QObject {
     Q_OBJECT
+#ifdef QT6_QML_AVAILABLE
     QML_ELEMENT
     QML_SINGLETON
+#endif
 
 public:
     explicit BTSerializer(QObject* parent = nullptr);
@@ -28,6 +32,7 @@ public:
     ~BTSerializer() override;
 
     // QML accessible methods
+#ifdef QT6_QML_AVAILABLE
     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
     Q_INVOKABLE QString serializeToString(const QVariantMap& editorState);
     Q_INVOKABLE bool generateCode(const QVariantMap& editorState, const QString& outputDir);
@@ -40,6 +45,7 @@ public:
     // Validation
     Q_INVOKABLE bool validateEditorState(const QVariantMap& editorState);
     Q_INVOKABLE QStringList getValidationErrors() const;
+#endif
     
     // Test-accessible methods
     BehaviorTreeXML convertToBehaviorTreeXML(const QVariantMap& editorState);
