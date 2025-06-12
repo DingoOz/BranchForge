@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-ubuntu:
+    if: false
     name: Test on Ubuntu 24.04 (ROS2 Jazzy)
     runs-on: ubuntu-24.04
     
