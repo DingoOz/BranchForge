@@ -40,11 +40,7 @@ jobs:
         sudo apt-get install -y \
           qt6-base-dev \
           qt6-qmake \
-          qt6-tools-dev \
-          libqt6core6-dev \
-          libqt6gui6-dev \
-          libqt6widgets6-dev \
-          libqt6opengl6-dev || echo "⚠️ Some Qt6 packages failed to install"
+          qt6-tools-dev || echo "⚠️ Some Qt6 packages failed to install"
         
         # Try installing Qt6 cmake support specifically
         sudo apt-get install -y qt6-base-dev-tools || echo "⚠️ qt6-base-dev-tools not available"
