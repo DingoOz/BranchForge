@@ -130,6 +130,7 @@ jobs:
       run: |
         source /opt/ros/${{ matrix.ros_distro }}/setup.bash
         export PATH=$HOME/.local/bin:$PATH
+        export CMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake:$CMAKE_PREFIX_PATH"
         
         # Clean any existing build cache
         rm -rf build/ install/ log/
@@ -138,6 +139,7 @@ jobs:
           --cmake-args \
             -DCMAKE_BUILD_TYPE=Release \
             -DBUILD_TESTING=ON \
+            -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake" \
           --executor sequential
 
     - name: Run tests with error handling
@@ -324,6 +326,7 @@ jobs:
       run: |
         source /opt/ros/${{ matrix.ros_distro }}/setup.bash
         export PATH=$HOME/.local/bin:$PATH
+        export CMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake:$CMAKE_PREFIX_PATH"
         
         # Clean any existing build cache
         rm -rf build/ install/ log/
@@ -332,6 +335,7 @@ jobs:
           --cmake-args \
             -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
             -DBUILD_TESTING=OFF \
+            -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake" \
           --executor sequential
 
     - name: Check build artifacts
