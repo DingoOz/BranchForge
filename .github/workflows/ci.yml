@@ -38,8 +38,7 @@ jobs:
           wget \
           libgtest-dev \
           qt6-base-dev \
-          qt6-declarative-dev \
-          libqt6xml6 \
+          qt6-qmake \
           qt6-tools-dev || echo "⚠️ Some Qt6 packages may not be available"
 
     - name: Install colcon
@@ -317,8 +316,7 @@ jobs:
           build-essential \
           cmake \
           qt6-base-dev \
-          qt6-declarative-dev \
-          libqt6xml6 \
+          qt6-qmake \
           qt6-tools-dev \
           libgtest-dev || echo "⚠️ Some packages may not be available"
 

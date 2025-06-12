@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Find Qt6 packages
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Qml Quick Xml)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Qml Quick)
+# Try to find Xml component separately (may not be available on all systems)
+find_package(Qt6 COMPONENTS Xml QUIET)
 
 qt6_standard_project_setup()
 
@@ -63,8 +65,13 @@ target_link_libraries(branchforge_enhanced PRIVATE
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
-    Qt6::Xml
 )
+
+# Link Qt6::Xml if available
+if(TARGET Qt6::Xml)
+    target_link_libraries(branchforge_enhanced PRIVATE Qt6::Xml)
+    target_compile_definitions(branchforge_enhanced PRIVATE QT6_XML_AVAILABLE)
+endif()
 
 target_compile_options(branchforge_enhanced PRIVATE
     -Wall -Wextra -Wpedantic
