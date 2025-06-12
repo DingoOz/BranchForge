@@ -101,7 +101,10 @@ ApplicationWindow {
         Menu {
             title: "&Help"
             MenuItem { text: "&Documentation" }
-            MenuItem { text: "&About BranchForge" }
+            MenuItem { 
+                text: "&About BranchForge"
+                onTriggered: aboutDialog.open()
+            }
         }
     }
     
@@ -181,5 +184,10 @@ ApplicationWindow {
                 text: ProjectManager.hasProject ? "Project: " + ProjectManager.projectName : "No Project"
             }
         }
+    }
+    
+    // About Dialog
+    AboutDialog {
+        id: aboutDialog
     }
 }
