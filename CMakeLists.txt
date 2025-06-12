@@ -75,6 +75,66 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_definitions(branchforge_enhanced PRIVATE DEBUG_BUILD)
 endif()
 
+# Testing configuration
+option(BUILD_TESTING "Build tests" ON)
+
+if(BUILD_TESTING)
+    enable_testing()
+    
+    # Use system GTest
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(GTEST REQUIRED gtest>=1.14.0)
+    pkg_check_modules(GTEST_MAIN REQUIRED gtest_main>=1.14.0)
+    
+    # Create imported targets for consistency
+    if(NOT TARGET gtest)
+        add_library(gtest SHARED IMPORTED)
+        find_library(GTEST_LIB NAMES gtest PATHS /usr/lib /usr/local/lib /usr/lib/x86_64-linux-gnu)
+        set_target_properties(gtest PROPERTIES IMPORTED_LOCATION ${GTEST_LIB})
+        target_include_directories(gtest INTERFACE ${GTEST_INCLUDE_DIRS})
+    endif()
+    
+    if(NOT TARGET gtest_main)
+        add_library(gtest_main SHARED IMPORTED)
+        find_library(GTEST_MAIN_LIB NAMES gtest_main PATHS /usr/lib /usr/local/lib /usr/lib/x86_64-linux-gnu)
+        set_target_properties(gtest_main PROPERTIES IMPORTED_LOCATION ${GTEST_MAIN_LIB})
+        target_include_directories(gtest_main INTERFACE ${GTEST_INCLUDE_DIRS})
+    endif()
+    
+    # Test library with shared code
+    add_library(branchforge_test_lib
+        src/core/Application.cpp
+        src/ui/MainWindow.cpp
+        src/ros2/ROS2Interface.cpp
+        src/ros2/ROS2TopicBrowser.cpp
+        src/project/ProjectManager.cpp
+        src/project/BehaviorTreeXML.cpp
+        src/project/CodeGenerator.cpp
+        src/project/BTSerializer.cpp
+        src/monitoring/BTExecutionMonitor.cpp
+        src/recording/DataRecorder.cpp
+        src/nodes/AdvancedNodeSystem.cpp
+        src/visualization/SensorDataPipeline.cpp
+    )
+    
+    target_include_directories(branchforge_test_lib
+        PUBLIC include
+    )
+    
+    target_link_libraries(branchforge_test_lib
+        Qt6::Core
+        Qt6::Widgets
+        Qt6::Concurrent
+        Qt6::Gui
+        Qt6::Qml
+        Qt6::Quick
+        Qt6::Xml
+    )
+    
+    # Add test subdirectory
+    add_subdirectory(tests)
+endif()
+
 install(TARGETS branchforge_enhanced
     DESTINATION bin
 )

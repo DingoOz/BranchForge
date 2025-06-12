@@ -1,0 +1,8 @@
+-- Checking for module 'gtest_main>=1.14.0'
+--   Found gtest_main, version 1.14.0
+CMake Error at CMakeLists.txt:95 (message):
+  GMock not found
+
+
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:1016: cmake_check_build_system] Error 1

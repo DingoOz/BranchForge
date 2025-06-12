@@ -11,6 +11,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/home/dingo/Programming/BranchForge/resources.qrc"
+  "/home/dingo/Programming/BranchForge/tests/CMakeLists.txt"
+  "/home/dingo/Programming/BranchForge/tests/data/complex_tree.xml"
+  "/home/dingo/Programming/BranchForge/tests/data/invalid_tree.xml"
+  "/home/dingo/Programming/BranchForge/tests/data/sample_tree.xml"
+  "/home/dingo/Programming/BranchForge/tests/integration/CMakeLists.txt"
+  "/home/dingo/Programming/BranchForge/tests/unit/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake"
@@ -294,15 +300,29 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "resources.qrc.depends"
   "CMakeFiles/branchforge_enhanced_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/branchforge_test_lib_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/deploy_qml_imports/branchforge_enhanced.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/data/sample_tree.xml"
+  "tests/data/complex_tree.xml"
+  "tests/data/invalid_tree.xml"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/unit/CMakeFiles/test_behavior_tree_xml_autogen.dir/AutogenInfo.json"
+  "tests/unit/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/integration/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/branchforge_enhanced.dir/DependInfo.cmake"
+  "CMakeFiles/branchforge_test_lib.dir/DependInfo.cmake"
   "CMakeFiles/branchforge_enhanced_qmlimportscan.dir/DependInfo.cmake"
   "CMakeFiles/branchforge_enhanced_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/branchforge_enhanced_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/branchforge_test_lib_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/branchforge_test_lib_autogen.dir/DependInfo.cmake"
+  "tests/unit/CMakeFiles/test_behavior_tree_xml.dir/DependInfo.cmake"
+  "tests/unit/CMakeFiles/test_behavior_tree_xml_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/unit/CMakeFiles/test_behavior_tree_xml_autogen.dir/DependInfo.cmake"
   )

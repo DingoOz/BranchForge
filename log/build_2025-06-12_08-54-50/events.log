@@ -1,0 +1,113 @@
+[0.000000] (-) TimerEvent: {}
+[0.000199] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.001295] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.008299] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.009049] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.009762] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099971] (-) TimerEvent: {}
+[0.140879] (branchforge) StdoutLine: {'line': b'-- Configuring done (0.1s)\n'}
+[0.182189] (branchforge) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.189589] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[0.200102] (-) TimerEvent: {}
+[0.223707] (branchforge) StdoutLine: {'line': b'[  0%] Built target branchforge_test_lib_autogen_timestamp_deps\n'}
+[0.224442] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_qmlimportscan\n'}
+[0.241371] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.244917] (branchforge) StdoutLine: {'line': b'[  3%] Automatic MOC and UIC for target branchforge_test_lib\n'}
+[0.268186] (branchforge) StdoutLine: {'line': b'[  3%] Built target branchforge_test_lib_autogen\n'}
+[0.300203] (-) TimerEvent: {}
+[0.320188] (branchforge) StdoutLine: {'line': b'[ 27%] Built target branchforge_test_lib\n'}
+[0.345987] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_code_generator_autogen_timestamp_deps\n'}
+[0.350643] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_application_autogen_timestamp_deps\n'}
+[0.351518] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_bt_serializer_autogen_timestamp_deps\n'}
+[0.352451] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_project_manager_autogen_timestamp_deps\n'}
+[0.352640] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps\n'}
+[0.352727] (branchforge) StdoutLine: {'line': b'[ 27%] Built target test_behavior_tree_xml_autogen_timestamp_deps\n'}
+[0.361147] (branchforge) StdoutLine: {'line': b'[ 29%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.371398] (branchforge) StdoutLine: {'line': b'[ 31%] Automatic MOC and UIC for target test_application\n'}
+[0.378811] (branchforge) StdoutLine: {'line': b'[ 34%] Automatic MOC and UIC for target test_code_generator\n'}
+[0.379237] (branchforge) StdoutLine: {'line': b'[ 34%] Automatic MOC and UIC for target test_project_manager\n'}
+[0.382981] (branchforge) StdoutLine: {'line': b'[ 36%] Automatic MOC and UIC for target test_behavior_tree_xml\n'}
+[0.383722] (branchforge) StdoutLine: {'line': b'[ 39%] Built target test_visual_to_code_pipeline_autogen\n'}
+[0.383870] (branchforge) StdoutLine: {'line': b'[ 39%] Automatic MOC and UIC for target test_bt_serializer\n'}
+[0.391834] (branchforge) StdoutLine: {'line': b'[ 39%] Built target branchforge_enhanced_autogen\n'}
+[0.400920] (-) TimerEvent: {}
+[0.409043] (branchforge) StdoutLine: {'line': b'[ 41%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline_autogen/mocs_compilation.cpp.o\n'}
+[0.410089] (branchforge) StdoutLine: {'line': b'[ 43%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o\n'}
+[0.411888] (branchforge) StdoutLine: {'line': b'[ 43%] Built target test_application_autogen\n'}
+[0.414436] (branchforge) StdoutLine: {'line': b'[ 43%] Built target test_behavior_tree_xml_autogen\n'}
+[0.425674] (branchforge) StdoutLine: {'line': b'[ 43%] Built target test_project_manager_autogen\n'}
+[0.437041] (branchforge) StdoutLine: {'line': b'[ 43%] Built target test_code_generator_autogen\n'}
+[0.437626] (branchforge) StdoutLine: {'line': b'[ 43%] Built target test_bt_serializer_autogen\n'}
+[0.443959] (branchforge) StdoutLine: {'line': b'[ 44%] Building CXX object tests/unit/CMakeFiles/test_application.dir/test_application_autogen/mocs_compilation.cpp.o\n'}
+[0.444200] (branchforge) StdoutLine: {'line': b'[ 46%] Building CXX object tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o\n'}
+[0.450024] (branchforge) StdoutLine: {'line': b'[ 48%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o\n'}
+[0.457473] (branchforge) StdoutLine: {'line': b'[ 77%] Built target branchforge_enhanced\n'}
+[0.458975] (branchforge) StdoutLine: {'line': b'[ 82%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o\n'}
+[0.459183] (branchforge) StdoutLine: {'line': b'[ 82%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o\n'}
+[0.459286] (branchforge) StdoutLine: {'line': b'[ 82%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/test_bt_serializer_autogen/mocs_compilation.cpp.o\n'}
+[0.459703] (branchforge) StdoutLine: {'line': b'[ 84%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/test_project_manager_autogen/mocs_compilation.cpp.o\n'}
+[0.459892] (branchforge) StdoutLine: {'line': b'[ 86%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/test_code_generator_autogen/mocs_compilation.cpp.o\n'}
+[0.464034] (branchforge) StdoutLine: {'line': b'[ 87%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o\n'}
+[0.500985] (-) TimerEvent: {}
+[0.551744] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[0.551993] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[0.552093] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[0.552162] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[0.554499] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/build.make:90: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o] Error 1\n'}
+[0.554746] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:748: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/all] Error 2\n'}
+[0.554823] (branchforge) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.562631] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[0.562791] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[0.562849] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[0.562901] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[0.564435] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_project_manager.dir/build.make:90: tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o] Error 1\n'}
+[0.564636] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:432: tests/unit/CMakeFiles/test_project_manager.dir/all] Error 2\n'}
+[0.568090] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/core/test_application.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[0.568253] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[0.568296] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[0.568346] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[0.570201] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_application.dir/build.make:90: tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o] Error 1\n'}
+[0.571094] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:460: tests/unit/CMakeFiles/test_application.dir/all] Error 2\n'}
+[0.578350] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[0.578539] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[0.578621] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[0.578696] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[0.580515] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_code_generator.dir/build.make:90: tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o] Error 1\n'}
+[0.580857] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:376: tests/unit/CMakeFiles/test_code_generator.dir/all] Error 2\n'}
+[0.584182] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[0.584375] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[0.584488] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[0.584576] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[0.585990] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_bt_serializer.dir/build.make:90: tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o] Error 1\n'}
+[0.586258] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:404: tests/unit/CMakeFiles/test_bt_serializer.dir/all] Error 2\n'}
+[0.601086] (-) TimerEvent: {}
+[0.701408] (-) TimerEvent: {}
+[0.801713] (-) TimerEvent: {}
+[0.901889] (-) TimerEvent: {}
+[1.004922] (-) TimerEvent: {}
+[1.105158] (-) TimerEvent: {}
+[1.206067] (-) TimerEvent: {}
+[1.306294] (-) TimerEvent: {}
+[1.406492] (-) TimerEvent: {}
+[1.506738] (-) TimerEvent: {}
+[1.606992] (-) TimerEvent: {}
+[1.707192] (-) TimerEvent: {}
+[1.807392] (-) TimerEvent: {}
+[1.907615] (-) TimerEvent: {}
+[2.007797] (-) TimerEvent: {}
+[2.107975] (-) TimerEvent: {}
+[2.208210] (-) TimerEvent: {}
+[2.308436] (-) TimerEvent: {}
+[2.408614] (-) TimerEvent: {}
+[2.508897] (-) TimerEvent: {}
+[2.609089] (-) TimerEvent: {}
+[2.709279] (-) TimerEvent: {}
+[2.809487] (-) TimerEvent: {}
+[2.862260] (branchforge) StdoutLine: {'line': b'[ 89%] Linking CXX executable test_behavior_tree_xml\n'}
+[2.909594] (-) TimerEvent: {}
+[3.009779] (-) TimerEvent: {}
+[3.057685] (branchforge) StdoutLine: {'line': b'[ 91%] Built target test_behavior_tree_xml\n'}
+[3.058692] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.060561] (branchforge) CommandEnded: {'returncode': 2}
+[3.069957] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[3.080463] (-) EventReactorShutdown: {}

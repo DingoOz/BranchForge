@@ -1,0 +1,4 @@
+test_bt_serializer_autogen/timestamp: \
+	/home/dingo/Programming/BranchForge/tests/unit/CMakeLists.txt \
+	/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp \
+	/usr/bin/cmake

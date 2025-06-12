@@ -1,0 +1,540 @@
+[0.000000] (-) TimerEvent: {}
+[0.000114] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.002759] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.017548] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.020096] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.020170] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099673] (-) TimerEvent: {}
+[0.199948] (-) TimerEvent: {}
+[0.300302] (-) TimerEvent: {}
+[0.313750] (branchforge) StdoutLine: {'line': b'-- Fetching Google Test with GMock from source...\n'}
+[0.321234] (branchforge) StderrLine: {'line': b'CMake Warning (dev) at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1331 (message):\n'}
+[0.321577] (branchforge) StderrLine: {'line': b'  The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is\n'}
+[0.321707] (branchforge) StderrLine: {'line': b"  not set.  The policy's OLD behavior will be used.  When using a URL\n"}
+[0.321835] (branchforge) StderrLine: {'line': b'  download, the timestamps of extracted files should preferably be that of\n'}
+[0.321948] (branchforge) StderrLine: {'line': b'  the time of extraction, otherwise code that depends on the extracted\n'}
+[0.322062] (branchforge) StderrLine: {'line': b'  contents might not be rebuilt if the URL changes.  The OLD behavior\n'}
+[0.322177] (branchforge) StderrLine: {'line': b'  preserves the timestamps from the archive instead, but this is usually not\n'}
+[0.322308] (branchforge) StderrLine: {'line': b'  what you want.  Update your project to the NEW behavior or specify the\n'}
+[0.322423] (branchforge) StderrLine: {'line': b'  DOWNLOAD_EXTRACT_TIMESTAMP option with a value of true to avoid this\n'}
+[0.322534] (branchforge) StderrLine: {'line': b'  robustness issue.\n'}
+[0.322644] (branchforge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.322754] (branchforge) StderrLine: {'line': b'  CMakeLists.txt:87 (FetchContent_Declare)\n'}
+[0.322865] (branchforge) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.322976] (branchforge) StderrLine: {'line': b'\n'}
+[0.400520] (-) TimerEvent: {}
+[0.501554] (-) TimerEvent: {}
+[0.602858] (-) TimerEvent: {}
+[0.703271] (-) TimerEvent: {}
+[0.803763] (-) TimerEvent: {}
+[0.904223] (-) TimerEvent: {}
+[1.004630] (-) TimerEvent: {}
+[1.105043] (-) TimerEvent: {}
+[1.205362] (-) TimerEvent: {}
+[1.305688] (-) TimerEvent: {}
+[1.406115] (-) TimerEvent: {}
+[1.479140] (branchforge) StderrLine: {'line': b"gmake[1]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.479772] (branchforge) StderrLine: {'line': b"gmake[2]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.480099] (branchforge) StderrLine: {'line': b"gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.480436] (branchforge) StderrLine: {'line': b"gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.480743] (branchforge) StderrLine: {'line': b"gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.481027] (branchforge) StderrLine: {'line': b"[ 11%] Creating directories for 'googletest-populate'\n"}
+[1.481345] (branchforge) StderrLine: {'line': b"[ 22%] Performing download step (download, verify and extract) for 'googletest-populate'\n"}
+[1.481643] (branchforge) StderrLine: {'line': b'-- Downloading...\n'}
+[1.481919] (branchforge) StderrLine: {'line': b"   dst='/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'\n"}
+[1.482281] (branchforge) StderrLine: {'line': b"   timeout='none'\n"}
+[1.482621] (branchforge) StderrLine: {'line': b"   inactivity timeout='none'\n"}
+[1.482909] (branchforge) StderrLine: {'line': b"-- Using src='https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'\n"}
+[1.483180] (branchforge) StderrLine: {'line': b'-- [download 0% complete]\n'}
+[1.483500] (branchforge) StderrLine: {'line': b'CMake Error at googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake:170 (message):\n'}
+[1.483788] (branchforge) StderrLine: {'line': b'  Each download failed!\n'}
+[1.484060] (branchforge) StderrLine: {'line': b'\n'}
+[1.484382] (branchforge) StderrLine: {'line': b"    error: downloading 'https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip' failed\n"}
+[1.484673] (branchforge) StderrLine: {'line': b'          status_code: 22\n'}
+[1.484952] (branchforge) StderrLine: {'line': b'          status_string: "HTTP response code said error"\n'}
+[1.485294] (branchforge) StderrLine: {'line': b'          log:\n'}
+[1.485645] (branchforge) StderrLine: {'line': b'          --- LOG BEGIN ---\n'}
+[1.486014] (branchforge) StderrLine: {'line': b'          Host github.com:443 was resolved.\n'}
+[1.486398] (branchforge) StderrLine: {'line': b'\n'}
+[1.486734] (branchforge) StderrLine: {'line': b'  IPv6: (none)\n'}
+[1.487014] (branchforge) StderrLine: {'line': b'\n'}
+[1.487344] (branchforge) StderrLine: {'line': b'  IPv4: 4.237.22.38\n'}
+[1.487657] (branchforge) StderrLine: {'line': b'\n'}
+[1.487955] (branchforge) StderrLine: {'line': b'    Trying 4.237.22.38:443...\n'}
+[1.488255] (branchforge) StderrLine: {'line': b'\n'}
+[1.488565] (branchforge) StderrLine: {'line': b'  Connected to github.com (4.237.22.38) port 443\n'}
+[1.488830] (branchforge) StderrLine: {'line': b'\n'}
+[1.489096] (branchforge) StderrLine: {'line': b'  ALPN: curl offers h2,http/1.1\n'}
+[1.489400] (branchforge) StderrLine: {'line': b'\n'}
+[1.489679] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.489942] (branchforge) StderrLine: {'line': b'\n'}
+[1.490198] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS handshake, Client hello (1):\n'}
+[1.490503] (branchforge) StderrLine: {'line': b'\n'}
+[1.490769] (branchforge) StderrLine: {'line': b'  [512 bytes data]\n'}
+[1.491033] (branchforge) StderrLine: {'line': b'\n'}
+[1.491331] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.491628] (branchforge) StderrLine: {'line': b'\n'}
+[1.491895] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Server hello (2):\n'}
+[1.492161] (branchforge) StderrLine: {'line': b'\n'}
+[1.492460] (branchforge) StderrLine: {'line': b'  [122 bytes data]\n'}
+[1.492729] (branchforge) StderrLine: {'line': b'\n'}
+[1.492993] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.493786] (branchforge) StderrLine: {'line': b'\n'}
+[1.494144] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.494455] (branchforge) StderrLine: {'line': b'\n'}
+[1.494718] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.494975] (branchforge) StderrLine: {'line': b'\n'}
+[1.495249] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):\n'}
+[1.495541] (branchforge) StderrLine: {'line': b'\n'}
+[1.495800] (branchforge) StderrLine: {'line': b'  [19 bytes data]\n'}
+[1.496057] (branchforge) StderrLine: {'line': b'\n'}
+[1.496356] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.496634] (branchforge) StderrLine: {'line': b'\n'}
+[1.496894] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.497155] (branchforge) StderrLine: {'line': b'\n'}
+[1.497472] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Certificate (11):\n'}
+[1.497764] (branchforge) StderrLine: {'line': b'\n'}
+[1.498036] (branchforge) StderrLine: {'line': b'  [3135 bytes data]\n'}
+[1.498353] (branchforge) StderrLine: {'line': b'\n'}
+[1.498658] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.498985] (branchforge) StderrLine: {'line': b'\n'}
+[1.499284] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.499577] (branchforge) StderrLine: {'line': b'\n'}
+[1.499848] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, CERT verify (15):\n'}
+[1.500113] (branchforge) StderrLine: {'line': b'\n'}
+[1.504993] (branchforge) StderrLine: {'line': b'  [79 bytes data]\n'}
+[1.505349] (branchforge) StderrLine: {'line': b'\n'}
+[1.505596] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.505864] (branchforge) StderrLine: {'line': b'\n'}
+[1.506076] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.506322] (-) TimerEvent: {}
+[1.506374] (branchforge) StderrLine: {'line': b'\n'}
+[1.506621] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Finished (20):\n'}
+[1.506825] (branchforge) StderrLine: {'line': b'\n'}
+[1.507019] (branchforge) StderrLine: {'line': b'  [36 bytes data]\n'}
+[1.507246] (branchforge) StderrLine: {'line': b'\n'}
+[1.507489] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.507676] (branchforge) StderrLine: {'line': b'\n'}
+[1.507854] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):\n'}
+[1.509792] (branchforge) StderrLine: {'line': b'\n'}
+[1.510143] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.510492] (branchforge) StderrLine: {'line': b'\n'}
+[1.510901] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.511202] (branchforge) StderrLine: {'line': b'\n'}
+[1.511658] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.511953] (branchforge) StderrLine: {'line': b'\n'}
+[1.512296] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS handshake, Finished (20):\n'}
+[1.514444] (branchforge) StderrLine: {'line': b'\n'}
+[1.517651] (branchforge) StderrLine: {'line': b'  [36 bytes data]\n'}
+[1.518253] (branchforge) StderrLine: {'line': b'\n'}
+[1.518751] (branchforge) StderrLine: {'line': b'  SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /\n'}
+[1.519100] (branchforge) StderrLine: {'line': b'  id-ecPublicKey\n'}
+[1.519516] (branchforge) StderrLine: {'line': b'\n'}
+[1.520542] (branchforge) StderrLine: {'line': b'  ALPN: server accepted h2\n'}
+[1.520795] (branchforge) StderrLine: {'line': b'\n'}
+[1.521029] (branchforge) StderrLine: {'line': b'  Server certificate:\n'}
+[1.521257] (branchforge) StderrLine: {'line': b'\n'}
+[1.522147] (branchforge) StderrLine: {'line': b'   subject: CN=github.com\n'}
+[1.522424] (branchforge) StderrLine: {'line': b'   start date: Feb  5 00:00:00 2025 GMT\n'}
+[1.522644] (branchforge) StderrLine: {'line': b'   expire date: Feb  5 23:59:59 2026 GMT\n'}
+[1.522843] (branchforge) StderrLine: {'line': b'   subjectAltName: host "github.com" matched cert\'s "github.com"\n'}
+[1.523029] (branchforge) StderrLine: {'line': b'   issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA\n'}
+[1.523284] (branchforge) StderrLine: {'line': b'   SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n'}
+[1.523529] (branchforge) StderrLine: {'line': b'    Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256\n'}
+[1.523729] (branchforge) StderrLine: {'line': b'    Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384\n'}
+[1.524628] (branchforge) StderrLine: {'line': b'    Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption\n'}
+[1.525356] (branchforge) StderrLine: {'line': b'\n'}
+[1.525642] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.525824] (branchforge) StderrLine: {'line': b'\n'}
+[1.527481] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.528107] (branchforge) StderrLine: {'line': b'\n'}
+[1.528241] (branchforge) StderrLine: {'line': b'  using HTTP/2\n'}
+[1.528354] (branchforge) StderrLine: {'line': b'\n'}
+[1.528454] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] OPENED stream for\n'}
+[1.528552] (branchforge) StderrLine: {'line': b'  https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip\n'}
+[1.528651] (branchforge) StderrLine: {'line': b'\n'}
+[1.528796] (branchforge) StderrLine: {'line': b'\n'}
+[1.528971] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:method: GET]\n'}
+[1.529380] (branchforge) StderrLine: {'line': b'\n'}
+[1.529585] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:scheme: https]\n'}
+[1.529778] (branchforge) StderrLine: {'line': b'\n'}
+[1.529913] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:authority: github.com]\n'}
+[1.530048] (branchforge) StderrLine: {'line': b'\n'}
+[1.530181] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:path:\n'}
+[1.530331] (branchforge) StderrLine: {'line': b'  /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip]\n'}
+[1.530471] (branchforge) StderrLine: {'line': b'\n'}
+[1.530603] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [user-agent: curl/8.5.0]\n'}
+[1.530735] (branchforge) StderrLine: {'line': b'\n'}
+[1.530864] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [accept: */*]\n'}
+[1.530993] (branchforge) StderrLine: {'line': b'\n'}
+[1.531101] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.531180] (branchforge) StderrLine: {'line': b'\n'}
+[1.531271] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.531353] (branchforge) StderrLine: {'line': b'\n'}
+[1.531425] (branchforge) StderrLine: {'line': b'  GET /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip\n'}
+[1.531488] (branchforge) StderrLine: {'line': b'  HTTP/2\n'}
+[1.531551] (branchforge) StderrLine: {'line': b'\n'}
+[1.531613] (branchforge) StderrLine: {'line': b'  Host: github.com\n'}
+[1.531675] (branchforge) StderrLine: {'line': b'\n'}
+[1.531737] (branchforge) StderrLine: {'line': b'  User-Agent: curl/8.5.0\n'}
+[1.531798] (branchforge) StderrLine: {'line': b'\n'}
+[1.531860] (branchforge) StderrLine: {'line': b'  Accept: */*\n'}
+[1.531921] (branchforge) StderrLine: {'line': b'\n'}
+[1.531984] (branchforge) StderrLine: {'line': b'  \n'}
+[1.532053] (branchforge) StderrLine: {'line': b'\n'}
+[1.532123] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.532213] (branchforge) StderrLine: {'line': b'\n'}
+[1.532354] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.532520] (branchforge) StderrLine: {'line': b'\n'}
+[1.532682] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):\n'}
+[1.532875] (branchforge) StderrLine: {'line': b'\n'}
+[1.533106] (branchforge) StderrLine: {'line': b'  [57 bytes data]\n'}
+[1.534734] (branchforge) StderrLine: {'line': b'\n'}
+[1.535292] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.535822] (branchforge) StderrLine: {'line': b'\n'}
+[1.536147] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.536567] (branchforge) StderrLine: {'line': b'\n'}
+[1.536907] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):\n'}
+[1.537250] (branchforge) StderrLine: {'line': b'\n'}
+[1.538082] (branchforge) StderrLine: {'line': b'  [57 bytes data]\n'}
+[1.538328] (branchforge) StderrLine: {'line': b'\n'}
+[1.538637] (branchforge) StderrLine: {'line': b'  old SSL session ID is stale, removing\n'}
+[1.538787] (branchforge) StderrLine: {'line': b'\n'}
+[1.538935] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.539087] (branchforge) StderrLine: {'line': b'\n'}
+[1.540656] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.541307] (branchforge) StderrLine: {'line': b'\n'}
+[1.541815] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.541967] (branchforge) StderrLine: {'line': b'\n'}
+[1.542090] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.542221] (branchforge) StderrLine: {'line': b'\n'}
+[1.542531] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.542653] (branchforge) StderrLine: {'line': b'\n'}
+[1.542768] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.542883] (branchforge) StderrLine: {'line': b'\n'}
+[1.542999] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.543113] (branchforge) StderrLine: {'line': b'\n'}
+[1.543290] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.543429] (branchforge) StderrLine: {'line': b'\n'}
+[1.543548] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.544791] (branchforge) StderrLine: {'line': b'\n'}
+[1.545471] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.545639] (branchforge) StderrLine: {'line': b'\n'}
+[1.545764] (branchforge) StderrLine: {'line': b'  HTTP/2 302 \n'}
+[1.545885] (branchforge) StderrLine: {'line': b'\n'}
+[1.546029] (branchforge) StderrLine: {'line': b'  date: Wed, 11 Jun 2025 22:52:13 GMT\n'}
+[1.546311] (branchforge) StderrLine: {'line': b'\n'}
+[1.546472] (branchforge) StderrLine: {'line': b'  content-type: text/html; charset=utf-8\n'}
+[1.546608] (branchforge) StderrLine: {'line': b'\n'}
+[1.546735] (branchforge) StderrLine: {'line': b'  content-length: 0\n'}
+[1.546855] (branchforge) StderrLine: {'line': b'\n'}
+[1.546969] (branchforge) StderrLine: {'line': b'  vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame,\n'}
+[1.547086] (branchforge) StderrLine: {'line': b'  X-Requested-With,Accept-Encoding, Accept, X-Requested-With\n'}
+[1.547287] (branchforge) StderrLine: {'line': b'\n'}
+[1.547354] (branchforge) StderrLine: {'line': b'  location:\n'}
+[1.547419] (branchforge) StderrLine: {'line': b'  https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68\n'}
+[1.547486] (branchforge) StderrLine: {'line': b'\n'}
+[1.547547] (branchforge) StderrLine: {'line': b'\n'}
+[1.547610] (branchforge) StderrLine: {'line': b'  cache-control: max-age=0, private\n'}
+[1.547677] (branchforge) StderrLine: {'line': b'\n'}
+[1.547741] (branchforge) StderrLine: {'line': b'  strict-transport-security: max-age=31536000; includeSubdomains; preload\n'}
+[1.547806] (branchforge) StderrLine: {'line': b'\n'}
+[1.547870] (branchforge) StderrLine: {'line': b'  x-frame-options: deny\n'}
+[1.547937] (branchforge) StderrLine: {'line': b'\n'}
+[1.549079] (branchforge) StderrLine: {'line': b'  x-content-type-options: nosniff\n'}
+[1.549187] (branchforge) StderrLine: {'line': b'\n'}
+[1.549288] (branchforge) StderrLine: {'line': b'  x-xss-protection: 0\n'}
+[1.549357] (branchforge) StderrLine: {'line': b'\n'}
+[1.549438] (branchforge) StderrLine: {'line': b'  referrer-policy: no-referrer-when-downgrade\n'}
+[1.549555] (branchforge) StderrLine: {'line': b'\n'}
+[1.549631] (branchforge) StderrLine: {'line': b"  content-security-policy: default-src 'none'; base-uri 'self'; child-src\n"}
+[1.550715] (branchforge) StderrLine: {'line': b'  github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/\n'}
+[1.550842] (branchforge) StderrLine: {'line': b"  gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com\n"}
+[1.550907] (branchforge) StderrLine: {'line': b'  www.githubstatus.com collector.github.com raw.githubusercontent.com\n'}
+[1.550974] (branchforge) StderrLine: {'line': b'  api.github.com github-cloud.s3.amazonaws.com\n'}
+[1.551043] (branchforge) StderrLine: {'line': b'  github-production-repository-file-5c1aeb.s3.amazonaws.com\n'}
+[1.551112] (branchforge) StderrLine: {'line': b'  github-production-upload-manifest-file-7fdce7.s3.amazonaws.com\n'}
+[1.551181] (branchforge) StderrLine: {'line': b'  github-production-user-asset-6210df.s3.amazonaws.com\n'}
+[1.551266] (branchforge) StderrLine: {'line': b'  *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com\n'}
+[1.551335] (branchforge) StderrLine: {'line': b'  objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com\n'}
+[1.551427] (branchforge) StderrLine: {'line': b'  proxy.individual.githubcopilot.com proxy.business.githubcopilot.com\n'}
+[1.551530] (branchforge) StderrLine: {'line': b'  proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com\n'}
+[1.551603] (branchforge) StderrLine: {'line': b'  wss://*.actions.githubusercontent.com\n'}
+[1.551673] (branchforge) StderrLine: {'line': b'  productionresultssa0.blob.core.windows.net/\n'}
+[1.551742] (branchforge) StderrLine: {'line': b'  productionresultssa1.blob.core.windows.net/\n'}
+[1.551810] (branchforge) StderrLine: {'line': b'  productionresultssa2.blob.core.windows.net/\n'}
+[1.551877] (branchforge) StderrLine: {'line': b'  productionresultssa3.blob.core.windows.net/\n'}
+[1.551942] (branchforge) StderrLine: {'line': b'  productionresultssa4.blob.core.windows.net/\n'}
+[1.552012] (branchforge) StderrLine: {'line': b'  productionresultssa5.blob.core.windows.net/\n'}
+[1.552082] (branchforge) StderrLine: {'line': b'  productionresultssa6.blob.core.windows.net/\n'}
+[1.552151] (branchforge) StderrLine: {'line': b'  productionresultssa7.blob.core.windows.net/\n'}
+[1.552556] (branchforge) StderrLine: {'line': b'  productionresultssa8.blob.core.windows.net/\n'}
+[1.552915] (branchforge) StderrLine: {'line': b'  productionresultssa9.blob.core.windows.net/\n'}
+[1.552993] (branchforge) StderrLine: {'line': b'  productionresultssa10.blob.core.windows.net/\n'}
+[1.553062] (branchforge) StderrLine: {'line': b'  productionresultssa11.blob.core.windows.net/\n'}
+[1.553127] (branchforge) StderrLine: {'line': b'  productionresultssa12.blob.core.windows.net/\n'}
+[1.553243] (branchforge) StderrLine: {'line': b'  productionresultssa13.blob.core.windows.net/\n'}
+[1.553328] (branchforge) StderrLine: {'line': b'  productionresultssa14.blob.core.windows.net/\n'}
+[1.553419] (branchforge) StderrLine: {'line': b'  productionresultssa15.blob.core.windows.net/\n'}
+[1.553516] (branchforge) StderrLine: {'line': b'  productionresultssa16.blob.core.windows.net/\n'}
+[1.553612] (branchforge) StderrLine: {'line': b'  productionresultssa17.blob.core.windows.net/\n'}
+[1.553711] (branchforge) StderrLine: {'line': b'  productionresultssa18.blob.core.windows.net/\n'}
+[1.553806] (branchforge) StderrLine: {'line': b'  productionresultssa19.blob.core.windows.net/\n'}
+[1.553898] (branchforge) StderrLine: {'line': b'  github-production-repository-image-32fea6.s3.amazonaws.com\n'}
+[1.553991] (branchforge) StderrLine: {'line': b'  github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com\n'}
+[1.554083] (branchforge) StderrLine: {'line': b'  wss://alive.github.com api.githubcopilot.com\n'}
+[1.554178] (branchforge) StderrLine: {'line': b'  api.individual.githubcopilot.com api.business.githubcopilot.com\n'}
+[1.554312] (branchforge) StderrLine: {'line': b'  api.enterprise.githubcopilot.com; font-src github.githubassets.com;\n'}
+[1.554411] (branchforge) StderrLine: {'line': b"  form-action 'self' github.com gist.github.com\n"}
+[1.554526] (branchforge) StderrLine: {'line': b'  copilot-workspace.githubnext.com objects-origin.githubusercontent.com;\n'}
+[1.554621] (branchforge) StderrLine: {'line': b"  frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com\n"}
+[1.554720] (branchforge) StderrLine: {'line': b"  notebooks.githubusercontent.com; img-src 'self' data: blob:\n"}
+[1.554851] (branchforge) StderrLine: {'line': b'  github.githubassets.com media.githubusercontent.com\n'}
+[1.554958] (branchforge) StderrLine: {'line': b'  camo.githubusercontent.com identicons.github.com\n'}
+[1.555055] (branchforge) StderrLine: {'line': b'  avatars.githubusercontent.com private-avatars.githubusercontent.com\n'}
+[1.555151] (branchforge) StderrLine: {'line': b'  github-cloud.s3.amazonaws.com objects.githubusercontent.com\n'}
+[1.555278] (branchforge) StderrLine: {'line': b'  release-assets.githubusercontent.com\n'}
+[1.555388] (branchforge) StderrLine: {'line': b'  secured-user-images.githubusercontent.com/\n'}
+[1.555498] (branchforge) StderrLine: {'line': b'  user-images.githubusercontent.com/\n'}
+[1.555596] (branchforge) StderrLine: {'line': b'  private-user-images.githubusercontent.com opengraph.githubassets.com\n'}
+[1.555691] (branchforge) StderrLine: {'line': b'  copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/\n'}
+[1.555787] (branchforge) StderrLine: {'line': b'  github-production-user-asset-6210df.s3.amazonaws.com\n'}
+[1.555877] (branchforge) StderrLine: {'line': b'  customer-stories-feed.github.com spotlights-feed.github.com\n'}
+[1.555965] (branchforge) StderrLine: {'line': b'  objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src\n'}
+[1.556050] (branchforge) StderrLine: {'line': b"  'self'; media-src github.com user-images.githubusercontent.com/\n"}
+[1.556139] (branchforge) StderrLine: {'line': b'  secured-user-images.githubusercontent.com/\n'}
+[1.556245] (branchforge) StderrLine: {'line': b'  private-user-images.githubusercontent.com\n'}
+[1.556371] (branchforge) StderrLine: {'line': b'  github-production-user-asset-6210df.s3.amazonaws.com gist.github.com;\n'}
+[1.556505] (branchforge) StderrLine: {'line': b"  script-src github.githubassets.com; style-src 'unsafe-inline'\n"}
+[1.556630] (branchforge) StderrLine: {'line': b'  github.githubassets.com; upgrade-insecure-requests; worker-src\n'}
+[1.556752] (branchforge) StderrLine: {'line': b'  github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/\n'}
+[1.556873] (branchforge) StderrLine: {'line': b'  gist.github.com/assets-cdn/worker/\n'}
+[1.556992] (branchforge) StderrLine: {'line': b'\n'}
+[1.557123] (branchforge) StderrLine: {'line': b'  server: github.com\n'}
+[1.557256] (branchforge) StderrLine: {'line': b'\n'}
+[1.557387] (branchforge) StderrLine: {'line': b'  x-github-request-id: DC96:4649E:17CE1:1D38B:684A089D\n'}
+[1.557508] (branchforge) StderrLine: {'line': b'\n'}
+[1.557628] (branchforge) StderrLine: {'line': b'  \n'}
+[1.557740] (branchforge) StderrLine: {'line': b'\n'}
+[1.557853] (branchforge) StderrLine: {'line': b'  Connection #0 to host github.com left intact\n'}
+[1.557967] (branchforge) StderrLine: {'line': b'\n'}
+[1.558080] (branchforge) StderrLine: {'line': b'  Issue another request to this URL:\n'}
+[1.558195] (branchforge) StderrLine: {'line': b"  'https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68'\n"}
+[1.558324] (branchforge) StderrLine: {'line': b'\n'}
+[1.558441] (branchforge) StderrLine: {'line': b'\n'}
+[1.558554] (branchforge) StderrLine: {'line': b'  Host codeload.github.com:443 was resolved.\n'}
+[1.558667] (branchforge) StderrLine: {'line': b'\n'}
+[1.558779] (branchforge) StderrLine: {'line': b'  IPv6: (none)\n'}
+[1.558892] (branchforge) StderrLine: {'line': b'\n'}
+[1.559005] (branchforge) StderrLine: {'line': b'  IPv4: 4.237.22.35\n'}
+[1.559117] (branchforge) StderrLine: {'line': b'\n'}
+[1.559236] (branchforge) StderrLine: {'line': b'    Trying 4.237.22.35:443...\n'}
+[1.559354] (branchforge) StderrLine: {'line': b'\n'}
+[1.559465] (branchforge) StderrLine: {'line': b'  Connected to codeload.github.com (4.237.22.35) port 443\n'}
+[1.559576] (branchforge) StderrLine: {'line': b'\n'}
+[1.559704] (branchforge) StderrLine: {'line': b'  ALPN: curl offers h2,http/1.1\n'}
+[1.559837] (branchforge) StderrLine: {'line': b'\n'}
+[1.559970] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.560101] (branchforge) StderrLine: {'line': b'\n'}
+[1.560241] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS handshake, Client hello (1):\n'}
+[1.564388] (branchforge) StderrLine: {'line': b'\n'}
+[1.564534] (branchforge) StderrLine: {'line': b'  [512 bytes data]\n'}
+[1.564647] (branchforge) StderrLine: {'line': b'\n'}
+[1.564756] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.564859] (branchforge) StderrLine: {'line': b'\n'}
+[1.564961] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Server hello (2):\n'}
+[1.565045] (branchforge) StderrLine: {'line': b'\n'}
+[1.565121] (branchforge) StderrLine: {'line': b'  [122 bytes data]\n'}
+[1.565197] (branchforge) StderrLine: {'line': b'\n'}
+[1.565297] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.565372] (branchforge) StderrLine: {'line': b'\n'}
+[1.565444] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.565516] (branchforge) StderrLine: {'line': b'\n'}
+[1.565588] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.565662] (branchforge) StderrLine: {'line': b'\n'}
+[1.565735] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):\n'}
+[1.565811] (branchforge) StderrLine: {'line': b'\n'}
+[1.565883] (branchforge) StderrLine: {'line': b'  [19 bytes data]\n'}
+[1.565956] (branchforge) StderrLine: {'line': b'\n'}
+[1.566025] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.566096] (branchforge) StderrLine: {'line': b'\n'}
+[1.566160] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.566236] (branchforge) StderrLine: {'line': b'\n'}
+[1.566304] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Certificate (11):\n'}
+[1.566370] (branchforge) StderrLine: {'line': b'\n'}
+[1.566434] (branchforge) StderrLine: {'line': b'  [3134 bytes data]\n'}
+[1.566500] (branchforge) StderrLine: {'line': b'\n'}
+[1.566563] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.566628] (branchforge) StderrLine: {'line': b'\n'}
+[1.566693] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.566756] (branchforge) StderrLine: {'line': b'\n'}
+[1.566819] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, CERT verify (15):\n'}
+[1.566882] (branchforge) StderrLine: {'line': b'\n'}
+[1.566947] (branchforge) StderrLine: {'line': b'  [79 bytes data]\n'}
+[1.567009] (branchforge) StderrLine: {'line': b'\n'}
+[1.567104] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.567170] (branchforge) StderrLine: {'line': b'\n'}
+[1.567245] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.567311] (branchforge) StderrLine: {'line': b'\n'}
+[1.567376] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Finished (20):\n'}
+[1.567447] (branchforge) StderrLine: {'line': b'\n'}
+[1.567515] (branchforge) StderrLine: {'line': b'  [36 bytes data]\n'}
+[1.567621] (branchforge) StderrLine: {'line': b'\n'}
+[1.567725] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.567826] (branchforge) StderrLine: {'line': b'\n'}
+[1.567911] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):\n'}
+[1.567986] (branchforge) StderrLine: {'line': b'\n'}
+[1.568059] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.568139] (branchforge) StderrLine: {'line': b'\n'}
+[1.568250] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.568345] (branchforge) StderrLine: {'line': b'\n'}
+[1.568426] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.568515] (branchforge) StderrLine: {'line': b'\n'}
+[1.568591] (branchforge) StderrLine: {'line': b'  TLSv1.3 (OUT), TLS handshake, Finished (20):\n'}
+[1.568670] (branchforge) StderrLine: {'line': b'\n'}
+[1.568765] (branchforge) StderrLine: {'line': b'  [36 bytes data]\n'}
+[1.568869] (branchforge) StderrLine: {'line': b'\n'}
+[1.568977] (branchforge) StderrLine: {'line': b'  SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /\n'}
+[1.569088] (branchforge) StderrLine: {'line': b'  id-ecPublicKey\n'}
+[1.569188] (branchforge) StderrLine: {'line': b'\n'}
+[1.569296] (branchforge) StderrLine: {'line': b'  ALPN: server accepted h2\n'}
+[1.569392] (branchforge) StderrLine: {'line': b'\n'}
+[1.569493] (branchforge) StderrLine: {'line': b'  Server certificate:\n'}
+[1.569626] (branchforge) StderrLine: {'line': b'\n'}
+[1.569735] (branchforge) StderrLine: {'line': b'   subject: CN=*.github.com\n'}
+[1.569841] (branchforge) StderrLine: {'line': b'   start date: Feb  5 00:00:00 2025 GMT\n'}
+[1.569945] (branchforge) StderrLine: {'line': b'   expire date: Feb  5 23:59:59 2026 GMT\n'}
+[1.570059] (branchforge) StderrLine: {'line': b'   subjectAltName: host "codeload.github.com" matched cert\'s "*.github.com"\n'}
+[1.570168] (branchforge) StderrLine: {'line': b'   issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA\n'}
+[1.570279] (branchforge) StderrLine: {'line': b'   SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n'}
+[1.570373] (branchforge) StderrLine: {'line': b'    Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256\n'}
+[1.570465] (branchforge) StderrLine: {'line': b'    Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384\n'}
+[1.570556] (branchforge) StderrLine: {'line': b'    Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption\n'}
+[1.570647] (branchforge) StderrLine: {'line': b'\n'}
+[1.570738] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.570830] (branchforge) StderrLine: {'line': b'\n'}
+[1.570920] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.571012] (branchforge) StderrLine: {'line': b'\n'}
+[1.571107] (branchforge) StderrLine: {'line': b'  using HTTP/2\n'}
+[1.571196] (branchforge) StderrLine: {'line': b'\n'}
+[1.571375] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] OPENED stream for\n'}
+[1.571482] (branchforge) StderrLine: {'line': b'  https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68\n'}
+[1.571591] (branchforge) StderrLine: {'line': b'\n'}
+[1.571872] (branchforge) StderrLine: {'line': b'\n'}
+[1.571958] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:method: GET]\n'}
+[1.572041] (branchforge) StderrLine: {'line': b'\n'}
+[1.572129] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:scheme: https]\n'}
+[1.572236] (branchforge) StderrLine: {'line': b'\n'}
+[1.572326] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:authority: codeload.github.com]\n'}
+[1.572413] (branchforge) StderrLine: {'line': b'\n'}
+[1.572501] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [:path:\n'}
+[1.572589] (branchforge) StderrLine: {'line': b'  /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68]\n'}
+[1.572675] (branchforge) StderrLine: {'line': b'\n'}
+[1.572762] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [user-agent: curl/8.5.0]\n'}
+[1.572847] (branchforge) StderrLine: {'line': b'\n'}
+[1.572935] (branchforge) StderrLine: {'line': b'  [HTTP/2] [1] [accept: */*]\n'}
+[1.573022] (branchforge) StderrLine: {'line': b'\n'}
+[1.573107] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.573191] (branchforge) StderrLine: {'line': b'\n'}
+[1.573288] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.573373] (branchforge) StderrLine: {'line': b'\n'}
+[1.573456] (branchforge) StderrLine: {'line': b'  GET /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68 HTTP/2\n'}
+[1.573542] (branchforge) StderrLine: {'line': b'\n'}
+[1.573628] (branchforge) StderrLine: {'line': b'  Host: codeload.github.com\n'}
+[1.573714] (branchforge) StderrLine: {'line': b'\n'}
+[1.573797] (branchforge) StderrLine: {'line': b'  User-Agent: curl/8.5.0\n'}
+[1.573881] (branchforge) StderrLine: {'line': b'\n'}
+[1.573964] (branchforge) StderrLine: {'line': b'  Accept: */*\n'}
+[1.574051] (branchforge) StderrLine: {'line': b'\n'}
+[1.574138] (branchforge) StderrLine: {'line': b'  \n'}
+[1.574229] (branchforge) StderrLine: {'line': b'\n'}
+[1.574321] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.574404] (branchforge) StderrLine: {'line': b'\n'}
+[1.574486] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.574578] (branchforge) StderrLine: {'line': b'\n'}
+[1.574693] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):\n'}
+[1.574927] (branchforge) StderrLine: {'line': b'\n'}
+[1.575019] (branchforge) StderrLine: {'line': b'  [57 bytes data]\n'}
+[1.575102] (branchforge) StderrLine: {'line': b'\n'}
+[1.575188] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.575351] (branchforge) StderrLine: {'line': b'\n'}
+[1.575432] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.575507] (branchforge) StderrLine: {'line': b'\n'}
+[1.575581] (branchforge) StderrLine: {'line': b'  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):\n'}
+[1.575661] (branchforge) StderrLine: {'line': b'\n'}
+[1.575737] (branchforge) StderrLine: {'line': b'  [57 bytes data]\n'}
+[1.575811] (branchforge) StderrLine: {'line': b'\n'}
+[1.575894] (branchforge) StderrLine: {'line': b'  old SSL session ID is stale, removing\n'}
+[1.575992] (branchforge) StderrLine: {'line': b'\n'}
+[1.576090] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.577924] (branchforge) StderrLine: {'line': b'\n'}
+[1.578116] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.578295] (branchforge) StderrLine: {'line': b'\n'}
+[1.578458] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.578605] (branchforge) StderrLine: {'line': b'\n'}
+[1.578735] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.578870] (branchforge) StderrLine: {'line': b'\n'}
+[1.579003] (branchforge) StderrLine: {'line': b'  [5 bytes data]\n'}
+[1.579135] (branchforge) StderrLine: {'line': b'\n'}
+[1.581514] (branchforge) StderrLine: {'line': b'  [1 bytes data]\n'}
+[1.581699] (branchforge) StderrLine: {'line': b'\n'}
+[1.581833] (branchforge) StderrLine: {'line': b'  HTTP/2 404 \n'}
+[1.583368] (branchforge) StderrLine: {'line': b'\n'}
+[1.583494] (branchforge) StderrLine: {'line': b'  access-control-allow-origin: https://render.githubusercontent.com\n'}
+[1.583580] (branchforge) StderrLine: {'line': b'\n'}
+[1.583658] (branchforge) StderrLine: {'line': b"  content-security-policy: default-src 'none'; style-src 'unsafe-inline';\n"}
+[1.583736] (branchforge) StderrLine: {'line': b'  sandbox\n'}
+[1.583850] (branchforge) StderrLine: {'line': b'\n'}
+[1.583929] (branchforge) StderrLine: {'line': b'  cross-origin-resource-policy: cross-origin\n'}
+[1.584006] (branchforge) StderrLine: {'line': b'\n'}
+[1.584080] (branchforge) StderrLine: {'line': b'  strict-transport-security: max-age=31536000\n'}
+[1.584155] (branchforge) StderrLine: {'line': b'\n'}
+[1.584245] (branchforge) StderrLine: {'line': b'  vary: Authorization,Accept-Encoding\n'}
+[1.584323] (branchforge) StderrLine: {'line': b'\n'}
+[1.584396] (branchforge) StderrLine: {'line': b'  x-content-type-options: nosniff\n'}
+[1.584471] (branchforge) StderrLine: {'line': b'\n'}
+[1.584546] (branchforge) StderrLine: {'line': b'  x-frame-options: deny\n'}
+[1.584621] (branchforge) StderrLine: {'line': b'\n'}
+[1.584695] (branchforge) StderrLine: {'line': b'  x-xss-protection: 1; mode=block\n'}
+[1.584769] (branchforge) StderrLine: {'line': b'\n'}
+[1.584842] (branchforge) StderrLine: {'line': b'  date: Wed, 11 Jun 2025 22:52:13 GMT\n'}
+[1.584917] (branchforge) StderrLine: {'line': b'\n'}
+[1.584989] (branchforge) StderrLine: {'line': b'  content-length: 14\n'}
+[1.585063] (branchforge) StderrLine: {'line': b'\n'}
+[1.585136] (branchforge) StderrLine: {'line': b'  content-type: text/plain; charset=utf-8\n'}
+[1.585216] (branchforge) StderrLine: {'line': b'\n'}
+[1.586631] (branchforge) StderrLine: {'line': b'  x-github-request-id: CA1C:3AA860:04CF:1ABE:684A089D\n'}
+[1.587264] (branchforge) StderrLine: {'line': b'\n'}
+[1.590043] (branchforge) StderrLine: {'line': b'  The requested URL returned error: 404\n'}
+[1.590268] (branchforge) StderrLine: {'line': b'\n'}
+[1.590593] (branchforge) StderrLine: {'line': b'  Connection #1 to host codeload.github.com left intact\n'}
+[1.590720] (branchforge) StderrLine: {'line': b'\n'}
+[1.590838] (branchforge) StderrLine: {'line': b'\n'}
+[1.590954] (branchforge) StderrLine: {'line': b'\n'}
+[1.591171] (branchforge) StderrLine: {'line': b'          --- LOG END ---\n'}
+[1.591316] (branchforge) StderrLine: {'line': b'          \n'}
+[1.591429] (branchforge) StderrLine: {'line': b'    \n'}
+[1.591549] (branchforge) StderrLine: {'line': b'\n'}
+[1.591665] (branchforge) StderrLine: {'line': b'\n'}
+[1.591786] (branchforge) StderrLine: {'line': b'gmake[3]: *** [CMakeFiles/googletest-populate.dir/build.make:100: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download] Error 1\n'}
+[1.591905] (branchforge) StderrLine: {'line': b"gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.592023] (branchforge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Makefile2:83: CMakeFiles/googletest-populate.dir/all] Error 2\n'}
+[1.592140] (branchforge) StderrLine: {'line': b"gmake[2]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.592352] (branchforge) StderrLine: {'line': b'gmake[1]: *** [Makefile:91: all] Error 2\n'}
+[1.594601] (branchforge) StderrLine: {'line': b"gmake[1]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'\n"}
+[1.594710] (branchforge) StderrLine: {'line': b'\n'}
+[1.594800] (branchforge) StderrLine: {'line': b'CMake Error at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1679 (message):\n'}
+[1.595085] (branchforge) StderrLine: {'line': b'  Build step for googletest failed: 2\n'}
+[1.595230] (branchforge) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.595362] (branchforge) StderrLine: {'line': b'  /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819:EVAL:2 (__FetchContent_directPopulate)\n'}
+[1.595481] (branchforge) StderrLine: {'line': b'  /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819 (cmake_language)\n'}
+[1.595658] (branchforge) StderrLine: {'line': b'  /usr/share/cmake-3.28/Modules/FetchContent.cmake:2033 (FetchContent_Populate)\n'}
+[1.595779] (branchforge) StderrLine: {'line': b'  CMakeLists.txt:93 (FetchContent_MakeAvailable)\n'}
+[1.595895] (branchforge) StderrLine: {'line': b'\n'}
+[1.596009] (branchforge) StderrLine: {'line': b'\n'}
+[1.596895] (branchforge) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.597029] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:1016: cmake_check_build_system] Error 1\n'}
+[1.597156] (branchforge) CommandEnded: {'returncode': 2}
+[1.599475] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[1.606504] (-) TimerEvent: {}
+[1.610126] (-) EventReactorShutdown: {}

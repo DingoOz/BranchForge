@@ -1,0 +1,21 @@
+[0.153s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/test.py", line 29, in test
+    return await extension.test()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/test.py", line 58, in test
+    output = await check_output(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+           ^^^^^^
+AssertionError: Expected ['/home/dingo/.local/bin/ctest', '--show-only'] to pass: Traceback (most recent call last):
+  File "/home/dingo/.local/bin/ctest", line 5, in <module>
+    from cmake import ctest
+ModuleNotFoundError: No module named 'cmake'
+

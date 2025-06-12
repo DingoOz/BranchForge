@@ -1,0 +1,37 @@
+[  1%] Built target branchforge_test_lib_autogen_timestamp_deps
+[  1%] Built target branchforge_enhanced_qmlimportscan
+[  1%] Built target branchforge_enhanced_autogen_timestamp_deps
+[  3%] Automatic MOC and UIC for target branchforge_test_lib
+[  3%] Built target branchforge_test_lib_autogen
+[  5%] Automatic MOC and UIC for target branchforge_enhanced
+[  6%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o
+[  8%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o
+[  8%] Built target branchforge_enhanced_autogen
+[ 10%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 13%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 13%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
+[ 15%] Linking CXX static library libbranchforge_test_lib.a
+[ 34%] Built target branchforge_test_lib
+[ 34%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps
+[ 34%] Built target test_application_autogen_timestamp_deps
+[ 34%] Built target test_bt_serializer_autogen_timestamp_deps
+[ 34%] Built target test_code_generator_autogen_timestamp_deps
+[ 34%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[ 34%] Built target test_project_manager_autogen_timestamp_deps
+[ 36%] Built target test_visual_to_code_pipeline_autogen
+[ 37%] Built target test_code_generator_autogen
+[ 41%] Automatic MOC and UIC for target test_application
+[ 41%] Built target test_behavior_tree_xml_autogen
+[ 43%] Automatic MOC and UIC for target test_bt_serializer
+[ 44%] Built target test_project_manager_autogen
+[ 46%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o
+[ 46%] Built target test_application_autogen
+[ 48%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o
+[ 50%] Linking CXX executable test_behavior_tree_xml
+[ 50%] Built target test_bt_serializer_autogen
+[ 53%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o
+[ 53%] Building CXX object tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o
+[ 55%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o
+[ 58%] Built target test_behavior_tree_xml
+[ 60%] Linking CXX executable branchforge_enhanced
+[ 82%] Built target branchforge_enhanced

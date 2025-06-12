@@ -1,0 +1,10 @@
+[0.013s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.122s] -- Checking for module 'gtest_main>=1.14.0'
+[0.130s] --   Found gtest_main, version 1.14.0
+[0.177s] CMake Error at CMakeLists.txt:95 (message):
+[0.177s]   GMock not found
+[0.177s] 
+[0.178s] 
+[0.178s] -- Configuring incomplete, errors occurred!
+[0.188s] gmake: *** [Makefile:1016: cmake_check_build_system] Error 1
+[0.189s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

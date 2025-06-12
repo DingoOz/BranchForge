@@ -1,0 +1,71 @@
+[0.018s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.333s] -- Configuring done (0.3s)
+[0.438s] -- Generating done (0.1s)
+[0.454s] -- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[0.515s] [  1%] Built target branchforge_enhanced_qmlimportscan
+[0.515s] [  1%] Built target branchforge_test_lib_autogen_timestamp_deps
+[0.569s] [  1%] Built target branchforge_enhanced_autogen_timestamp_deps
+[0.574s] [  3%] Automatic MOC and UIC for target branchforge_test_lib
+[0.635s] [  3%] Built target branchforge_test_lib_autogen
+[0.679s] [  5%] Building CXX object CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o
+[0.684s] [ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[0.684s] [ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o
+[0.684s] [ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o
+[0.684s] [ 12%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o
+[0.687s] [ 13%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o
+[0.687s] [ 15%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o
+[0.687s] [ 17%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o
+[0.692s] [ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o
+[0.692s] [ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[0.706s] [ 22%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o
+[0.729s] [ 24%] Automatic MOC and UIC for target branchforge_enhanced
+[0.739s] [ 25%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[1.942s] [ 25%] Built target branchforge_enhanced_autogen
+[1.965s] [ 27%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o
+[6.668s] [ 29%] Generating qrc_resources.cpp
+[6.869s] [ 31%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[6.878s] [ 32%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[7.676s] [ 34%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[8.587s] [ 36%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[9.132s] [ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[9.444s] [ 39%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[10.081s] [ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[10.105s] [ 43%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o
+[10.292s] [ 44%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[11.506s] [ 46%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
+[12.040s] [ 48%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[12.228s] [ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[12.297s] [ 51%] Linking CXX static library libbranchforge_test_lib.a
+[13.128s] [ 51%] Built target branchforge_test_lib
+[13.207s] [ 51%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[13.254s] [ 53%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[17.683s] In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+[17.683s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+[17.685s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+[17.685s]   193 |     AdvancedNodeTemplate m_template;
+[17.685s]       |                          ^~~~~~~~~~
+[17.685s] /home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+[17.685s]   190 |     QString m_id;
+[17.686s]       |             ^~~~
+[17.686s] /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+[17.686s]   306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+[17.686s]       | ^~~~~~~~~~~~~~~~~~~~
+[20.137s] [ 55%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o
+[20.189s] [ 56%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[23.811s] [ 58%] Linking CXX executable branchforge_enhanced
+[24.731s] [ 58%] Built target branchforge_enhanced
+[24.765s] [ 58%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps
+[24.795s] [ 60%] Automatic MOC and UIC for target test_behavior_tree_xml
+[24.875s] [ 60%] Built target test_behavior_tree_xml_autogen
+[24.910s] [ 62%] Automatic MOC and UIC for target test_visual_to_code_pipeline
+[24.994s] [ 62%] Built target test_visual_to_code_pipeline_autogen
+[25.042s] [ 63%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/test_behavior_tree_xml_autogen/mocs_compilation.cpp.o
+[25.074s] [ 65%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o
+[25.344s] /home/dingo/Programming/BranchForge/tests/unit/project/test_behavior_tree_xml.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory
+[25.344s]     2 | #include <gmock/gmock.h>
+[25.344s]       |          ^~~~~~~~~~~~~~~
+[25.344s] compilation terminated.
+[25.348s] gmake[2]: *** [tests/unit/CMakeFiles/test_behavior_tree_xml.dir/build.make:90: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o] Error 1
+[25.348s] gmake[1]: *** [CMakeFiles/Makefile2:348: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/all] Error 2
+[25.349s] gmake: *** [Makefile:146: all] Error 2
+[25.352s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

@@ -349,7 +349,10 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake",
 		"/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake",
-		"/home/dingo/Programming/BranchForge/resources.qrc"
+		"/home/dingo/Programming/BranchForge/resources.qrc",
+		"/usr/share/cmake-3.28/Modules/FindPkgConfig.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/dingo/Programming/BranchForge",
 	"DEP_FILE" : "/home/dingo/Programming/BranchForge/build/branchforge/branchforge_enhanced_autogen/deps",

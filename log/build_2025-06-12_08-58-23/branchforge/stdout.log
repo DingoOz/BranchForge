@@ -1,0 +1,17 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  2%] Built target branchforge_enhanced_qmlimportscan
+[  2%] Built target branchforge_test_lib_autogen_timestamp_deps
+[  2%] Built target branchforge_enhanced_autogen_timestamp_deps
+[  5%] Built target branchforge_test_lib_autogen
+[ 42%] Built target branchforge_test_lib
+[ 42%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[ 44%] Automatic MOC and UIC for target test_behavior_tree_xml
+[ 47%] Built target branchforge_enhanced_autogen
+[ 47%] Built target test_behavior_tree_xml_autogen
+[ 55%] Built target test_behavior_tree_xml
+[100%] Built target branchforge_enhanced
+-- Install configuration: ""
+-- Installing: /home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced
+-- Set non-toolchain portion of runtime path of "/home/dingo/Programming/BranchForge/install/branchforge/bin/branchforge_enhanced" to "$ORIGIN:$ORIGIN/../lib"

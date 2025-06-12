@@ -1,0 +1,16 @@
+CMake Error: File /home/dingo/Programming/BranchForge/tests/data/sample_tree.xml does not exist.
+CMake Error at tests/CMakeLists.txt:41 (configure_file):
+  configure_file Problem configuring file
+
+
+CMake Error: File /home/dingo/Programming/BranchForge/tests/data/complex_tree.xml does not exist.
+CMake Error at tests/CMakeLists.txt:42 (configure_file):
+  configure_file Problem configuring file
+
+
+CMake Error: File /home/dingo/Programming/BranchForge/tests/data/invalid_tree.xml does not exist.
+CMake Error at tests/CMakeLists.txt:43 (configure_file):
+  configure_file Problem configuring file
+
+
+gmake: *** [Makefile:648: cmake_check_build_system] Error 1

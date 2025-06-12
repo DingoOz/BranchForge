@@ -1,0 +1,4 @@
+test_behavior_tree_xml_autogen/timestamp: \
+	/home/dingo/Programming/BranchForge/tests/unit/CMakeLists.txt \
+	/home/dingo/Programming/BranchForge/tests/unit/project/test_behavior_tree_xml.cpp \
+	/usr/bin/cmake

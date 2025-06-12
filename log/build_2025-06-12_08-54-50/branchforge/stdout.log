@@ -1,0 +1,42 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  0%] Built target branchforge_test_lib_autogen_timestamp_deps
+[  1%] Built target branchforge_enhanced_qmlimportscan
+[  1%] Built target branchforge_enhanced_autogen_timestamp_deps
+[  3%] Automatic MOC and UIC for target branchforge_test_lib
+[  3%] Built target branchforge_test_lib_autogen
+[ 27%] Built target branchforge_test_lib
+[ 27%] Built target test_code_generator_autogen_timestamp_deps
+[ 27%] Built target test_application_autogen_timestamp_deps
+[ 27%] Built target test_bt_serializer_autogen_timestamp_deps
+[ 27%] Built target test_project_manager_autogen_timestamp_deps
+[ 27%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps
+[ 27%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[ 29%] Automatic MOC and UIC for target branchforge_enhanced
+[ 31%] Automatic MOC and UIC for target test_application
+[ 34%] Automatic MOC and UIC for target test_code_generator
+[ 34%] Automatic MOC and UIC for target test_project_manager
+[ 36%] Automatic MOC and UIC for target test_behavior_tree_xml
+[ 39%] Built target test_visual_to_code_pipeline_autogen
+[ 39%] Automatic MOC and UIC for target test_bt_serializer
+[ 39%] Built target branchforge_enhanced_autogen
+[ 41%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline_autogen/mocs_compilation.cpp.o
+[ 43%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o
+[ 43%] Built target test_application_autogen
+[ 43%] Built target test_behavior_tree_xml_autogen
+[ 43%] Built target test_project_manager_autogen
+[ 43%] Built target test_code_generator_autogen
+[ 43%] Built target test_bt_serializer_autogen
+[ 44%] Building CXX object tests/unit/CMakeFiles/test_application.dir/test_application_autogen/mocs_compilation.cpp.o
+[ 46%] Building CXX object tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o
+[ 48%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o
+[ 77%] Built target branchforge_enhanced
+[ 82%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o
+[ 82%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o
+[ 82%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/test_bt_serializer_autogen/mocs_compilation.cpp.o
+[ 84%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/test_project_manager_autogen/mocs_compilation.cpp.o
+[ 86%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/test_code_generator_autogen/mocs_compilation.cpp.o
+[ 87%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o
+[ 89%] Linking CXX executable test_behavior_tree_xml
+[ 91%] Built target test_behavior_tree_xml

@@ -1,0 +1,19 @@
+[0.018s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.235s] -- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+[0.237s] -- Checking for module 'gtest>=1.14.0'
+[0.261s] --   Found gtest, version 1.14.0
+[0.339s] -- Checking for module 'gmock>=1.14.0'
+[0.466s] --   Package 'gmock', required by 'virtual:world', not found
+[0.466s] CMake Error at /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake:619 (message):
+[0.467s]   The following required packages were not found:
+[0.467s] 
+[0.467s]    - gmock>=1.14.0
+[0.467s] 
+[0.468s] Call Stack (most recent call first):
+[0.468s]   /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake:841 (_pkg_check_modules_internal)
+[0.469s]   CMakeLists.txt:87 (pkg_check_modules)
+[0.469s] 
+[0.469s] 
+[0.469s] -- Configuring incomplete, errors occurred!
+[0.482s] gmake: *** [Makefile:1016: cmake_check_build_system] Error 1
+[0.488s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
