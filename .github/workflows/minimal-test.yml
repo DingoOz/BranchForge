@@ -24,7 +24,13 @@ jobs:
           pkg-config \
           libgtest-dev \
           python3-pip \
-          python3-colcon-common-extensions
+          python3-setuptools
+
+    - name: Install colcon
+      run: |
+        # Install colcon via pip since apt package doesn't exist on Ubuntu 24.04
+        python3 -m pip install --user --upgrade pip
+        python3 -m pip install --user colcon-common-extensions
 
     - name: Setup ROS2 Jazzy
       run: |
