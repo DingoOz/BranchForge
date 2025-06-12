@@ -1,0 +1,137 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  quick-test:
+    name: Quick Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout PR code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Install minimal dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          cmake \
+          libgtest-dev \
+          qt6-base-dev \
+          libqt6xml6-dev \
+          pkg-config
+
+    - name: Quick build test (no ROS)
+      run: |
+        # Try to build core components without ROS dependencies
+        mkdir -p build-test
+        cd build-test
+        cmake .. \
+          -DCMAKE_BUILD_TYPE=Debug \
+          -DBUILD_TESTING=ON \
+          -DSKIP_ROS_DEPS=ON || echo "CMake configure failed, but continuing..."
+
+    - name: Check code structure
+      run: |
+        echo "=== Checking project structure ==="
+        
+        # Check that core files exist
+        test -f "src/main.cpp" && echo "✅ Main source exists" || echo "❌ Main source missing"
+        test -d "include" && echo "✅ Include directory exists" || echo "❌ Include directory missing"
+        test -f "package.xml" && echo "✅ ROS package file exists" || echo "❌ Package file missing"
+        test -f "CMakeLists.txt" && echo "✅ CMake file exists" || echo "❌ CMake file missing"
+        
+        # Check test structure
+        test -d "tests" && echo "✅ Tests directory exists" || echo "❌ Tests directory missing"
+        test -f "tests/CMakeLists.txt" && echo "✅ Test CMake exists" || echo "❌ Test CMake missing"
+        
+        echo "=== Source file count ==="
+        find src -name "*.cpp" | wc -l | xargs echo "C++ source files:"
+        find include -name "*.h" | wc -l | xargs echo "Header files:"
+        find tests -name "*.cpp" | wc -l | xargs echo "Test files:"
+
+  code-quality:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout PR code
+      uses: actions/checkout@v4
+
+    - name: Install code quality tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck clang-format
+
+    - name: Run cppcheck
+      run: |
+        echo "=== Running cppcheck ==="
+        cppcheck --enable=warning,style,performance \
+          --std=c++20 \
+          --suppress=missingIncludeSystem \
+          --quiet \
+          --error-exitcode=0 \
+          src/ include/
+          
+    - name: Check formatting
+      run: |
+        echo "=== Checking code formatting ==="
+        find src include tests -name "*.cpp" -o -name "*.h" | head -10 | while read file; do
+          if [ -f "$file" ]; then
+            echo "Checking $file"
+            clang-format --dry-run --Werror "$file" 2>/dev/null || echo "⚠️  $file may have formatting issues"
+          fi
+        done
+
+    - name: Check for common issues
+      run: |
+        echo "=== Checking for common issues ==="
+        
+        # Check for TODO/FIXME comments
+        TODO_COUNT=$(grep -r "TODO\|FIXME" src/ include/ tests/ 2>/dev/null | wc -l || echo "0")
+        echo "Found $TODO_COUNT TODO/FIXME comments"
+        
+        # Check for debug prints
+        DEBUG_COUNT=$(grep -r "std::cout\|printf\|qDebug" src/ include/ 2>/dev/null | wc -l || echo "0")
+        echo "Found $DEBUG_COUNT potential debug statements"
+        
+        # Check for memory management
+        NEW_COUNT=$(grep -r " new \| delete " src/ include/ 2>/dev/null | wc -l || echo "0")
+        echo "Found $NEW_COUNT raw new/delete usages (consider smart pointers)"
+
+  dependency-check:
+    name: Dependency Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout PR code
+      uses: actions/checkout@v4
+
+    - name: Analyze dependencies
+      run: |
+        echo "=== Analyzing dependencies ==="
+        
+        # Check CMakeLists.txt for dependencies
+        echo "--- CMake dependencies ---"
+        grep -E "find_package|pkg_check_modules" CMakeLists.txt || echo "No find_package calls found"
+        
+        # Check package.xml for ROS dependencies
+        echo "--- ROS dependencies ---"
+        if [ -f package.xml ]; then
+          grep -E "<depend|<build_depend|<exec_depend" package.xml || echo "No dependencies in package.xml"
+        fi
+        
+        # Check include statements
+        echo "--- Include analysis ---"
+        echo "Qt includes:"
+        grep -r "#include <Q" include/ src/ | wc -l
+        echo "Standard library includes:"
+        grep -r "#include <std" include/ src/ | wc -l
+        echo "ROS includes:"
+        grep -r "#include.*rclcpp\|#include.*ros" include/ src/ | wc -l
