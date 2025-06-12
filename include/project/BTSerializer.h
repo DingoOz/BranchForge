@@ -24,6 +24,7 @@ class BTSerializer : public QObject {
 
 public:
     explicit BTSerializer(QObject* parent = nullptr);
+    explicit BTSerializer(const CodeGenOptions& options, QObject* parent = nullptr);
     ~BTSerializer() override;
 
     // QML accessible methods
@@ -39,6 +40,10 @@ public:
     // Validation
     Q_INVOKABLE bool validateEditorState(const QVariantMap& editorState);
     Q_INVOKABLE QStringList getValidationErrors() const;
+    
+    // Test-accessible methods
+    BehaviorTreeXML convertToBehaviorTreeXML(const QVariantMap& editorState);
+    BTXMLNode convertQVariantToNode(const QVariantMap& nodeData);
 
 signals:
     void serializationCompleted(bool success, const QString& message);
@@ -46,7 +51,6 @@ signals:
 
 private:
     // Conversion methods
-    BehaviorTreeXML convertToBehaviorTreeXML(const QVariantMap& editorState);
     BTXMLNode convertNode(const QVariantMap& nodeData);
     void extractConnections(const QVariantList& connections, BehaviorTreeXML& behaviorTree);
     

@@ -1,0 +1,4 @@
+test_visual_to_code_pipeline_autogen/timestamp: \
+	/home/dingo/Programming/BranchForge/tests/integration/CMakeLists.txt \
+	/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp \
+	/usr/bin/cmake

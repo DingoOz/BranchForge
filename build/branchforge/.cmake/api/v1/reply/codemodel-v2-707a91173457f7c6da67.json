@@ -1,0 +1,190 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-33126f8c04f46b3fff49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "tests",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-tests-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests"
+				},
+				{
+					"build" : "tests/unit",
+					"jsonFile" : "directory-tests.unit-4ac8c025c276fb39190f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "tests/unit",
+					"targetIndexes" : 
+					[
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"build" : "tests/integration",
+					"jsonFile" : "directory-tests.integration-eee40bc7e66a7d94f52a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "tests/integration"
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "branchforge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_enhanced::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_enhanced-1868d9d2fd6cc720950c.json",
+					"name" : "branchforge_enhanced",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_enhanced_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_enhanced_autogen-9f6c15055d62465f64a8.json",
+					"name" : "branchforge_enhanced_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_enhanced_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_enhanced_autogen_timestamp_deps-8f8cd40acd77489480f0.json",
+					"name" : "branchforge_enhanced_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_enhanced_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_enhanced_qmlimportscan-b5f353d8c892b2a0b5c5.json",
+					"name" : "branchforge_enhanced_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_test_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_test_lib-cc481dbc9a2c85cadad6.json",
+					"name" : "branchforge_test_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_test_lib_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_test_lib_autogen-a8a0ff80589542c57080.json",
+					"name" : "branchforge_test_lib_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "branchforge_test_lib_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-branchforge_test_lib_autogen_timestamp_deps-77d61488619a71218c24.json",
+					"name" : "branchforge_test_lib_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "test_behavior_tree_xml::@17bd492d087794b9594e",
+					"jsonFile" : "target-test_behavior_tree_xml-c46b14db5a65f754f275.json",
+					"name" : "test_behavior_tree_xml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "test_behavior_tree_xml_autogen::@17bd492d087794b9594e",
+					"jsonFile" : "target-test_behavior_tree_xml_autogen-c100489121ab8722e1c6.json",
+					"name" : "test_behavior_tree_xml_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "test_behavior_tree_xml_autogen_timestamp_deps::@17bd492d087794b9594e",
+					"jsonFile" : "target-test_behavior_tree_xml_autogen_timestamp_deps-24d209ba39dbd6118ded.json",
+					"name" : "test_behavior_tree_xml_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dingo/Programming/BranchForge/build/branchforge",
+		"source" : "/home/dingo/Programming/BranchForge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

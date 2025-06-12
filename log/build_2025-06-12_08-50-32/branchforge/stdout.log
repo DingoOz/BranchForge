@@ -1,0 +1,51 @@
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge
+[  1%] Built target branchforge_enhanced_qmlimportscan
+[  1%] Built target branchforge_test_lib_autogen_timestamp_deps
+[  1%] Built target branchforge_enhanced_autogen_timestamp_deps
+[  3%] Automatic MOC and UIC for target branchforge_test_lib
+[  3%] Built target branchforge_test_lib_autogen
+[  5%] Building CXX object CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o
+[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o
+[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o
+[ 12%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o
+[ 13%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o
+[ 15%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o
+[ 17%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o
+[ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o
+[ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 22%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o
+[ 24%] Automatic MOC and UIC for target branchforge_enhanced
+[ 25%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 25%] Built target branchforge_enhanced_autogen
+[ 27%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o
+[ 29%] Generating qrc_resources.cpp
+[ 31%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o
+[ 32%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o
+[ 34%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
+[ 36%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
+[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
+[ 39%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
+[ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
+[ 43%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o
+[ 44%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
+[ 46%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
+[ 48%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
+[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
+[ 51%] Linking CXX static library libbranchforge_test_lib.a
+[ 51%] Built target branchforge_test_lib
+[ 51%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[ 53%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
+[ 55%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o
+[ 56%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
+[ 58%] Linking CXX executable branchforge_enhanced
+[ 58%] Built target branchforge_enhanced
+[ 58%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps
+[ 60%] Automatic MOC and UIC for target test_behavior_tree_xml
+[ 60%] Built target test_behavior_tree_xml_autogen
+[ 62%] Automatic MOC and UIC for target test_visual_to_code_pipeline
+[ 62%] Built target test_visual_to_code_pipeline_autogen
+[ 63%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/test_behavior_tree_xml_autogen/mocs_compilation.cpp.o
+[ 65%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o

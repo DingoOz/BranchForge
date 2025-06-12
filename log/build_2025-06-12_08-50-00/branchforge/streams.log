@@ -1,0 +1,54 @@
+[0.018s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.281s] -- Configuring done (0.2s)
+[0.286s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.286s]   Cannot find source file:
+[0.287s] 
+[0.288s]     /home/dingo/Programming/BranchForge/tests/unit/unit/project/test_behavior_tree_xml.cpp
+[0.288s] Call Stack (most recent call first):
+[0.288s]   tests/unit/CMakeLists.txt:4 (add_branchforge_test)
+[0.289s] 
+[0.289s] 
+[0.289s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.289s]   Cannot find source file:
+[0.290s] 
+[0.290s]     /home/dingo/Programming/BranchForge/tests/unit/unit/project/test_code_generator.cpp
+[0.290s] Call Stack (most recent call first):
+[0.290s]   tests/unit/CMakeLists.txt:5 (add_branchforge_test)
+[0.290s] 
+[0.291s] 
+[0.291s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.291s]   Cannot find source file:
+[0.291s] 
+[0.291s]     /home/dingo/Programming/BranchForge/tests/unit/unit/project/test_bt_serializer.cpp
+[0.292s] Call Stack (most recent call first):
+[0.292s]   tests/unit/CMakeLists.txt:6 (add_branchforge_test)
+[0.292s] 
+[0.292s] 
+[0.293s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.293s]   Cannot find source file:
+[0.293s] 
+[0.293s]     /home/dingo/Programming/BranchForge/tests/unit/unit/project/test_project_manager.cpp
+[0.294s] Call Stack (most recent call first):
+[0.294s]   tests/unit/CMakeLists.txt:7 (add_branchforge_test)
+[0.294s] 
+[0.294s] 
+[0.295s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.295s]   Cannot find source file:
+[0.295s] 
+[0.295s]     /home/dingo/Programming/BranchForge/tests/unit/unit/core/test_application.cpp
+[0.296s] Call Stack (most recent call first):
+[0.296s]   tests/unit/CMakeLists.txt:13 (add_branchforge_test)
+[0.296s] 
+[0.296s] 
+[0.297s] CMake Error at tests/CMakeLists.txt:5 (add_executable):
+[0.297s]   Cannot find source file:
+[0.297s] 
+[0.298s]     /home/dingo/Programming/BranchForge/tests/integration/integration/test_visual_to_code_pipeline.cpp
+[0.298s] Call Stack (most recent call first):
+[0.298s]   tests/integration/CMakeLists.txt:3 (add_branchforge_test)
+[0.298s] 
+[0.299s] 
+[0.384s] -- Generating done (0.0s)
+[0.387s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[0.397s] gmake: *** [Makefile:1226: cmake_check_build_system] Error 1
+[0.404s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

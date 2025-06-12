@@ -1,0 +1,92 @@
+-- Configuring done (0.3s)
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/project/test_behavior_tree_xml.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:4 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/project/test_code_generator.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:5 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/project/test_bt_serializer.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:6 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/project/test_project_manager.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:7 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/nodes/test_advanced_node_system.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:10 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/core/test_application.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:13 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/ui/test_main_window.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:16 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    unit/utilities/test_string_utils.cpp
+Call Stack (most recent call first):
+  tests/unit/CMakeLists.txt:19 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    integration/test_visual_to_code_pipeline.cpp
+Call Stack (most recent call first):
+  tests/integration/CMakeLists.txt:3 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    integration/test_generated_code_compilation.cpp
+Call Stack (most recent call first):
+  tests/integration/CMakeLists.txt:4 (add_branchforge_test)
+
+
+CMake Error at tests/CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    integration/test_project_workflows.cpp
+Call Stack (most recent call first):
+  tests/integration/CMakeLists.txt:5 (add_branchforge_test)
+
+
+-- Generating done (0.1s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+gmake: *** [Makefile:648: cmake_check_build_system] Error 1

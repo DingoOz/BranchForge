@@ -1,0 +1,329 @@
+[0.000000] (-) TimerEvent: {}
+[0.000248] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.000645] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.019951] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.020035] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.020079] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.099563] (-) TimerEvent: {}
+[0.199877] (-) TimerEvent: {}
+[0.300185] (-) TimerEvent: {}
+[0.335389] (branchforge) StdoutLine: {'line': b'-- Configuring done (0.3s)\n'}
+[0.400339] (-) TimerEvent: {}
+[0.440237] (branchforge) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[0.456825] (branchforge) StdoutLine: {'line': b'-- Build files have been written to: /home/dingo/Programming/BranchForge/build/branchforge\n'}
+[0.500490] (-) TimerEvent: {}
+[0.516941] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_qmlimportscan\n'}
+[0.517336] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_test_lib_autogen_timestamp_deps\n'}
+[0.571405] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.576141] (branchforge) StdoutLine: {'line': b'[  3%] Automatic MOC and UIC for target branchforge_test_lib\n'}
+[0.600622] (-) TimerEvent: {}
+[0.637512] (branchforge) StdoutLine: {'line': b'[  3%] Built target branchforge_test_lib_autogen\n'}
+[0.681016] (branchforge) StdoutLine: {'line': b'[  5%] Building CXX object CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o\n'}
+[0.684763] (branchforge) StdoutLine: {'line': b'[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o\n'}
+[0.686709] (branchforge) StdoutLine: {'line': b'[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o\n'}
+[0.686857] (branchforge) StdoutLine: {'line': b'[ 10%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o\n'}
+[0.686954] (branchforge) StdoutLine: {'line': b'[ 12%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o\n'}
+[0.688985] (branchforge) StdoutLine: {'line': b'[ 13%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o\n'}
+[0.689362] (branchforge) StdoutLine: {'line': b'[ 15%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o\n'}
+[0.689528] (branchforge) StdoutLine: {'line': b'[ 17%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o\n'}
+[0.693914] (branchforge) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o\n'}
+[0.694352] (branchforge) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o\n'}
+[0.702191] (-) TimerEvent: {}
+[0.708386] (branchforge) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o\n'}
+[0.730266] (branchforge) StdoutLine: {'line': b'[ 24%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.741341] (branchforge) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[0.806685] (-) TimerEvent: {}
+[0.908192] (-) TimerEvent: {}
+[1.010335] (-) TimerEvent: {}
+[1.110634] (-) TimerEvent: {}
+[1.212229] (-) TimerEvent: {}
+[1.317196] (-) TimerEvent: {}
+[1.417490] (-) TimerEvent: {}
+[1.517785] (-) TimerEvent: {}
+[1.618114] (-) TimerEvent: {}
+[1.718392] (-) TimerEvent: {}
+[1.818698] (-) TimerEvent: {}
+[1.919009] (-) TimerEvent: {}
+[1.944660] (branchforge) StdoutLine: {'line': b'[ 25%] Built target branchforge_enhanced_autogen\n'}
+[1.964719] (branchforge) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[2.019166] (-) TimerEvent: {}
+[2.119760] (-) TimerEvent: {}
+[2.221187] (-) TimerEvent: {}
+[2.321510] (-) TimerEvent: {}
+[2.423206] (-) TimerEvent: {}
+[2.523513] (-) TimerEvent: {}
+[2.626362] (-) TimerEvent: {}
+[2.730183] (-) TimerEvent: {}
+[2.830565] (-) TimerEvent: {}
+[2.930863] (-) TimerEvent: {}
+[3.031181] (-) TimerEvent: {}
+[3.131710] (-) TimerEvent: {}
+[3.233032] (-) TimerEvent: {}
+[3.333373] (-) TimerEvent: {}
+[3.433691] (-) TimerEvent: {}
+[3.533997] (-) TimerEvent: {}
+[3.637195] (-) TimerEvent: {}
+[3.737521] (-) TimerEvent: {}
+[3.840188] (-) TimerEvent: {}
+[3.940499] (-) TimerEvent: {}
+[4.040813] (-) TimerEvent: {}
+[4.141339] (-) TimerEvent: {}
+[4.242937] (-) TimerEvent: {}
+[4.345217] (-) TimerEvent: {}
+[4.449198] (-) TimerEvent: {}
+[4.549533] (-) TimerEvent: {}
+[4.654198] (-) TimerEvent: {}
+[4.754547] (-) TimerEvent: {}
+[4.854861] (-) TimerEvent: {}
+[4.955201] (-) TimerEvent: {}
+[5.060197] (-) TimerEvent: {}
+[5.163195] (-) TimerEvent: {}
+[5.265202] (-) TimerEvent: {}
+[5.365546] (-) TimerEvent: {}
+[5.465856] (-) TimerEvent: {}
+[5.566203] (-) TimerEvent: {}
+[5.666544] (-) TimerEvent: {}
+[5.767125] (-) TimerEvent: {}
+[5.871391] (-) TimerEvent: {}
+[5.971703] (-) TimerEvent: {}
+[6.072043] (-) TimerEvent: {}
+[6.172649] (-) TimerEvent: {}
+[6.276523] (-) TimerEvent: {}
+[6.380819] (-) TimerEvent: {}
+[6.481165] (-) TimerEvent: {}
+[6.581476] (-) TimerEvent: {}
+[6.669034] (branchforge) StdoutLine: {'line': b'[ 29%] Generating qrc_resources.cpp\n'}
+[6.681640] (-) TimerEvent: {}
+[6.785379] (-) TimerEvent: {}
+[6.871684] (branchforge) StdoutLine: {'line': b'[ 31%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/main.cpp.o\n'}
+[6.879934] (branchforge) StdoutLine: {'line': b'[ 32%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[6.885524] (-) TimerEvent: {}
+[6.985805] (-) TimerEvent: {}
+[7.086132] (-) TimerEvent: {}
+[7.186785] (-) TimerEvent: {}
+[7.288355] (-) TimerEvent: {}
+[7.388668] (-) TimerEvent: {}
+[7.489186] (-) TimerEvent: {}
+[7.591892] (-) TimerEvent: {}
+[7.675439] (branchforge) StdoutLine: {'line': b'[ 34%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o\n'}
+[7.692059] (-) TimerEvent: {}
+[7.792626] (-) TimerEvent: {}
+[7.896338] (-) TimerEvent: {}
+[7.996640] (-) TimerEvent: {}
+[8.096939] (-) TimerEvent: {}
+[8.197258] (-) TimerEvent: {}
+[8.300219] (-) TimerEvent: {}
+[8.400510] (-) TimerEvent: {}
+[8.506764] (-) TimerEvent: {}
+[8.589121] (branchforge) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o\n'}
+[8.606931] (-) TimerEvent: {}
+[8.707238] (-) TimerEvent: {}
+[8.810196] (-) TimerEvent: {}
+[8.910504] (-) TimerEvent: {}
+[9.010817] (-) TimerEvent: {}
+[9.116440] (-) TimerEvent: {}
+[9.134725] (branchforge) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o\n'}
+[9.220191] (-) TimerEvent: {}
+[9.320477] (-) TimerEvent: {}
+[9.420780] (-) TimerEvent: {}
+[9.446276] (branchforge) StdoutLine: {'line': b'[ 39%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o\n'}
+[9.520921] (-) TimerEvent: {}
+[9.621173] (-) TimerEvent: {}
+[9.721456] (-) TimerEvent: {}
+[9.821742] (-) TimerEvent: {}
+[9.922765] (-) TimerEvent: {}
+[10.025357] (-) TimerEvent: {}
+[10.083579] (branchforge) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o\n'}
+[10.107721] (branchforge) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o\n'}
+[10.128190] (-) TimerEvent: {}
+[10.228485] (-) TimerEvent: {}
+[10.288219] (branchforge) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o\n'}
+[10.328650] (-) TimerEvent: {}
+[10.429002] (-) TimerEvent: {}
+[10.531200] (-) TimerEvent: {}
+[10.631539] (-) TimerEvent: {}
+[10.731829] (-) TimerEvent: {}
+[10.834488] (-) TimerEvent: {}
+[10.934801] (-) TimerEvent: {}
+[11.035154] (-) TimerEvent: {}
+[11.137227] (-) TimerEvent: {}
+[11.237596] (-) TimerEvent: {}
+[11.337908] (-) TimerEvent: {}
+[11.441197] (-) TimerEvent: {}
+[11.508376] (branchforge) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o\n'}
+[11.541357] (-) TimerEvent: {}
+[11.641973] (-) TimerEvent: {}
+[11.746212] (-) TimerEvent: {}
+[11.846842] (-) TimerEvent: {}
+[11.947188] (-) TimerEvent: {}
+[12.042228] (branchforge) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o\n'}
+[12.047357] (-) TimerEvent: {}
+[12.149257] (-) TimerEvent: {}
+[12.230750] (branchforge) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o\n'}
+[12.249406] (-) TimerEvent: {}
+[12.299003] (branchforge) StdoutLine: {'line': b'[ 51%] Linking CXX static library libbranchforge_test_lib.a\n'}
+[12.349559] (-) TimerEvent: {}
+[12.449857] (-) TimerEvent: {}
+[12.550687] (-) TimerEvent: {}
+[12.651237] (-) TimerEvent: {}
+[12.751564] (-) TimerEvent: {}
+[12.851902] (-) TimerEvent: {}
+[12.952956] (-) TimerEvent: {}
+[13.054530] (-) TimerEvent: {}
+[13.130649] (branchforge) StdoutLine: {'line': b'[ 51%] Built target branchforge_test_lib\n'}
+[13.161191] (-) TimerEvent: {}
+[13.209830] (branchforge) StdoutLine: {'line': b'[ 51%] Built target test_behavior_tree_xml_autogen_timestamp_deps\n'}
+[13.256480] (branchforge) StdoutLine: {'line': b'[ 53%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o\n'}
+[13.261349] (-) TimerEvent: {}
+[13.361675] (-) TimerEvent: {}
+[13.462020] (-) TimerEvent: {}
+[13.562360] (-) TimerEvent: {}
+[13.662667] (-) TimerEvent: {}
+[13.762963] (-) TimerEvent: {}
+[13.863232] (-) TimerEvent: {}
+[13.965426] (-) TimerEvent: {}
+[14.065762] (-) TimerEvent: {}
+[14.166114] (-) TimerEvent: {}
+[14.268441] (-) TimerEvent: {}
+[14.371500] (-) TimerEvent: {}
+[14.471823] (-) TimerEvent: {}
+[14.572182] (-) TimerEvent: {}
+[14.674079] (-) TimerEvent: {}
+[14.774384] (-) TimerEvent: {}
+[14.874898] (-) TimerEvent: {}
+[14.978148] (-) TimerEvent: {}
+[15.078494] (-) TimerEvent: {}
+[15.178811] (-) TimerEvent: {}
+[15.279158] (-) TimerEvent: {}
+[15.381354] (-) TimerEvent: {}
+[15.481656] (-) TimerEvent: {}
+[15.581958] (-) TimerEvent: {}
+[15.684194] (-) TimerEvent: {}
+[15.784521] (-) TimerEvent: {}
+[15.885027] (-) TimerEvent: {}
+[15.988374] (-) TimerEvent: {}
+[16.088677] (-) TimerEvent: {}
+[16.188975] (-) TimerEvent: {}
+[16.289314] (-) TimerEvent: {}
+[16.389679] (-) TimerEvent: {}
+[16.493567] (-) TimerEvent: {}
+[16.593933] (-) TimerEvent: {}
+[16.694207] (-) TimerEvent: {}
+[16.794519] (-) TimerEvent: {}
+[16.895173] (-) TimerEvent: {}
+[16.997192] (-) TimerEvent: {}
+[17.097488] (-) TimerEvent: {}
+[17.197793] (-) TimerEvent: {}
+[17.298061] (-) TimerEvent: {}
+[17.398859] (-) TimerEvent: {}
+[17.499746] (-) TimerEvent: {}
+[17.601182] (-) TimerEvent: {}
+[17.685470] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:\n'}
+[17.685906] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)\xe2\x80\x99:\n'}
+[17.687221] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: \xe2\x80\x98BranchForge::Nodes::AdvancedNodeInstance::m_template\xe2\x80\x99 will be initialized after [-Wreorder]\n'}
+[17.687520] (branchforge) StderrLine: {'line': b'  193 |     AdvancedNodeTemplate m_template;\n'}
+[17.687668] (branchforge) StderrLine: {'line': b'      |                          ^~~~~~~~~~\n'}
+[17.687809] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   \xe2\x80\x98QString BranchForge::Nodes::AdvancedNodeInstance::m_id\xe2\x80\x99 [-Wreorder]\n'}
+[17.687953] (branchforge) StderrLine: {'line': b'  190 |     QString m_id;\n'}
+[17.688107] (branchforge) StderrLine: {'line': b'      |             ^~~~\n'}
+[17.688254] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]\n'}
+[17.688415] (branchforge) StderrLine: {'line': b'  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)\n'}
+[17.688551] (branchforge) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[17.702139] (-) TimerEvent: {}
+[17.802631] (-) TimerEvent: {}
+[17.902987] (-) TimerEvent: {}
+[18.004147] (-) TimerEvent: {}
+[18.104450] (-) TimerEvent: {}
+[18.204852] (-) TimerEvent: {}
+[18.305705] (-) TimerEvent: {}
+[18.406245] (-) TimerEvent: {}
+[18.506923] (-) TimerEvent: {}
+[18.607203] (-) TimerEvent: {}
+[18.707477] (-) TimerEvent: {}
+[18.809249] (-) TimerEvent: {}
+[18.909526] (-) TimerEvent: {}
+[19.009843] (-) TimerEvent: {}
+[19.110100] (-) TimerEvent: {}
+[19.210343] (-) TimerEvent: {}
+[19.310594] (-) TimerEvent: {}
+[19.411136] (-) TimerEvent: {}
+[19.511395] (-) TimerEvent: {}
+[19.611637] (-) TimerEvent: {}
+[19.714316] (-) TimerEvent: {}
+[19.814577] (-) TimerEvent: {}
+[19.915012] (-) TimerEvent: {}
+[20.015354] (-) TimerEvent: {}
+[20.115656] (-) TimerEvent: {}
+[20.138873] (branchforge) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/branchforge_enhanced.dir/qrc_resources.cpp.o\n'}
+[20.191824] (branchforge) StdoutLine: {'line': b'[ 56%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o\n'}
+[20.215824] (-) TimerEvent: {}
+[20.316130] (-) TimerEvent: {}
+[20.416390] (-) TimerEvent: {}
+[20.516664] (-) TimerEvent: {}
+[20.616980] (-) TimerEvent: {}
+[20.717261] (-) TimerEvent: {}
+[20.818095] (-) TimerEvent: {}
+[20.918363] (-) TimerEvent: {}
+[21.019080] (-) TimerEvent: {}
+[21.119355] (-) TimerEvent: {}
+[21.219634] (-) TimerEvent: {}
+[21.320021] (-) TimerEvent: {}
+[21.420373] (-) TimerEvent: {}
+[21.520637] (-) TimerEvent: {}
+[21.620928] (-) TimerEvent: {}
+[21.721238] (-) TimerEvent: {}
+[21.821632] (-) TimerEvent: {}
+[21.921933] (-) TimerEvent: {}
+[22.022169] (-) TimerEvent: {}
+[22.122433] (-) TimerEvent: {}
+[22.222697] (-) TimerEvent: {}
+[22.323165] (-) TimerEvent: {}
+[22.423612] (-) TimerEvent: {}
+[22.523908] (-) TimerEvent: {}
+[22.624687] (-) TimerEvent: {}
+[22.725010] (-) TimerEvent: {}
+[22.825296] (-) TimerEvent: {}
+[22.925592] (-) TimerEvent: {}
+[23.025954] (-) TimerEvent: {}
+[23.126296] (-) TimerEvent: {}
+[23.226568] (-) TimerEvent: {}
+[23.326955] (-) TimerEvent: {}
+[23.427233] (-) TimerEvent: {}
+[23.527474] (-) TimerEvent: {}
+[23.627716] (-) TimerEvent: {}
+[23.728294] (-) TimerEvent: {}
+[23.813818] (branchforge) StdoutLine: {'line': b'[ 58%] Linking CXX executable branchforge_enhanced\n'}
+[23.828435] (-) TimerEvent: {}
+[23.930747] (-) TimerEvent: {}
+[24.031084] (-) TimerEvent: {}
+[24.133013] (-) TimerEvent: {}
+[24.233288] (-) TimerEvent: {}
+[24.333574] (-) TimerEvent: {}
+[24.433877] (-) TimerEvent: {}
+[24.534182] (-) TimerEvent: {}
+[24.634501] (-) TimerEvent: {}
+[24.733018] (branchforge) StdoutLine: {'line': b'[ 58%] Built target branchforge_enhanced\n'}
+[24.734576] (-) TimerEvent: {}
+[24.767772] (branchforge) StdoutLine: {'line': b'[ 58%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps\n'}
+[24.797055] (branchforge) StdoutLine: {'line': b'[ 60%] Automatic MOC and UIC for target test_behavior_tree_xml\n'}
+[24.834762] (-) TimerEvent: {}
+[24.877254] (branchforge) StdoutLine: {'line': b'[ 60%] Built target test_behavior_tree_xml_autogen\n'}
+[24.912242] (branchforge) StdoutLine: {'line': b'[ 62%] Automatic MOC and UIC for target test_visual_to_code_pipeline\n'}
+[24.934935] (-) TimerEvent: {}
+[24.995859] (branchforge) StdoutLine: {'line': b'[ 62%] Built target test_visual_to_code_pipeline_autogen\n'}
+[25.035103] (-) TimerEvent: {}
+[25.044828] (branchforge) StdoutLine: {'line': b'[ 63%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/test_behavior_tree_xml_autogen/mocs_compilation.cpp.o\n'}
+[25.076734] (branchforge) StdoutLine: {'line': b'[ 65%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o\n'}
+[25.135306] (-) TimerEvent: {}
+[25.236136] (-) TimerEvent: {}
+[25.336418] (-) TimerEvent: {}
+[25.346097] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_behavior_tree_xml.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory\n'}
+[25.346461] (branchforge) StderrLine: {'line': b'    2 | #include <gmock/gmock.h>\n'}
+[25.346672] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~~~~~~~~~\n'}
+[25.346810] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[25.350359] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_behavior_tree_xml.dir/build.make:90: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o] Error 1\n'}
+[25.350757] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:348: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/all] Error 2\n'}
+[25.351319] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[25.354580] (branchforge) CommandEnded: {'returncode': 2}
+[25.395440] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[25.404356] (-) EventReactorShutdown: {}

@@ -1,0 +1,11 @@
+CMake Error at /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake:619 (message):
+  The following required packages were not found:
+
+   - gmock>=1.14.0
+
+Call Stack (most recent call first):
+  /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake:841 (_pkg_check_modules_internal)
+  CMakeLists.txt:87 (pkg_check_modules)
+
+
+gmake: *** [Makefile:1016: cmake_check_build_system] Error 1

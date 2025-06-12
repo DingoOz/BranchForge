@@ -1,0 +1,117 @@
+Start testing: Jun 12 14:33 AEST
+----------------------------------------------------------
+1/1 Testing: test_behavior_tree_xml
+1/1 Test: test_behavior_tree_xml
+Command: "/home/dingo/Programming/BranchForge/build/branchforge/tests/unit/test_behavior_tree_xml"
+Directory: /home/dingo/Programming/BranchForge/build/branchforge
+"test_behavior_tree_xml" start time: Jun 12 14:33 AEST
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 15 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 15 tests from BehaviorTreeXMLTest
+[ RUN      ] BehaviorTreeXMLTest.AddNode_ValidNode_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "test_node_1" "Action" "Test Action"
+[       OK ] BehaviorTreeXMLTest.AddNode_ValidNode_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.AddNode_DuplicateId_Ignored
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "duplicate_id" "Action" "First Node"
+branchforge.project.xml: Node with ID already exists: "duplicate_id"
+[       OK ] BehaviorTreeXMLTest.AddNode_DuplicateId_Ignored (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.RemoveNode_ExistingNode_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "to_remove" "Action" "Remove Me"
+branchforge.project.xml: Removed node: "to_remove"
+[       OK ] BehaviorTreeXMLTest.RemoveNode_ExistingNode_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.UpdateNode_ExistingNode_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "update_me" "Action" "Original Name"
+branchforge.project.xml: Updated node: "update_me"
+[       OK ] BehaviorTreeXMLTest.UpdateNode_ExistingNode_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.SetTreeMetadata_ValidData_Success
+branchforge.project.xml: BehaviorTreeXML created
+[       OK ] BehaviorTreeXMLTest.SetTreeMetadata_ValidData_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ValidateTree_EmptyTree_Fails
+branchforge.project.xml: BehaviorTreeXML created
+[       OK ] BehaviorTreeXMLTest.ValidateTree_EmptyTree_Fails (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ValidateTree_NoRootNode_Fails
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "test_node" "Action" "Test"
+[       OK ] BehaviorTreeXMLTest.ValidateTree_NoRootNode_Fails (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ValidateTree_ValidSingleNode_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "root" "Action" "Root Action"
+branchforge.project.xml: Tree validation completed successfully
+[       OK ] BehaviorTreeXMLTest.ValidateTree_ValidSingleNode_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ValidateTree_CircularReference_Fails
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "nodeA" "Sequence" "Node A"
+branchforge.project.xml: Added node: "nodeB" "Action" "Node B"
+[       OK ] BehaviorTreeXMLTest.ValidateTree_CircularReference_Fails (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ExportToString_ValidTree_ProducesXML
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "root" "Sequence" "Root Sequence"
+branchforge.project.xml: Exported 1 nodes to XML string
+[       OK ] BehaviorTreeXMLTest.ExportToString_ValidTree_ProducesXML (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ImportFromString_ValidXML_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Importing BT from XML string
+branchforge.project.xml: Cleared all tree data
+branchforge.project.xml: Added node: "import_root" "Action" "Import Action"
+branchforge.project.xml: Successfully imported 1 nodes
+branchforge.project.xml: Tree validation completed successfully
+[       OK ] BehaviorTreeXMLTest.ImportFromString_ValidXML_Success (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ImportFromString_InvalidXML_Fails
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Importing BT from XML string
+branchforge.project.xml: XML parsing error at line 1 column 1 : "Start tag expected."
+[       OK ] BehaviorTreeXMLTest.ImportFromString_InvalidXML_Fails (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ExportImportRoundTrip_PreservesData
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "root" "Sequence" "Root"
+branchforge.project.xml: Added node: "child1" "Action" "Action 1"
+branchforge.project.xml: Added node: "child2" "Condition" "Condition 1"
+branchforge.project.xml: Exported 3 nodes to XML string
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Importing BT from XML string
+branchforge.project.xml: Cleared all tree data
+branchforge.project.xml: Added node: "root" "Sequence" "Root"
+branchforge.project.xml: Added node: "child1" "Action" "Action 1"
+branchforge.project.xml: Added node: "child2" "Condition" "Condition 1"
+branchforge.project.xml: Successfully imported 3 nodes
+branchforge.project.xml: Tree validation completed successfully
+[       OK ] BehaviorTreeXMLTest.ExportImportRoundTrip_PreservesData (0 ms)
+[ RUN      ] BehaviorTreeXMLTest.ExportToFile_ValidPath_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "file_test" "Action" "File Test"
+branchforge.project.xml: Exported 1 nodes to XML string
+branchforge.project.xml: Exported BT to file: "/tmp/qt_temp.WYISnV"
+[       OK ] BehaviorTreeXMLTest.ExportToFile_ValidPath_Success (3 ms)
+[ RUN      ] BehaviorTreeXMLTest.ImportFromFile_ValidFile_Success
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Added node: "file_import" "Condition" "File Import Test"
+branchforge.project.xml: Exported 1 nodes to XML string
+branchforge.project.xml: Exported BT to file: "/tmp/qt_temp.ZWQlDz"
+branchforge.project.xml: BehaviorTreeXML created
+branchforge.project.xml: Importing BT from XML string
+branchforge.project.xml: Cleared all tree data
+branchforge.project.xml: Added node: "file_import" "Condition" "File Import Test"
+branchforge.project.xml: Successfully imported 1 nodes
+branchforge.project.xml: Tree validation completed successfully
+[       OK ] BehaviorTreeXMLTest.ImportFromFile_ValidFile_Success (1 ms)
+[----------] 15 tests from BehaviorTreeXMLTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test suite ran. (6 ms total)
+[  PASSED  ] 15 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_behavior_tree_xml" end time: Jun 12 14:33 AEST
+"test_behavior_tree_xml" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 12 14:33 AEST

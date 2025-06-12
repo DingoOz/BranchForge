@@ -27,6 +27,14 @@ BTSerializer::BTSerializer(QObject* parent)
     m_codeGenOptions.outputDirectory = "./generated";
 }
 
+BTSerializer::BTSerializer(const CodeGenOptions& options, QObject* parent)
+    : QObject(parent)
+    , m_codeGenOptions(options)
+    , m_nodeIdCounter(1)
+{
+    qCInfo(btSerializer) << "BTSerializer initialized with custom options";
+}
+
 BTSerializer::~BTSerializer() = default;
 
 bool BTSerializer::serializeToXML(const QVariantMap& editorState, const QString& filePath) {

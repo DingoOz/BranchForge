@@ -1,0 +1,6 @@
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'gtest>=1.14.0'
+--   Found gtest, version 1.14.0
+-- Checking for module 'gmock>=1.14.0'
+--   Package 'gmock', required by 'virtual:world', not found
+-- Configuring incomplete, errors occurred!

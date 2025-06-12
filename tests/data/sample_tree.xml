@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<BehaviorTree name="SampleTree" description="Sample behavior tree for testing" version="1.0" root_node_id="root_sequence">
+    <Node id="root_sequence" type="sequence" name="Root Sequence" x="100" y="50"/>
+    <Node id="move_forward" type="move_to" name="Move Forward" x="100" y="150" parent_id="root_sequence">
+        <Parameter name="distance" value="2.0"/>
+        <Parameter name="speed" value="0.8"/>
+    </Node>
+    <Node id="check_battery" type="battery_check" name="Check Battery" x="200" y="150" parent_id="root_sequence">
+        <Parameter name="threshold" value="20.0"/>
+    </Node>
+    <Node id="rotate_left" type="rotate" name="Rotate Left" x="300" y="150" parent_id="root_sequence">
+        <Parameter name="angle" value="1.57"/>
+        <Parameter name="speed" value="0.5"/>
+    </Node>
+</BehaviorTree>

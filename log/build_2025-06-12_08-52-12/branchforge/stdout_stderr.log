@@ -1,0 +1,515 @@
+-- Fetching Google Test with GMock from source...
+CMake Warning (dev) at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1331 (message):
+  The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is
+  not set.  The policy's OLD behavior will be used.  When using a URL
+  download, the timestamps of extracted files should preferably be that of
+  the time of extraction, otherwise code that depends on the extracted
+  contents might not be rebuilt if the URL changes.  The OLD behavior
+  preserves the timestamps from the archive instead, but this is usually not
+  what you want.  Update your project to the NEW behavior or specify the
+  DOWNLOAD_EXTRACT_TIMESTAMP option with a value of true to avoid this
+  robustness issue.
+Call Stack (most recent call first):
+  CMakeLists.txt:87 (FetchContent_Declare)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+gmake[1]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[2]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[ 11%] Creating directories for 'googletest-populate'
+[ 22%] Performing download step (download, verify and extract) for 'googletest-populate'
+-- Downloading...
+   dst='/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'
+-- [download 0% complete]
+CMake Error at googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake:170 (message):
+  Each download failed!
+
+    error: downloading 'https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip' failed
+          status_code: 22
+          status_string: "HTTP response code said error"
+          log:
+          --- LOG BEGIN ---
+          Host github.com:443 was resolved.
+
+  IPv6: (none)
+
+  IPv4: 4.237.22.38
+
+    Trying 4.237.22.38:443...
+
+  Connected to github.com (4.237.22.38) port 443
+
+  ALPN: curl offers h2,http/1.1
+
+  [5 bytes data]
+
+  TLSv1.3 (OUT), TLS handshake, Client hello (1):
+
+  [512 bytes data]
+
+  [5 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Server hello (2):
+
+  [122 bytes data]
+
+  [5 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+
+  [19 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Certificate (11):
+
+  [3135 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, CERT verify (15):
+
+  [79 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Finished (20):
+
+  [36 bytes data]
+
+  [5 bytes data]
+
+  TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (OUT), TLS handshake, Finished (20):
+
+  [36 bytes data]
+
+  SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /
+  id-ecPublicKey
+
+  ALPN: server accepted h2
+
+  Server certificate:
+
+   subject: CN=github.com
+   start date: Feb  5 00:00:00 2025 GMT
+   expire date: Feb  5 23:59:59 2026 GMT
+   subjectAltName: host "github.com" matched cert's "github.com"
+   issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA
+   SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.
+    Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+    Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+    Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  using HTTP/2
+
+  [HTTP/2] [1] OPENED stream for
+  https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip
+
+
+  [HTTP/2] [1] [:method: GET]
+
+  [HTTP/2] [1] [:scheme: https]
+
+  [HTTP/2] [1] [:authority: github.com]
+
+  [HTTP/2] [1] [:path:
+  /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip]
+
+  [HTTP/2] [1] [user-agent: curl/8.5.0]
+
+  [HTTP/2] [1] [accept: */*]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  GET /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip
+  HTTP/2
+
+  Host: github.com
+
+  User-Agent: curl/8.5.0
+
+  Accept: */*
+
+  
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+
+  [57 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+
+  [57 bytes data]
+
+  old SSL session ID is stale, removing
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  HTTP/2 302 
+
+  date: Wed, 11 Jun 2025 22:52:13 GMT
+
+  content-type: text/html; charset=utf-8
+
+  content-length: 0
+
+  vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame,
+  X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+
+  location:
+  https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68
+
+
+  cache-control: max-age=0, private
+
+  strict-transport-security: max-age=31536000; includeSubdomains; preload
+
+  x-frame-options: deny
+
+  x-content-type-options: nosniff
+
+  x-xss-protection: 0
+
+  referrer-policy: no-referrer-when-downgrade
+
+  content-security-policy: default-src 'none'; base-uri 'self'; child-src
+  github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/
+  gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com
+  www.githubstatus.com collector.github.com raw.githubusercontent.com
+  api.github.com github-cloud.s3.amazonaws.com
+  github-production-repository-file-5c1aeb.s3.amazonaws.com
+  github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
+  github-production-user-asset-6210df.s3.amazonaws.com
+  *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com
+  objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com
+  proxy.individual.githubcopilot.com proxy.business.githubcopilot.com
+  proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com
+  wss://*.actions.githubusercontent.com
+  productionresultssa0.blob.core.windows.net/
+  productionresultssa1.blob.core.windows.net/
+  productionresultssa2.blob.core.windows.net/
+  productionresultssa3.blob.core.windows.net/
+  productionresultssa4.blob.core.windows.net/
+  productionresultssa5.blob.core.windows.net/
+  productionresultssa6.blob.core.windows.net/
+  productionresultssa7.blob.core.windows.net/
+  productionresultssa8.blob.core.windows.net/
+  productionresultssa9.blob.core.windows.net/
+  productionresultssa10.blob.core.windows.net/
+  productionresultssa11.blob.core.windows.net/
+  productionresultssa12.blob.core.windows.net/
+  productionresultssa13.blob.core.windows.net/
+  productionresultssa14.blob.core.windows.net/
+  productionresultssa15.blob.core.windows.net/
+  productionresultssa16.blob.core.windows.net/
+  productionresultssa17.blob.core.windows.net/
+  productionresultssa18.blob.core.windows.net/
+  productionresultssa19.blob.core.windows.net/
+  github-production-repository-image-32fea6.s3.amazonaws.com
+  github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com
+  wss://alive.github.com api.githubcopilot.com
+  api.individual.githubcopilot.com api.business.githubcopilot.com
+  api.enterprise.githubcopilot.com; font-src github.githubassets.com;
+  form-action 'self' github.com gist.github.com
+  copilot-workspace.githubnext.com objects-origin.githubusercontent.com;
+  frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com
+  notebooks.githubusercontent.com; img-src 'self' data: blob:
+  github.githubassets.com media.githubusercontent.com
+  camo.githubusercontent.com identicons.github.com
+  avatars.githubusercontent.com private-avatars.githubusercontent.com
+  github-cloud.s3.amazonaws.com objects.githubusercontent.com
+  release-assets.githubusercontent.com
+  secured-user-images.githubusercontent.com/
+  user-images.githubusercontent.com/
+  private-user-images.githubusercontent.com opengraph.githubassets.com
+  copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/
+  github-production-user-asset-6210df.s3.amazonaws.com
+  customer-stories-feed.github.com spotlights-feed.github.com
+  objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src
+  'self'; media-src github.com user-images.githubusercontent.com/
+  secured-user-images.githubusercontent.com/
+  private-user-images.githubusercontent.com
+  github-production-user-asset-6210df.s3.amazonaws.com gist.github.com;
+  script-src github.githubassets.com; style-src 'unsafe-inline'
+  github.githubassets.com; upgrade-insecure-requests; worker-src
+  github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/
+  gist.github.com/assets-cdn/worker/
+
+  server: github.com
+
+  x-github-request-id: DC96:4649E:17CE1:1D38B:684A089D
+
+  
+
+  Connection #0 to host github.com left intact
+
+  Issue another request to this URL:
+  'https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68'
+
+
+  Host codeload.github.com:443 was resolved.
+
+  IPv6: (none)
+
+  IPv4: 4.237.22.35
+
+    Trying 4.237.22.35:443...
+
+  Connected to codeload.github.com (4.237.22.35) port 443
+
+  ALPN: curl offers h2,http/1.1
+
+  [5 bytes data]
+
+  TLSv1.3 (OUT), TLS handshake, Client hello (1):
+
+  [512 bytes data]
+
+  [5 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Server hello (2):
+
+  [122 bytes data]
+
+  [5 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+
+  [19 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Certificate (11):
+
+  [3134 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, CERT verify (15):
+
+  [79 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Finished (20):
+
+  [36 bytes data]
+
+  [5 bytes data]
+
+  TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (OUT), TLS handshake, Finished (20):
+
+  [36 bytes data]
+
+  SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /
+  id-ecPublicKey
+
+  ALPN: server accepted h2
+
+  Server certificate:
+
+   subject: CN=*.github.com
+   start date: Feb  5 00:00:00 2025 GMT
+   expire date: Feb  5 23:59:59 2026 GMT
+   subjectAltName: host "codeload.github.com" matched cert's "*.github.com"
+   issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA
+   SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.
+    Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+    Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+    Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  using HTTP/2
+
+  [HTTP/2] [1] OPENED stream for
+  https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68
+
+
+  [HTTP/2] [1] [:method: GET]
+
+  [HTTP/2] [1] [:scheme: https]
+
+  [HTTP/2] [1] [:authority: codeload.github.com]
+
+  [HTTP/2] [1] [:path:
+  /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68]
+
+  [HTTP/2] [1] [user-agent: curl/8.5.0]
+
+  [HTTP/2] [1] [accept: */*]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  GET /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68 HTTP/2
+
+  Host: codeload.github.com
+
+  User-Agent: curl/8.5.0
+
+  Accept: */*
+
+  
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+
+  [57 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+
+  [57 bytes data]
+
+  old SSL session ID is stale, removing
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  [5 bytes data]
+
+  [1 bytes data]
+
+  HTTP/2 404 
+
+  access-control-allow-origin: https://render.githubusercontent.com
+
+  content-security-policy: default-src 'none'; style-src 'unsafe-inline';
+  sandbox
+
+  cross-origin-resource-policy: cross-origin
+
+  strict-transport-security: max-age=31536000
+
+  vary: Authorization,Accept-Encoding
+
+  x-content-type-options: nosniff
+
+  x-frame-options: deny
+
+  x-xss-protection: 1; mode=block
+
+  date: Wed, 11 Jun 2025 22:52:13 GMT
+
+  content-length: 14
+
+  content-type: text/plain; charset=utf-8
+
+  x-github-request-id: CA1C:3AA860:04CF:1ABE:684A089D
+
+  The requested URL returned error: 404
+
+  Connection #1 to host codeload.github.com left intact
+
+
+
+          --- LOG END ---
+          
+    
+
+
+gmake[3]: *** [CMakeFiles/googletest-populate.dir/build.make:100: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download] Error 1
+gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[2]: *** [CMakeFiles/Makefile2:83: CMakeFiles/googletest-populate.dir/all] Error 2
+gmake[2]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+gmake[1]: *** [Makefile:91: all] Error 2
+gmake[1]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+
+CMake Error at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1679 (message):
+  Build step for googletest failed: 2
+Call Stack (most recent call first):
+  /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819:EVAL:2 (__FetchContent_directPopulate)
+  /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819 (cmake_language)
+  /usr/share/cmake-3.28/Modules/FetchContent.cmake:2033 (FetchContent_Populate)
+  CMakeLists.txt:93 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:1016: cmake_check_build_system] Error 1

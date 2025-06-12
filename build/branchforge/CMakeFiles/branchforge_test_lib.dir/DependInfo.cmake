@@ -1,0 +1,35 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/dingo/Programming/BranchForge/build/branchforge/branchforge_test_lib_autogen/mocs_compilation.cpp" "CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/core/Application.cpp" "CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/monitoring/BTExecutionMonitor.cpp" "CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp" "CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/project/BTSerializer.cpp" "CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/project/BehaviorTreeXML.cpp" "CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/project/CodeGenerator.cpp" "CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/project/ProjectManager.cpp" "CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/recording/DataRecorder.cpp" "CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/ros2/ROS2Interface.cpp" "CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/ros2/ROS2TopicBrowser.cpp" "CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/ui/MainWindow.cpp" "CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o.d"
+  "/home/dingo/Programming/BranchForge/src/visualization/SensorDataPipeline.cpp" "CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o" "gcc" "CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

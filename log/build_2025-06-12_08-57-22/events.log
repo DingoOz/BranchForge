@@ -1,0 +1,662 @@
+[0.000000] (-) TimerEvent: {}
+[0.001039] (branchforge) JobQueued: {'identifier': 'branchforge', 'dependencies': OrderedDict()}
+[0.001130] (branchforge) JobStarted: {'identifier': 'branchforge'}
+[0.007734] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'cmake'}
+[0.008502] (branchforge) JobProgress: {'identifier': 'branchforge', 'progress': 'build'}
+[0.009174] (branchforge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dingo/Programming/BranchForge/build/branchforge', '--', '-j12', '-l12'], 'cwd': '/home/dingo/Programming/BranchForge/build/branchforge', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_AU:en', 'USER': 'dingo', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'FONTCONFIG_PATH': '/etc/fonts', 'GIT_EDITOR': 'true', 'GIO_MODULE_DIR': '/home/dingo/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '2', 'HOME': '/home/dingo', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.100.2', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/194/usr/lib/x86_64-linux-gnu/gtk-3.0', 'NVM_BIN': '/home/dingo/.nvm/versions/node/v18.20.8/bin', 'NVM_INC': '/home/dingo/.nvm/versions/node/v18.20.8/include/node', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/dingo/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/194/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'NIX_PROFILES': '/nix/var/nix/profiles/default /home/dingo/.nix-profile', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/194/usr/share/code/code', 'MANAGERPID': '3458', 'SYSTEMD_EXEC_PID': '3768', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '58389', 'NVM_DIR': '/home/dingo/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'dingo', 'JOURNAL_STREAM': '9:28274', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'CLAUDE_CODE_SSE_PORT': '22132', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'USERNAME': 'dingo', 'TERM': 'xterm-256color', 'OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE': 'delta', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/dingo/.nvm/versions/node/v18.20.8/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dingo/.local/bin:/home/dingo/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dingo/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/ThinkPad-X1-Yoga:@/tmp/.ICE-unix/3690,unix/ThinkPad-X1-Yoga:/tmp/.ICE-unix/3690', 'GTK_EXE_PREFIX': '/snap/code/194/usr', 'INVOCATION_ID': '63ff04ccafc54cf282a52ce066c44e1a', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'BAMF_DESKTOP_FILE_HINT': '/var/lib/snapd/desktop/applications/code_code.desktop', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/194/usr/lib/locale', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/dingo/snap/code/194/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.LWP272', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bb6ff2ef0d.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/dingo/snap/code/194/.local/share/glib-2.0/schemas', 'ROS_DOMAIN_ID': '30', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'CLAUDECODE': '1', 'NIX_SSL_CERT_FILE': '/etc/ssl/certs/ca-certificates.crt', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dingo/Programming/BranchForge/build/branchforge', 'ENABLE_IDE_INTEGRATION': 'true', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/home/dingo/snap/code/194/.local/share:/home/dingo/snap/code/194:/snap/code/194/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share:/home/dingo/.nix-profile/share:/nix/var/nix/profiles/default/share', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[0.054599] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_test_lib_autogen_timestamp_deps\n'}
+[0.054799] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_qmlimportscan\n'}
+[0.069795] (branchforge) StdoutLine: {'line': b'[  1%] Built target branchforge_enhanced_autogen_timestamp_deps\n'}
+[0.075543] (branchforge) StdoutLine: {'line': b'[  3%] Automatic MOC and UIC for target branchforge_test_lib\n'}
+[0.099483] (branchforge) StdoutLine: {'line': b'[  3%] Built target branchforge_test_lib_autogen\n'}
+[0.099850] (-) TimerEvent: {}
+[0.127314] (branchforge) StdoutLine: {'line': b'[  5%] Automatic MOC and UIC for target branchforge_enhanced\n'}
+[0.128885] (branchforge) StdoutLine: {'line': b'[  6%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o\n'}
+[0.133189] (branchforge) StdoutLine: {'line': b'[  8%] Building CXX object CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o\n'}
+[0.199955] (-) TimerEvent: {}
+[0.300172] (-) TimerEvent: {}
+[0.370050] (branchforge) StdoutLine: {'line': b'[  8%] Built target branchforge_enhanced_autogen\n'}
+[0.400792] (-) TimerEvent: {}
+[0.411816] (branchforge) StdoutLine: {'line': b'[ 10%] Building CXX object CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.o\n'}
+[0.413748] (branchforge) StdoutLine: {'line': b'[ 13%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o\n'}
+[0.415209] (branchforge) StdoutLine: {'line': b'[ 13%] Building CXX object CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o\n'}
+[0.500898] (-) TimerEvent: {}
+[0.601086] (-) TimerEvent: {}
+[0.701303] (-) TimerEvent: {}
+[0.801530] (-) TimerEvent: {}
+[0.902256] (-) TimerEvent: {}
+[1.002474] (-) TimerEvent: {}
+[1.102695] (-) TimerEvent: {}
+[1.203145] (-) TimerEvent: {}
+[1.305982] (-) TimerEvent: {}
+[1.406194] (-) TimerEvent: {}
+[1.506384] (-) TimerEvent: {}
+[1.606584] (-) TimerEvent: {}
+[1.706795] (-) TimerEvent: {}
+[1.810513] (-) TimerEvent: {}
+[1.910703] (-) TimerEvent: {}
+[2.010883] (-) TimerEvent: {}
+[2.111082] (-) TimerEvent: {}
+[2.211292] (-) TimerEvent: {}
+[2.311496] (-) TimerEvent: {}
+[2.411671] (-) TimerEvent: {}
+[2.511855] (-) TimerEvent: {}
+[2.612050] (-) TimerEvent: {}
+[2.712483] (-) TimerEvent: {}
+[2.812670] (-) TimerEvent: {}
+[2.912860] (-) TimerEvent: {}
+[3.013690] (-) TimerEvent: {}
+[3.114190] (-) TimerEvent: {}
+[3.214396] (-) TimerEvent: {}
+[3.315878] (-) TimerEvent: {}
+[3.416094] (-) TimerEvent: {}
+[3.516283] (-) TimerEvent: {}
+[3.616476] (-) TimerEvent: {}
+[3.716661] (-) TimerEvent: {}
+[3.817139] (-) TimerEvent: {}
+[3.917748] (-) TimerEvent: {}
+[3.957884] (branchforge) StdoutLine: {'line': b'[ 15%] Linking CXX static library libbranchforge_test_lib.a\n'}
+[4.017866] (-) TimerEvent: {}
+[4.078983] (branchforge) StdoutLine: {'line': b'[ 34%] Built target branchforge_test_lib\n'}
+[4.102838] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps\n'}
+[4.103082] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_application_autogen_timestamp_deps\n'}
+[4.103198] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_bt_serializer_autogen_timestamp_deps\n'}
+[4.104178] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_code_generator_autogen_timestamp_deps\n'}
+[4.104419] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_behavior_tree_xml_autogen_timestamp_deps\n'}
+[4.108120] (branchforge) StdoutLine: {'line': b'[ 34%] Built target test_project_manager_autogen_timestamp_deps\n'}
+[4.117977] (-) TimerEvent: {}
+[4.124817] (branchforge) StdoutLine: {'line': b'[ 36%] Built target test_visual_to_code_pipeline_autogen\n'}
+[4.126296] (branchforge) StdoutLine: {'line': b'[ 37%] Built target test_code_generator_autogen\n'}
+[4.127681] (branchforge) StdoutLine: {'line': b'[ 41%] Automatic MOC and UIC for target test_application\n'}
+[4.127906] (branchforge) StdoutLine: {'line': b'[ 41%] Built target test_behavior_tree_xml_autogen\n'}
+[4.130064] (branchforge) StdoutLine: {'line': b'[ 43%] Automatic MOC and UIC for target test_bt_serializer\n'}
+[4.153378] (branchforge) StdoutLine: {'line': b'[ 44%] Built target test_project_manager_autogen\n'}
+[4.159618] (branchforge) StdoutLine: {'line': b'[ 46%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o\n'}
+[4.159866] (branchforge) StdoutLine: {'line': b'[ 46%] Built target test_application_autogen\n'}
+[4.161599] (branchforge) StdoutLine: {'line': b'[ 48%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o\n'}
+[4.166756] (branchforge) StdoutLine: {'line': b'[ 50%] Linking CXX executable test_behavior_tree_xml\n'}
+[4.168583] (branchforge) StdoutLine: {'line': b'[ 50%] Built target test_bt_serializer_autogen\n'}
+[4.188685] (branchforge) StdoutLine: {'line': b'[ 53%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o\n'}
+[4.189091] (branchforge) StdoutLine: {'line': b'[ 53%] Building CXX object tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o\n'}
+[4.206447] (branchforge) StdoutLine: {'line': b'[ 55%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o\n'}
+[4.218102] (-) TimerEvent: {}
+[4.318331] (-) TimerEvent: {}
+[4.418546] (-) TimerEvent: {}
+[4.477555] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/core/test_application.cpp:5:10: fatal error: QTest: No such file or directory\n'}
+[4.477992] (branchforge) StderrLine: {'line': b'    5 | #include <QTest>\n'}
+[4.478119] (branchforge) StderrLine: {'line': b'      |          ^~~~~~~\n'}
+[4.478228] (branchforge) StderrLine: {'line': b'compilation terminated.\n'}
+[4.485631] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_application.dir/build.make:90: tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o] Error 1\n'}
+[4.486032] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:460: tests/unit/CMakeFiles/test_application.dir/all] Error 2\n'}
+[4.486258] (branchforge) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[4.490249] (branchforge) StdoutLine: {'line': b'[ 58%] Built target test_behavior_tree_xml\n'}
+[4.519395] (-) TimerEvent: {}
+[4.619635] (-) TimerEvent: {}
+[4.719870] (-) TimerEvent: {}
+[4.820107] (-) TimerEvent: {}
+[4.920381] (-) TimerEvent: {}
+[5.020627] (-) TimerEvent: {}
+[5.120852] (-) TimerEvent: {}
+[5.221073] (-) TimerEvent: {}
+[5.322095] (-) TimerEvent: {}
+[5.422447] (-) TimerEvent: {}
+[5.522667] (-) TimerEvent: {}
+[5.609085] (branchforge) StdoutLine: {'line': b'[ 60%] Linking CXX executable branchforge_enhanced\n'}
+[5.622813] (-) TimerEvent: {}
+[5.723069] (-) TimerEvent: {}
+[5.823275] (-) TimerEvent: {}
+[5.923491] (-) TimerEvent: {}
+[6.023706] (-) TimerEvent: {}
+[6.123931] (-) TimerEvent: {}
+[6.224152] (-) TimerEvent: {}
+[6.324390] (-) TimerEvent: {}
+[6.426326] (-) TimerEvent: {}
+[6.469663] (branchforge) StdoutLine: {'line': b'[ 82%] Built target branchforge_enhanced\n'}
+[6.526549] (-) TimerEvent: {}
+[6.626778] (-) TimerEvent: {}
+[6.726970] (-) TimerEvent: {}
+[6.733868] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateHeaderFile_ValidTree_ContainsExpectedContent_Test::TestBody()\xe2\x80\x99:\n'}
+[6.734113] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:112:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.734215] (branchforge) StderrLine: {'line': b'  112 |     EXPECT_THAT(headerFile.toStdString(), HasSubstr("TESTPROJECT_H"));  // Include guard\n'}
+[6.734379] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[6.743033] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:112:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.743297] (branchforge) StderrLine: {'line': b'  112 |     EXPECT_THAT(headerFile.toStdString(), HasSubstr("TESTPROJECT_H"));  // Include guard\n'}
+[6.743450] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.743573] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.753174] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateCMakeFile_ValidOptions_ContainsExpectedContent_Test::TestBody()\xe2\x80\x99:\n'}
+[6.753473] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:122:42: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.753616] (branchforge) StderrLine: {'line': b'  122 |     EXPECT_THAT(cmakeFile.toStdString(), HasSubstr("cmake_minimum_required"));\n'}
+[6.753734] (branchforge) StderrLine: {'line': b'      |                                          ^~~~~~~~~\n'}
+[6.766614] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:122:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.766980] (branchforge) StderrLine: {'line': b'  122 |     EXPECT_THAT(cmakeFile.toStdString(), HasSubstr("cmake_minimum_required"));\n'}
+[6.767159] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.767321] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.779695] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GeneratePackageXML_ValidOptions_ContainsExpectedContent_Test::TestBody()\xe2\x80\x99:\n'}
+[6.779969] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:135:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.780116] (branchforge) StderrLine: {'line': b'  135 |     EXPECT_THAT(packageXml.toStdString(), HasSubstr("<?xml version"));\n'}
+[6.780249] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[6.788793] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:135:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.789112] (branchforge) StderrLine: {'line': b'  135 |     EXPECT_THAT(packageXml.toStdString(), HasSubstr("<?xml version"));\n'}
+[6.789272] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.789440] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.801055] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateNodeImplementation_ActionNode_ProducesValidCode_Test::TestBody()\xe2\x80\x99:\n'}
+[6.801359] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:153:41: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.801507] (branchforge) StderrLine: {'line': b'  153 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("SyncActionNode"));\n'}
+[6.801635] (branchforge) StderrLine: {'line': b'      |                                         ^~~~~~~~~\n'}
+[6.812124] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:153:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.812393] (branchforge) StderrLine: {'line': b'  153 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("SyncActionNode"));\n'}
+[6.812524] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.812639] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.822251] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateNodeImplementation_ConditionNode_ProducesValidCode_Test::TestBody()\xe2\x80\x99:\n'}
+[6.822581] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:169:41: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.822794] (branchforge) StderrLine: {'line': b'  169 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("ConditionNode"));\n'}
+[6.822948] (branchforge) StderrLine: {'line': b'      |                                         ^~~~~~~~~\n'}
+[6.827087] (-) TimerEvent: {}
+[6.830911] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:169:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.831208] (branchforge) StderrLine: {'line': b'  169 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("ConditionNode"));\n'}
+[6.831482] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.831663] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.840153] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateNodeHeader_ValidNode_ProducesValidHeader_Test::TestBody()\xe2\x80\x99:\n'}
+[6.840487] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:184:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.840686] (branchforge) StderrLine: {'line': b'  184 |     EXPECT_THAT(headerCode.toStdString(), HasSubstr("#pragma once"));\n'}
+[6.840852] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[6.848790] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:184:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.849111] (branchforge) StderrLine: {'line': b'  184 |     EXPECT_THAT(headerCode.toStdString(), HasSubstr("#pragma once"));\n'}
+[6.849282] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.849460] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.861486] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateWithConcepts_EnabledOption_IncludesConcepts_Test::TestBody()\xe2\x80\x99:\n'}
+[6.861764] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:200:40: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.861862] (branchforge) StderrLine: {'line': b'  200 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("concept"));\n'}
+[6.861947] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~\n'}
+[6.872597] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:200:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.872894] (branchforge) StderrLine: {'line': b'  200 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("concept"));\n'}
+[6.873036] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.873160] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.886829] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateWithoutConcepts_DisabledOption_ExcludesConcepts_Test::TestBody()\xe2\x80\x99:\n'}
+[6.887094] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:44: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.887189] (branchforge) StderrLine: {'line': b'  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[6.887267] (branchforge) StderrLine: {'line': b'      |                                            ^~~~~~~~~\n'}
+[6.891020] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:40: error: \xe2\x80\x98Not\xe2\x80\x99 was not declared in this scope\n'}
+[6.891316] (branchforge) StderrLine: {'line': b'  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[6.891440] (branchforge) StderrLine: {'line': b'      |                                        ^~~\n'}
+[6.901741] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.902053] (branchforge) StderrLine: {'line': b'  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[6.902192] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.902390] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.911747] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateWithCoroutines_EnabledOption_IncludesCoroutines_Test::TestBody()\xe2\x80\x99:\n'}
+[6.911995] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:225:40: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.912119] (branchforge) StderrLine: {'line': b'  225 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("coroutine"));\n'}
+[6.912232] (branchforge) StderrLine: {'line': b'      |                                        ^~~~~~~~~\n'}
+[6.920393] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:225:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.920637] (branchforge) StderrLine: {'line': b'  225 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("coroutine"));\n'}
+[6.920751] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.920858] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.927377] (-) TimerEvent: {}
+[6.935600] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_ValidateGeneratedCode_EmptyMainCpp_ReturnsError_Test::TestBody()\xe2\x80\x99:\n'}
+[6.935895] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:253:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.936032] (branchforge) StderrLine: {'line': b'  253 |     EXPECT_THAT(validation.toStdString(), HasSubstr("Main C++ file is empty"));\n'}
+[6.936189] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[6.947556] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:253:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.948437] (branchforge) StderrLine: {'line': b'  253 |     EXPECT_THAT(validation.toStdString(), HasSubstr("Main C++ file is empty"));\n'}
+[6.948569] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.948683] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[6.954082] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_SanitizeIdentifier_InvalidCharacters_ProducesValidIdentifier_Test::TestBody()\xe2\x80\x99:\n'}
+[6.954372] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:298:52: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.954538] (branchforge) StderrLine: {'line': b'  298 |     QString result1 = generator->sanitizeIdentifier("test-node with spaces!");\n'}
+[6.954672] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[6.954790] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:2:\n'}
+[6.954914] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here\n'}
+[6.955027] (branchforge) StderrLine: {'line': b'  120 |     QString sanitizeIdentifier(const QString& name) const;\n'}
+[6.955142] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~~~~~~~\n'}
+[6.955253] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:299:52: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.955385] (branchforge) StderrLine: {'line': b'  299 |     QString result2 = generator->sanitizeIdentifier("123invalid");\n'}
+[6.955524] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n'}
+[6.957328] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here\n'}
+[6.957470] (branchforge) StderrLine: {'line': b'  120 |     QString sanitizeIdentifier(const QString& name) const;\n'}
+[6.959773] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~~~~~~~\n'}
+[6.960622] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:300:52: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.960736] (branchforge) StderrLine: {'line': b'  300 |     QString result3 = generator->sanitizeIdentifier("");\n'}
+[6.960836] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~\n'}
+[6.960934] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here\n'}
+[6.961033] (branchforge) StderrLine: {'line': b'  120 |     QString sanitizeIdentifier(const QString& name) const;\n'}
+[6.961132] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~~~~~~~\n'}
+[6.961230] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_ToPascalCase_VariousInputs_ProducesCorrectCase_Test::TestBody()\xe2\x80\x99:\n'}
+[6.961345] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:310:46: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.961462] (branchforge) StderrLine: {'line': b'  310 |     QString result1 = generator->toPascalCase("move_to_goal");\n'}
+[6.961568] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\n'}
+[6.961675] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here\n'}
+[6.961780] (branchforge) StderrLine: {'line': b'  122 |     QString toPascalCase(const QString& name) const;\n'}
+[6.961882] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~\n'}
+[6.961986] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:311:46: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.962106] (branchforge) StderrLine: {'line': b'  311 |     QString result2 = generator->toPascalCase("check battery");\n'}
+[6.962224] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~\n'}
+[6.962341] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here\n'}
+[6.962452] (branchforge) StderrLine: {'line': b'  122 |     QString toPascalCase(const QString& name) const;\n'}
+[6.962555] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~\n'}
+[6.962657] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:312:46: error: \xe2\x80\x98QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const\xe2\x80\x99 is private within this context\n'}
+[6.962763] (branchforge) StderrLine: {'line': b'  312 |     QString result3 = generator->toPascalCase("simple");\n'}
+[6.963014] (branchforge) StderrLine: {'line': b'      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~\n'}
+[6.963135] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here\n'}
+[6.963242] (branchforge) StderrLine: {'line': b'  122 |     QString toPascalCase(const QString& name) const;\n'}
+[6.963357] (branchforge) StderrLine: {'line': b'      |             ^~~~~~~~~~~~\n'}
+[6.970978] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function \xe2\x80\x98virtual void CodeGeneratorTest_GenerateFromBehaviorTree_ComplexTree_HandlesAllNodeTypes_Test::TestBody()\xe2\x80\x99:\n'}
+[6.971265] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:373:76: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[6.971446] (branchforge) StderrLine: {'line': b'  373 |     EXPECT_THAT(code.nodeImplementations["retry_decorator"].toStdString(), HasSubstr("DecoratorNode"));\n'}
+[6.971581] (branchforge) StderrLine: {'line': b'      |                                                                            ^~~~~~~~~\n'}
+[6.980372] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:373:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[6.980619] (branchforge) StderrLine: {'line': b'  373 |     EXPECT_THAT(code.nodeImplementations["retry_decorator"].toStdString(), HasSubstr("DecoratorNode"));\n'}
+[6.980733] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[6.980839] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.027489] (-) TimerEvent: {}
+[7.127868] (-) TimerEvent: {}
+[7.145660] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function \xe2\x80\x98virtual void BTSerializerTest_ValidateEditorState_ValidState_ReturnsEmpty_Test::TestBody()\xe2\x80\x99:\n'}
+[7.146515] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:188:57: error: conversion from \xe2\x80\x98bool\xe2\x80\x99 to non-scalar type \xe2\x80\x98QString\xe2\x80\x99 requested\n'}
+[7.146666] (branchforge) StderrLine: {'line': b'  188 |     QString validation = serializer->validateEditorState(editorState);\n'}
+[7.146787] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[7.146916] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function \xe2\x80\x98virtual void BTSerializerTest_ValidateEditorState_MissingNodes_ReturnsError_Test::TestBody()\xe2\x80\x99:\n'}
+[7.147028] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:201:57: error: conversion from \xe2\x80\x98bool\xe2\x80\x99 to non-scalar type \xe2\x80\x98QString\xe2\x80\x99 requested\n'}
+[7.147144] (branchforge) StderrLine: {'line': b'  201 |     QString validation = serializer->validateEditorState(invalidState);\n'}
+[7.147441] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n'}
+[7.147570] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function \xe2\x80\x98virtual void BTSerializerTest_ValidateEditorState_NodesWithoutIds_ReturnsError_Test::TestBody()\xe2\x80\x99:\n'}
+[7.147685] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:223:57: error: conversion from \xe2\x80\x98bool\xe2\x80\x99 to non-scalar type \xe2\x80\x98QString\xe2\x80\x99 requested\n'}
+[7.147806] (branchforge) StderrLine: {'line': b'  223 |     QString validation = serializer->validateEditorState(invalidState);\n'}
+[7.147912] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n'}
+[7.163849] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function \xe2\x80\x98virtual void BTSerializerTest_ProcessConnections_ValidConnections_SetsParentChildRelationships_Test::TestBody()\xe2\x80\x99:\n'}
+[7.164102] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:286:37: error: \xe2\x80\x98Contains\xe2\x80\x99 was not declared in this scope\n'}
+[7.164218] (branchforge) StderrLine: {'line': b'  286 |     EXPECT_THAT(rootNode->children, Contains(QString("move_action")));\n'}
+[7.164337] (branchforge) StderrLine: {'line': b'      |                                     ^~~~~~~~\n'}
+[7.172734] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:286:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.172969] (branchforge) StderrLine: {'line': b'  286 |     EXPECT_THAT(rootNode->children, Contains(QString("move_action")));\n'}
+[7.173080] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.173183] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.180971] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function \xe2\x80\x98virtual void BTSerializerTest_SerializeComplexTree_MultiLevelHierarchy_ProducesCorrectStructure_Test::TestBody()\xe2\x80\x99:\n'}
+[7.181241] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:364:52: error: no matching function for call to \xe2\x80\x98BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)\xe2\x80\x99\n'}
+[7.181397] (branchforge) StderrLine: {'line': b'  364 |     QString xmlContent = serializer->serializeToXML(complexState);\n'}
+[7.181510] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n'}
+[7.181614] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:3:\n'}
+[7.181795] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: \xe2\x80\x98bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)\xe2\x80\x99\n'}
+[7.181903] (branchforge) StderrLine: {'line': b'   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);\n'}
+[7.182007] (branchforge) StderrLine: {'line': b'      |                      ^~~~~~~~~~~~~~\n'}
+[7.182110] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided\n'}
+[7.228117] (-) TimerEvent: {}
+[7.328325] (-) TimerEvent: {}
+[7.428886] (-) TimerEvent: {}
+[7.506250] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_CreateNewProject_ValidParameters_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.506524] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:96:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.506637] (branchforge) StderrLine: {'line': b'   96 |     ProjectSettings settings;\n'}
+[7.506736] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.513430] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:97:5: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.513898] (branchforge) StderrLine: {'line': b'   97 |     settings.name = projectName;\n'}
+[7.514034] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~\n'}
+[7.514147] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:105:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98createNewProject\xe2\x80\x99; did you mean \xe2\x80\x98createProject\xe2\x80\x99?\n'}
+[7.514265] (branchforge) StderrLine: {'line': b'  105 |     bool success = projectManager->createNewProject(projectPath, settings);\n'}
+[7.514399] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~~\n'}
+[7.514507] (branchforge) StderrLine: {'line': b'      |                                    createProject\n'}
+[7.532376] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_CreateNewProject_ExistingDirectory_Fails_Test::TestBody()\xe2\x80\x99:\n'}
+[7.532686] (-) TimerEvent: {}
+[7.532720] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:122:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.532863] (branchforge) StderrLine: {'line': b'  122 |     ProjectSettings settings;\n'}
+[7.532979] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.542568] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:123:5: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.542792] (branchforge) StderrLine: {'line': b'  123 |     settings.name = projectName;\n'}
+[7.542908] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~\n'}
+[7.543018] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:126:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98createNewProject\xe2\x80\x99; did you mean \xe2\x80\x98createProject\xe2\x80\x99?\n'}
+[7.543141] (branchforge) StderrLine: {'line': b'  126 |     bool success = projectManager->createNewProject(projectPath, settings);\n'}
+[7.543249] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~~\n'}
+[7.543390] (branchforge) StderrLine: {'line': b'      |                                    createProject\n'}
+[7.544598] (branchforge) StderrLine: {'line': b'In file included from /usr/include/gtest/gtest-printers.h:122,\n'}
+[7.544770] (branchforge) StderrLine: {'line': b'                 from /usr/include/gtest/gtest-matchers.h:49,\n'}
+[7.544875] (branchforge) StderrLine: {'line': b'                 from /usr/include/gtest/internal/gtest-death-test-internal.h:47,\n'}
+[7.544974] (branchforge) StderrLine: {'line': b'                 from /usr/include/gtest/gtest-death-test.h:43,\n'}
+[7.545086] (branchforge) StderrLine: {'line': b'                 from /usr/include/gtest/gtest.h:65,\n'}
+[7.545199] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:1:\n'}
+[7.545301] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_LoadProject_ValidProject_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.545425] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:147:33: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.545545] (branchforge) StderrLine: {'line': b'  147 |     EXPECT_TRUE(projectManager->hasOpenProject());\n'}
+[7.545652] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~\n'}
+[7.546364] (branchforge) StderrLine: {'line': b'In file included from /usr/include/gtest/gtest.h:72:\n'}
+[7.546540] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:148:31: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getCurrentProjectName\xe2\x80\x99\n'}
+[7.546657] (branchforge) StderrLine: {'line': b'  148 |     EXPECT_EQ(projectManager->getCurrentProjectName(), projectName);\n'}
+[7.546762] (branchforge) StderrLine: {'line': b'      |                               ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.546869] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:149:31: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getCurrentProjectPath\xe2\x80\x99\n'}
+[7.546979] (branchforge) StderrLine: {'line': b'  149 |     EXPECT_EQ(projectManager->getCurrentProjectPath(), projectPath);\n'}
+[7.547098] (branchforge) StderrLine: {'line': b'      |                               ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.549365] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_LoadProject_NonexistentFile_Fails_Test::TestBody()\xe2\x80\x99:\n'}
+[7.549563] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:161:34: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.549669] (branchforge) StderrLine: {'line': b'  161 |     EXPECT_FALSE(projectManager->hasOpenProject());\n'}
+[7.549771] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~~\n'}
+[7.550041] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_LoadProject_InvalidProjectFile_Fails_Test::TestBody()\xe2\x80\x99:\n'}
+[7.550172] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:177:34: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.550288] (branchforge) StderrLine: {'line': b'  177 |     EXPECT_FALSE(projectManager->hasOpenProject());\n'}
+[7.550422] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~~\n'}
+[7.565934] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_SaveProject_LoadedProject_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.566216] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:192:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.566369] (branchforge) StderrLine: {'line': b'  192 |     ProjectSettings newSettings = projectManager->getProjectSettings();\n'}
+[7.566491] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.577801] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:193:5: error: \xe2\x80\x98newSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.578081] (branchforge) StderrLine: {'line': b'  193 |     newSettings.description = "Modified description";\n'}
+[7.578207] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.578516] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:194:21: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98updateProjectSettings\xe2\x80\x99; did you mean \xe2\x80\x98QJsonObject BranchForge::Project::ProjectManager::m_projectSettings\xe2\x80\x99? (not accessible from this context)\n'}
+[7.578698] (branchforge) StderrLine: {'line': b'  194 |     projectManager->updateProjectSettings(newSettings);\n'}
+[7.578919] (branchforge) StderrLine: {'line': b'      |                     ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.579036] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:3:\n'}
+[7.579140] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here\n'}
+[7.579244] (branchforge) StderrLine: {'line': b'   52 |     QJsonObject m_projectSettings;\n'}
+[7.579375] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~~~~\n'}
+[7.579495] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:205:34: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getProjectSettings\xe2\x80\x99; did you mean \xe2\x80\x98QJsonObject BranchForge::Project::ProjectManager::m_projectSettings\xe2\x80\x99? (not accessible from this context)\n'}
+[7.579617] (branchforge) StderrLine: {'line': b'  205 |     EXPECT_EQ(newProjectManager->getProjectSettings().description, "Modified description");\n'}
+[7.579729] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~~~~~~\n'}
+[7.579842] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here\n'}
+[7.579988] (branchforge) StderrLine: {'line': b'   52 |     QJsonObject m_projectSettings;\n'}
+[7.580117] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~~~~\n'}
+[7.599566] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_AddBehaviorTree_ValidTree_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.599834] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:227:5: error: \xe2\x80\x98BehaviorTreeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.599954] (branchforge) StderrLine: {'line': b'  227 |     BehaviorTreeInfo treeInfo;\n'}
+[7.602841] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~~\n'}
+[7.608787] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:228:5: error: \xe2\x80\x98treeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.609024] (branchforge) StderrLine: {'line': b'  228 |     treeInfo.name = "NewTree";\n'}
+[7.609137] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~\n'}
+[7.609247] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:233:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98addBehaviorTree\xe2\x80\x99; did you mean \xe2\x80\x98QJsonObject BranchForge::Project::ProjectManager::m_behaviorTree\xe2\x80\x99? (not accessible from this context)\n'}
+[7.609409] (branchforge) StderrLine: {'line': b'  233 |     bool success = projectManager->addBehaviorTree(treeInfo);\n'}
+[7.609526] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~\n'}
+[7.609640] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:51:17: note: declared private here\n'}
+[7.609755] (branchforge) StderrLine: {'line': b'   51 |     QJsonObject m_behaviorTree;\n'}
+[7.609864] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~\n'}
+[7.609974] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:237:45: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getBehaviorTreeNames\xe2\x80\x99\n'}
+[7.610084] (branchforge) StderrLine: {'line': b'  237 |     QStringList treeNames = projectManager->getBehaviorTreeNames();\n'}
+[7.610190] (branchforge) StderrLine: {'line': b'      |                                             ^~~~~~~~~~~~~~~~~~~~\n'}
+[7.621832] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:238:28: error: \xe2\x80\x98Contains\xe2\x80\x99 was not declared in this scope\n'}
+[7.622101] (branchforge) StderrLine: {'line': b'  238 |     EXPECT_THAT(treeNames, Contains(QString("NewTree")));\n'}
+[7.622220] (branchforge) StderrLine: {'line': b'      |                            ^~~~~~~~\n'}
+[7.622340] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_CompleteWorkflow_ComplexTree_ProducesValidCode_Test::TestBody()\xe2\x80\x99:\n'}
+[7.622460] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:268:60: error: no matching function for call to \xe2\x80\x98BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)\xe2\x80\x99\n'}
+[7.622575] (branchforge) StderrLine: {'line': b'  268 |     bool serializationSuccess = !serializer->serializeToXML(editorState).isEmpty();\n'}
+[7.622679] (branchforge) StderrLine: {'line': b'      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[7.622782] (branchforge) StderrLine: {'line': b'In file included from /home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:3:\n'}
+[7.622901] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: \xe2\x80\x98bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)\xe2\x80\x99\n'}
+[7.623004] (branchforge) StderrLine: {'line': b'   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);\n'}
+[7.623105] (branchforge) StderrLine: {'line': b'      |                      ^~~~~~~~~~~~~~\n'}
+[7.623206] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided\n'}
+[7.624523] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_VisualToXML_ComplexTree_PreservesAllData_Test::TestBody()\xe2\x80\x99:\n'}
+[7.624700] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:284:52: error: no matching function for call to \xe2\x80\x98BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)\xe2\x80\x99\n'}
+[7.624782] (branchforge) StderrLine: {'line': b'  284 |     QString xmlContent = serializer->serializeToXML(editorState);\n'}
+[7.624862] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\n'}
+[7.624941] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: \xe2\x80\x98bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)\xe2\x80\x99\n'}
+[7.625026] (branchforge) StderrLine: {'line': b'   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);\n'}
+[7.625105] (branchforge) StderrLine: {'line': b'      |                      ^~~~~~~~~~~~~~\n'}
+[7.625185] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided\n'}
+[7.631462] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:238:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.631641] (branchforge) StderrLine: {'line': b'  238 |     EXPECT_THAT(treeNames, Contains(QString("NewTree")));\n'}
+[7.631726] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.631806] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.633381] (-) TimerEvent: {}
+[7.634082] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_RemoveBehaviorTree_ExistingTree_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.634299] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:252:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98removeBehaviorTree\xe2\x80\x99; did you mean \xe2\x80\x98QJsonObject BranchForge::Project::ProjectManager::m_behaviorTree\xe2\x80\x99? (not accessible from this context)\n'}
+[7.634436] (branchforge) StderrLine: {'line': b'  252 |     bool success = projectManager->removeBehaviorTree("SubTree");\n'}
+[7.634545] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~~~~\n'}
+[7.634652] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:51:17: note: declared private here\n'}
+[7.634780] (branchforge) StderrLine: {'line': b'   51 |     QJsonObject m_behaviorTree;\n'}
+[7.634900] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~\n'}
+[7.636550] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:256:45: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getBehaviorTreeNames\xe2\x80\x99\n'}
+[7.636811] (branchforge) StderrLine: {'line': b'  256 |     QStringList treeNames = projectManager->getBehaviorTreeNames();\n'}
+[7.636945] (branchforge) StderrLine: {'line': b'      |                                             ^~~~~~~~~~~~~~~~~~~~\n'}
+[7.639484] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_XMLToCode_ValidXML_GeneratesCompilableCode_Test::TestBody()\xe2\x80\x99:\n'}
+[7.639740] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:334:86: error: passing \xe2\x80\x98const QString\xe2\x80\x99 as \xe2\x80\x98this\xe2\x80\x99 argument discards qualifiers [-fpermissive]\n'}
+[7.639860] (branchforge) StderrLine: {'line': b'  334 |             if (it.value().contains(nodeType) || it.value().contains(nodeType.replace("_", ""))) {\n'}
+[7.639969] (branchforge) StderrLine: {'line': b'      |                                                                      ~~~~~~~~~~~~~~~~^~~~~~~~~\n'}
+[7.640090] (branchforge) StderrLine: {'line': b'In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:11,\n'}
+[7.640202] (branchforge) StderrLine: {'line': b'                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,\n'}
+[7.640326] (branchforge) StderrLine: {'line': b'                 from /home/dingo/Programming/BranchForge/include/project/BTSerializer.h:3:\n'}
+[7.640460] (branchforge) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:721:14: note:   in call to \xe2\x80\x98QString& QString::replace(const QString&, const QString&, Qt::CaseSensitivity)\xe2\x80\x99\n'}
+[7.640574] (branchforge) StderrLine: {'line': b'  721 |     QString &replace(const QString &before, const QString &after,\n'}
+[7.640706] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~\n'}
+[7.645220] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:32: error: \xe2\x80\x98Contains\xe2\x80\x99 was not declared in this scope\n'}
+[7.645519] (branchforge) StderrLine: {'line': b'  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));\n'}
+[7.645659] (branchforge) StderrLine: {'line': b'      |                                ^~~~~~~~\n'}
+[7.652921] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:28: error: \xe2\x80\x98Not\xe2\x80\x99 was not declared in this scope\n'}
+[7.653150] (branchforge) StderrLine: {'line': b'  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));\n'}
+[7.653256] (branchforge) StderrLine: {'line': b'      |                            ^~~\n'}
+[7.654732] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_ParameterPropagation_AllParameters_AppearInGeneratedCode_Test::TestBody()\xe2\x80\x99:\n'}
+[7.654915] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:357:44: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.655055] (branchforge) StderrLine: {'line': b'  357 |     EXPECT_THAT(mainContent.toStdString(), HasSubstr("NavfnPlanner"));\n'}
+[7.655191] (branchforge) StderrLine: {'line': b'      |                                            ^~~~~~~~~\n'}
+[7.665610] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.666280] (branchforge) StderrLine: {'line': b'  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));\n'}
+[7.666451] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.666585] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.666712] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:357:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.666841] (branchforge) StderrLine: {'line': b'  357 |     EXPECT_THAT(mainContent.toStdString(), HasSubstr("NavfnPlanner"));\n'}
+[7.666963] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.667085] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.683376] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_GetBehaviorTreeInfo_ExistingTree_ReturnsCorrectInfo_Test::TestBody()\xe2\x80\x99:\n'}
+[7.683672] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:271:5: error: \xe2\x80\x98BehaviorTreeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.683811] (branchforge) StderrLine: {'line': b'  271 |     BehaviorTreeInfo treeInfo = projectManager->getBehaviorTreeInfo("MainTree");\n'}
+[7.683950] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~~\n'}
+[7.685038] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_HierarchyPreservation_NestedStructure_MaintainsParentChildRelations_Test::TestBody()\xe2\x80\x99:\n'}
+[7.685233] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:396:41: error: \xe2\x80\x98Contains\xe2\x80\x99 was not declared in this scope\n'}
+[7.685361] (branchforge) StderrLine: {'line': b'  396 |     EXPECT_THAT(rootSelector->children, Contains(QString("nav_sequence")));\n'}
+[7.685493] (branchforge) StderrLine: {'line': b'      |                                         ^~~~~~~~\n'}
+[7.691302] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:274:15: error: \xe2\x80\x98treeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.691538] (branchforge) StderrLine: {'line': b'  274 |     EXPECT_EQ(treeInfo.name, "MainTree");\n'}
+[7.691744] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.699050] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:396:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.699329] (branchforge) StderrLine: {'line': b'  396 |     EXPECT_THAT(rootSelector->children, Contains(QString("nav_sequence")));\n'}
+[7.699475] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.699600] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.703022] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:275:15: error: \xe2\x80\x98treeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.703262] (branchforge) StderrLine: {'line': b'  275 |     EXPECT_EQ(treeInfo.fileName, "trees/main_tree.xml");\n'}
+[7.703407] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.710430] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:411:45: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.710685] (branchforge) StderrLine: {'line': b'  411 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("root_selector"));\n'}
+[7.710803] (branchforge) StderrLine: {'line': b'      |                                             ^~~~~~~~~\n'}
+[7.712677] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:276:18: error: \xe2\x80\x98treeInfo\xe2\x80\x99 was not declared in this scope\n'}
+[7.712946] (branchforge) StderrLine: {'line': b'  276 |     EXPECT_FALSE(treeInfo.name.isEmpty());\n'}
+[7.713070] (branchforge) StderrLine: {'line': b'      |                  ^~~~~~~~\n'}
+[7.723177] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_CodeGeneration_WithConcepts_ProducesModernCpp_Test::TestBody()\xe2\x80\x99:\n'}
+[7.723495] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:427:45: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.723633] (branchforge) StderrLine: {'line': b'  427 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("concept"));\n'}
+[7.723760] (branchforge) StderrLine: {'line': b'      |                                             ^~~~~~~~~\n'}
+[7.732541] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_GetProjectSettings_LoadedProject_ReturnsCorrectSettings_Test::TestBody()\xe2\x80\x99:\n'}
+[7.732841] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:291:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.732980] (branchforge) StderrLine: {'line': b'  291 |     ProjectSettings settings = projectManager->getProjectSettings();\n'}
+[7.733099] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.733467] (-) TimerEvent: {}
+[7.734725] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:427:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.734961] (branchforge) StderrLine: {'line': b'  427 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("concept"));\n'}
+[7.735078] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.735186] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.742552] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:294:15: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.743077] (branchforge) StderrLine: {'line': b'  294 |     EXPECT_EQ(settings.name, projectName);\n'}
+[7.743203] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.747708] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_CodeGeneration_WithoutConcepts_ProducesStandardCpp_Test::TestBody()\xe2\x80\x99:\n'}
+[7.747946] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:49: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.748059] (branchforge) StderrLine: {'line': b'  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[7.748166] (branchforge) StderrLine: {'line': b'      |                                                 ^~~~~~~~~\n'}
+[7.750575] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:295:15: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.750749] (branchforge) StderrLine: {'line': b'  295 |     EXPECT_EQ(settings.description, "Test project");\n'}
+[7.750853] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.757381] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:45: error: \xe2\x80\x98Not\xe2\x80\x99 was not declared in this scope\n'}
+[7.757650] (branchforge) StderrLine: {'line': b'  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[7.757768] (branchforge) StderrLine: {'line': b'      |                                             ^~~\n'}
+[7.761102] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:296:15: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.761361] (branchforge) StderrLine: {'line': b'  296 |     EXPECT_EQ(settings.version, "1.0.0");\n'}
+[7.761504] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.766876] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.767147] (branchforge) StderrLine: {'line': b'  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));\n'}
+[7.767262] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.767383] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.769071] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_RoundTripConsistency_VisualToCodeToVisual_PreservesData_Test::TestBody()\xe2\x80\x99:\n'}
+[7.769358] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:452:52: error: no matching function for call to \xe2\x80\x98BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)\xe2\x80\x99\n'}
+[7.769490] (branchforge) StderrLine: {'line': b'  452 |     QString xmlContent = serializer->serializeToXML(originalState);\n'}
+[7.769601] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\n'}
+[7.769710] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: \xe2\x80\x98bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)\xe2\x80\x99\n'}
+[7.769817] (branchforge) StderrLine: {'line': b'   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);\n'}
+[7.769923] (branchforge) StderrLine: {'line': b'      |                      ^~~~~~~~~~~~~~\n'}
+[7.770030] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided\n'}
+[7.771697] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:297:15: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.771950] (branchforge) StderrLine: {'line': b'  297 |     EXPECT_EQ(settings.author, "Test Author");\n'}
+[7.772081] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.774509] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function \xe2\x80\x98virtual void VisualToCodePipelineTest_ValidationPipeline_InvalidTree_FailsGracefully_Test::TestBody()\xe2\x80\x99:\n'}
+[7.774735] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:490:57: error: conversion from \xe2\x80\x98bool\xe2\x80\x99 to non-scalar type \xe2\x80\x98QString\xe2\x80\x99 requested\n'}
+[7.774854] (branchforge) StderrLine: {'line': b'  490 |     QString validation = serializer->validateEditorState(invalidState);\n'}
+[7.774966] (branchforge) StderrLine: {'line': b'      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\n'}
+[7.782497] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:298:15: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.782742] (branchforge) StderrLine: {'line': b'  298 |     EXPECT_EQ(settings.targetROS2Distro, "humble");\n'}
+[7.782856] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~\n'}
+[7.786031] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:494:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.786280] (branchforge) StderrLine: {'line': b'  494 |     EXPECT_THAT(validation.toStdString(), HasSubstr("id"));\n'}
+[7.786418] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[7.793021] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:299:17: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.793300] (branchforge) StderrLine: {'line': b'  299 |     EXPECT_TRUE(settings.useConcepts);\n'}
+[7.793445] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~\n'}
+[7.798350] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:494:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.798648] (branchforge) StderrLine: {'line': b'  494 |     EXPECT_THAT(validation.toStdString(), HasSubstr("id"));\n'}
+[7.798774] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.798895] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.804293] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:300:18: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.804548] (branchforge) StderrLine: {'line': b'  300 |     EXPECT_FALSE(settings.useCoroutines);\n'}
+[7.804668] (branchforge) StderrLine: {'line': b'      |                  ^~~~~~~~\n'}
+[7.818968] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_UpdateProjectSettings_ValidSettings_Success_Test::TestBody()\xe2\x80\x99:\n'}
+[7.819321] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:313:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.819453] (branchforge) StderrLine: {'line': b'  313 |     ProjectSettings newSettings = projectManager->getProjectSettings();\n'}
+[7.819565] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.819673] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_code_generator.dir/build.make:90: tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o] Error 1\n'}
+[7.819782] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:376: tests/unit/CMakeFiles/test_code_generator.dir/all] Error 2\n'}
+[7.829745] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:314:5: error: \xe2\x80\x98newSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.830072] (branchforge) StderrLine: {'line': b'  314 |     newSettings.description = "Updated description";\n'}
+[7.830199] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.832961] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:320:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98updateProjectSettings\xe2\x80\x99; did you mean \xe2\x80\x98QJsonObject BranchForge::Project::ProjectManager::m_projectSettings\xe2\x80\x99? (not accessible from this context)\n'}
+[7.833151] (branchforge) StderrLine: {'line': b'  320 |     bool success = projectManager->updateProjectSettings(newSettings);\n'}
+[7.833257] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.833782] (-) TimerEvent: {}
+[7.833806] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here\n'}
+[7.833911] (branchforge) StderrLine: {'line': b'   52 |     QJsonObject m_projectSettings;\n'}
+[7.834033] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~~~~\n'}
+[7.834136] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:325:20: error: expected \xe2\x80\x98;\xe2\x80\x99 before \xe2\x80\x98updatedSettings\xe2\x80\x99\n'}
+[7.834242] (branchforge) StderrLine: {'line': b'  325 |     ProjectSettings updatedSettings = projectManager->getProjectSettings();\n'}
+[7.834356] (branchforge) StderrLine: {'line': b'      |                    ^~~~~~~~~~~~~~~~\n'}
+[7.834463] (branchforge) StderrLine: {'line': b'      |                    ;\n'}
+[7.843589] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:326:15: error: \xe2\x80\x98updatedSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.844069] (branchforge) StderrLine: {'line': b'  326 |     EXPECT_EQ(updatedSettings.description, "Updated description");\n'}
+[7.844198] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~\n'}
+[7.857564] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:327:15: error: \xe2\x80\x98updatedSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.857840] (branchforge) StderrLine: {'line': b'  327 |     EXPECT_EQ(updatedSettings.version, "2.0.0");\n'}
+[7.857954] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~\n'}
+[7.870114] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:328:15: error: \xe2\x80\x98updatedSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.870403] (branchforge) StderrLine: {'line': b'  328 |     EXPECT_EQ(updatedSettings.targetROS2Distro, "iron");\n'}
+[7.870538] (branchforge) StderrLine: {'line': b'      |               ^~~~~~~~~~~~~~~\n'}
+[7.883602] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:329:17: error: \xe2\x80\x98updatedSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.883849] (branchforge) StderrLine: {'line': b'  329 |     EXPECT_TRUE(updatedSettings.useCoroutines);\n'}
+[7.883971] (branchforge) StderrLine: {'line': b'      |                 ^~~~~~~~~~~~~~~\n'}
+[7.885324] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_GetRecentProjects_InitiallyEmpty_ReturnsEmptyList_Test::TestBody()\xe2\x80\x99:\n'}
+[7.885495] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:335:50: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getRecentProjects\xe2\x80\x99\n'}
+[7.885602] (branchforge) StderrLine: {'line': b'  335 |     QStringList recentProjects = projectManager->getRecentProjects();\n'}
+[7.885704] (branchforge) StderrLine: {'line': b'      |                                                  ^~~~~~~~~~~~~~~~~\n'}
+[7.886857] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_AddToRecentProjects_ValidPath_AddsToList_Test::TestBody()\xe2\x80\x99:\n'}
+[7.887183] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:346:21: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98addToRecentProjects\xe2\x80\x99\n'}
+[7.887297] (branchforge) StderrLine: {'line': b'  346 |     projectManager->addToRecentProjects(projectPath);\n'}
+[7.887419] (branchforge) StderrLine: {'line': b'      |                     ^~~~~~~~~~~~~~~~~~~\n'}
+[7.887529] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:349:50: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getRecentProjects\xe2\x80\x99\n'}
+[7.887640] (branchforge) StderrLine: {'line': b'  349 |     QStringList recentProjects = projectManager->getRecentProjects();\n'}
+[7.887749] (branchforge) StderrLine: {'line': b'      |                                                  ^~~~~~~~~~~~~~~~~\n'}
+[7.897549] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:351:33: error: \xe2\x80\x98Contains\xe2\x80\x99 was not declared in this scope\n'}
+[7.897798] (branchforge) StderrLine: {'line': b'  351 |     EXPECT_THAT(recentProjects, Contains(projectPath));\n'}
+[7.897913] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~\n'}
+[7.908296] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:351:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.908567] (branchforge) StderrLine: {'line': b'  351 |     EXPECT_THAT(recentProjects, Contains(projectPath));\n'}
+[7.908665] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.908747] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.909665] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_AddToRecentProjects_DuplicatePath_DoesNotDuplicate_Test::TestBody()\xe2\x80\x99:\n'}
+[7.909782] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:359:21: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98addToRecentProjects\xe2\x80\x99\n'}
+[7.909954] (branchforge) StderrLine: {'line': b'  359 |     projectManager->addToRecentProjects(projectPath);\n'}
+[7.911894] (branchforge) StderrLine: {'line': b'      |                     ^~~~~~~~~~~~~~~~~~~\n'}
+[7.912084] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:360:21: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98addToRecentProjects\xe2\x80\x99\n'}
+[7.912203] (branchforge) StderrLine: {'line': b'  360 |     projectManager->addToRecentProjects(projectPath); // Add same path again\n'}
+[7.912314] (branchforge) StderrLine: {'line': b'      |                     ^~~~~~~~~~~~~~~~~~~\n'}
+[7.912430] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:363:50: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getRecentProjects\xe2\x80\x99\n'}
+[7.912539] (branchforge) StderrLine: {'line': b'  363 |     QStringList recentProjects = projectManager->getRecentProjects();\n'}
+[7.912636] (branchforge) StderrLine: {'line': b'      |                                                  ^~~~~~~~~~~~~~~~~\n'}
+[7.912989] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_ValidateProject_ValidProject_ReturnsEmpty_Test::TestBody()\xe2\x80\x99:\n'}
+[7.913479] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:379:42: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98validateProject\xe2\x80\x99; did you mean \xe2\x80\x98createProject\xe2\x80\x99?\n'}
+[7.913607] (branchforge) StderrLine: {'line': b'  379 |     QString validation = projectManager->validateProject();\n'}
+[7.913711] (branchforge) StderrLine: {'line': b'      |                                          ^~~~~~~~~~~~~~~\n'}
+[7.913810] (branchforge) StderrLine: {'line': b'      |                                          createProject\n'}
+[7.916812] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_ValidateProject_MissingTreeFiles_ReturnsError_Test::TestBody()\xe2\x80\x99:\n'}
+[7.917077] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:399:42: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98validateProject\xe2\x80\x99; did you mean \xe2\x80\x98createProject\xe2\x80\x99?\n'}
+[7.917200] (branchforge) StderrLine: {'line': b'  399 |     QString validation = projectManager->validateProject();\n'}
+[7.917302] (branchforge) StderrLine: {'line': b'      |                                          ^~~~~~~~~~~~~~~\n'}
+[7.917413] (branchforge) StderrLine: {'line': b'      |                                          createProject\n'}
+[7.925951] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:403:43: error: \xe2\x80\x98HasSubstr\xe2\x80\x99 was not declared in this scope\n'}
+[7.926234] (branchforge) StderrLine: {'line': b'  403 |     EXPECT_THAT(validation.toStdString(), HasSubstr("sub_tree.xml"));\n'}
+[7.926368] (branchforge) StderrLine: {'line': b'      |                                           ^~~~~~~~~\n'}
+[7.933906] (-) TimerEvent: {}
+[7.937062] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:403:5: error: \xe2\x80\x98EXPECT_THAT\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98EXPECT_GT\xe2\x80\x99?\n'}
+[7.937340] (branchforge) StderrLine: {'line': b'  403 |     EXPECT_THAT(validation.toStdString(), HasSubstr("sub_tree.xml"));\n'}
+[7.937472] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~\n'}
+[7.937578] (branchforge) StderrLine: {'line': b'      |     EXPECT_GT\n'}
+[7.939518] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_CloseProject_OpenProject_ClearsState_Test::TestBody()\xe2\x80\x99:\n'}
+[7.939917] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:416:33: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.940043] (branchforge) StderrLine: {'line': b'  416 |     ASSERT_TRUE(projectManager->hasOpenProject());\n'}
+[7.940151] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~\n'}
+[7.940249] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:422:34: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.940487] (branchforge) StderrLine: {'line': b'  422 |     EXPECT_FALSE(projectManager->hasOpenProject());\n'}
+[7.940590] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~~\n'}
+[7.940682] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:423:33: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getCurrentProjectName\xe2\x80\x99\n'}
+[7.940794] (branchforge) StderrLine: {'line': b'  423 |     EXPECT_TRUE(projectManager->getCurrentProjectName().isEmpty());\n'}
+[7.940889] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.940986] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:424:33: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98getCurrentProjectPath\xe2\x80\x99\n'}
+[7.941091] (branchforge) StderrLine: {'line': b'  424 |     EXPECT_TRUE(projectManager->getCurrentProjectPath().isEmpty());\n'}
+[7.941404] (branchforge) StderrLine: {'line': b'      |                                 ^~~~~~~~~~~~~~~~~~~~~\n'}
+[7.943136] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_LoadProject_CorruptedXML_HandlesGracefully_Test::TestBody()\xe2\x80\x99:\n'}
+[7.943408] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:441:34: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98hasOpenProject\xe2\x80\x99; did you mean \xe2\x80\x98hasProject\xe2\x80\x99?\n'}
+[7.943553] (branchforge) StderrLine: {'line': b'  441 |     EXPECT_FALSE(projectManager->hasOpenProject());\n'}
+[7.943673] (branchforge) StderrLine: {'line': b'      |                                  ^~~~~~~~~~~~~~\n'}
+[7.957705] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function \xe2\x80\x98virtual void ProjectManagerTest_CreateNewProject_InvalidPath_Fails_Test::TestBody()\xe2\x80\x99:\n'}
+[7.957967] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:447:5: error: \xe2\x80\x98ProjectSettings\xe2\x80\x99 was not declared in this scope\n'}
+[7.958082] (branchforge) StderrLine: {'line': b'  447 |     ProjectSettings settings;\n'}
+[7.958189] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~~~~~~~~\n'}
+[7.967652] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:448:5: error: \xe2\x80\x98settings\xe2\x80\x99 was not declared in this scope\n'}
+[7.967911] (branchforge) StderrLine: {'line': b'  448 |     settings.name = "TestProject";\n'}
+[7.968035] (branchforge) StderrLine: {'line': b'      |     ^~~~~~~~\n'}
+[7.968140] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:451:36: error: \xe2\x80\x98class BranchForge::Project::ProjectManager\xe2\x80\x99 has no member named \xe2\x80\x98createNewProject\xe2\x80\x99; did you mean \xe2\x80\x98createProject\xe2\x80\x99?\n'}
+[7.968248] (branchforge) StderrLine: {'line': b'  451 |     bool success = projectManager->createNewProject(invalidPath, settings);\n'}
+[7.968370] (branchforge) StderrLine: {'line': b'      |                                    ^~~~~~~~~~~~~~~~\n'}
+[7.968480] (branchforge) StderrLine: {'line': b'      |                                    createProject\n'}
+[8.034014] (-) TimerEvent: {}
+[8.102038] (branchforge) StderrLine: {'line': b'In file included from /usr/include/c++/13/memory:78,\n'}
+[8.102363] (branchforge) StderrLine: {'line': b'                 from /usr/include/gtest/gtest.h:56:\n'}
+[8.102489] (branchforge) StderrLine: {'line': b'/usr/include/c++/13/bits/unique_ptr.h: In instantiation of \xe2\x80\x98std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = BranchForge::Project::ProjectManager; _Args = {}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<BranchForge::Project::ProjectManager>]\xe2\x80\x99:\n'}
+[8.102596] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:13:58:   required from here\n'}
+[8.102695] (branchforge) StderrLine: {'line': b'/usr/include/c++/13/bits/unique_ptr.h:1070:30: error: \xe2\x80\x98BranchForge::Project::ProjectManager::ProjectManager(QObject*)\xe2\x80\x99 is private within this context\n'}
+[8.102791] (branchforge) StderrLine: {'line': b' 1070 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }\n'}
+[8.102887] (branchforge) StderrLine: {'line': b'      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[8.102981] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:41:14: note: declared private here\n'}
+[8.103075] (branchforge) StderrLine: {'line': b'   41 |     explicit ProjectManager(QObject* parent = nullptr);\n'}
+[8.103186] (branchforge) StderrLine: {'line': b'      |              ^~~~~~~~~~~~~~\n'}
+[8.134509] (-) TimerEvent: {}
+[8.234706] (-) TimerEvent: {}
+[8.254751] (branchforge) StderrLine: {'line': b'/usr/include/c++/13/bits/unique_ptr.h: In instantiation of \xe2\x80\x98void std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = BranchForge::Project::ProjectManager]\xe2\x80\x99:\n'}
+[8.255022] (branchforge) StderrLine: {'line': b'/usr/include/c++/13/bits/unique_ptr.h:404:17:   required from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = BranchForge::Project::ProjectManager; _Dp = std::default_delete<BranchForge::Project::ProjectManager>]\xe2\x80\x99\n'}
+[8.255145] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:13:58:   required from here\n'}
+[8.255272] (branchforge) StderrLine: {'line': b'/usr/include/c++/13/bits/unique_ptr.h:99:9: error: \xe2\x80\x98virtual BranchForge::Project::ProjectManager::~ProjectManager()\xe2\x80\x99 is private within this context\n'}
+[8.255403] (branchforge) StderrLine: {'line': b'   99 |         delete __ptr;\n'}
+[8.255508] (branchforge) StderrLine: {'line': b'      |         ^~~~~~~~~~~~\n'}
+[8.255607] (branchforge) StderrLine: {'line': b'/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:42:5: note: declared private here\n'}
+[8.255708] (branchforge) StderrLine: {'line': b'   42 |     ~ProjectManager();\n'}
+[8.255806] (branchforge) StderrLine: {'line': b'      |     ^\n'}
+[8.336886] (-) TimerEvent: {}
+[8.379453] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_bt_serializer.dir/build.make:90: tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o] Error 1\n'}
+[8.379878] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:404: tests/unit/CMakeFiles/test_bt_serializer.dir/all] Error 2\n'}
+[8.436986] (-) TimerEvent: {}
+[8.537218] (-) TimerEvent: {}
+[8.637531] (-) TimerEvent: {}
+[8.739376] (-) TimerEvent: {}
+[8.757888] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/build.make:90: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o] Error 1\n'}
+[8.758241] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:748: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/all] Error 2\n'}
+[8.839506] (-) TimerEvent: {}
+[8.848248] (branchforge) StderrLine: {'line': b'gmake[2]: *** [tests/unit/CMakeFiles/test_project_manager.dir/build.make:90: tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o] Error 1\n'}
+[8.848605] (branchforge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:432: tests/unit/CMakeFiles/test_project_manager.dir/all] Error 2\n'}
+[8.848828] (branchforge) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.851368] (branchforge) CommandEnded: {'returncode': 2}
+[8.864315] (branchforge) JobEnded: {'identifier': 'branchforge', 'rc': 2}
+[8.876039] (-) EventReactorShutdown: {}

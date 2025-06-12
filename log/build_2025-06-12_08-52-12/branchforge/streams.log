@@ -1,0 +1,517 @@
+[0.019s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.311s] -- Fetching Google Test with GMock from source...
+[0.319s] CMake Warning (dev) at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1331 (message):
+[0.319s]   The DOWNLOAD_EXTRACT_TIMESTAMP option was not given and policy CMP0135 is
+[0.319s]   not set.  The policy's OLD behavior will be used.  When using a URL
+[0.319s]   download, the timestamps of extracted files should preferably be that of
+[0.319s]   the time of extraction, otherwise code that depends on the extracted
+[0.319s]   contents might not be rebuilt if the URL changes.  The OLD behavior
+[0.319s]   preserves the timestamps from the archive instead, but this is usually not
+[0.320s]   what you want.  Update your project to the NEW behavior or specify the
+[0.320s]   DOWNLOAD_EXTRACT_TIMESTAMP option with a value of true to avoid this
+[0.320s]   robustness issue.
+[0.320s] Call Stack (most recent call first):
+[0.320s]   CMakeLists.txt:87 (FetchContent_Declare)
+[0.320s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.320s] 
+[1.477s] gmake[1]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.477s] gmake[2]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.477s] gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.478s] gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.478s] gmake[3]: Entering directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.478s] [ 11%] Creating directories for 'googletest-populate'
+[1.479s] [ 22%] Performing download step (download, verify and extract) for 'googletest-populate'
+[1.479s] -- Downloading...
+[1.479s]    dst='/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild/googletest-populate-prefix/src/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'
+[1.480s]    timeout='none'
+[1.480s]    inactivity timeout='none'
+[1.480s] -- Using src='https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip'
+[1.481s] -- [download 0% complete]
+[1.481s] CMake Error at googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake:170 (message):
+[1.481s]   Each download failed!
+[1.481s] 
+[1.482s]     error: downloading 'https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip' failed
+[1.482s]           status_code: 22
+[1.482s]           status_string: "HTTP response code said error"
+[1.483s]           log:
+[1.483s]           --- LOG BEGIN ---
+[1.483s]           Host github.com:443 was resolved.
+[1.484s] 
+[1.484s]   IPv6: (none)
+[1.484s] 
+[1.485s]   IPv4: 4.237.22.38
+[1.485s] 
+[1.485s]     Trying 4.237.22.38:443...
+[1.486s] 
+[1.486s]   Connected to github.com (4.237.22.38) port 443
+[1.486s] 
+[1.486s]   ALPN: curl offers h2,http/1.1
+[1.487s] 
+[1.487s]   [5 bytes data]
+[1.487s] 
+[1.488s]   TLSv1.3 (OUT), TLS handshake, Client hello (1):
+[1.488s] 
+[1.488s]   [512 bytes data]
+[1.488s] 
+[1.489s]   [5 bytes data]
+[1.489s] 
+[1.489s]   TLSv1.3 (IN), TLS handshake, Server hello (2):
+[1.490s] 
+[1.490s]   [122 bytes data]
+[1.490s] 
+[1.490s]   [5 bytes data]
+[1.491s] 
+[1.492s]   [5 bytes data]
+[1.492s] 
+[1.492s]   [1 bytes data]
+[1.492s] 
+[1.493s]   TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+[1.493s] 
+[1.493s]   [19 bytes data]
+[1.493s] 
+[1.494s]   [5 bytes data]
+[1.494s] 
+[1.494s]   [1 bytes data]
+[1.495s] 
+[1.495s]   TLSv1.3 (IN), TLS handshake, Certificate (11):
+[1.495s] 
+[1.495s]   [3135 bytes data]
+[1.496s] 
+[1.496s]   [5 bytes data]
+[1.496s] 
+[1.497s]   [1 bytes data]
+[1.497s] 
+[1.497s]   TLSv1.3 (IN), TLS handshake, CERT verify (15):
+[1.502s] 
+[1.502s]   [79 bytes data]
+[1.503s] 
+[1.503s]   [5 bytes data]
+[1.503s] 
+[1.503s]   [1 bytes data]
+[1.504s] 
+[1.504s]   TLSv1.3 (IN), TLS handshake, Finished (20):
+[1.504s] 
+[1.504s]   [36 bytes data]
+[1.505s] 
+[1.505s]   [5 bytes data]
+[1.505s] 
+[1.507s]   TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+[1.507s] 
+[1.508s]   [1 bytes data]
+[1.508s] 
+[1.508s]   [5 bytes data]
+[1.509s] 
+[1.509s]   [1 bytes data]
+[1.509s] 
+[1.510s]   TLSv1.3 (OUT), TLS handshake, Finished (20):
+[1.515s] 
+[1.515s]   [36 bytes data]
+[1.516s] 
+[1.516s]   SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /
+[1.517s]   id-ecPublicKey
+[1.518s] 
+[1.518s]   ALPN: server accepted h2
+[1.518s] 
+[1.518s]   Server certificate:
+[1.519s] 
+[1.519s]    subject: CN=github.com
+[1.520s]    start date: Feb  5 00:00:00 2025 GMT
+[1.520s]    expire date: Feb  5 23:59:59 2026 GMT
+[1.520s]    subjectAltName: host "github.com" matched cert's "github.com"
+[1.520s]    issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA
+[1.521s]    SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.
+[1.521s]     Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+[1.521s]     Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+[1.522s]     Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption
+[1.523s] 
+[1.523s]   [5 bytes data]
+[1.524s] 
+[1.525s]   [1 bytes data]
+[1.525s] 
+[1.525s]   using HTTP/2
+[1.526s] 
+[1.526s]   [HTTP/2] [1] OPENED stream for
+[1.526s]   https://github.com/google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip
+[1.526s] 
+[1.526s] 
+[1.526s]   [HTTP/2] [1] [:method: GET]
+[1.527s] 
+[1.527s]   [HTTP/2] [1] [:scheme: https]
+[1.527s] 
+[1.527s]   [HTTP/2] [1] [:authority: github.com]
+[1.527s] 
+[1.527s]   [HTTP/2] [1] [:path:
+[1.528s]   /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip]
+[1.528s] 
+[1.528s]   [HTTP/2] [1] [user-agent: curl/8.5.0]
+[1.528s] 
+[1.528s]   [HTTP/2] [1] [accept: */*]
+[1.528s] 
+[1.528s]   [5 bytes data]
+[1.528s] 
+[1.528s]   [1 bytes data]
+[1.529s] 
+[1.529s]   GET /google/googletest/archive/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68.zip
+[1.529s]   HTTP/2
+[1.529s] 
+[1.529s]   Host: github.com
+[1.529s] 
+[1.529s]   User-Agent: curl/8.5.0
+[1.529s] 
+[1.529s]   Accept: */*
+[1.529s] 
+[1.529s]   
+[1.529s] 
+[1.529s]   [5 bytes data]
+[1.529s] 
+[1.530s]   [1 bytes data]
+[1.530s] 
+[1.530s]   TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+[1.530s] 
+[1.532s]   [57 bytes data]
+[1.532s] 
+[1.533s]   [5 bytes data]
+[1.533s] 
+[1.534s]   [1 bytes data]
+[1.534s] 
+[1.534s]   TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+[1.535s] 
+[1.535s]   [57 bytes data]
+[1.536s] 
+[1.536s]   old SSL session ID is stale, removing
+[1.536s] 
+[1.536s]   [5 bytes data]
+[1.538s] 
+[1.538s]   [1 bytes data]
+[1.539s] 
+[1.539s]   [5 bytes data]
+[1.539s] 
+[1.539s]   [1 bytes data]
+[1.540s] 
+[1.540s]   [5 bytes data]
+[1.540s] 
+[1.540s]   [1 bytes data]
+[1.540s] 
+[1.540s]   [5 bytes data]
+[1.540s] 
+[1.541s]   [1 bytes data]
+[1.541s] 
+[1.542s]   [5 bytes data]
+[1.543s] 
+[1.543s]   [1 bytes data]
+[1.543s] 
+[1.543s]   HTTP/2 302 
+[1.543s] 
+[1.543s]   date: Wed, 11 Jun 2025 22:52:13 GMT
+[1.544s] 
+[1.544s]   content-type: text/html; charset=utf-8
+[1.544s] 
+[1.544s]   content-length: 0
+[1.544s] 
+[1.544s]   vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame,
+[1.544s]   X-Requested-With,Accept-Encoding, Accept, X-Requested-With
+[1.544s] 
+[1.545s]   location:
+[1.545s]   https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68
+[1.545s] 
+[1.545s] 
+[1.545s]   cache-control: max-age=0, private
+[1.545s] 
+[1.545s]   strict-transport-security: max-age=31536000; includeSubdomains; preload
+[1.545s] 
+[1.545s]   x-frame-options: deny
+[1.546s] 
+[1.546s]   x-content-type-options: nosniff
+[1.546s] 
+[1.546s]   x-xss-protection: 0
+[1.547s] 
+[1.547s]   referrer-policy: no-referrer-when-downgrade
+[1.547s] 
+[1.547s]   content-security-policy: default-src 'none'; base-uri 'self'; child-src
+[1.548s]   github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/
+[1.548s]   gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com
+[1.548s]   www.githubstatus.com collector.github.com raw.githubusercontent.com
+[1.548s]   api.github.com github-cloud.s3.amazonaws.com
+[1.548s]   github-production-repository-file-5c1aeb.s3.amazonaws.com
+[1.548s]   github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
+[1.548s]   github-production-user-asset-6210df.s3.amazonaws.com
+[1.548s]   *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com
+[1.549s]   objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com
+[1.549s]   proxy.individual.githubcopilot.com proxy.business.githubcopilot.com
+[1.549s]   proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com
+[1.549s]   wss://*.actions.githubusercontent.com
+[1.549s]   productionresultssa0.blob.core.windows.net/
+[1.549s]   productionresultssa1.blob.core.windows.net/
+[1.549s]   productionresultssa2.blob.core.windows.net/
+[1.549s]   productionresultssa3.blob.core.windows.net/
+[1.549s]   productionresultssa4.blob.core.windows.net/
+[1.549s]   productionresultssa5.blob.core.windows.net/
+[1.549s]   productionresultssa6.blob.core.windows.net/
+[1.549s]   productionresultssa7.blob.core.windows.net/
+[1.550s]   productionresultssa8.blob.core.windows.net/
+[1.550s]   productionresultssa9.blob.core.windows.net/
+[1.550s]   productionresultssa10.blob.core.windows.net/
+[1.550s]   productionresultssa11.blob.core.windows.net/
+[1.550s]   productionresultssa12.blob.core.windows.net/
+[1.550s]   productionresultssa13.blob.core.windows.net/
+[1.551s]   productionresultssa14.blob.core.windows.net/
+[1.551s]   productionresultssa15.blob.core.windows.net/
+[1.551s]   productionresultssa16.blob.core.windows.net/
+[1.551s]   productionresultssa17.blob.core.windows.net/
+[1.551s]   productionresultssa18.blob.core.windows.net/
+[1.551s]   productionresultssa19.blob.core.windows.net/
+[1.551s]   github-production-repository-image-32fea6.s3.amazonaws.com
+[1.551s]   github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com
+[1.551s]   wss://alive.github.com api.githubcopilot.com
+[1.551s]   api.individual.githubcopilot.com api.business.githubcopilot.com
+[1.552s]   api.enterprise.githubcopilot.com; font-src github.githubassets.com;
+[1.552s]   form-action 'self' github.com gist.github.com
+[1.552s]   copilot-workspace.githubnext.com objects-origin.githubusercontent.com;
+[1.552s]   frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com
+[1.552s]   notebooks.githubusercontent.com; img-src 'self' data: blob:
+[1.552s]   github.githubassets.com media.githubusercontent.com
+[1.552s]   camo.githubusercontent.com identicons.github.com
+[1.552s]   avatars.githubusercontent.com private-avatars.githubusercontent.com
+[1.552s]   github-cloud.s3.amazonaws.com objects.githubusercontent.com
+[1.552s]   release-assets.githubusercontent.com
+[1.553s]   secured-user-images.githubusercontent.com/
+[1.553s]   user-images.githubusercontent.com/
+[1.553s]   private-user-images.githubusercontent.com opengraph.githubassets.com
+[1.553s]   copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/
+[1.553s]   github-production-user-asset-6210df.s3.amazonaws.com
+[1.553s]   customer-stories-feed.github.com spotlights-feed.github.com
+[1.553s]   objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src
+[1.553s]   'self'; media-src github.com user-images.githubusercontent.com/
+[1.553s]   secured-user-images.githubusercontent.com/
+[1.553s]   private-user-images.githubusercontent.com
+[1.554s]   github-production-user-asset-6210df.s3.amazonaws.com gist.github.com;
+[1.554s]   script-src github.githubassets.com; style-src 'unsafe-inline'
+[1.554s]   github.githubassets.com; upgrade-insecure-requests; worker-src
+[1.554s]   github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/
+[1.554s]   gist.github.com/assets-cdn/worker/
+[1.554s] 
+[1.554s]   server: github.com
+[1.554s] 
+[1.555s]   x-github-request-id: DC96:4649E:17CE1:1D38B:684A089D
+[1.555s] 
+[1.555s]   
+[1.555s] 
+[1.555s]   Connection #0 to host github.com left intact
+[1.555s] 
+[1.555s]   Issue another request to this URL:
+[1.555s]   'https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68'
+[1.556s] 
+[1.556s] 
+[1.556s]   Host codeload.github.com:443 was resolved.
+[1.556s] 
+[1.556s]   IPv6: (none)
+[1.556s] 
+[1.556s]   IPv4: 4.237.22.35
+[1.556s] 
+[1.556s]     Trying 4.237.22.35:443...
+[1.557s] 
+[1.557s]   Connected to codeload.github.com (4.237.22.35) port 443
+[1.557s] 
+[1.557s]   ALPN: curl offers h2,http/1.1
+[1.557s] 
+[1.557s]   [5 bytes data]
+[1.557s] 
+[1.561s]   TLSv1.3 (OUT), TLS handshake, Client hello (1):
+[1.562s] 
+[1.562s]   [512 bytes data]
+[1.562s] 
+[1.562s]   [5 bytes data]
+[1.562s] 
+[1.562s]   TLSv1.3 (IN), TLS handshake, Server hello (2):
+[1.562s] 
+[1.562s]   [122 bytes data]
+[1.562s] 
+[1.562s]   [5 bytes data]
+[1.563s] 
+[1.563s]   [5 bytes data]
+[1.563s] 
+[1.563s]   [1 bytes data]
+[1.563s] 
+[1.563s]   TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+[1.563s] 
+[1.563s]   [19 bytes data]
+[1.563s] 
+[1.563s]   [5 bytes data]
+[1.563s] 
+[1.563s]   [1 bytes data]
+[1.563s] 
+[1.563s]   TLSv1.3 (IN), TLS handshake, Certificate (11):
+[1.564s] 
+[1.564s]   [3134 bytes data]
+[1.564s] 
+[1.564s]   [5 bytes data]
+[1.564s] 
+[1.564s]   [1 bytes data]
+[1.564s] 
+[1.564s]   TLSv1.3 (IN), TLS handshake, CERT verify (15):
+[1.564s] 
+[1.564s]   [79 bytes data]
+[1.564s] 
+[1.564s]   [5 bytes data]
+[1.564s] 
+[1.564s]   [1 bytes data]
+[1.564s] 
+[1.565s]   TLSv1.3 (IN), TLS handshake, Finished (20):
+[1.565s] 
+[1.565s]   [36 bytes data]
+[1.565s] 
+[1.565s]   [5 bytes data]
+[1.565s] 
+[1.565s]   TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+[1.565s] 
+[1.565s]   [1 bytes data]
+[1.565s] 
+[1.565s]   [5 bytes data]
+[1.566s] 
+[1.566s]   [1 bytes data]
+[1.566s] 
+[1.566s]   TLSv1.3 (OUT), TLS handshake, Finished (20):
+[1.566s] 
+[1.566s]   [36 bytes data]
+[1.566s] 
+[1.566s]   SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 /
+[1.566s]   id-ecPublicKey
+[1.566s] 
+[1.566s]   ALPN: server accepted h2
+[1.567s] 
+[1.567s]   Server certificate:
+[1.567s] 
+[1.567s]    subject: CN=*.github.com
+[1.567s]    start date: Feb  5 00:00:00 2025 GMT
+[1.567s]    expire date: Feb  5 23:59:59 2026 GMT
+[1.567s]    subjectAltName: host "codeload.github.com" matched cert's "*.github.com"
+[1.567s]    issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA
+[1.567s]    SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.
+[1.568s]     Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+[1.568s]     Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+[1.568s]     Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha384WithRSAEncryption
+[1.568s] 
+[1.568s]   [5 bytes data]
+[1.568s] 
+[1.568s]   [1 bytes data]
+[1.568s] 
+[1.568s]   using HTTP/2
+[1.568s] 
+[1.569s]   [HTTP/2] [1] OPENED stream for
+[1.569s]   https://codeload.github.com/google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68
+[1.569s] 
+[1.569s] 
+[1.569s]   [HTTP/2] [1] [:method: GET]
+[1.569s] 
+[1.569s]   [HTTP/2] [1] [:scheme: https]
+[1.569s] 
+[1.570s]   [HTTP/2] [1] [:authority: codeload.github.com]
+[1.570s] 
+[1.570s]   [HTTP/2] [1] [:path:
+[1.570s]   /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68]
+[1.570s] 
+[1.570s]   [HTTP/2] [1] [user-agent: curl/8.5.0]
+[1.570s] 
+[1.570s]   [HTTP/2] [1] [accept: */*]
+[1.570s] 
+[1.570s]   [5 bytes data]
+[1.570s] 
+[1.570s]   [1 bytes data]
+[1.571s] 
+[1.571s]   GET /google/googletest/zip/03597a01ee50ed33e9fd7188b4aaa9d5bb6c9c68 HTTP/2
+[1.571s] 
+[1.571s]   Host: codeload.github.com
+[1.571s] 
+[1.571s]   User-Agent: curl/8.5.0
+[1.571s] 
+[1.571s]   Accept: */*
+[1.571s] 
+[1.571s]   
+[1.571s] 
+[1.572s]   [5 bytes data]
+[1.572s] 
+[1.572s]   [1 bytes data]
+[1.572s] 
+[1.572s]   TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+[1.572s] 
+[1.572s]   [57 bytes data]
+[1.572s] 
+[1.572s]   [5 bytes data]
+[1.573s] 
+[1.573s]   [1 bytes data]
+[1.573s] 
+[1.573s]   TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+[1.573s] 
+[1.573s]   [57 bytes data]
+[1.573s] 
+[1.573s]   old SSL session ID is stale, removing
+[1.573s] 
+[1.575s]   [5 bytes data]
+[1.575s] 
+[1.575s]   [1 bytes data]
+[1.576s] 
+[1.576s]   [5 bytes data]
+[1.576s] 
+[1.576s]   [1 bytes data]
+[1.576s] 
+[1.576s]   [5 bytes data]
+[1.579s] 
+[1.579s]   [1 bytes data]
+[1.579s] 
+[1.580s]   HTTP/2 404 
+[1.581s] 
+[1.581s]   access-control-allow-origin: https://render.githubusercontent.com
+[1.581s] 
+[1.581s]   content-security-policy: default-src 'none'; style-src 'unsafe-inline';
+[1.581s]   sandbox
+[1.581s] 
+[1.581s]   cross-origin-resource-policy: cross-origin
+[1.581s] 
+[1.581s]   strict-transport-security: max-age=31536000
+[1.581s] 
+[1.581s]   vary: Authorization,Accept-Encoding
+[1.582s] 
+[1.582s]   x-content-type-options: nosniff
+[1.582s] 
+[1.582s]   x-frame-options: deny
+[1.582s] 
+[1.582s]   x-xss-protection: 1; mode=block
+[1.582s] 
+[1.582s]   date: Wed, 11 Jun 2025 22:52:13 GMT
+[1.582s] 
+[1.582s]   content-length: 14
+[1.582s] 
+[1.582s]   content-type: text/plain; charset=utf-8
+[1.584s] 
+[1.584s]   x-github-request-id: CA1C:3AA860:04CF:1ABE:684A089D
+[1.587s] 
+[1.587s]   The requested URL returned error: 404
+[1.588s] 
+[1.588s]   Connection #1 to host codeload.github.com left intact
+[1.588s] 
+[1.588s] 
+[1.588s] 
+[1.588s]           --- LOG END ---
+[1.589s]           
+[1.589s]     
+[1.589s] 
+[1.589s] 
+[1.589s] gmake[3]: *** [CMakeFiles/googletest-populate.dir/build.make:100: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download] Error 1
+[1.589s] gmake[3]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.589s] gmake[2]: *** [CMakeFiles/Makefile2:83: CMakeFiles/googletest-populate.dir/all] Error 2
+[1.589s] gmake[2]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.592s] gmake[1]: *** [Makefile:91: all] Error 2
+[1.592s] gmake[1]: Leaving directory '/home/dingo/Programming/BranchForge/build/branchforge/_deps/googletest-subbuild'
+[1.592s] 
+[1.592s] CMake Error at /usr/share/cmake-3.28/Modules/FetchContent.cmake:1679 (message):
+[1.592s]   Build step for googletest failed: 2
+[1.592s] Call Stack (most recent call first):
+[1.593s]   /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819:EVAL:2 (__FetchContent_directPopulate)
+[1.593s]   /usr/share/cmake-3.28/Modules/FetchContent.cmake:1819 (cmake_language)
+[1.593s]   /usr/share/cmake-3.28/Modules/FetchContent.cmake:2033 (FetchContent_Populate)
+[1.593s]   CMakeLists.txt:93 (FetchContent_MakeAvailable)
+[1.593s] 
+[1.594s] 
+[1.594s] -- Configuring incomplete, errors occurred!
+[1.594s] gmake: *** [Makefile:1016: cmake_check_build_system] Error 1
+[1.595s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

@@ -1,0 +1,19 @@
+[0.049s] Invoking command in '/home/dingo/Programming/BranchForge/build/branchforge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12
+[0.355s] CMake Error: File /home/dingo/Programming/BranchForge/tests/data/sample_tree.xml does not exist.
+[0.356s] CMake Error at tests/CMakeLists.txt:41 (configure_file):
+[0.356s]   configure_file Problem configuring file
+[0.356s] 
+[0.356s] 
+[0.356s] CMake Error: File /home/dingo/Programming/BranchForge/tests/data/complex_tree.xml does not exist.
+[0.356s] CMake Error at tests/CMakeLists.txt:42 (configure_file):
+[0.356s]   configure_file Problem configuring file
+[0.356s] 
+[0.357s] 
+[0.357s] CMake Error: File /home/dingo/Programming/BranchForge/tests/data/invalid_tree.xml does not exist.
+[0.357s] CMake Error at tests/CMakeLists.txt:43 (configure_file):
+[0.357s]   configure_file Problem configuring file
+[0.357s] 
+[0.357s] 
+[0.371s] -- Configuring incomplete, errors occurred!
+[0.380s] gmake: *** [Makefile:648: cmake_check_build_system] Error 1
+[0.384s] Invoked command in '/home/dingo/Programming/BranchForge/build/branchforge' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dingo/Programming/BranchForge/build/branchforge -- -j12 -l12

@@ -1,0 +1,33 @@
+[  0%] Built target branchforge_test_lib_autogen_timestamp_deps
+[  1%] Built target branchforge_enhanced_qmlimportscan
+[  1%] Built target branchforge_enhanced_autogen_timestamp_deps
+[  3%] Built target branchforge_test_lib_autogen
+[ 27%] Built target branchforge_test_lib
+[ 27%] Built target test_project_manager_autogen_timestamp_deps
+[ 27%] Built target test_bt_serializer_autogen_timestamp_deps
+[ 27%] Built target test_behavior_tree_xml_autogen_timestamp_deps
+[ 27%] Built target test_code_generator_autogen_timestamp_deps
+[ 27%] Built target test_visual_to_code_pipeline_autogen_timestamp_deps
+[ 27%] Built target test_application_autogen_timestamp_deps
+[ 29%] Automatic MOC and UIC for target test_project_manager
+[ 31%] Automatic MOC and UIC for target test_bt_serializer
+[ 32%] Automatic MOC and UIC for target test_code_generator
+[ 37%] Automatic MOC and UIC for target test_visual_to_code_pipeline
+[ 37%] Automatic MOC and UIC for target test_behavior_tree_xml
+[ 37%] Automatic MOC and UIC for target test_application
+[ 37%] Built target test_project_manager_autogen
+[ 37%] Built target test_bt_serializer_autogen
+[ 37%] Built target test_visual_to_code_pipeline_autogen
+[ 37%] Built target test_code_generator_autogen
+[ 37%] Built target test_application_autogen
+[ 37%] Built target test_behavior_tree_xml_autogen
+[ 39%] Built target branchforge_enhanced_autogen
+[ 41%] Building CXX object tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o
+[ 43%] Building CXX object tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o
+[ 44%] Building CXX object tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o
+[ 46%] Building CXX object tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o
+[ 48%] Building CXX object tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o
+[ 50%] Building CXX object tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o
+[ 79%] Built target branchforge_enhanced
+[ 81%] Linking CXX executable test_behavior_tree_xml
+[ 82%] Built target test_behavior_tree_xml

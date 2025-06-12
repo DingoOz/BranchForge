@@ -1,0 +1,4 @@
+test_application_autogen/timestamp: \
+	/home/dingo/Programming/BranchForge/tests/unit/CMakeLists.txt \
+	/home/dingo/Programming/BranchForge/tests/unit/core/test_application.cpp \
+	/usr/bin/cmake

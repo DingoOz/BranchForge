@@ -1,0 +1,18 @@
+In file included from /home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:1:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h: In constructor ‘BranchForge::Nodes::AdvancedNodeInstance::AdvancedNodeInstance(const BranchForge::Nodes::AdvancedNodeTemplate&, QObject*)’:
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:193:26: warning: ‘BranchForge::Nodes::AdvancedNodeInstance::m_template’ will be initialized after [-Wreorder]
+  193 |     AdvancedNodeTemplate m_template;
+      |                          ^~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/nodes/AdvancedNodeSystem.h:190:13: warning:   ‘QString BranchForge::Nodes::AdvancedNodeInstance::m_id’ [-Wreorder]
+  190 |     QString m_id;
+      |             ^~~~
+/home/dingo/Programming/BranchForge/src/nodes/AdvancedNodeSystem.cpp:306:1: warning:   when initialized here [-Wreorder]
+  306 | AdvancedNodeInstance::AdvancedNodeInstance(const AdvancedNodeTemplate& template_, QObject* parent)
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_behavior_tree_xml.cpp:2:10: fatal error: gmock/gmock.h: No such file or directory
+    2 | #include <gmock/gmock.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [tests/unit/CMakeFiles/test_behavior_tree_xml.dir/build.make:90: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/project/test_behavior_tree_xml.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:348: tests/unit/CMakeFiles/test_behavior_tree_xml.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

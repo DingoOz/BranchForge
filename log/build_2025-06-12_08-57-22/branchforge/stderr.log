@@ -1,0 +1,528 @@
+/home/dingo/Programming/BranchForge/tests/unit/core/test_application.cpp:5:10: fatal error: QTest: No such file or directory
+    5 | #include <QTest>
+      |          ^~~~~~~
+compilation terminated.
+gmake[2]: *** [tests/unit/CMakeFiles/test_application.dir/build.make:90: tests/unit/CMakeFiles/test_application.dir/core/test_application.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:460: tests/unit/CMakeFiles/test_application.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateHeaderFile_ValidTree_ContainsExpectedContent_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:112:43: error: ‘HasSubstr’ was not declared in this scope
+  112 |     EXPECT_THAT(headerFile.toStdString(), HasSubstr("TESTPROJECT_H"));  // Include guard
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:112:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  112 |     EXPECT_THAT(headerFile.toStdString(), HasSubstr("TESTPROJECT_H"));  // Include guard
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateCMakeFile_ValidOptions_ContainsExpectedContent_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:122:42: error: ‘HasSubstr’ was not declared in this scope
+  122 |     EXPECT_THAT(cmakeFile.toStdString(), HasSubstr("cmake_minimum_required"));
+      |                                          ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:122:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  122 |     EXPECT_THAT(cmakeFile.toStdString(), HasSubstr("cmake_minimum_required"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GeneratePackageXML_ValidOptions_ContainsExpectedContent_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:135:43: error: ‘HasSubstr’ was not declared in this scope
+  135 |     EXPECT_THAT(packageXml.toStdString(), HasSubstr("<?xml version"));
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:135:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  135 |     EXPECT_THAT(packageXml.toStdString(), HasSubstr("<?xml version"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateNodeImplementation_ActionNode_ProducesValidCode_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:153:41: error: ‘HasSubstr’ was not declared in this scope
+  153 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("SyncActionNode"));
+      |                                         ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:153:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  153 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("SyncActionNode"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateNodeImplementation_ConditionNode_ProducesValidCode_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:169:41: error: ‘HasSubstr’ was not declared in this scope
+  169 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("ConditionNode"));
+      |                                         ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:169:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  169 |     EXPECT_THAT(nodeCode.toStdString(), HasSubstr("ConditionNode"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateNodeHeader_ValidNode_ProducesValidHeader_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:184:43: error: ‘HasSubstr’ was not declared in this scope
+  184 |     EXPECT_THAT(headerCode.toStdString(), HasSubstr("#pragma once"));
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:184:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  184 |     EXPECT_THAT(headerCode.toStdString(), HasSubstr("#pragma once"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateWithConcepts_EnabledOption_IncludesConcepts_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:200:40: error: ‘HasSubstr’ was not declared in this scope
+  200 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("concept"));
+      |                                        ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:200:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  200 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("concept"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateWithoutConcepts_DisabledOption_ExcludesConcepts_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:44: error: ‘HasSubstr’ was not declared in this scope
+  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |                                            ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:40: error: ‘Not’ was not declared in this scope
+  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |                                        ^~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:213:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  213 |     EXPECT_THAT(mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateWithCoroutines_EnabledOption_IncludesCoroutines_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:225:40: error: ‘HasSubstr’ was not declared in this scope
+  225 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("coroutine"));
+      |                                        ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:225:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  225 |     EXPECT_THAT(mainCpp.toStdString(), HasSubstr("coroutine"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_ValidateGeneratedCode_EmptyMainCpp_ReturnsError_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:253:43: error: ‘HasSubstr’ was not declared in this scope
+  253 |     EXPECT_THAT(validation.toStdString(), HasSubstr("Main C++ file is empty"));
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:253:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  253 |     EXPECT_THAT(validation.toStdString(), HasSubstr("Main C++ file is empty"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_SanitizeIdentifier_InvalidCharacters_ProducesValidIdentifier_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:298:52: error: ‘QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const’ is private within this context
+  298 |     QString result1 = generator->sanitizeIdentifier("test-node with spaces!");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:2:
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here
+  120 |     QString sanitizeIdentifier(const QString& name) const;
+      |             ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:299:52: error: ‘QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const’ is private within this context
+  299 |     QString result2 = generator->sanitizeIdentifier("123invalid");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here
+  120 |     QString sanitizeIdentifier(const QString& name) const;
+      |             ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:300:52: error: ‘QString BranchForge::Project::CodeGenerator::sanitizeIdentifier(const QString&) const’ is private within this context
+  300 |     QString result3 = generator->sanitizeIdentifier("");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:120:13: note: declared private here
+  120 |     QString sanitizeIdentifier(const QString& name) const;
+      |             ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_ToPascalCase_VariousInputs_ProducesCorrectCase_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:310:46: error: ‘QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const’ is private within this context
+  310 |     QString result1 = generator->toPascalCase("move_to_goal");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here
+  122 |     QString toPascalCase(const QString& name) const;
+      |             ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:311:46: error: ‘QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const’ is private within this context
+  311 |     QString result2 = generator->toPascalCase("check battery");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here
+  122 |     QString toPascalCase(const QString& name) const;
+      |             ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:312:46: error: ‘QString BranchForge::Project::CodeGenerator::toPascalCase(const QString&) const’ is private within this context
+  312 |     QString result3 = generator->toPascalCase("simple");
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/CodeGenerator.h:122:13: note: declared private here
+  122 |     QString toPascalCase(const QString& name) const;
+      |             ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp: In member function ‘virtual void CodeGeneratorTest_GenerateFromBehaviorTree_ComplexTree_HandlesAllNodeTypes_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:373:76: error: ‘HasSubstr’ was not declared in this scope
+  373 |     EXPECT_THAT(code.nodeImplementations["retry_decorator"].toStdString(), HasSubstr("DecoratorNode"));
+      |                                                                            ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_code_generator.cpp:373:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  373 |     EXPECT_THAT(code.nodeImplementations["retry_decorator"].toStdString(), HasSubstr("DecoratorNode"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function ‘virtual void BTSerializerTest_ValidateEditorState_ValidState_ReturnsEmpty_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:188:57: error: conversion from ‘bool’ to non-scalar type ‘QString’ requested
+  188 |     QString validation = serializer->validateEditorState(editorState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function ‘virtual void BTSerializerTest_ValidateEditorState_MissingNodes_ReturnsError_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:201:57: error: conversion from ‘bool’ to non-scalar type ‘QString’ requested
+  201 |     QString validation = serializer->validateEditorState(invalidState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function ‘virtual void BTSerializerTest_ValidateEditorState_NodesWithoutIds_ReturnsError_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:223:57: error: conversion from ‘bool’ to non-scalar type ‘QString’ requested
+  223 |     QString validation = serializer->validateEditorState(invalidState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function ‘virtual void BTSerializerTest_ProcessConnections_ValidConnections_SetsParentChildRelationships_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:286:37: error: ‘Contains’ was not declared in this scope
+  286 |     EXPECT_THAT(rootNode->children, Contains(QString("move_action")));
+      |                                     ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:286:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  286 |     EXPECT_THAT(rootNode->children, Contains(QString("move_action")));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp: In member function ‘virtual void BTSerializerTest_SerializeComplexTree_MultiLevelHierarchy_ProducesCorrectStructure_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:364:52: error: no matching function for call to ‘BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)’
+  364 |     QString xmlContent = serializer->serializeToXML(complexState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_bt_serializer.cpp:3:
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: ‘bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)’
+   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
+      |                      ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_CreateNewProject_ValidParameters_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:96:5: error: ‘ProjectSettings’ was not declared in this scope
+   96 |     ProjectSettings settings;
+      |     ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:97:5: error: ‘settings’ was not declared in this scope
+   97 |     settings.name = projectName;
+      |     ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:105:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘createNewProject’; did you mean ‘createProject’?
+  105 |     bool success = projectManager->createNewProject(projectPath, settings);
+      |                                    ^~~~~~~~~~~~~~~~
+      |                                    createProject
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_CreateNewProject_ExistingDirectory_Fails_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:122:5: error: ‘ProjectSettings’ was not declared in this scope
+  122 |     ProjectSettings settings;
+      |     ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:123:5: error: ‘settings’ was not declared in this scope
+  123 |     settings.name = projectName;
+      |     ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:126:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘createNewProject’; did you mean ‘createProject’?
+  126 |     bool success = projectManager->createNewProject(projectPath, settings);
+      |                                    ^~~~~~~~~~~~~~~~
+      |                                    createProject
+In file included from /usr/include/gtest/gtest-printers.h:122,
+                 from /usr/include/gtest/gtest-matchers.h:49,
+                 from /usr/include/gtest/internal/gtest-death-test-internal.h:47,
+                 from /usr/include/gtest/gtest-death-test.h:43,
+                 from /usr/include/gtest/gtest.h:65,
+                 from /home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:1:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_LoadProject_ValidProject_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:147:33: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  147 |     EXPECT_TRUE(projectManager->hasOpenProject());
+      |                                 ^~~~~~~~~~~~~~
+In file included from /usr/include/gtest/gtest.h:72:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:148:31: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getCurrentProjectName’
+  148 |     EXPECT_EQ(projectManager->getCurrentProjectName(), projectName);
+      |                               ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:149:31: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getCurrentProjectPath’
+  149 |     EXPECT_EQ(projectManager->getCurrentProjectPath(), projectPath);
+      |                               ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_LoadProject_NonexistentFile_Fails_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:161:34: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  161 |     EXPECT_FALSE(projectManager->hasOpenProject());
+      |                                  ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_LoadProject_InvalidProjectFile_Fails_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:177:34: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  177 |     EXPECT_FALSE(projectManager->hasOpenProject());
+      |                                  ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_SaveProject_LoadedProject_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:192:5: error: ‘ProjectSettings’ was not declared in this scope
+  192 |     ProjectSettings newSettings = projectManager->getProjectSettings();
+      |     ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:193:5: error: ‘newSettings’ was not declared in this scope
+  193 |     newSettings.description = "Modified description";
+      |     ^~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:194:21: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘updateProjectSettings’; did you mean ‘QJsonObject BranchForge::Project::ProjectManager::m_projectSettings’? (not accessible from this context)
+  194 |     projectManager->updateProjectSettings(newSettings);
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:3:
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here
+   52 |     QJsonObject m_projectSettings;
+      |                 ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:205:34: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getProjectSettings’; did you mean ‘QJsonObject BranchForge::Project::ProjectManager::m_projectSettings’? (not accessible from this context)
+  205 |     EXPECT_EQ(newProjectManager->getProjectSettings().description, "Modified description");
+      |                                  ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here
+   52 |     QJsonObject m_projectSettings;
+      |                 ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_AddBehaviorTree_ValidTree_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:227:5: error: ‘BehaviorTreeInfo’ was not declared in this scope
+  227 |     BehaviorTreeInfo treeInfo;
+      |     ^~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:228:5: error: ‘treeInfo’ was not declared in this scope
+  228 |     treeInfo.name = "NewTree";
+      |     ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:233:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘addBehaviorTree’; did you mean ‘QJsonObject BranchForge::Project::ProjectManager::m_behaviorTree’? (not accessible from this context)
+  233 |     bool success = projectManager->addBehaviorTree(treeInfo);
+      |                                    ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:51:17: note: declared private here
+   51 |     QJsonObject m_behaviorTree;
+      |                 ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:237:45: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getBehaviorTreeNames’
+  237 |     QStringList treeNames = projectManager->getBehaviorTreeNames();
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:238:28: error: ‘Contains’ was not declared in this scope
+  238 |     EXPECT_THAT(treeNames, Contains(QString("NewTree")));
+      |                            ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_CompleteWorkflow_ComplexTree_ProducesValidCode_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:268:60: error: no matching function for call to ‘BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)’
+  268 |     bool serializationSuccess = !serializer->serializeToXML(editorState).isEmpty();
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:3:
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: ‘bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)’
+   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
+      |                      ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_VisualToXML_ComplexTree_PreservesAllData_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:284:52: error: no matching function for call to ‘BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)’
+  284 |     QString xmlContent = serializer->serializeToXML(editorState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: ‘bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)’
+   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
+      |                      ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:238:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  238 |     EXPECT_THAT(treeNames, Contains(QString("NewTree")));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_RemoveBehaviorTree_ExistingTree_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:252:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘removeBehaviorTree’; did you mean ‘QJsonObject BranchForge::Project::ProjectManager::m_behaviorTree’? (not accessible from this context)
+  252 |     bool success = projectManager->removeBehaviorTree("SubTree");
+      |                                    ^~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:51:17: note: declared private here
+   51 |     QJsonObject m_behaviorTree;
+      |                 ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:256:45: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getBehaviorTreeNames’
+  256 |     QStringList treeNames = projectManager->getBehaviorTreeNames();
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_XMLToCode_ValidXML_GeneratesCompilableCode_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:334:86: error: passing ‘const QString’ as ‘this’ argument discards qualifiers [-fpermissive]
+  334 |             if (it.value().contains(nodeType) || it.value().contains(nodeType.replace("_", ""))) {
+      |                                                                      ~~~~~~~~~~~~~~~~^~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h:11,
+                 from /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:1,
+                 from /home/dingo/Programming/BranchForge/include/project/BTSerializer.h:3:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:721:14: note:   in call to ‘QString& QString::replace(const QString&, const QString&, Qt::CaseSensitivity)’
+  721 |     QString &replace(const QString &before, const QString &after,
+      |              ^~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:32: error: ‘Contains’ was not declared in this scope
+  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));
+      |                                ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:28: error: ‘Not’ was not declared in this scope
+  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));
+      |                            ^~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_ParameterPropagation_AllParameters_AppearInGeneratedCode_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:357:44: error: ‘HasSubstr’ was not declared in this scope
+  357 |     EXPECT_THAT(mainContent.toStdString(), HasSubstr("NavfnPlanner"));
+      |                                            ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:257:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  257 |     EXPECT_THAT(treeNames, Not(Contains(QString("SubTree"))));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:357:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  357 |     EXPECT_THAT(mainContent.toStdString(), HasSubstr("NavfnPlanner"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_GetBehaviorTreeInfo_ExistingTree_ReturnsCorrectInfo_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:271:5: error: ‘BehaviorTreeInfo’ was not declared in this scope
+  271 |     BehaviorTreeInfo treeInfo = projectManager->getBehaviorTreeInfo("MainTree");
+      |     ^~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_HierarchyPreservation_NestedStructure_MaintainsParentChildRelations_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:396:41: error: ‘Contains’ was not declared in this scope
+  396 |     EXPECT_THAT(rootSelector->children, Contains(QString("nav_sequence")));
+      |                                         ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:274:15: error: ‘treeInfo’ was not declared in this scope
+  274 |     EXPECT_EQ(treeInfo.name, "MainTree");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:396:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  396 |     EXPECT_THAT(rootSelector->children, Contains(QString("nav_sequence")));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:275:15: error: ‘treeInfo’ was not declared in this scope
+  275 |     EXPECT_EQ(treeInfo.fileName, "trees/main_tree.xml");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:411:45: error: ‘HasSubstr’ was not declared in this scope
+  411 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("root_selector"));
+      |                                             ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:276:18: error: ‘treeInfo’ was not declared in this scope
+  276 |     EXPECT_FALSE(treeInfo.name.isEmpty());
+      |                  ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_CodeGeneration_WithConcepts_ProducesModernCpp_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:427:45: error: ‘HasSubstr’ was not declared in this scope
+  427 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("concept"));
+      |                                             ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_GetProjectSettings_LoadedProject_ReturnsCorrectSettings_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:291:5: error: ‘ProjectSettings’ was not declared in this scope
+  291 |     ProjectSettings settings = projectManager->getProjectSettings();
+      |     ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:427:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  427 |     EXPECT_THAT(code.mainCpp.toStdString(), HasSubstr("concept"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:294:15: error: ‘settings’ was not declared in this scope
+  294 |     EXPECT_EQ(settings.name, projectName);
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_CodeGeneration_WithoutConcepts_ProducesStandardCpp_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:49: error: ‘HasSubstr’ was not declared in this scope
+  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |                                                 ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:295:15: error: ‘settings’ was not declared in this scope
+  295 |     EXPECT_EQ(settings.description, "Test project");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:45: error: ‘Not’ was not declared in this scope
+  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |                                             ^~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:296:15: error: ‘settings’ was not declared in this scope
+  296 |     EXPECT_EQ(settings.version, "1.0.0");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:443:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  443 |     EXPECT_THAT(code.mainCpp.toStdString(), Not(HasSubstr("concept")));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_RoundTripConsistency_VisualToCodeToVisual_PreservesData_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:452:52: error: no matching function for call to ‘BranchForge::Project::BTSerializer::serializeToXML(QVariantMap&)’
+  452 |     QString xmlContent = serializer->serializeToXML(originalState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note: candidate: ‘bool BranchForge::Project::BTSerializer::serializeToXML(const QVariantMap&, const QString&)’
+   31 |     Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
+      |                      ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/BTSerializer.h:31:22: note:   candidate expects 2 arguments, 1 provided
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:297:15: error: ‘settings’ was not declared in this scope
+  297 |     EXPECT_EQ(settings.author, "Test Author");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp: In member function ‘virtual void VisualToCodePipelineTest_ValidationPipeline_InvalidTree_FailsGracefully_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:490:57: error: conversion from ‘bool’ to non-scalar type ‘QString’ requested
+  490 |     QString validation = serializer->validateEditorState(invalidState);
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:298:15: error: ‘settings’ was not declared in this scope
+  298 |     EXPECT_EQ(settings.targetROS2Distro, "humble");
+      |               ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:494:43: error: ‘HasSubstr’ was not declared in this scope
+  494 |     EXPECT_THAT(validation.toStdString(), HasSubstr("id"));
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:299:17: error: ‘settings’ was not declared in this scope
+  299 |     EXPECT_TRUE(settings.useConcepts);
+      |                 ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/integration/test_visual_to_code_pipeline.cpp:494:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  494 |     EXPECT_THAT(validation.toStdString(), HasSubstr("id"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:300:18: error: ‘settings’ was not declared in this scope
+  300 |     EXPECT_FALSE(settings.useCoroutines);
+      |                  ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_UpdateProjectSettings_ValidSettings_Success_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:313:5: error: ‘ProjectSettings’ was not declared in this scope
+  313 |     ProjectSettings newSettings = projectManager->getProjectSettings();
+      |     ^~~~~~~~~~~~~~~
+gmake[2]: *** [tests/unit/CMakeFiles/test_code_generator.dir/build.make:90: tests/unit/CMakeFiles/test_code_generator.dir/project/test_code_generator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:376: tests/unit/CMakeFiles/test_code_generator.dir/all] Error 2
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:314:5: error: ‘newSettings’ was not declared in this scope
+  314 |     newSettings.description = "Updated description";
+      |     ^~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:320:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘updateProjectSettings’; did you mean ‘QJsonObject BranchForge::Project::ProjectManager::m_projectSettings’? (not accessible from this context)
+  320 |     bool success = projectManager->updateProjectSettings(newSettings);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:52:17: note: declared private here
+   52 |     QJsonObject m_projectSettings;
+      |                 ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:325:20: error: expected ‘;’ before ‘updatedSettings’
+  325 |     ProjectSettings updatedSettings = projectManager->getProjectSettings();
+      |                    ^~~~~~~~~~~~~~~~
+      |                    ;
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:326:15: error: ‘updatedSettings’ was not declared in this scope
+  326 |     EXPECT_EQ(updatedSettings.description, "Updated description");
+      |               ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:327:15: error: ‘updatedSettings’ was not declared in this scope
+  327 |     EXPECT_EQ(updatedSettings.version, "2.0.0");
+      |               ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:328:15: error: ‘updatedSettings’ was not declared in this scope
+  328 |     EXPECT_EQ(updatedSettings.targetROS2Distro, "iron");
+      |               ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:329:17: error: ‘updatedSettings’ was not declared in this scope
+  329 |     EXPECT_TRUE(updatedSettings.useCoroutines);
+      |                 ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_GetRecentProjects_InitiallyEmpty_ReturnsEmptyList_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:335:50: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getRecentProjects’
+  335 |     QStringList recentProjects = projectManager->getRecentProjects();
+      |                                                  ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_AddToRecentProjects_ValidPath_AddsToList_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:346:21: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘addToRecentProjects’
+  346 |     projectManager->addToRecentProjects(projectPath);
+      |                     ^~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:349:50: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getRecentProjects’
+  349 |     QStringList recentProjects = projectManager->getRecentProjects();
+      |                                                  ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:351:33: error: ‘Contains’ was not declared in this scope
+  351 |     EXPECT_THAT(recentProjects, Contains(projectPath));
+      |                                 ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:351:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  351 |     EXPECT_THAT(recentProjects, Contains(projectPath));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_AddToRecentProjects_DuplicatePath_DoesNotDuplicate_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:359:21: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘addToRecentProjects’
+  359 |     projectManager->addToRecentProjects(projectPath);
+      |                     ^~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:360:21: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘addToRecentProjects’
+  360 |     projectManager->addToRecentProjects(projectPath); // Add same path again
+      |                     ^~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:363:50: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getRecentProjects’
+  363 |     QStringList recentProjects = projectManager->getRecentProjects();
+      |                                                  ^~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_ValidateProject_ValidProject_ReturnsEmpty_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:379:42: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘validateProject’; did you mean ‘createProject’?
+  379 |     QString validation = projectManager->validateProject();
+      |                                          ^~~~~~~~~~~~~~~
+      |                                          createProject
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_ValidateProject_MissingTreeFiles_ReturnsError_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:399:42: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘validateProject’; did you mean ‘createProject’?
+  399 |     QString validation = projectManager->validateProject();
+      |                                          ^~~~~~~~~~~~~~~
+      |                                          createProject
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:403:43: error: ‘HasSubstr’ was not declared in this scope
+  403 |     EXPECT_THAT(validation.toStdString(), HasSubstr("sub_tree.xml"));
+      |                                           ^~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:403:5: error: ‘EXPECT_THAT’ was not declared in this scope; did you mean ‘EXPECT_GT’?
+  403 |     EXPECT_THAT(validation.toStdString(), HasSubstr("sub_tree.xml"));
+      |     ^~~~~~~~~~~
+      |     EXPECT_GT
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_CloseProject_OpenProject_ClearsState_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:416:33: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  416 |     ASSERT_TRUE(projectManager->hasOpenProject());
+      |                                 ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:422:34: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  422 |     EXPECT_FALSE(projectManager->hasOpenProject());
+      |                                  ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:423:33: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getCurrentProjectName’
+  423 |     EXPECT_TRUE(projectManager->getCurrentProjectName().isEmpty());
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:424:33: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘getCurrentProjectPath’
+  424 |     EXPECT_TRUE(projectManager->getCurrentProjectPath().isEmpty());
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_LoadProject_CorruptedXML_HandlesGracefully_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:441:34: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘hasOpenProject’; did you mean ‘hasProject’?
+  441 |     EXPECT_FALSE(projectManager->hasOpenProject());
+      |                                  ^~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp: In member function ‘virtual void ProjectManagerTest_CreateNewProject_InvalidPath_Fails_Test::TestBody()’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:447:5: error: ‘ProjectSettings’ was not declared in this scope
+  447 |     ProjectSettings settings;
+      |     ^~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:448:5: error: ‘settings’ was not declared in this scope
+  448 |     settings.name = "TestProject";
+      |     ^~~~~~~~
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:451:36: error: ‘class BranchForge::Project::ProjectManager’ has no member named ‘createNewProject’; did you mean ‘createProject’?
+  451 |     bool success = projectManager->createNewProject(invalidPath, settings);
+      |                                    ^~~~~~~~~~~~~~~~
+      |                                    createProject
+In file included from /usr/include/c++/13/memory:78,
+                 from /usr/include/gtest/gtest.h:56:
+/usr/include/c++/13/bits/unique_ptr.h: In instantiation of ‘std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = BranchForge::Project::ProjectManager; _Args = {}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<BranchForge::Project::ProjectManager>]’:
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:13:58:   required from here
+/usr/include/c++/13/bits/unique_ptr.h:1070:30: error: ‘BranchForge::Project::ProjectManager::ProjectManager(QObject*)’ is private within this context
+ 1070 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:41:14: note: declared private here
+   41 |     explicit ProjectManager(QObject* parent = nullptr);
+      |              ^~~~~~~~~~~~~~
+/usr/include/c++/13/bits/unique_ptr.h: In instantiation of ‘void std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = BranchForge::Project::ProjectManager]’:
+/usr/include/c++/13/bits/unique_ptr.h:404:17:   required from ‘std::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = BranchForge::Project::ProjectManager; _Dp = std::default_delete<BranchForge::Project::ProjectManager>]’
+/home/dingo/Programming/BranchForge/tests/unit/project/test_project_manager.cpp:13:58:   required from here
+/usr/include/c++/13/bits/unique_ptr.h:99:9: error: ‘virtual BranchForge::Project::ProjectManager::~ProjectManager()’ is private within this context
+   99 |         delete __ptr;
+      |         ^~~~~~~~~~~~
+/home/dingo/Programming/BranchForge/include/project/ProjectManager.h:42:5: note: declared private here
+   42 |     ~ProjectManager();
+      |     ^
+gmake[2]: *** [tests/unit/CMakeFiles/test_bt_serializer.dir/build.make:90: tests/unit/CMakeFiles/test_bt_serializer.dir/project/test_bt_serializer.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:404: tests/unit/CMakeFiles/test_bt_serializer.dir/all] Error 2
+gmake[2]: *** [tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/build.make:90: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/test_visual_to_code_pipeline.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:748: tests/integration/CMakeFiles/test_visual_to_code_pipeline.dir/all] Error 2
+gmake[2]: *** [tests/unit/CMakeFiles/test_project_manager.dir/build.make:90: tests/unit/CMakeFiles/test_project_manager.dir/project/test_project_manager.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:432: tests/unit/CMakeFiles/test_project_manager.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
