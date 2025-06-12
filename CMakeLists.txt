@@ -145,10 +145,23 @@ if(BUILD_TESTING)
         Qt6::Widgets
         Qt6::Concurrent
         Qt6::Gui
-        Qt6::Qml
-        Qt6::Quick
-        Qt6::Xml
     )
+    
+    # Link optional Qt6 components if available (same as main target)
+    if(TARGET Qt6::Qml)
+        target_link_libraries(branchforge_test_lib Qt6::Qml)
+        target_compile_definitions(branchforge_test_lib PRIVATE QT6_QML_AVAILABLE)
+    endif()
+
+    if(TARGET Qt6::Quick)
+        target_link_libraries(branchforge_test_lib Qt6::Quick)
+        target_compile_definitions(branchforge_test_lib PRIVATE QT6_QUICK_AVAILABLE)
+    endif()
+
+    if(TARGET Qt6::Xml)
+        target_link_libraries(branchforge_test_lib Qt6::Xml)
+        target_compile_definitions(branchforge_test_lib PRIVATE QT6_XML_AVAILABLE)
+    endif()
     
     # Add test subdirectory
     add_subdirectory(tests)
