@@ -18,14 +18,24 @@ jobs:
     - name: Install basic dependencies
       run: |
         sudo apt-get update
+        
+        # Check available Qt6 packages first
+        echo "=== Available Qt6 packages ==="
+        apt-cache search qt6 | grep -E "(base|xml|declarative)" | head -10
+        
+        # Install core dependencies
         sudo apt-get install -y \
           build-essential \
           cmake \
           pkg-config \
-          libgtest-dev \
+          libgtest-dev
+        
+        # Install Qt6 with correct package names for Ubuntu 24.04
+        sudo apt-get install -y \
           qt6-base-dev \
           qt6-declarative-dev \
-          libqt6xml6-dev
+          libqt6xml6 \
+          qt6-tools-dev || echo "⚠️ Some Qt6 packages failed to install"
 
     - name: Setup ROS2 Jazzy (Ubuntu 24.04)
       run: |
