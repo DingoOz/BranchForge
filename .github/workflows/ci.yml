@@ -84,19 +84,15 @@ jobs:
           ros-${{ matrix.ros_distro }}-ament-lint-auto \
           ros-${{ matrix.ros_distro }}-ament-lint-common
 
-    - name: Install ZeroMQ
-      run: |
-        sudo apt-get install -y libzmq3-dev libcppzmq-dev
-
     - name: Install BehaviorTree.CPP
       run: |
         source /opt/ros/${{ matrix.ros_distro }}/setup.bash
-        # BehaviorTree.CPP might not be available in ROS packages, install from source
+        # Install from source using older stable version without ZeroMQ dependency
         cd /tmp
-        git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch 4.6.2
+        git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git --depth 1 --branch 4.5.2
         cd BehaviorTree.CPP
         mkdir build && cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DBUILD_USING_AMENT=OFF
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DBUILD_SHARED_LIBS=ON
         make -j$(nproc)
         sudo make install
         sudo ldconfig
