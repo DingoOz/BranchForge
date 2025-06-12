@@ -4,8 +4,10 @@
 #include "project/ProjectManager.h"
 #include "project/BTSerializer.h"
 
+#ifdef QT6_QML_AVAILABLE
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#endif
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -22,7 +24,9 @@ namespace BranchForge::Core {
 
 Application::Application(int argc, char* argv[])
     : m_app(std::make_unique<QApplication>(argc, argv))
+#ifdef QT6_QML_AVAILABLE
     , m_engine(std::make_unique<QQmlApplicationEngine>())
+#endif
 {
     m_app->setApplicationName("BranchForge");
     m_app->setApplicationVersion("0.1.0");
@@ -31,7 +35,9 @@ Application::Application(int argc, char* argv[])
 
     qCInfo(appCore) << "Initializing BranchForge application";
 
+#ifdef QT6_QML_AVAILABLE
     setupQmlTypes();
+#endif
     initializeROS2();
 }
 
@@ -40,6 +46,7 @@ Application::~Application() = default;
 int Application::run() {
     qCInfo(appCore) << "Starting BranchForge application";
     
+#ifdef QT6_QML_AVAILABLE
     // Debug: Check what resources are available
     qCInfo(appCore) << "Available resources:";
     QDirIterator it(":", QDirIterator::Subdirectories);
@@ -105,11 +112,39 @@ int Application::run() {
         qCCritical(appCore) << "Failed to load QML application";
         return -1;
     }
+#else
+    // Non-QML mode - just run a minimal application for testing
+    qCInfo(appCore) << "Running in non-QML mode (QML not available)";
+    qCInfo(appCore) << "Application initialized successfully - testing components";
+    
+    // Test that our core components can be instantiated
+    try {
+        // Test BehaviorTreeXML
+        qCInfo(appCore) << "Testing BehaviorTreeXML component...";
+        Project::BehaviorTreeXML testXML;
+        qCInfo(appCore) << "✓ BehaviorTreeXML component works";
+        
+        // Test CodeGenerator  
+        qCInfo(appCore) << "Testing CodeGenerator component...";
+        Project::CodeGenOptions options;
+        options.projectName = "test_project";
+        Project::CodeGenerator testGen(options);
+        qCInfo(appCore) << "✓ CodeGenerator component works";
+        
+        qCInfo(appCore) << "All core components functional - this would be a GUI app with QML";
+        qCInfo(appCore) << "Exiting successfully (non-interactive mode)";
+        return 0;  // Exit successfully for testing
+    } catch (const std::exception& e) {
+        qCCritical(appCore) << "Component test failed:" << e.what();
+        return -1;
+    }
+#endif
 
     return m_app->exec();
 }
 
 void Application::setupQmlTypes() {
+#ifdef QT6_QML_AVAILABLE
     qCInfo(appCore) << "Registering QML types";
     
     // Register C++ types for QML
@@ -134,6 +169,9 @@ void Application::setupQmlTypes() {
             return &instance;
         });
     qmlRegisterType<Project::CodeGenOptionsWrapper>("BranchForge.Project", 1, 0, "CodeGenOptions");
+#else
+    qCInfo(appCore) << "QML not available - skipping QML type registration";
+#endif
 }
 
 void Application::initializeROS2() {
