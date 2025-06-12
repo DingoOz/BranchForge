@@ -19,13 +19,7 @@
   <depend>tf2_ros</depend>
   <depend>urdf</depend>
 
-  <build_depend>qt6-base-dev</build_depend>
-  <build_depend>qt6-declarative-dev</build_depend>
-  <build_depend>qt6-quick3d-dev</build_depend>
-
-  <exec_depend>qt6-base</exec_depend>
-  <exec_depend>qt6-declarative</exec_depend>
-  <exec_depend>qt6-quick3d</exec_depend>
+  <!-- Qt6 dependencies are handled via system packages in CI workflows -->
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
