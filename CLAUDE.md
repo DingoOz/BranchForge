@@ -9,20 +9,20 @@ BranchForge is an open-source, comprehensive development platform for designing,
 ## Technology Stack
 
 - **Language**: Modern C++20 throughout the entire codebase
-- **UI Framework**: Qt6 with QML and Qt Quick 3D for hardware-accelerated interfaces
+- **UI Framework**: Qt6.4+ with QML and Qt Quick for hardware-accelerated interfaces
 - **Target Platform**: Ubuntu 22.04 LTS and newer (primary focus)
 - **Build System**: CMake 3.20+ with C++20 module support
 - **ROS2 Integration**: Native rclcpp integration with Humble, Iron, Jazzy, and Rolling
-- **Graphics**: Qt6 Quick 3D with OpenGL/Vulkan backend for 3D visualization
+- **Graphics**: Qt6.4+ Quick with OpenGL/Vulkan backend for visualization
 - **Extensions**: Dual Python/C++ hot-reload system for community development
 
 ## Architecture Components
 
-### Frontend (C++20/Qt6 Application)
-- Qt6 Quick 3D for hardware-accelerated 3D rendering
-- Modular docking system with persistent workspace layouts
+### Frontend (C++20/Qt6.4+ Application)
+- Qt6.4+ Quick for hardware-accelerated 2D/3D rendering
+- Modular docking system with persistent workspace layouts  
 - Custom BT editor with drag-and-drop node creation
-- Integrated 3D visualization engine (replacing RViz2 dependency)
+- Integrated visualization engine (replacing RViz2 dependency)
 - Real-time performance monitoring and debugging interfaces
 
 ### Backend Services
@@ -51,7 +51,7 @@ BranchForge is an open-source, comprehensive development platform for designing,
 ### Testing Strategy
 - **Unit Tests**: C++20 code with Google Test framework
 - **Integration Tests**: ROS2 integration with automated robot simulations
-- **UI Tests**: Qt6 GUI testing with automated interaction simulation
+- **UI Tests**: Qt6.4+ GUI testing with automated interaction simulation
 - **Performance Tests**: Benchmarking with large BT projects and datasets
 - **Extension Tests**: Validation of Python and C++ extension loading/reloading
 
@@ -65,7 +65,7 @@ BranchForge is an open-source, comprehensive development platform for designing,
 
 The project is structured into 4 main phases:
 
-1. **Phase 1 (Months 1-3)**: Foundation - Basic BT Visual Editor, Qt6 UI Framework, ROS2 Integration Layer, C++20 Code Generation
+1. **Phase 1 (Months 1-3)**: Foundation - Basic BT Visual Editor, Qt6.4+ UI Framework, ROS2 Integration Layer, C++20 Code Generation
 2. **Phase 2 (Months 4-6)**: Core Features - Integrated 3D Visualization Engine, Real-time BT Monitoring, Data Recording/Playback, Advanced Node System
 3. **Phase 3 (Months 7-9)**: Advanced Integration & Testing - Automated Testing Framework, Extension System, Performance Analytics, Simulation Integration
 4. **Phase 4 (Months 10-12)**: Intelligence & Optimization - AI-Powered BT Analysis, Advanced Collaboration Features, Production Deployment Tools, Community Platform
