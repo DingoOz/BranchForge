@@ -54,6 +54,9 @@ jobs:
       run: |
         source /opt/ros/jazzy/setup.bash
         
+        # Clean any existing build cache
+        rm -rf build/ install/ log/ build-minimal/
+        
         # Try to configure with minimal dependencies
         mkdir -p build-minimal
         cd build-minimal

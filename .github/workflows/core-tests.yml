@@ -62,9 +62,14 @@ jobs:
         sudo make install
         sudo ldconfig
 
-    - name: Build BranchForge
+    - name: Clean and Build BranchForge
       run: |
         source /opt/ros/jazzy/setup.bash
+        
+        # Clean any existing build cache
+        rm -rf build/ install/ log/
+        
+        # Build with fresh cache
         colcon build --packages-select branchforge \
           --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 
