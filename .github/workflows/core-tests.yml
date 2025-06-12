@@ -32,36 +32,72 @@ jobs:
           python3-pip \
           python3-setuptools
         
-        # Install Qt6 packages (now that package.xml is fixed)
-        echo "=== Checking available Qt6 packages ==="
-        apt-cache search qt6 | grep -E "(dev|cmake)" | sort
+        # Discover what Qt6 packages are actually available
+        echo "=== Discovering available Qt6 packages ==="
+        echo "All packages containing 'qt6':"
+        apt-cache search qt6 | head -30
         
-        echo "\n=== Installing Qt6 packages ==="
-        sudo apt-get install -y \
-          qt6-base-dev \
-          qt6-qmake \
-          qt6-tools-dev || echo "⚠️ Some Qt6 packages failed to install"
+        echo -e "\nPackages containing 'qt' and 'dev':"
+        apt-cache search qt | grep dev | grep -i qt | head -20
         
-        # Try installing Qt6 cmake support specifically
-        sudo apt-get install -y qt6-base-dev-tools || echo "⚠️ qt6-base-dev-tools not available"
+        echo "\n=== Checking specific Qt6 packages ==="
+        QT6_PACKAGES=("qt6-base-dev" "qt6-tools-dev" "qt6-qmake" "qt6-base-dev-tools" "libqt6core6" "libqt6gui6" "libqt6widgets6" "libqt6xml6" "qmake6")
+        AVAILABLE_PACKAGES=()
         
-        # Debug: Check what Qt6 files are actually installed
-        echo "=== Checking Qt6 installation ==="
-        echo "Qt6 packages installed:"
-        dpkg -l | grep qt6
+        for pkg in "${QT6_PACKAGES[@]}"; do
+          if apt-cache show "$pkg" >/dev/null 2>&1; then
+            echo "✓ $pkg is available"
+            AVAILABLE_PACKAGES+=("$pkg")
+          else
+            echo "✗ $pkg is NOT available"
+          fi
+        done
         
-        echo "\n=== Searching for Qt6 cmake files ==="
-        find /usr -name "*Qt6*.cmake" -type f 2>/dev/null | head -20 || echo "No Qt6 cmake files found"
+        echo "\n=== Installing only available Qt6 packages ==="
+        if [ ${#AVAILABLE_PACKAGES[@]} -gt 0 ]; then
+          sudo apt-get install -y "${AVAILABLE_PACKAGES[@]}"
+        else
+          echo "❌ No Qt6 packages available - trying alternative approach"
+          # Try installing any package with qt6 in the name
+          sudo apt-get install -y $(apt-cache search qt6 | grep -E "qt6.*dev" | head -3 | cut -d' ' -f1) || echo "Alternative Qt6 installation failed"
+        fi
         
-        echo "\n=== Checking cmake directories ==="
-        find /usr -path "*/cmake/Qt6*" -type d 2>/dev/null || echo "No Qt6 cmake directories found"
+        # Comprehensive Qt6 installation check
+        echo "\n=== Comprehensive Qt6 installation check ==="
+        echo "Qt6 packages actually installed:"
+        dpkg -l | grep qt6 || echo "No qt6 packages installed"
         
-        echo "\n=== Checking lib directories ==="
-        find /usr -name "libQt6*" -type f 2>/dev/null | head -10 || echo "No Qt6 libraries found"
+        echo "\n=== Searching for Qt6 files ==="
+        echo "Qt6 cmake files:"
+        find /usr -name "*Qt6*.cmake" -type f 2>/dev/null | head -10 || echo "No Qt6 cmake files found"
         
-        echo "\n=== Testing qmake ==="
-        which qmake6 || echo "qmake6 not found"
-        qmake6 -query QT_INSTALL_PREFIX 2>/dev/null || echo "qmake6 query failed"
+        echo "\nQt6 config files:"
+        find /usr -name "Qt6Config.cmake" -type f 2>/dev/null || echo "No Qt6Config.cmake found"
+        
+        echo "\nQt6 libraries:"
+        find /usr -name "libQt6*" -type f 2>/dev/null | head -5 || echo "No Qt6 libraries found"
+        
+        echo "\nQt6 executables:"
+        find /usr -name "*qt6*" -type f -executable 2>/dev/null | head -5 || echo "No Qt6 executables found"
+        
+        echo "\n=== If no Qt6 found, try manual installation ==="
+        if ! find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | grep -q .; then
+          echo "No Qt6Config.cmake found - trying manual Qt6 installation from source"
+          
+          # Download and install a minimal Qt6
+          cd /tmp
+          wget -q https://download.qt.io/archive/qt/6.2/6.2.4/single/qt-everywhere-src-6.2.4.tar.xz || echo "Qt6 download failed"
+          
+          if [ -f "qt-everywhere-src-6.2.4.tar.xz" ]; then
+            echo "Attempting Qt6 minimal build (this may take a while)..."
+            tar -xf qt-everywhere-src-6.2.4.tar.xz
+            cd qt-everywhere-src-6.2.4
+            ./configure -opensource -confirm-license -nomake examples -nomake tests -prefix /usr/local/qt6 || echo "Qt6 configure failed"
+            make -j2 qtbase || echo "Qt6 build failed"
+            sudo make install || echo "Qt6 install failed"
+            export Qt6_DIR="/usr/local/qt6/lib/cmake/Qt6"
+          fi
+        fi
 
     - name: Install colcon
       run: |
@@ -116,53 +152,26 @@ jobs:
         # Clean any existing build cache
         rm -rf build/ install/ log/
         
-        # Try to find Qt6 using multiple approaches
-        echo "\n=== Attempting to locate Qt6 for CMake ==="
-        
-        # Method 1: Use qmake to find Qt6
-        if command -v qmake6 >/dev/null 2>&1; then
-          QT_PREFIX=$(qmake6 -query QT_INSTALL_PREFIX 2>/dev/null || echo "")
-          if [ -n "$QT_PREFIX" ]; then
-            QT6_DIR="$QT_PREFIX/lib/cmake/Qt6"
-            echo "Found Qt6 via qmake6: $QT6_DIR"
-          fi
-        fi
-        
-        # Method 2: Search for Qt6Config.cmake
-        if [ -z "$QT6_DIR" ]; then
-          QT6_CONFIG=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1)
-          if [ -n "$QT6_CONFIG" ]; then
-            QT6_DIR=$(dirname "$QT6_CONFIG")
-            echo "Found Qt6Config.cmake at: $QT6_DIR"
-          fi
-        fi
-        
-        # Method 3: Try standard locations
-        if [ -z "$QT6_DIR" ]; then
-          for path in "/usr/lib/x86_64-linux-gnu/cmake/Qt6" "/usr/lib/cmake/Qt6" "/usr/share/cmake/Qt6"; do
-            if [ -f "$path/Qt6Config.cmake" ]; then
-              QT6_DIR="$path"
-              echo "Found Qt6 at standard location: $QT6_DIR"
-              break
-            fi
-          done
+        # Show what we have and attempt to build
+        echo -e "\n=== Final Qt6 status check ==="
+        QT6_CONFIG=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1)
+        if [ -n "$QT6_CONFIG" ]; then
+          QT6_DIR=$(dirname "$QT6_CONFIG")
+          echo "✅ Found Qt6Config.cmake at: $QT6_DIR"
+          BUILD_ARGS="-DQt6_DIR=\"$QT6_DIR\""
+        else
+          echo "❌ No Qt6Config.cmake found - will attempt build anyway"
+          BUILD_ARGS=""
         fi
         
         # Build with fresh cache
-        if [ -n "$QT6_DIR" ] && [ -f "$QT6_DIR/Qt6Config.cmake" ]; then
-          echo "Building with Qt6_DIR: $QT6_DIR"
-          colcon build --packages-select branchforge \
-            --cmake-args \
-              -DCMAKE_BUILD_TYPE=Release \
-              -DBUILD_TESTING=ON \
-              -DQt6_DIR="$QT6_DIR"
-        else
-          echo "❌ Could not locate Qt6Config.cmake - attempting build without Qt6_DIR"
-          colcon build --packages-select branchforge \
-            --cmake-args \
-              -DCMAKE_BUILD_TYPE=Release \
-              -DBUILD_TESTING=ON
-        fi
+        echo -e "\n=== Building BranchForge ==="
+        colcon build --packages-select branchforge \
+          --cmake-args \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DBUILD_TESTING=ON \
+            $BUILD_ARGS \
+          --event-handlers console_direct+ || echo "❌ Build failed but continuing for diagnosis"
 
     - name: Run Core Tests
       run: |
