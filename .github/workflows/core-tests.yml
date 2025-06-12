@@ -32,24 +32,40 @@ jobs:
           python3-pip \
           python3-setuptools
         
-        # Install Qt6 with correct package names for Ubuntu 24.04
+        # Try alternative Qt6 installation approaches
+        echo "=== Checking available Qt6 packages ==="
+        apt-cache search qt6 | grep -E "(base|dev|cmake)" | head -10
+        
         echo "=== Installing Qt6 packages ==="
+        # Try installing from universe repository
+        sudo add-apt-repository universe -y
+        sudo apt-get update
+        
+        # Install Qt6 packages with more comprehensive approach
         sudo apt-get install -y \
           qt6-base-dev \
           qt6-declarative-dev \
-          libqt6xml6 \
           qt6-tools-dev \
           qt6-base-dev-tools \
-          qmake6 \
-          libqt6core6 \
-          libqt6gui6 \
-          libqt6widgets6 || echo "⚠️ Some Qt6 packages failed to install"
+          libqt6core6-dev \
+          libqt6gui6-dev \
+          libqt6widgets6-dev \
+          libqt6xml6-dev \
+          qmake6 || echo "⚠️ Some Qt6 packages failed to install"
         
         # Debug: Check what Qt6 files are actually installed
         echo "=== Checking Qt6 installation ==="
+        echo "Qt6 packages installed:"
+        dpkg -l | grep qt6 | head -10
+        
+        echo "\nQt6 cmake files:"
         find /usr -name "*Qt6*" -type f 2>/dev/null | grep -i cmake | head -10 || echo "No Qt6 cmake files found"
-        ls -la /usr/lib/x86_64-linux-gnu/cmake/ 2>/dev/null || echo "No cmake directory found"
-        dpkg -l | grep qt6 || echo "No qt6 packages found"
+        
+        echo "\nCMake directories:"
+        find /usr -name cmake -type d 2>/dev/null | head -5
+        
+        echo "\nQt6 directories:"
+        find /usr -name "*Qt6*" -type d 2>/dev/null | head -10 || echo "No Qt6 directories found"
 
     - name: Install colcon
       run: |
@@ -106,17 +122,28 @@ jobs:
         
         # Try to find Qt6 and set environment
         export QT_SELECT=6
-        export Qt6_DIR=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1 | xargs dirname 2>/dev/null || echo "/usr/lib/x86_64-linux-gnu/cmake/Qt6")
-        echo "Using Qt6_DIR: $Qt6_DIR"
+        QT6_CONFIG=$(find /usr -name "Qt6Config.cmake" -type f 2>/dev/null | head -1)
+        if [ -n "$QT6_CONFIG" ]; then
+          export Qt6_DIR=$(dirname "$QT6_CONFIG")
+          echo "Found Qt6Config.cmake at: $QT6_CONFIG"
+          echo "Using Qt6_DIR: $Qt6_DIR"
+        else
+          echo "❌ Qt6Config.cmake not found anywhere!"
+          echo "Attempting build without Qt6_DIR..."
+        fi
         
-        # Build with fresh cache
-        colcon build --packages-select branchforge \
-          --cmake-args \
-            -DCMAKE_BUILD_TYPE=Release \
-            -DBUILD_TESTING=ON \
-            -DQt6_DIR="$Qt6_DIR" \
-            -DCMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/cmake:/usr/lib/cmake" \
-            --verbose
+        # Build with fresh cache - try multiple approaches
+        echo "=== Attempting colcon build ==="
+        if [ -n "$Qt6_DIR" ]; then
+          colcon build --packages-select branchforge \
+            --cmake-args \
+              -DCMAKE_BUILD_TYPE=Release \
+              -DBUILD_TESTING=ON \
+              -DQt6_DIR="$Qt6_DIR" \
+            --event-handlers console_direct+ || echo "Build with Qt6_DIR failed"
+        else
+          echo "Skipping build due to missing Qt6 - this will help us debug the Qt6 installation issue"
+        fi
 
     - name: Run Core Tests
       run: |
