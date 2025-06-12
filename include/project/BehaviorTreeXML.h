@@ -3,8 +3,10 @@
 #include <QString>
 #include <QXmlStreamWriter>
 #include <QXmlStreamReader>
+#ifdef QT6_XML_AVAILABLE
 #include <QDomDocument>
 #include <QDomElement>
+#endif
 #include <QList>
 #include <QPointF>
 #include <QMap>
@@ -89,7 +91,9 @@ public:
     void clear();
 
 private:
+#ifdef QT6_XML_AVAILABLE
     void parseXMLNode(const QDomElement& element, const QString& parentId = QString());
+#endif
     void writeXMLNode(QXmlStreamWriter& writer, const BTXMLNode& node) const;
     
     QString generateNodeId() const;
@@ -119,8 +123,10 @@ public:
     static bool validateGrootXML(const QString& xmlContent);
     
 private:
+#ifdef QT6_XML_AVAILABLE
     static QDomDocument parseToDom(const QString& xmlContent);
     static QString domToString(const QDomDocument& doc);
+#endif
 };
 
 } // namespace BranchForge::Project

@@ -2,7 +2,9 @@
 
 #include <QObject>
 #include <QTimer>
+#ifdef QT6_QML_AVAILABLE
 #include <QQmlEngine>
+#endif
 #include <QStringList>
 #include <memory>
 #ifdef HAVE_ROS2
@@ -13,8 +15,10 @@ namespace BranchForge::ROS2 {
 
 class ROS2Interface : public QObject {
     Q_OBJECT
+#ifdef QT6_QML_AVAILABLE
     QML_ELEMENT
     QML_SINGLETON
+#endif
 
     Q_PROPERTY(bool isConnected READ isConnected NOTIFY connectionChanged)
     Q_PROPERTY(QStringList availableNodes READ availableNodes NOTIFY nodesChanged)
