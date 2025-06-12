@@ -62,6 +62,7 @@ bool BehaviorTreeXML::importFromFile(const QString& filePath) {
 bool BehaviorTreeXML::importFromString(const QString& xmlContent) {
     qCInfo(btXML) << "Importing BT from XML string";
     
+#ifdef QT6_XML_AVAILABLE
     QDomDocument doc;
     QString errorMsg;
     int errorLine, errorColumn;
@@ -94,6 +95,11 @@ bool BehaviorTreeXML::importFromString(const QString& xmlContent) {
     
     qCInfo(btXML) << "Successfully imported" << m_nodes.size() << "nodes";
     return validateTree();
+#else
+    // Qt6 XML not available - cannot parse DOM
+    qCWarning(btXML) << "XML parsing not available - Qt6::Xml component not installed";
+    return false;
+#endif
 }
 
 bool BehaviorTreeXML::exportToFile(const QString& filePath) const {
@@ -391,6 +397,7 @@ void BehaviorTreeXML::clear() {
     qCDebug(btXML) << "Cleared all tree data";
 }
 
+#ifdef QT6_XML_AVAILABLE
 void BehaviorTreeXML::parseXMLNode(const QDomElement& element, const QString& parentId) {
     BTXMLNode node;
     node.id = element.attribute("id", generateNodeId());
@@ -427,6 +434,7 @@ void BehaviorTreeXML::parseXMLNode(const QDomElement& element, const QString& pa
     
     addNode(node);
 }
+#endif
 
 void BehaviorTreeXML::writeXMLNode(QXmlStreamWriter& writer, const BTXMLNode& node) const {
     writer.writeStartElement("Node");
@@ -470,6 +478,7 @@ bool BehaviorTreeXML::isValidConnection(const QString& parentId, const QString& 
 }
 
 // BTXMLTransformer implementation
+#ifdef QT6_XML_AVAILABLE
 QString BTXMLTransformer::convertFromGroot(const QString& grootXML) {
     // Convert Groot format to BranchForge format
     QDomDocument doc = parseToDom(grootXML);
@@ -541,5 +550,44 @@ QDomDocument BTXMLTransformer::parseToDom(const QString& xmlContent) {
 QString BTXMLTransformer::domToString(const QDomDocument& doc) {
     return doc.toString(2);
 }
+
+#else
+// Qt6 XML not available - provide stub implementations
+QString BTXMLTransformer::convertFromGroot(const QString& grootXML) {
+    Q_UNUSED(grootXML)
+    qCWarning(btXML) << "XML transformations not available - Qt6::Xml component not installed";
+    return QString();
+}
+
+QString BTXMLTransformer::convertFromBehaviorTreeCPP(const QString& btcppXML) {
+    Q_UNUSED(btcppXML)
+    qCWarning(btXML) << "XML transformations not available - Qt6::Xml component not installed";
+    return QString();
+}
+
+QString BTXMLTransformer::convertToGroot(const QString& branchForgeXML) {
+    Q_UNUSED(branchForgeXML)
+    qCWarning(btXML) << "XML transformations not available - Qt6::Xml component not installed";
+    return QString();
+}
+
+QString BTXMLTransformer::convertToBehaviorTreeCPP(const QString& branchForgeXML) {
+    Q_UNUSED(branchForgeXML)
+    qCWarning(btXML) << "XML transformations not available - Qt6::Xml component not installed";
+    return QString();
+}
+
+bool BTXMLTransformer::validateBehaviorTreeCPPXML(const QString& xmlContent) {
+    Q_UNUSED(xmlContent)
+    qCWarning(btXML) << "XML validation not available - Qt6::Xml component not installed";
+    return false;
+}
+
+bool BTXMLTransformer::validateGrootXML(const QString& xmlContent) {
+    Q_UNUSED(xmlContent)
+    qCWarning(btXML) << "XML validation not available - Qt6::Xml component not installed";
+    return false;
+}
+#endif
 
 } // namespace BranchForge::Project
