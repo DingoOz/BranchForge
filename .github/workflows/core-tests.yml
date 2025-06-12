@@ -40,8 +40,13 @@ jobs:
         echo -e "\nPackages containing 'qt' and 'dev':"
         apt-cache search qt | grep dev | grep -i qt | head -20
         
+        echo -e "\nQt QML/Quick packages:"
+        apt-cache search qt6 | grep -i qml
+        apt-cache search qt6 | grep -i quick
+        apt-cache search qt6 | grep -i declarative
+        
         echo "\n=== Checking specific Qt6 packages ==="
-        QT6_PACKAGES=("qt6-base-dev" "qt6-tools-dev" "qt6-qmake" "qt6-base-dev-tools" "libqt6core6" "libqt6gui6" "libqt6widgets6" "libqt6xml6" "qmake6")
+        QT6_PACKAGES=("qt6-base-dev" "qt6-tools-dev" "qt6-qmake" "qt6-base-dev-tools" "qt6-declarative-dev" "qt6-quick-dev" "qml6-module-qtquick" "libqt6core6" "libqt6gui6" "libqt6widgets6" "libqt6xml6" "qmake6")
         AVAILABLE_PACKAGES=()
         
         for pkg in "${QT6_PACKAGES[@]}"; do
