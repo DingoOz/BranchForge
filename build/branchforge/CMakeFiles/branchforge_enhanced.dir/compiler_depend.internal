@@ -366,6 +366,7 @@ CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilatio
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QQueue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
@@ -445,6 +446,7 @@ CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilatio
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qqueue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
@@ -955,6 +957,7 @@ CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
@@ -1038,6 +1041,7 @@ CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
@@ -5213,6 +5217,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLoggingCategory
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h
@@ -5247,6 +5252,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h
@@ -5266,6 +5272,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h

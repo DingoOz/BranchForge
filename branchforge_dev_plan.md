@@ -270,3 +270,12 @@
 - **Months 7-9**: Testing framework and extension system
 - **Months 10-12**: AI features and community platform
 - **Ongoing**: Community support, maintenance, and enhancement
+
+
+## Additional ideas during development
+- Have a dockable panel that renders the map topic and the robot's position in the map
+- Allow an option to overlay the lidar scan topic on the map 
+- Highlight which node is currently being used by the robot (in simulation or in real life)
+- have a smooth averaged highlight fucntion that shows the recent history of which nodes and branches have been used by the robot (15 second maxiumum)
+- have a window that scrolls through the last nodes used or other relevant info from the ROS2 robot's state
+- have dockable panel that displays how confused the robot is, as measured by how close to retry limits it is.

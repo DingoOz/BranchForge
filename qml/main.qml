@@ -25,6 +25,7 @@ ApplicationWindow {
     property bool showNodeLibrary: true
     property bool showProperties: true
     property bool showProjectExplorer: true
+    property bool showLidarScan: false
     
     Component.onCompleted: {
         console.log("Main QML window loaded successfully!");
@@ -88,6 +89,12 @@ ApplicationWindow {
                 checkable: true
                 checked: showProjectExplorer
                 onTriggered: showProjectExplorer = !showProjectExplorer
+            }
+            MenuItem { 
+                text: "&Lidar Scan Viewer"
+                checkable: true
+                checked: showLidarScan
+                onTriggered: showLidarScan = !showLidarScan
             }
         }
         
@@ -159,13 +166,36 @@ ApplicationWindow {
             }
         }
         
-        // Right panel - Properties
-        PropertiesPanel {
-            id: propertiesPanel
+        // Right panel - Properties and Lidar Scan
+        Item {
             SplitView.preferredWidth: 300
-            SplitView.minimumWidth: showProperties ? 250 : 0
+            SplitView.minimumWidth: (showProperties || showLidarScan) ? 250 : 0
             SplitView.maximumWidth: 500
-            visible: showProperties
+            visible: showProperties || showLidarScan
+            
+            SplitView {
+                anchors.fill: parent
+                orientation: Qt.Vertical
+                
+                PropertiesPanel {
+                    id: propertiesPanel
+                    SplitView.fillWidth: true
+                    SplitView.fillHeight: showLidarScan ? false : true
+                    SplitView.preferredHeight: showLidarScan ? 300 : -1
+                    visible: showProperties
+                }
+                
+                LidarScanPanel {
+                    id: lidarScanPanel
+                    SplitView.fillWidth: true
+                    SplitView.fillHeight: true
+                    visible: showLidarScan
+                    
+                    onTopicChanged: function(topic) {
+                        ROS2Interface.subscribeLaserScan(topic)
+                    }
+                }
+            }
         }
     }
     

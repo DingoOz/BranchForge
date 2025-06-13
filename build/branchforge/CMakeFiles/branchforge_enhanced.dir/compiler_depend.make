@@ -365,6 +365,7 @@ CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QQueue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
@@ -444,6 +445,7 @@ CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilatio
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qqueue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
@@ -952,6 +954,7 @@ CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o: /home/dingo/Prog
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
@@ -1035,6 +1038,7 @@ CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o: /home/dingo/Prog
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
@@ -5201,6 +5205,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o: /home/dingo/Pr
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QLoggingCategory \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMetaType \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
@@ -5235,6 +5240,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o: /home/dingo/Pr
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
@@ -5254,6 +5260,7 @@ CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o: /home/dingo/Pr
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qpointer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
@@ -7103,6 +7110,10 @@ branchforge_enhanced_autogen/4FUEZNKSHM/moc_DataRecorder.cpp:
 
 /usr/include/c++/13/bits/vector.tcc:
 
+/usr/include/x86_64-linux-gnu/qt6/QtQml/qtqml-config.h:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
@@ -7199,6 +7210,10 @@ branchforge_enhanced_autogen/K7U2THO6V7/moc_SensorDataPipeline.cpp:
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtQml/qqmlregistration.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
@@ -7230,6 +7245,8 @@ branchforge_enhanced_autogen/K7U2THO6V7/moc_SensorDataPipeline.cpp:
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess:
 
 branchforge_enhanced_autogen/YQ6IUZR2IF/moc_BTSerializer.cpp:
 
@@ -7264,10 +7281,6 @@ branchforge_enhanced_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtQml/qqmlpropertyvaluesource.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/13/bits/unique_lock.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtQml/qtqml-config.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h:
 
@@ -8037,6 +8050,8 @@ branchforge_enhanced_autogen/WLQGO73KP3/moc_BTExecutionMonitor.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariantList:
@@ -8118,7 +8133,3 @@ branchforge_enhanced_autogen/WLQGO73KP3/moc_BTExecutionMonitor.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtQml/qjsvalue.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtQml/qqmllist.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtQml/qqmlregistration.h:

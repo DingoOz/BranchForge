@@ -1,9 +1,0 @@
-<RCC>
-  <qresource prefix="/BranchForge">
-    <file alias="qml/main.qml">/home/dingo/Programming/BranchForge/qml/main.qml</file>
-    <file alias="qml/components/NodeEditor.qml">/home/dingo/Programming/BranchForge/qml/components/NodeEditor.qml</file>
-    <file alias="qml/components/NodeLibraryPanel.qml">/home/dingo/Programming/BranchForge/qml/components/NodeLibraryPanel.qml</file>
-    <file alias="qml/components/PropertiesPanel.qml">/home/dingo/Programming/BranchForge/qml/components/PropertiesPanel.qml</file>
-  </qresource>
-</RCC>
-

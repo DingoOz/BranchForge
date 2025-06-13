@@ -5,6 +5,9 @@
         <file>qml/components/NodeEditor.qml</file>
         <file>qml/components/NodeLibraryPanel.qml</file>
         <file>qml/components/PropertiesPanel.qml</file>
+        <file>qml/components/ProjectExplorer.qml</file>
         <file>qml/components/CodeGenDialog.qml</file>
+        <file>qml/components/AboutDialog.qml</file>
+        <file>qml/components/LidarScanPanel.qml</file>
     </qresource>
 </RCC>
