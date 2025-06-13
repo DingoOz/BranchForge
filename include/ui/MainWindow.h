@@ -38,6 +38,7 @@ signals:
 
 private:
     void updateTitle();
+    QString generateNav2BehaviorTreeXML() const;
 
     QString m_title{"BranchForge"};
     bool m_isDarkMode{true};
