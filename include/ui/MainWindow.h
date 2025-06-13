@@ -29,7 +29,7 @@ public slots:
     void newProject();
     void openProject();
     void saveProject();
-    void exportProject();
+    void exportXML();
 
 signals:
     void titleChanged();

@@ -55,8 +55,8 @@ ApplicationWindow {
                 onTriggered: mainWindowInstance.saveProject()
             }
             MenuItem { 
-                text: "&Export C++ Project"
-                onTriggered: mainWindowInstance.exportProject()
+                text: "&Export XML"
+                onTriggered: mainWindowInstance.exportXML()
             }
             MenuSeparator {}
             MenuItem { 
