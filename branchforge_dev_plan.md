@@ -279,3 +279,12 @@
 - have a smooth averaged highlight fucntion that shows the recent history of which nodes and branches have been used by the robot (15 second maxiumum)
 - have a window that scrolls through the last nodes used or other relevant info from the ROS2 robot's state
 - have dockable panel that displays how confused the robot is, as measured by how close to retry limits it is.
+
+- allwo for a any tracked variable reported on a topic to be plotted over time in a chart
+- allow for any panel ot be docked in any configuration
+- ender urdf models in the map view
+- render 3d point clouds and maps
+- plot any actuator position on a chart
+- mcap file format support
+- team sharing
+- Behaviour Trees are predominately defined in XML
