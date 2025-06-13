@@ -29,7 +29,7 @@ public slots:
     void newProject();
     void openProject();
     void saveProject();
-    void exportProject();
+    void exportXML();
 
 signals:
     void titleChanged();
@@ -38,6 +38,7 @@ signals:
 
 private:
     void updateTitle();
+    QString generateNav2BehaviorTreeXML() const;
 
     QString m_title{"BranchForge"};
     bool m_isDarkMode{true};
