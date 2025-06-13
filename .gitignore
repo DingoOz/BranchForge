@@ -33,6 +33,7 @@
 
 # Build directories and cache files
 build/
+branchforge/
 install/
 log/
 CMakeCache.txt
@@ -40,6 +41,18 @@ CMakeFiles/
 _deps/
 *.cmake
 *.cmake.in
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+
+# Qt MOC/UIC/RCC generated files
+*_autogen/
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.moc
 
 # ROS2 specific
 .colcon/
@@ -55,6 +68,15 @@ _deps/
 # Qt files
 *.pro.user
 *.qmake.stash
-moc_*
-ui_*
-qrc_*
+
+# Test artifacts
+Testing/
+CTestConfiguration.ini
+
+# Package artifacts  
+*.deb
+*.rpm
+
+# Temporary files
+.DS_Store
+Thumbs.db
