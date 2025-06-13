@@ -74,7 +74,10 @@ qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/main.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/NodeEditor.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/NodeLibraryPanel.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/PropertiesPanel.qml
+qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/ProjectExplorer.qml
 qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/CodeGenDialog.qml
+qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/AboutDialog.qml
+qrc_resources.cpp: /home/dingo/Programming/BranchForge/qml/components/LidarScanPanel.qml
 qrc_resources.cpp: resources.qrc.depends
 qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/dingo/Programming/BranchForge/build/branchforge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"

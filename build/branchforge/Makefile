@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/dingo/Programming/BranchForge/build/branchforge
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -185,19 +175,6 @@ branchforge_enhanced/fast:
 .PHONY : branchforge_enhanced/fast
 
 #=============================================================================
-# Target rules for targets named branchforge_test_lib
-
-# Build rule for target.
-branchforge_test_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_test_lib
-.PHONY : branchforge_test_lib
-
-# fast build rule for target.
-branchforge_test_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/build
-.PHONY : branchforge_test_lib/fast
-
-#=============================================================================
 # Target rules for targets named branchforge_enhanced_qmlimportscan
 
 # Build rule for target.
@@ -236,71 +213,6 @@ branchforge_enhanced_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced_autogen.dir/build.make CMakeFiles/branchforge_enhanced_autogen.dir/build
 .PHONY : branchforge_enhanced_autogen/fast
 
-#=============================================================================
-# Target rules for targets named branchforge_test_lib_autogen_timestamp_deps
-
-# Build rule for target.
-branchforge_test_lib_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_test_lib_autogen_timestamp_deps
-.PHONY : branchforge_test_lib_autogen_timestamp_deps
-
-# fast build rule for target.
-branchforge_test_lib_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib_autogen_timestamp_deps.dir/build.make CMakeFiles/branchforge_test_lib_autogen_timestamp_deps.dir/build
-.PHONY : branchforge_test_lib_autogen_timestamp_deps/fast
-
-#=============================================================================
-# Target rules for targets named branchforge_test_lib_autogen
-
-# Build rule for target.
-branchforge_test_lib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 branchforge_test_lib_autogen
-.PHONY : branchforge_test_lib_autogen
-
-# fast build rule for target.
-branchforge_test_lib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib_autogen.dir/build.make CMakeFiles/branchforge_test_lib_autogen.dir/build
-.PHONY : branchforge_test_lib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named test_behavior_tree_xml
-
-# Build rule for target.
-test_behavior_tree_xml: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_behavior_tree_xml
-.PHONY : test_behavior_tree_xml
-
-# fast build rule for target.
-test_behavior_tree_xml/fast:
-	$(MAKE) $(MAKESILENT) -f tests/unit/CMakeFiles/test_behavior_tree_xml.dir/build.make tests/unit/CMakeFiles/test_behavior_tree_xml.dir/build
-.PHONY : test_behavior_tree_xml/fast
-
-#=============================================================================
-# Target rules for targets named test_behavior_tree_xml_autogen_timestamp_deps
-
-# Build rule for target.
-test_behavior_tree_xml_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_behavior_tree_xml_autogen_timestamp_deps
-.PHONY : test_behavior_tree_xml_autogen_timestamp_deps
-
-# fast build rule for target.
-test_behavior_tree_xml_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f tests/unit/CMakeFiles/test_behavior_tree_xml_autogen_timestamp_deps.dir/build.make tests/unit/CMakeFiles/test_behavior_tree_xml_autogen_timestamp_deps.dir/build
-.PHONY : test_behavior_tree_xml_autogen_timestamp_deps/fast
-
-#=============================================================================
-# Target rules for targets named test_behavior_tree_xml_autogen
-
-# Build rule for target.
-test_behavior_tree_xml_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_behavior_tree_xml_autogen
-.PHONY : test_behavior_tree_xml_autogen
-
-# fast build rule for target.
-test_behavior_tree_xml_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f tests/unit/CMakeFiles/test_behavior_tree_xml_autogen.dir/build.make tests/unit/CMakeFiles/test_behavior_tree_xml_autogen.dir/build
-.PHONY : test_behavior_tree_xml_autogen/fast
-
 branchforge_enhanced_autogen/mocs_compilation.o: branchforge_enhanced_autogen/mocs_compilation.cpp.o
 .PHONY : branchforge_enhanced_autogen/mocs_compilation.o
 
@@ -324,30 +236,6 @@ branchforge_enhanced_autogen/mocs_compilation.s: branchforge_enhanced_autogen/mo
 branchforge_enhanced_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/branchforge_enhanced_autogen/mocs_compilation.cpp.s
 .PHONY : branchforge_enhanced_autogen/mocs_compilation.cpp.s
-
-branchforge_test_lib_autogen/mocs_compilation.o: branchforge_test_lib_autogen/mocs_compilation.cpp.o
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.o
-
-# target to build an object file
-branchforge_test_lib_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.o
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.cpp.o
-
-branchforge_test_lib_autogen/mocs_compilation.i: branchforge_test_lib_autogen/mocs_compilation.cpp.i
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-branchforge_test_lib_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.i
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.cpp.i
-
-branchforge_test_lib_autogen/mocs_compilation.s: branchforge_test_lib_autogen/mocs_compilation.cpp.s
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-branchforge_test_lib_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/branchforge_test_lib_autogen/mocs_compilation.cpp.s
-.PHONY : branchforge_test_lib_autogen/mocs_compilation.cpp.s
 
 qrc_resources.o: qrc_resources.cpp.o
 .PHONY : qrc_resources.o
@@ -379,7 +267,6 @@ src/core/Application.o: src/core/Application.cpp.o
 # target to build an object file
 src/core/Application.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.o
 .PHONY : src/core/Application.cpp.o
 
 src/core/Application.i: src/core/Application.cpp.i
@@ -388,7 +275,6 @@ src/core/Application.i: src/core/Application.cpp.i
 # target to preprocess a source file
 src/core/Application.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.i
 .PHONY : src/core/Application.cpp.i
 
 src/core/Application.s: src/core/Application.cpp.s
@@ -397,7 +283,6 @@ src/core/Application.s: src/core/Application.cpp.s
 # target to generate assembly for a file
 src/core/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/core/Application.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/core/Application.cpp.s
 .PHONY : src/core/Application.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -430,7 +315,6 @@ src/monitoring/BTExecutionMonitor.o: src/monitoring/BTExecutionMonitor.cpp.o
 # target to build an object file
 src/monitoring/BTExecutionMonitor.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.o
 .PHONY : src/monitoring/BTExecutionMonitor.cpp.o
 
 src/monitoring/BTExecutionMonitor.i: src/monitoring/BTExecutionMonitor.cpp.i
@@ -439,7 +323,6 @@ src/monitoring/BTExecutionMonitor.i: src/monitoring/BTExecutionMonitor.cpp.i
 # target to preprocess a source file
 src/monitoring/BTExecutionMonitor.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.i
 .PHONY : src/monitoring/BTExecutionMonitor.cpp.i
 
 src/monitoring/BTExecutionMonitor.s: src/monitoring/BTExecutionMonitor.cpp.s
@@ -448,7 +331,6 @@ src/monitoring/BTExecutionMonitor.s: src/monitoring/BTExecutionMonitor.cpp.s
 # target to generate assembly for a file
 src/monitoring/BTExecutionMonitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/monitoring/BTExecutionMonitor.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/monitoring/BTExecutionMonitor.cpp.s
 .PHONY : src/monitoring/BTExecutionMonitor.cpp.s
 
 src/nodes/AdvancedNodeSystem.o: src/nodes/AdvancedNodeSystem.cpp.o
@@ -457,7 +339,6 @@ src/nodes/AdvancedNodeSystem.o: src/nodes/AdvancedNodeSystem.cpp.o
 # target to build an object file
 src/nodes/AdvancedNodeSystem.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.o
 .PHONY : src/nodes/AdvancedNodeSystem.cpp.o
 
 src/nodes/AdvancedNodeSystem.i: src/nodes/AdvancedNodeSystem.cpp.i
@@ -466,7 +347,6 @@ src/nodes/AdvancedNodeSystem.i: src/nodes/AdvancedNodeSystem.cpp.i
 # target to preprocess a source file
 src/nodes/AdvancedNodeSystem.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.i
 .PHONY : src/nodes/AdvancedNodeSystem.cpp.i
 
 src/nodes/AdvancedNodeSystem.s: src/nodes/AdvancedNodeSystem.cpp.s
@@ -475,7 +355,6 @@ src/nodes/AdvancedNodeSystem.s: src/nodes/AdvancedNodeSystem.cpp.s
 # target to generate assembly for a file
 src/nodes/AdvancedNodeSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/nodes/AdvancedNodeSystem.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/nodes/AdvancedNodeSystem.cpp.s
 .PHONY : src/nodes/AdvancedNodeSystem.cpp.s
 
 src/project/BTSerializer.o: src/project/BTSerializer.cpp.o
@@ -484,7 +363,6 @@ src/project/BTSerializer.o: src/project/BTSerializer.cpp.o
 # target to build an object file
 src/project/BTSerializer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.o
 .PHONY : src/project/BTSerializer.cpp.o
 
 src/project/BTSerializer.i: src/project/BTSerializer.cpp.i
@@ -493,7 +371,6 @@ src/project/BTSerializer.i: src/project/BTSerializer.cpp.i
 # target to preprocess a source file
 src/project/BTSerializer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.i
 .PHONY : src/project/BTSerializer.cpp.i
 
 src/project/BTSerializer.s: src/project/BTSerializer.cpp.s
@@ -502,7 +379,6 @@ src/project/BTSerializer.s: src/project/BTSerializer.cpp.s
 # target to generate assembly for a file
 src/project/BTSerializer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BTSerializer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BTSerializer.cpp.s
 .PHONY : src/project/BTSerializer.cpp.s
 
 src/project/BehaviorTreeXML.o: src/project/BehaviorTreeXML.cpp.o
@@ -511,7 +387,6 @@ src/project/BehaviorTreeXML.o: src/project/BehaviorTreeXML.cpp.o
 # target to build an object file
 src/project/BehaviorTreeXML.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.o
 .PHONY : src/project/BehaviorTreeXML.cpp.o
 
 src/project/BehaviorTreeXML.i: src/project/BehaviorTreeXML.cpp.i
@@ -520,7 +395,6 @@ src/project/BehaviorTreeXML.i: src/project/BehaviorTreeXML.cpp.i
 # target to preprocess a source file
 src/project/BehaviorTreeXML.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.i
 .PHONY : src/project/BehaviorTreeXML.cpp.i
 
 src/project/BehaviorTreeXML.s: src/project/BehaviorTreeXML.cpp.s
@@ -529,7 +403,6 @@ src/project/BehaviorTreeXML.s: src/project/BehaviorTreeXML.cpp.s
 # target to generate assembly for a file
 src/project/BehaviorTreeXML.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/BehaviorTreeXML.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/BehaviorTreeXML.cpp.s
 .PHONY : src/project/BehaviorTreeXML.cpp.s
 
 src/project/CodeGenerator.o: src/project/CodeGenerator.cpp.o
@@ -538,7 +411,6 @@ src/project/CodeGenerator.o: src/project/CodeGenerator.cpp.o
 # target to build an object file
 src/project/CodeGenerator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.o
 .PHONY : src/project/CodeGenerator.cpp.o
 
 src/project/CodeGenerator.i: src/project/CodeGenerator.cpp.i
@@ -547,7 +419,6 @@ src/project/CodeGenerator.i: src/project/CodeGenerator.cpp.i
 # target to preprocess a source file
 src/project/CodeGenerator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.i
 .PHONY : src/project/CodeGenerator.cpp.i
 
 src/project/CodeGenerator.s: src/project/CodeGenerator.cpp.s
@@ -556,7 +427,6 @@ src/project/CodeGenerator.s: src/project/CodeGenerator.cpp.s
 # target to generate assembly for a file
 src/project/CodeGenerator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/CodeGenerator.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/CodeGenerator.cpp.s
 .PHONY : src/project/CodeGenerator.cpp.s
 
 src/project/ProjectManager.o: src/project/ProjectManager.cpp.o
@@ -565,7 +435,6 @@ src/project/ProjectManager.o: src/project/ProjectManager.cpp.o
 # target to build an object file
 src/project/ProjectManager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.o
 .PHONY : src/project/ProjectManager.cpp.o
 
 src/project/ProjectManager.i: src/project/ProjectManager.cpp.i
@@ -574,7 +443,6 @@ src/project/ProjectManager.i: src/project/ProjectManager.cpp.i
 # target to preprocess a source file
 src/project/ProjectManager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.i
 .PHONY : src/project/ProjectManager.cpp.i
 
 src/project/ProjectManager.s: src/project/ProjectManager.cpp.s
@@ -583,7 +451,6 @@ src/project/ProjectManager.s: src/project/ProjectManager.cpp.s
 # target to generate assembly for a file
 src/project/ProjectManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/project/ProjectManager.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/project/ProjectManager.cpp.s
 .PHONY : src/project/ProjectManager.cpp.s
 
 src/recording/DataRecorder.o: src/recording/DataRecorder.cpp.o
@@ -592,7 +459,6 @@ src/recording/DataRecorder.o: src/recording/DataRecorder.cpp.o
 # target to build an object file
 src/recording/DataRecorder.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.o
 .PHONY : src/recording/DataRecorder.cpp.o
 
 src/recording/DataRecorder.i: src/recording/DataRecorder.cpp.i
@@ -601,7 +467,6 @@ src/recording/DataRecorder.i: src/recording/DataRecorder.cpp.i
 # target to preprocess a source file
 src/recording/DataRecorder.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.i
 .PHONY : src/recording/DataRecorder.cpp.i
 
 src/recording/DataRecorder.s: src/recording/DataRecorder.cpp.s
@@ -610,7 +475,6 @@ src/recording/DataRecorder.s: src/recording/DataRecorder.cpp.s
 # target to generate assembly for a file
 src/recording/DataRecorder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/recording/DataRecorder.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/recording/DataRecorder.cpp.s
 .PHONY : src/recording/DataRecorder.cpp.s
 
 src/ros2/ROS2Interface.o: src/ros2/ROS2Interface.cpp.o
@@ -619,7 +483,6 @@ src/ros2/ROS2Interface.o: src/ros2/ROS2Interface.cpp.o
 # target to build an object file
 src/ros2/ROS2Interface.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.o
 .PHONY : src/ros2/ROS2Interface.cpp.o
 
 src/ros2/ROS2Interface.i: src/ros2/ROS2Interface.cpp.i
@@ -628,7 +491,6 @@ src/ros2/ROS2Interface.i: src/ros2/ROS2Interface.cpp.i
 # target to preprocess a source file
 src/ros2/ROS2Interface.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.i
 .PHONY : src/ros2/ROS2Interface.cpp.i
 
 src/ros2/ROS2Interface.s: src/ros2/ROS2Interface.cpp.s
@@ -637,7 +499,6 @@ src/ros2/ROS2Interface.s: src/ros2/ROS2Interface.cpp.s
 # target to generate assembly for a file
 src/ros2/ROS2Interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2Interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2Interface.cpp.s
 .PHONY : src/ros2/ROS2Interface.cpp.s
 
 src/ros2/ROS2TopicBrowser.o: src/ros2/ROS2TopicBrowser.cpp.o
@@ -646,7 +507,6 @@ src/ros2/ROS2TopicBrowser.o: src/ros2/ROS2TopicBrowser.cpp.o
 # target to build an object file
 src/ros2/ROS2TopicBrowser.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.o
 .PHONY : src/ros2/ROS2TopicBrowser.cpp.o
 
 src/ros2/ROS2TopicBrowser.i: src/ros2/ROS2TopicBrowser.cpp.i
@@ -655,7 +515,6 @@ src/ros2/ROS2TopicBrowser.i: src/ros2/ROS2TopicBrowser.cpp.i
 # target to preprocess a source file
 src/ros2/ROS2TopicBrowser.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.i
 .PHONY : src/ros2/ROS2TopicBrowser.cpp.i
 
 src/ros2/ROS2TopicBrowser.s: src/ros2/ROS2TopicBrowser.cpp.s
@@ -664,7 +523,6 @@ src/ros2/ROS2TopicBrowser.s: src/ros2/ROS2TopicBrowser.cpp.s
 # target to generate assembly for a file
 src/ros2/ROS2TopicBrowser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ros2/ROS2TopicBrowser.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ros2/ROS2TopicBrowser.cpp.s
 .PHONY : src/ros2/ROS2TopicBrowser.cpp.s
 
 src/ui/MainWindow.o: src/ui/MainWindow.cpp.o
@@ -673,7 +531,6 @@ src/ui/MainWindow.o: src/ui/MainWindow.cpp.o
 # target to build an object file
 src/ui/MainWindow.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.o
 .PHONY : src/ui/MainWindow.cpp.o
 
 src/ui/MainWindow.i: src/ui/MainWindow.cpp.i
@@ -682,7 +539,6 @@ src/ui/MainWindow.i: src/ui/MainWindow.cpp.i
 # target to preprocess a source file
 src/ui/MainWindow.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.i
 .PHONY : src/ui/MainWindow.cpp.i
 
 src/ui/MainWindow.s: src/ui/MainWindow.cpp.s
@@ -691,7 +547,6 @@ src/ui/MainWindow.s: src/ui/MainWindow.cpp.s
 # target to generate assembly for a file
 src/ui/MainWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/ui/MainWindow.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/ui/MainWindow.cpp.s
 .PHONY : src/ui/MainWindow.cpp.s
 
 src/visualization/SensorDataPipeline.o: src/visualization/SensorDataPipeline.cpp.o
@@ -700,7 +555,6 @@ src/visualization/SensorDataPipeline.o: src/visualization/SensorDataPipeline.cpp
 # target to build an object file
 src/visualization/SensorDataPipeline.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.o
 .PHONY : src/visualization/SensorDataPipeline.cpp.o
 
 src/visualization/SensorDataPipeline.i: src/visualization/SensorDataPipeline.cpp.i
@@ -709,7 +563,6 @@ src/visualization/SensorDataPipeline.i: src/visualization/SensorDataPipeline.cpp
 # target to preprocess a source file
 src/visualization/SensorDataPipeline.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.i
 .PHONY : src/visualization/SensorDataPipeline.cpp.i
 
 src/visualization/SensorDataPipeline.s: src/visualization/SensorDataPipeline.cpp.s
@@ -718,7 +571,6 @@ src/visualization/SensorDataPipeline.s: src/visualization/SensorDataPipeline.cpp
 # target to generate assembly for a file
 src/visualization/SensorDataPipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_enhanced.dir/build.make CMakeFiles/branchforge_enhanced.dir/src/visualization/SensorDataPipeline.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/branchforge_test_lib.dir/build.make CMakeFiles/branchforge_test_lib.dir/src/visualization/SensorDataPipeline.cpp.s
 .PHONY : src/visualization/SensorDataPipeline.cpp.s
 
 # Help Target
@@ -733,23 +585,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... branchforge_enhanced_autogen"
 	@echo "... branchforge_enhanced_autogen_timestamp_deps"
 	@echo "... branchforge_enhanced_qmlimportscan"
-	@echo "... branchforge_test_lib_autogen"
-	@echo "... branchforge_test_lib_autogen_timestamp_deps"
-	@echo "... test_behavior_tree_xml_autogen"
-	@echo "... test_behavior_tree_xml_autogen_timestamp_deps"
 	@echo "... branchforge_enhanced"
-	@echo "... branchforge_test_lib"
-	@echo "... test_behavior_tree_xml"
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.o"
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.i"
 	@echo "... branchforge_enhanced_autogen/mocs_compilation.s"
-	@echo "... branchforge_test_lib_autogen/mocs_compilation.o"
-	@echo "... branchforge_test_lib_autogen/mocs_compilation.i"
-	@echo "... branchforge_test_lib_autogen/mocs_compilation.s"
 	@echo "... qrc_resources.o"
 	@echo "... qrc_resources.i"
 	@echo "... qrc_resources.s"
