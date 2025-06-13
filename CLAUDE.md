@@ -16,50 +16,103 @@ BranchForge is an open-source, comprehensive development platform for designing,
 - **Graphics**: Qt6.4+ Quick with OpenGL/Vulkan backend for visualization
 - **Extensions**: Dual Python/C++ hot-reload system for community development
 
+## Essential Commands
+
+### Build System
+```bash
+# Basic build (from project root)
+mkdir build && cd build
+cmake ..
+make -j$(nproc)
+
+# Clean rebuild
+rm -rf build && mkdir build && cd build
+cmake .. && make -j$(nproc)
+
+# Run the application
+./branchforge_enhanced
+```
+
+### Testing
+```bash
+# Build with tests enabled (default)
+cmake -DBUILD_TESTING=ON ..
+make -j$(nproc)
+
+# Run all tests
+ctest
+
+# Run specific test
+./test_behavior_tree_xml
+
+# Run tests with verbose output
+ctest --verbose
+```
+
+### Development Dependencies
+```bash
+# Install Qt6 dependencies on Ubuntu
+sudo apt install -y qt6-base-dev qt6-declarative-dev qt6-quick3d-dev
+
+# Install build tools
+sudo apt install -y cmake build-essential pkg-config
+
+# Install testing framework
+sudo apt install -y libgtest-dev
+```
+
 ## Architecture Components
 
-### Frontend (C++20/Qt6.4+ Application)
-- Qt6.4+ Quick for hardware-accelerated 2D/3D rendering
-- Modular docking system with persistent workspace layouts  
-- Custom BT editor with drag-and-drop node creation
-- Integrated visualization engine (replacing RViz2 dependency)
-- Real-time performance monitoring and debugging interfaces
+### Core Application Structure
+- **`src/core/Application.cpp`**: Main application class with conditional QML/Qt6 support
+- **`src/ui/MainWindow.cpp`**: Primary UI controller bridging C++ and QML
+- **`qml/main.qml`**: Main QML interface with SplitView layout for panels
+- **`qml/components/`**: Modular QML components for each UI panel
 
-### Backend Services
-- Modern C++20 abstraction layer with concepts and ranges
-- High-performance ROS2 communication using rclcpp with coroutines
-- Native URDF/SDF parser for robot model loading
-- Optimized sensor data pipeline for point clouds, images, and maps
-- SQLite database with C++20 wrappers for project and session management
+### Key Design Patterns
 
-### Extension System
-- Dynamic C++ plugin loading with automatic compilation
-- Embedded Python interpreter with module hot-swapping
-- Unified extension API supporting both languages
-- File watcher system for automatic reload during development
-- Template generators for rapid extension scaffolding
+#### Conditional Compilation
+The codebase uses extensive conditional compilation to support different Qt6 configurations:
+```cpp
+#ifdef QT6_QML_AVAILABLE
+    // QML-based UI code
+#else
+    // Fallback widget-based UI
+#endif
+```
 
-## Development Standards
+#### QML-C++ Integration
+- C++ classes are registered with QML using `qmlRegisterType` and `qmlRegisterSingletonType`
+- Singletons are used for cross-component communication (ROS2Interface, ProjectManager)
+- Properties and signals enable bidirectional communication between QML and C++
 
-### Code Quality
-- **Modern C++20**: Use concepts, ranges, coroutines, and modules where appropriate
-- **Static Analysis**: Clang-tidy and cppcheck integration in CI pipeline
-- **Code Coverage**: Minimum 80% coverage for core functionality
-- **Documentation**: Doxygen for C++ API, Sphinx for user documentation
-- **Security**: Regular security audits for extension system and data handling
+#### Resource Management
+- QML files are embedded using Qt's resource system (`resources.qrc`)
+- Conditional resource compilation based on Qt6 component availability
+- Graceful fallback when QML components are not available
 
-### Testing Strategy
-- **Unit Tests**: C++20 code with Google Test framework
-- **Integration Tests**: ROS2 integration with automated robot simulations
-- **UI Tests**: Qt6.4+ GUI testing with automated interaction simulation
-- **Performance Tests**: Benchmarking with large BT projects and datasets
-- **Extension Tests**: Validation of Python and C++ extension loading/reloading
+### UI Architecture
+- **Three-panel layout**: Node Library (left), Node Editor (center), Properties (right)
+- **Panel visibility**: Controlled via boolean properties with View menu integration
+- **Component isolation**: Each panel is a self-contained QML component
+- **State persistence**: UI layouts and panel visibility saved/restored
 
-### Platform Support
-- **Ubuntu Versions**: 22.04 LTS, 24.04 LTS, and rolling releases
-- **ROS2 Distributions**: Humble, Iron, Jazzy, and Rolling
-- **Hardware Configurations**: Various GPU configurations for 3D rendering
-- **Robot Platforms**: Testing with TurtleBot, Spot, and industrial manipulators
+### Project Structure
+```
+include/
+├── core/           # Application framework
+├── ui/             # User interface components
+├── project/        # Project management and serialization
+├── nodes/          # Behavior tree node system
+├── monitoring/     # Runtime monitoring and debugging
+├── recording/      # Data recording and playback
+├── ros2/           # ROS2 integration layer
+└── visualization/  # 3D visualization and sensor data
+
+qml/
+├── main.qml        # Main application window
+└── components/     # Reusable UI components
+```
 
 ## Development Phases
 
@@ -77,3 +130,9 @@ The project is structured into 4 main phases:
 - **Professional Performance**: Enterprise-grade reliability with modern C++20 architecture
 - **Community-Driven**: Open source with comprehensive extension API
 - **All-in-One Solution**: Design, visualize, test, and optimize in a single application
+
+## important-instruction-reminders
+Do what has been asked; nothing more, nothing less.
+NEVER create files unless they're absolutely necessary for achieving your goal.
+ALWAYS prefer editing an existing file to creating a new one.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
