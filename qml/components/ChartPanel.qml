@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import QtCharts 2.15
 import BranchForge.Charting 1.0
 
 Rectangle {
@@ -192,116 +191,289 @@ Rectangle {
         }
         
         // Chart area
-        ChartView {
-            id: chartView
+        Rectangle {
+            id: chartContainer
             Layout.fillWidth: true
             Layout.fillHeight: true
             
-            backgroundColor: darkMode ? "#2d2d2d" : "#ffffff"
-            plotAreaColor: darkMode ? "#1e1e1e" : "#f8f8f8"
-            titleColor: darkMode ? "#ffffff" : "#000000"
+            color: darkMode ? "#2d2d2d" : "#ffffff"
+            border.color: darkMode ? "#555" : "#ddd"
+            border.width: 1
+            radius: 4
             
-            antialiasing: true
-            animationOptions: ChartView.SeriesAnimations
-            
-            title: root.selectedTopic ? "Topic: " + root.selectedTopic : "No topic selected"
-            titleFont.pixelSize: 14
-            
-            legend.visible: root.showAverage
-            legend.alignment: Qt.AlignBottom
-            legend.labelColor: darkMode ? "#ffffff" : "#000000"
-            
-            ValueAxis {
-                id: xAxis
-                titleText: "Time"
-                titleColor: darkMode ? "#ffffff" : "#000000"
-                labelsColor: darkMode ? "#cccccc" : "#666666"
-                gridLineColor: darkMode ? "#444" : "#ddd"
-                minorGridLineColor: darkMode ? "#333" : "#eee"
-                gridVisible: true
-                minorGridVisible: true
-                labelFormat: "%.1f"
-            }
-            
-            ValueAxis {
-                id: yAxis
-                titleText: "Value"
-                titleColor: darkMode ? "#ffffff" : "#000000"
-                labelsColor: darkMode ? "#cccccc" : "#666666"
-                gridLineColor: darkMode ? "#444" : "#ddd"
-                minorGridLineColor: darkMode ? "#333" : "#eee"
-                gridVisible: true
-                minorGridVisible: true
-                labelFormat: "%.3f"
-            }
-            
-            LineSeries {
-                id: dataSeries
-                name: "Data"
-                color: darkMode ? "#4CAF50" : "#2196F3"
-                width: 2
-                axisX: xAxis
-                axisY: yAxis
-                useOpenGL: true
-            }
-            
-            LineSeries {
-                id: averageSeries
-                name: "Average"
-                color: darkMode ? "#FF9800" : "#FF5722"
-                width: 1
-                style: Qt.DashLine
-                axisX: xAxis
-                axisY: yAxis
-                useOpenGL: true
-                visible: root.showAverage
-            }
-            
-            // Zoom and pan functionality
-            MouseArea {
+            Column {
                 anchors.fill: parent
-                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                anchors.margins: 8
+                spacing: 4
                 
-                property real lastX: 0
-                property real lastY: 0
-                property bool isPanning: false
+                // Chart title
+                Label {
+                    id: chartTitle
+                    width: parent.width
+                    text: root.selectedTopic ? "Topic: " + root.selectedTopic : "No topic selected"
+                    font.pixelSize: 14
+                    font.bold: true
+                    color: darkMode ? "#ffffff" : "#000000"
+                    horizontalAlignment: Text.AlignHCenter
+                }
                 
-                onPressed: {
-                    if (mouse.button === Qt.LeftButton) {
-                        lastX = mouse.x
-                        lastY = mouse.y
-                        isPanning = true
+                // Legend
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: 20
+                    visible: root.showAverage
+                    
+                    Row {
+                        spacing: 4
+                        Rectangle {
+                            width: 16
+                            height: 2
+                            color: darkMode ? "#4CAF50" : "#2196F3"
+                            anchors.verticalCenter: parent.verticalCenter
+                        }
+                        Label {
+                            text: "Data"
+                            color: darkMode ? "#ffffff" : "#000000"
+                            font.pixelSize: 11
+                        }
+                    }
+                    
+                    Row {
+                        spacing: 4
+                        Rectangle {
+                            width: 16
+                            height: 2
+                            color: darkMode ? "#FF9800" : "#FF5722"
+                            anchors.verticalCenter: parent.verticalCenter
+                        }
+                        Label {
+                            text: "Average"
+                            color: darkMode ? "#ffffff" : "#000000"
+                            font.pixelSize: 11
+                        }
                     }
                 }
                 
-                onPositionChanged: {
-                    if (isPanning && (mouse.buttons & Qt.LeftButton)) {
-                        let deltaX = mouse.x - lastX
-                        let deltaY = mouse.y - lastY
+                // Chart canvas
+                Canvas {
+                    id: chartCanvas
+                    width: parent.width
+                    height: parent.height - chartTitle.height - (root.showAverage ? 20 : 0) - 8
+                    
+                    property var chartData: []
+                    property var averageData: []
+                    property real minTime: 0
+                    property real maxTime: 60
+                    property real minValue: 0
+                    property real maxValue: 100
+                    property real zoomFactor: 1.0
+                    property real panOffsetX: 0
+                    property real panOffsetY: 0
+                    
+                    onPaint: {
+                        var ctx = getContext("2d")
+                        ctx.clearRect(0, 0, width, height)
                         
-                        // Pan the chart
-                        chartView.scrollLeft(-deltaX)
-                        chartView.scrollUp(deltaY)
+                        // Draw background
+                        ctx.fillStyle = darkMode ? "#1e1e1e" : "#f8f8f8"
+                        ctx.fillRect(0, 0, width, height)
                         
-                        lastX = mouse.x
-                        lastY = mouse.y
+                        // Draw grid
+                        drawGrid(ctx)
+                        
+                        // Draw axes
+                        drawAxes(ctx)
+                        
+                        // Draw data
+                        if (chartData.length > 1) {
+                            drawDataSeries(ctx, chartData, darkMode ? "#4CAF50" : "#2196F3", 2)
+                        }
+                        
+                        if (root.showAverage && averageData.length > 1) {
+                            drawDataSeries(ctx, averageData, darkMode ? "#FF9800" : "#FF5722", 1, true)
+                        }
+                    }
+                    
+                    function drawGrid(ctx) {
+                        ctx.strokeStyle = darkMode ? "#444" : "#ddd"
+                        ctx.lineWidth = 1
+                        ctx.setLineDash([])
+                        
+                        let gridSpacingX = width / 10
+                        let gridSpacingY = height / 8
+                        
+                        // Vertical grid lines
+                        for (let i = 0; i <= 10; i++) {
+                            let x = i * gridSpacingX
+                            ctx.beginPath()
+                            ctx.moveTo(x, 0)
+                            ctx.lineTo(x, height)
+                            ctx.stroke()
+                        }
+                        
+                        // Horizontal grid lines
+                        for (let i = 0; i <= 8; i++) {
+                            let y = i * gridSpacingY
+                            ctx.beginPath()
+                            ctx.moveTo(0, y)
+                            ctx.lineTo(width, y)
+                            ctx.stroke()
+                        }
+                    }
+                    
+                    function drawAxes(ctx) {
+                        ctx.strokeStyle = darkMode ? "#666" : "#333"
+                        ctx.lineWidth = 2
+                        ctx.setLineDash([])
+                        
+                        // X axis (bottom)
+                        ctx.beginPath()
+                        ctx.moveTo(0, height)
+                        ctx.lineTo(width, height)
+                        ctx.stroke()
+                        
+                        // Y axis (left)
+                        ctx.beginPath()
+                        ctx.moveTo(0, 0)
+                        ctx.lineTo(0, height)
+                        ctx.stroke()
+                        
+                        // Draw axis labels
+                        ctx.fillStyle = darkMode ? "#cccccc" : "#666666"
+                        ctx.font = "10px sans-serif"
+                        
+                        // X axis labels (time)
+                        for (let i = 0; i <= 5; i++) {
+                            let x = (i * width) / 5
+                            let time = minTime + (i * (maxTime - minTime)) / 5
+                            ctx.fillText(time.toFixed(1) + "s", x + 2, height - 4)
+                        }
+                        
+                        // Y axis labels (value)
+                        for (let i = 0; i <= 4; i++) {
+                            let y = height - (i * height) / 4
+                            let value = minValue + (i * (maxValue - minValue)) / 4
+                            ctx.fillText(value.toFixed(2), 2, y - 2)
+                        }
+                    }
+                    
+                    function drawDataSeries(ctx, data, color, lineWidth, dashed = false) {
+                        if (data.length < 2) return
+                        
+                        ctx.strokeStyle = color
+                        ctx.lineWidth = lineWidth
+                        if (dashed) {
+                            ctx.setLineDash([5, 5])
+                        } else {
+                            ctx.setLineDash([])
+                        }
+                        
+                        ctx.beginPath()
+                        
+                        for (let i = 0; i < data.length; i++) {
+                            let point = data[i]
+                            let x = mapTimeToX(point.timestamp)
+                            let y = mapValueToY(point.value)
+                            
+                            if (i === 0) {
+                                ctx.moveTo(x, y)
+                            } else {
+                                ctx.lineTo(x, y)
+                            }
+                        }
+                        
+                        ctx.stroke()
+                    }
+                    
+                    function mapTimeToX(timestamp) {
+                        let normalizedTime = (timestamp - minTime) / (maxTime - minTime)
+                        return normalizedTime * width
+                    }
+                    
+                    function mapValueToY(value) {
+                        let normalizedValue = (value - minValue) / (maxValue - minValue)
+                        return height - (normalizedValue * height)
+                    }
+                    
+                    function updateData(newData, newAverageData) {
+                        chartData = newData
+                        averageData = newAverageData
+                        
+                        if (chartData.length > 0) {
+                            // Auto-scale axes
+                            minTime = Math.min(...chartData.map(p => p.timestamp))
+                            maxTime = Math.max(...chartData.map(p => p.timestamp))
+                            minValue = Math.min(...chartData.map(p => p.value))
+                            maxValue = Math.max(...chartData.map(p => p.value))
+                            
+                            // Add some padding
+                            let timeRange = maxTime - minTime
+                            let valueRange = maxValue - minValue
+                            
+                            if (valueRange === 0) {
+                                valueRange = 1
+                                minValue -= 0.5
+                                maxValue += 0.5
+                            } else {
+                                let padding = valueRange * 0.1
+                                minValue -= padding
+                                maxValue += padding
+                            }
+                        }
+                        
+                        requestPaint()
                     }
                 }
                 
-                onReleased: {
-                    isPanning = false
-                }
-                
-                onDoubleClicked: {
-                    // Reset zoom
-                    chartView.zoomReset()
-                    updateChartRange()
-                }
-                
-                onWheel: {
-                    // Zoom with mouse wheel
-                    let zoomFactor = wheel.angleDelta.y > 0 ? 1.1 : 0.9
-                    chartView.zoom(zoomFactor)
+                // Mouse interaction for zoom and pan
+                MouseArea {
+                    anchors.fill: chartCanvas
+                    acceptedButtons: Qt.LeftButton | Qt.RightButton
+                    
+                    property real lastX: 0
+                    property real lastY: 0
+                    property bool isPanning: false
+                    
+                    onPressed: {
+                        if (mouse.button === Qt.LeftButton) {
+                            lastX = mouse.x
+                            lastY = mouse.y
+                            isPanning = true
+                        }
+                    }
+                    
+                    onPositionChanged: {
+                        if (isPanning && (mouse.buttons & Qt.LeftButton)) {
+                            let deltaX = mouse.x - lastX
+                            let deltaY = mouse.y - lastY
+                            
+                            chartCanvas.panOffsetX += deltaX
+                            chartCanvas.panOffsetY += deltaY
+                            chartCanvas.requestPaint()
+                            
+                            lastX = mouse.x
+                            lastY = mouse.y
+                        }
+                    }
+                    
+                    onReleased: {
+                        isPanning = false
+                    }
+                    
+                    onDoubleClicked: {
+                        // Reset zoom and pan
+                        chartCanvas.zoomFactor = 1.0
+                        chartCanvas.panOffsetX = 0
+                        chartCanvas.panOffsetY = 0
+                        chartCanvas.requestPaint()
+                    }
+                    
+                    onWheel: {
+                        // Zoom with mouse wheel
+                        let zoomDelta = wheel.angleDelta.y > 0 ? 1.1 : 0.9
+                        chartCanvas.zoomFactor *= zoomDelta
+                        chartCanvas.requestPaint()
+                    }
                 }
             }
         }
@@ -368,69 +540,40 @@ Rectangle {
         // Get chart data
         let chartData = ChartDataManager.getChartData(root.selectedTopic, root.timeRange)
         
-        // Update main data series
-        dataSeries.clear()
+        // Process data for canvas
+        let processedData = []
+        let processedAverage = []
         
-        let minTime = Number.MAX_VALUE
-        let maxTime = Number.MIN_VALUE
-        let minValue = Number.MAX_VALUE
-        let maxValue = Number.MIN_VALUE
-        
-        for (let i = 0; i < chartData.length; i++) {
-            let point = chartData[i]
-            let relativeTime = (point.timestamp - chartData[0].timestamp) / 1000.0  // Convert to seconds
+        if (chartData.length > 0) {
+            let baseTime = chartData[0].timestamp
             
-            dataSeries.append(relativeTime, point.value)
+            for (let i = 0; i < chartData.length; i++) {
+                let point = chartData[i]
+                processedData.push({
+                    timestamp: (point.timestamp - baseTime) / 1000.0,  // Convert to relative seconds
+                    value: point.value
+                })
+            }
             
-            minTime = Math.min(minTime, relativeTime)
-            maxTime = Math.max(maxTime, relativeTime)
-            minValue = Math.min(minValue, point.value)
-            maxValue = Math.max(maxValue, point.value)
-        }
-        
-        // Update average series if enabled
-        if (root.showAverage && chartData.length > 10) {
-            let avgData = ChartDataManager.getAverageData(root.selectedTopic, 10)
-            averageSeries.clear()
-            
-            for (let i = 0; i < avgData.length; i++) {
-                let point = avgData[i]
-                let relativeTime = (point.timestamp - chartData[0].timestamp) / 1000.0
-                averageSeries.append(relativeTime, point.value)
+            // Get average data if enabled
+            if (root.showAverage && chartData.length > 10) {
+                let avgData = ChartDataManager.getAverageData(root.selectedTopic, 10)
+                for (let i = 0; i < avgData.length; i++) {
+                    let point = avgData[i]
+                    processedAverage.push({
+                        timestamp: (point.timestamp - baseTime) / 1000.0,
+                        value: point.value
+                    })
+                }
             }
         }
         
-        // Update axis ranges
-        if (chartData.length > 0) {
-            updateChartRange()
-        }
+        // Update canvas with new data
+        chartCanvas.updateData(processedData, processedAverage)
     }
     
     function updateChartRange() {
-        if (dataSeries.count === 0) return
-        
-        let minX = 0
-        let maxX = root.timeRange / 1000.0  // Convert to seconds
-        
-        // Calculate Y range with some padding
-        let minY = Number.MAX_VALUE
-        let maxY = Number.MIN_VALUE
-        
-        for (let i = 0; i < dataSeries.count; i++) {
-            let point = dataSeries.at(i)
-            minY = Math.min(minY, point.y)
-            maxY = Math.max(maxY, point.y)
-        }
-        
-        if (minY !== Number.MAX_VALUE && maxY !== Number.MIN_VALUE) {
-            let range = maxY - minY
-            let padding = range * 0.1  // 10% padding
-            
-            xAxis.min = minX
-            xAxis.max = maxX
-            yAxis.min = minY - padding
-            yAxis.max = maxY + padding
-        }
+        // Range is now handled automatically in the canvas updateData function
     }
     
     function updateStatistics() {
