@@ -26,6 +26,7 @@ ApplicationWindow {
     property bool showProperties: true
     property bool showProjectExplorer: true
     property bool showLidarScan: false
+    property bool showChartPanel: false
     
     Component.onCompleted: {
         console.log("Main QML window loaded successfully!");
@@ -95,6 +96,12 @@ ApplicationWindow {
                 checkable: true
                 checked: showLidarScan
                 onTriggered: showLidarScan = !showLidarScan
+            }
+            MenuItem { 
+                text: "&Chart Panel"
+                checkable: true
+                checked: showChartPanel
+                onTriggered: showChartPanel = !showChartPanel
             }
         }
         
@@ -166,12 +173,12 @@ ApplicationWindow {
             }
         }
         
-        // Right panel - Properties and Lidar Scan
+        // Right panel - Properties, Lidar Scan, and Chart Panel
         Item {
             SplitView.preferredWidth: 300
-            SplitView.minimumWidth: (showProperties || showLidarScan) ? 250 : 0
+            SplitView.minimumWidth: (showProperties || showLidarScan || showChartPanel) ? 250 : 0
             SplitView.maximumWidth: 500
-            visible: showProperties || showLidarScan
+            visible: showProperties || showLidarScan || showChartPanel
             
             SplitView {
                 anchors.fill: parent
@@ -180,20 +187,29 @@ ApplicationWindow {
                 PropertiesPanel {
                     id: propertiesPanel
                     SplitView.fillWidth: true
-                    SplitView.fillHeight: showLidarScan ? false : true
-                    SplitView.preferredHeight: showLidarScan ? 300 : -1
+                    SplitView.fillHeight: (showLidarScan || showChartPanel) ? false : true
+                    SplitView.preferredHeight: (showLidarScan || showChartPanel) ? 250 : -1
                     visible: showProperties
                 }
                 
                 LidarScanPanel {
                     id: lidarScanPanel
                     SplitView.fillWidth: true
-                    SplitView.fillHeight: true
+                    SplitView.fillHeight: showChartPanel ? false : true
+                    SplitView.preferredHeight: showChartPanel ? 250 : -1
                     visible: showLidarScan
                     
                     onTopicChanged: function(topic) {
                         ROS2Interface.subscribeLaserScan(topic)
                     }
+                }
+                
+                ChartPanel {
+                    id: chartPanel
+                    SplitView.fillWidth: true
+                    SplitView.fillHeight: true
+                    visible: showChartPanel
+                    darkMode: mainWindow.darkMode
                 }
             }
         }

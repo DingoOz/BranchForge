@@ -3,6 +3,7 @@
 #include "ros2/ROS2Interface.h"
 #include "project/ProjectManager.h"
 #include "project/BTSerializer.h"
+#include "charting/ChartDataManager.h"
 
 #ifdef QT6_QML_AVAILABLE
 #include <QQmlApplicationEngine>
@@ -169,6 +170,8 @@ void Application::setupQmlTypes() {
             return &instance;
         });
     qmlRegisterType<Project::CodeGenOptionsWrapper>("BranchForge.Project", 1, 0, "CodeGenOptions");
+    qmlRegisterSingletonType<Charting::ChartDataManager>("BranchForge.Charting", 1, 0, "ChartDataManager",
+        &Charting::ChartDataManager::create);
 #else
     qCInfo(appCore) << "QML not available - skipping QML type registration";
 #endif

@@ -13,7 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Find Qt6 packages - start with essential components
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui)
 # Try to find optional components (may not be available on all systems)
-find_package(Qt6 COMPONENTS Qml Quick Xml QUIET)
+find_package(Qt6 COMPONENTS Qml Quick Xml Charts QUIET)
 
 qt6_standard_project_setup()
 
@@ -42,6 +42,7 @@ set(SOURCES
     src/recording/DataRecorder.cpp
     src/nodes/AdvancedNodeSystem.cpp
     src/visualization/SensorDataPipeline.cpp
+    src/charting/ChartDataManager.cpp
     ${QML_RESOURCES}
 )
 
@@ -58,6 +59,7 @@ set(HEADERS
     include/recording/DataRecorder.h
     include/nodes/AdvancedNodeSystem.h
     include/visualization/SensorDataPipeline.h
+    include/charting/ChartDataManager.h
 )
 
 # Process Qt6 MOC for headers
@@ -91,6 +93,11 @@ endif()
 if(TARGET Qt6::Xml)
     target_link_libraries(branchforge_enhanced PRIVATE Qt6::Xml)
     target_compile_definitions(branchforge_enhanced PRIVATE QT6_XML_AVAILABLE)
+endif()
+
+if(TARGET Qt6::Charts)
+    target_link_libraries(branchforge_enhanced PRIVATE Qt6::Charts)
+    target_compile_definitions(branchforge_enhanced PRIVATE QT6_CHARTS_AVAILABLE)
 endif()
 
 target_compile_options(branchforge_enhanced PRIVATE
@@ -142,6 +149,7 @@ if(BUILD_TESTING)
         src/recording/DataRecorder.cpp
         src/nodes/AdvancedNodeSystem.cpp
         src/visualization/SensorDataPipeline.cpp
+        src/charting/ChartDataManager.cpp
     )
     
     target_include_directories(branchforge_test_lib
@@ -172,6 +180,11 @@ if(BUILD_TESTING)
     if(TARGET Qt6::Xml)
         target_link_libraries(branchforge_test_lib PRIVATE Qt6::Xml)
         target_compile_definitions(branchforge_test_lib PRIVATE QT6_XML_AVAILABLE)
+    endif()
+
+    if(TARGET Qt6::Charts)
+        target_link_libraries(branchforge_test_lib PRIVATE Qt6::Charts)
+        target_compile_definitions(branchforge_test_lib PRIVATE QT6_CHARTS_AVAILABLE)
     endif()
     
     # Add test subdirectory
