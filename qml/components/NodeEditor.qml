@@ -535,7 +535,7 @@ Rectangle {
                 
                 Text {
                     anchors.centerIn: parent
-                    text: "${nodeData.name}"
+                    text: parent.nodeName
                     color: "white"
                     font.bold: true
                     wrapMode: Text.WordWrap
@@ -969,6 +969,18 @@ Rectangle {
         
         console.log("Extracted editor state:", JSON.stringify(state, null, 2));
         return state;
+    }
+    
+    // Update node name in the visual representation
+    function updateNodeName(nodeId, newName) {
+        for (var i = 0; i < dynamicNodes.length; i++) {
+            var node = dynamicNodes[i];
+            if (node && node.nodeId === nodeId) {
+                node.nodeName = newName;
+                console.log("Updated node", nodeId, "name to:", newName);
+                break;
+            }
+        }
     }
     
     // Code generation dialog
