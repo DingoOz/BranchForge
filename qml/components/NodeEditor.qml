@@ -287,6 +287,7 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
+            hoverEnabled: true
             
             onClicked: function(mouse) {
                 // Handle panning mode
@@ -343,6 +344,18 @@ Rectangle {
                     // Update temporary connection line
                     connectionCanvas.tempConnectionEnd = Qt.point(mouse.x, mouse.y);
                     connectionCanvas.requestPaint();
+                } else if (!pressed) {
+                    // Handle connection hover feedback when not panning or connecting
+                    var newHoveredIndex = getConnectionAtPoint(mouse.x, mouse.y);
+                    if (newHoveredIndex !== connectionCanvas.hoveredConnectionIndex) {
+                        connectionCanvas.hoveredConnectionIndex = newHoveredIndex;
+                        if (connectionCanvas.hoveredConnectionIndex >= 0) {
+                            cursorShape = Qt.PointingHandCursor;
+                        } else {
+                            cursorShape = Qt.ArrowCursor;
+                        }
+                        connectionCanvas.requestPaint();
+                    }
                 }
             }
             
@@ -380,6 +393,25 @@ Rectangle {
                     
                     console.log("Zoom level:", root.zoomLevel.toFixed(2));
                 }
+            }
+            
+            onDoubleClicked: function(mouse) {
+                // Check for edge deletion first
+                var clickedConnectionIndex = getConnectionAtPoint(mouse.x, mouse.y);
+                if (clickedConnectionIndex >= 0) {
+                    deleteConnection(clickedConnectionIndex);
+                    return;
+                }
+                
+                // Handle other double-click actions here if needed
+                console.log("Double-clicked on canvas at:", mouse.x, mouse.y);
+            }
+            
+            
+            onExited: function() {
+                connectionCanvas.hoveredConnectionIndex = -1;
+                cursorShape = Qt.ArrowCursor;
+                connectionCanvas.requestPaint();
             }
         }
         
@@ -431,44 +463,6 @@ Rectangle {
                 }
             }
             
-            // MouseArea for detecting double-clicks on connection lines
-            MouseArea {
-                anchors.fill: parent
-                acceptedButtons: Qt.LeftButton
-                hoverEnabled: true
-                
-                onDoubleClicked: {
-                    var clickedConnectionIndex = getConnectionAtPoint(mouse.x, mouse.y);
-                    if (clickedConnectionIndex >= 0) {
-                        deleteConnection(clickedConnectionIndex);
-                    }
-                }
-                
-                onPositionChanged: {
-                    if (!pressed) {
-                        var newHoveredIndex = getConnectionAtPoint(mouse.x, mouse.y);
-                        if (newHoveredIndex !== connectionCanvas.hoveredConnectionIndex) {
-                            connectionCanvas.hoveredConnectionIndex = newHoveredIndex;
-                            if (connectionCanvas.hoveredConnectionIndex >= 0) {
-                                connectionCanvas.cursorShape = Qt.PointingHandCursor;
-                            } else {
-                                connectionCanvas.cursorShape = Qt.ArrowCursor;
-                            }
-                            connectionCanvas.requestPaint();
-                        }
-                    }
-                }
-                
-                onExited: {
-                    connectionCanvas.hoveredConnectionIndex = -1;
-                    connectionCanvas.cursorShape = Qt.ArrowCursor;
-                    connectionCanvas.requestPaint();
-                }
-                
-                // Allow other mouse events to pass through for canvas interactions
-                onPressed: mouse.accepted = false
-                onReleased: mouse.accepted = false
-            }
         }
         } // End of zoomContainer
     }
