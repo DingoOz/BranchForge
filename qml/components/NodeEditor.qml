@@ -390,6 +390,7 @@ Rectangle {
             anchors.fill: parent
             
             property var tempConnectionEnd: null
+            property int hoveredConnectionIndex: -1
             
             onPaint: {
                 var ctx = getContext("2d");
@@ -402,6 +403,15 @@ Rectangle {
                 for (var i = 0; i < connections.length; i++) {
                     var conn = connections[i];
                     if (conn.from && conn.to) {
+                        // Highlight hovered connection  
+                        if (hoveredConnectionIndex === i) {
+                            ctx.strokeStyle = "#FF5722"; // Red color for hover
+                            ctx.lineWidth = 4;
+                        } else {
+                            ctx.strokeStyle = "#FFC107"; // Normal yellow color
+                            ctx.lineWidth = 3;
+                        }
+                        
                         ctx.beginPath();
                         ctx.moveTo(conn.from.x, conn.from.y);
                         ctx.lineTo(conn.to.x, conn.to.y);
@@ -419,7 +429,45 @@ Rectangle {
                     ctx.stroke();
                     ctx.setLineDash([]); // Reset to solid line
                 }
+            }
+            
+            // MouseArea for detecting double-clicks on connection lines
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.LeftButton
+                hoverEnabled: true
                 
+                onDoubleClicked: {
+                    var clickedConnectionIndex = getConnectionAtPoint(mouse.x, mouse.y);
+                    if (clickedConnectionIndex >= 0) {
+                        deleteConnection(clickedConnectionIndex);
+                    }
+                }
+                
+                onPositionChanged: {
+                    if (!pressed) {
+                        var newHoveredIndex = getConnectionAtPoint(mouse.x, mouse.y);
+                        if (newHoveredIndex !== connectionCanvas.hoveredConnectionIndex) {
+                            connectionCanvas.hoveredConnectionIndex = newHoveredIndex;
+                            if (connectionCanvas.hoveredConnectionIndex >= 0) {
+                                connectionCanvas.cursorShape = Qt.PointingHandCursor;
+                            } else {
+                                connectionCanvas.cursorShape = Qt.ArrowCursor;
+                            }
+                            connectionCanvas.requestPaint();
+                        }
+                    }
+                }
+                
+                onExited: {
+                    connectionCanvas.hoveredConnectionIndex = -1;
+                    connectionCanvas.cursorShape = Qt.ArrowCursor;
+                    connectionCanvas.requestPaint();
+                }
+                
+                // Allow other mouse events to pass through for canvas interactions
+                onPressed: mouse.accepted = false
+                onReleased: mouse.accepted = false
             }
         }
         } // End of zoomContainer
@@ -739,6 +787,58 @@ Rectangle {
         
         // Repaint connections
         connectionCanvas.requestPaint();
+    }
+    
+    // Delete a connection by index
+    function deleteConnection(connectionIndex) {
+        if (connectionIndex >= 0 && connectionIndex < connections.length) {
+            var deletedConnection = connections[connectionIndex];
+            connections.splice(connectionIndex, 1);
+            connectionCanvas.requestPaint();
+            console.log("Connection deleted between nodes", deletedConnection.fromId, "and", deletedConnection.toId);
+            console.log("Total connections remaining:", connections.length);
+        }
+    }
+    
+    // Find which connection (if any) is near the given point
+    function getConnectionAtPoint(x, y) {
+        var tolerance = 8; // pixels tolerance for clicking near a line
+        
+        for (var i = 0; i < connections.length; i++) {
+            var conn = connections[i];
+            if (conn.from && conn.to) {
+                var distance = getDistanceToLine(x, y, conn.from.x, conn.from.y, conn.to.x, conn.to.y);
+                if (distance <= tolerance) {
+                    return i;
+                }
+            }
+        }
+        return -1; // No connection found at this point
+    }
+    
+    // Calculate the perpendicular distance from a point to a line segment
+    function getDistanceToLine(px, py, x1, y1, x2, y2) {
+        // Vector from line start to end
+        var dx = x2 - x1;
+        var dy = y2 - y1;
+        
+        // If the line is actually a point, return distance to that point
+        if (dx === 0 && dy === 0) {
+            return Math.sqrt((px - x1) * (px - x1) + (py - y1) * (py - y1));
+        }
+        
+        // Calculate the t parameter for the closest point on the line
+        var t = ((px - x1) * dx + (py - y1) * dy) / (dx * dx + dy * dy);
+        
+        // Clamp t to the line segment
+        t = Math.max(0, Math.min(1, t));
+        
+        // Find the closest point on the line segment
+        var closestX = x1 + t * dx;
+        var closestY = y1 + t * dy;
+        
+        // Return the distance from the point to the closest point on the line
+        return Math.sqrt((px - closestX) * (px - closestX) + (py - closestY) * (py - closestY));
     }
     
     // Zoom control functions
