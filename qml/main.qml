@@ -127,11 +127,16 @@ ApplicationWindow {
         anchors.margins: 4
         orientation: Qt.Horizontal
         
+        // Responsive panel sizing:
+        // - Left panels: up to 35% of window width, max 600px
+        // - Right panels: up to 45% for visualization panels (chart/lidar), 35% for properties
+        // - Center editor: minimum 25% of window width to ensure usability
+        
         // Left column - Node Library and Project Explorer
         Item {
             SplitView.preferredWidth: 250
             SplitView.minimumWidth: showNodeLibrary || showProjectExplorer ? 200 : 0
-            SplitView.maximumWidth: 400
+            SplitView.maximumWidth: Math.min(mainWindow.width * 0.35, 600)
             visible: showNodeLibrary || showProjectExplorer
             
             ColumnLayout {
@@ -161,7 +166,7 @@ ApplicationWindow {
         NodeEditor {
             id: nodeEditor
             SplitView.fillWidth: true
-            SplitView.minimumWidth: 400
+            SplitView.minimumWidth: Math.max(400, mainWindow.width * 0.25)
             
             onNodeSelected: function(nodeId, nodeName, nodeType) {
                 propertiesPanel.selectedNode = {
@@ -176,8 +181,11 @@ ApplicationWindow {
         // Right panel - Properties, Lidar Scan, and Chart Panel
         Item {
             SplitView.preferredWidth: 300
-            SplitView.minimumWidth: (showProperties || showLidarScan || showChartPanel) ? 250 : 0
-            SplitView.maximumWidth: 500
+            SplitView.minimumWidth: (showProperties || showLidarScan || showChartPanel) ? 
+                                   (showChartPanel || showLidarScan ? 350 : 250) : 0
+            SplitView.maximumWidth: (showChartPanel || showLidarScan) ? 
+                                   Math.min(mainWindow.width * 0.45, 1000) :
+                                   Math.min(mainWindow.width * 0.35, 600)
             visible: showProperties || showLidarScan || showChartPanel
             
             SplitView {
