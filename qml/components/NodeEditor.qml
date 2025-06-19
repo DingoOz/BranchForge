@@ -217,6 +217,33 @@ Rectangle {
                     showCodeGenDialog();
                 }
             }
+            
+            // Screenshot Button
+            Button {
+                text: "Screenshot"
+                width: 100
+                height: 30
+                font.pixelSize: 11
+                
+                background: Rectangle {
+                    color: parent.pressed ? "#1976D2" : (parent.hovered ? "#2196F3" : "#1E88E5")
+                    border.color: "#1976D2"
+                    border.width: 1
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    font: parent.font
+                    color: "#ffffff"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: {
+                    takeScreenshot();
+                }
+            }
         }
     }
     
@@ -926,6 +953,75 @@ Rectangle {
         console.log("Opening code generation dialog");
         codeGenDialog.editorState = getEditorState();
         codeGenDialog.open();
+    }
+    
+    // Screenshot functions
+    function takeScreenshot() {
+        console.log("Taking screenshot of node editor");
+        
+        // Generate a timestamp for the filename
+        var timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').split('.')[0];
+        var filename = "branchforge_nodes_" + timestamp + ".png";
+        
+        // Capture the canvas area (excluding toolbar)
+        var success = canvas.grabToImage(function(result) {
+            var filepath = "./screenshots/" + filename;
+            var saved = result.saveToFile(filepath);
+            if (saved) {
+                console.log("Screenshot saved to:", filepath);
+                showScreenshotNotification("Screenshot saved: " + filename);
+            } else {
+                console.error("Failed to save screenshot");
+                showScreenshotNotification("Failed to save screenshot");
+            }
+        });
+        
+        if (!success) {
+            console.error("Failed to capture screenshot");
+            showScreenshotNotification("Failed to capture screenshot");
+        }
+    }
+    
+    function showScreenshotNotification(message) {
+        // Create a temporary notification
+        var notificationComponent = Qt.createQmlObject(`
+            import QtQuick 2.15
+            Rectangle {
+                width: 300
+                height: 40
+                color: "#4CAF50"
+                radius: 6
+                border.color: "#45a047"
+                border.width: 1
+                z: 2000
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.topMargin: 50
+                anchors.rightMargin: 20
+                opacity: 0
+                
+                Text {
+                    anchors.centerIn: parent
+                    text: "${message}"
+                    color: "#ffffff"
+                    font.bold: true
+                }
+                
+                SequentialAnimation {
+                    running: true
+                    ParallelAnimation {
+                        NumberAnimation { target: parent; property: "opacity"; to: 1.0; duration: 200 }
+                        NumberAnimation { target: parent; property: "anchors.topMargin"; to: 70; duration: 200; easing.type: Easing.OutBack }
+                    }
+                    PauseAnimation { duration: 2000 }
+                    ParallelAnimation {
+                        NumberAnimation { target: parent; property: "opacity"; to: 0.0; duration: 200 }
+                        NumberAnimation { target: parent; property: "anchors.topMargin"; to: 50; duration: 200 }
+                    }
+                    ScriptAction { script: parent.destroy() }
+                }
+            }
+        `, root, "screenshotNotification");
     }
     
     function getEditorState() {

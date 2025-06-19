@@ -1,0 +1,131 @@
+General Software Standards
+
+  Naming Conventions
+
+  - Spelling: Use American spelling (color, serialize, etc.)
+  - Abbreviations: Minimal use; prefer descriptive names (currentSpeeds not curSpds)
+  - Booleans: Use verb prefixes (isValid, shouldExit, hasSettings)
+  - Constants: SCREAMING_SNAKE_CASE and mark const
+  - Variables: Descriptive names that explain purpose
+
+  File Standards
+
+  - Naming: snake_case for all files
+  - Extensions: C++ uses .cpp/.hpp, Python uses .py
+  - Organization: Source in src/, headers in include/, private headers in priv_include/
+  - Single Responsibility: Each file/module should have one clear purpose
+
+  Class Design
+
+  - Member Variables: All private with public accessors/mutators
+  - Visibility: Explicitly specify all visibility levels
+  - Private Members: Prefix with underscore (_maxSpeed, _loadDefaults())
+  - Member Ordering: Public (types, constructors, handlers, accessors, functions) → Private (types, methods, variables)
+
+  Code Quality
+
+  - Warnings: Not acceptable - must fix all compiler/linter warnings
+  - Function Length: Consider refactoring after 40 lines, definitely after 60 lines
+  - Constants: Make everything const where possible
+  - Magic Numbers: Use named constants instead of bare numbers
+  - Documentation: Use Doxygen comments - Priority: File/class → Public API → Internal API → Variables
+
+  C++ Specific Standards
+
+  Headers and Includes
+
+  - Include Guards: Use #pragma once as first line
+  - C++ Headers: Use #include <cstdlib> not #include <stdlib.h>
+  - Namespace: Never use using directives in headers
+  - Include Types: <> for system/external, "" for project files
+
+  Naming Conventions
+
+  - Classes: PascalCase (DriveController, Settings)
+  - Variables: camelCase (targetSpeeds, maxValue)
+  - Namespaces: snake_case (hi_can, drive_control)
+  - Structs/Typedefs: snake_case with _t suffix (speed_settings_t)
+
+  Memory Management
+
+  - Smart Pointers: Use std::unique_ptr, std::shared_ptr instead of raw pointers
+  - RAII: Resource Acquisition Is Initialization - use constructors/destructors
+  - References: Prefer references over pointers when possible
+  - STL: Use Standard Template Library (std::vector, std::string, etc.)
+  - Avoid: Never use malloc/free, minimize new/delete
+
+  Code Practices
+
+  - Pass-by-Reference: Use const ClassName& param instead of value passing
+  - Initializer Lists: Use in constructors instead of assignment in body
+  - Exceptions: For exceptional behavior only, derive from std::exception
+  - Casts: Use C++ casts (static_cast) not C-style (type)var
+  - Integer Types: Use <cstdint> types (int32_t, uint8_t) over int, char
+
+  Avoid
+
+  - #define: Use constexpr constants or enum class instead
+  - Global Variables: Use functions for inter-module communication
+  - using namespace: Especially in headers
+
+  Python Standards
+
+  Follow PEP 8
+
+  - Classes: PascalCase (XboxController, DriveSettings)
+  - Variables/Functions: snake_case (max_speed, process_input())
+  - Constants: UPPER_SNAKE_CASE (MAX_RETRY_COUNT)
+  - Indentation: 4 spaces (never tabs)
+
+  Additional Requirements
+
+  - Type Hints: Use throughout codebase
+  - Docstrings: Comprehensive with Args/Returns sections
+  - Formatter: Use Black formatter with default settings
+
+  ROS Specific Standards
+
+  Package Organization
+
+  - Naming: Related nodes with similar responsibilities
+  - Structure: No unnecessary prefixes (avoid rover_package_name)
+
+  Node Naming
+
+  - Format: Nouns describing what they are
+  - Avoid: _node suffix (generic_controller not generic_controller_node)
+
+  Topics and Communication
+
+  - Naming: Hierarchical starting with package name (/input_devices/controller)
+  - Messages: Use existing ROS message types when available
+
+  Build and Formatting
+
+  C++ Formatting (clang-format)
+
+  BasedOnStyle: Google
+  UseTab: Never
+  IndentWidth: 4
+  BreakBeforeBraces: Allman
+  ColumnLimit: 0
+
+  Project Structure
+
+  project/
+  ├── src/           # Source files
+  ├── include/       # Public headers
+  ├── priv_include/  # Private headers
+  └── CMakeLists.txt
+
+  Key Principles
+
+  1. Warnings are not acceptable - fix all compiler/linter warnings
+  2. Single Responsibility - each class/function/file has one purpose
+  3. Const Correctness - make everything const where possible
+  4. Documentation First - document file/class/public API at minimum
+  5. Modern Language Features - use C++20, Python 3.8+ features appropriately
+  6. Prefer Composition over Inheritance
+  7. RAII and Smart Pointers for resource management
+
+  This summary covers the essential standards for maintaining consistent, high-quality code across projects.
