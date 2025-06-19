@@ -284,6 +284,82 @@
 - allow for any panel ot be docked in any configuration
 - ender urdf models in the map view
 - render 3d point clouds and maps
+
+## URDF Model Rendering Implementation Strategy
+
+### Current Visualization System State
+The visualization system has a solid architecture foundation but lacks Qt6 Quick3D integration. The `Visualization3DEngine` interface exists in `include/visualization/SensorDataPipeline.h` but isn't implemented with actual 3D rendering capabilities.
+
+### URDF Rendering Implementation Approach
+
+#### 1. **Add Required Dependencies**
+Update CMakeLists.txt to include Qt6 Quick3D support:
+```cmake
+find_package(Qt6 REQUIRED COMPONENTS Quick3D Quick3DAssetImport)
+```
+
+#### 2. **URDF Parser Integration**
+Extend the existing `SensorDataPipeline` with URDF capabilities:
+- Parse URDF XML for robot geometry and joints using existing ROS2 integration
+- Convert mesh references (.dae, .stl, .obj) to Qt6 Quick3D compatible formats
+- Handle coordinate frame transformations between ROS2 (right-handed Z-up) and Qt6 (left-handed Y-up)
+- Implement joint state updates from ROS2 `/joint_states` topic
+
+#### 3. **3D Scene Architecture**
+Transform the current 2D `LidarScanPanel.qml` into a full 3D viewer:
+```qml
+import QtQuick3D
+View3D {
+    // Robot model rendering with articulated joints
+    Model { 
+        source: "robot_meshes.mesh"
+        materials: [ robotMaterial ]
+    }
+    // Point cloud rendering with GPU instancing
+    Instancing { 
+        instanceCount: pointCloudData.count
+        // Custom point cloud shader for performance
+    }
+    // Map/occupancy grid as textured plane
+    Model { 
+        source: "#Rectangle"
+        materials: [ occupancyGridMaterial ]
+    }
+    // Coordinate frame visualization
+    Node { /* TF tree rendering */ }
+}
+```
+
+#### 4. **Rendering Pipeline Components**
+- **Robot Model**: Load URDF meshes as Qt6 Quick3D Models with proper PBR materials
+- **LiDAR Points**: Custom instanced rendering for performance with millions of points using GPU compute shaders
+- **Map Data**: Occupancy grid as textured plane/heightmap with dynamic updates
+- **Coordinate Frames**: Interactive TF tree visualization with frame selection
+- **Sensor Overlays**: Camera image projection, range sensor visualization
+- **Joint State Animation**: Real-time joint position updates from ROS2 topics
+
+#### 5. **Performance Optimization**
+- **Hardware Acceleration**: Leverage Qt6 Quick3D's modern rendering pipeline with OpenGL/Vulkan backend
+- **LOD System**: Level-of-detail for complex robot meshes based on camera distance
+- **Frustum Culling**: Cull non-visible geometry for large datasets
+- **Asynchronous Loading**: Non-blocking mesh and texture loading to prevent UI freezing
+- **Point Cloud Optimization**: Spatial indexing and adaptive point size for smooth rendering
+- **Memory Management**: Efficient buffer management for streaming sensor data
+
+#### 6. **Integration Points**
+- **Existing Architecture**: Build on the well-designed `SensorDataPipeline` and `Visualization3DEngine` interfaces
+- **ROS2Bridge**: Extend `src/ros2/ROS2Interface.cpp` for URDF parameter server integration
+- **UI Integration**: Enhance `qml/components/LidarScanPanel.qml` with 3D capabilities
+- **Data Synchronization**: Use existing `SensorDataSynchronizer` for multi-modal data alignment
+
+#### 7. **Development Priority**
+1. **Phase 2.1**: Add Qt6 Quick3D dependencies and basic 3D scene setup
+2. **Phase 2.2**: Implement URDF parser and basic robot model loading
+3. **Phase 2.3**: Add point cloud rendering with performance optimization
+4. **Phase 2.4**: Integrate occupancy grid and map rendering
+5. **Phase 2.5**: Add interactive camera controls and coordinate frame visualization
+
+The key advantage is leveraging Qt6 Quick3D's modern rendering pipeline while maintaining the existing well-designed data synchronization architecture from `SensorDataPipeline.h`.
 - plot any actuator position on a chart
 - mcap file format support
 - team sharing
