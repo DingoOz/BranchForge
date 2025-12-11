@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include <QTimer>
+#include <QMutex>
 #ifdef QT6_QML_AVAILABLE
 #include <QQmlEngine>
 #endif
@@ -74,7 +75,7 @@ private:
     QStringList m_scanTopics;
     QString m_currentScanTopic;
     bool m_realROS2Available{false};
-    QProcess* m_topicProcess{nullptr};
+    std::unique_ptr<QProcess> m_topicProcess;
     QString m_yamlBuffer;
     
 #ifdef HAVE_ROS2
@@ -85,8 +86,7 @@ private:
     void* m_scanSubscription;
 #endif
     std::unique_ptr<QTimer> m_discoveryTimer;
-    
-    static ROS2Interface* s_instance;
+    mutable QMutex m_yamlBufferMutex;  // Protects m_yamlBuffer
 };
 
 } // namespace BranchForge::ROS2

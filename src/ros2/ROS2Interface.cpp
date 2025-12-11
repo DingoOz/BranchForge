@@ -2,6 +2,7 @@
 #include <QLoggingCategory>
 #include <QTimer>
 #include <QProcess>
+#include <QMutexLocker>
 #include <cmath>
 #include <cstdlib>
 
@@ -17,13 +18,9 @@ Q_LOGGING_CATEGORY(ros2Interface, "branchforge.ros2.interface")
 
 namespace BranchForge::ROS2 {
 
-ROS2Interface* ROS2Interface::s_instance = nullptr;
-
 ROS2Interface& ROS2Interface::instance() {
-    if (!s_instance) {
-        s_instance = new ROS2Interface();
-    }
-    return *s_instance;
+    static ROS2Interface s_instance;
+    return s_instance;
 }
 
 ROS2Interface::ROS2Interface(QObject* parent)
@@ -247,8 +244,8 @@ void ROS2Interface::unsubscribeLaserScan() {
     // Stop any real ROS2 topic process
     if (m_topicProcess) {
         m_topicProcess->kill();
-        m_topicProcess->deleteLater();
-        m_topicProcess = nullptr;
+        m_topicProcess->waitForFinished(1000);
+        m_topicProcess.reset();
         qCInfo(ros2Interface) << "Stopped real ROS2 topic subscription:" << m_currentScanTopic;
     }
     
@@ -294,16 +291,18 @@ void ROS2Interface::scanCallback(const sensor_msgs::msg::LaserScan::SharedPtr ms
 
 void ROS2Interface::detectRealROS2Topics() {
     qCInfo(ros2Interface) << "Detecting real ROS2 topics...";
-    
+
     QProcess process;
     process.setProgram("ros2");
     process.setArguments({"topic", "list", "-t"});
-    
+
     qCInfo(ros2Interface) << "Running command: ros2 topic list -t";
     process.start();
-    
+
     if (!process.waitForFinished(5000)) {
         qCWarning(ros2Interface) << "ROS2 topic detection timed out";
+        process.kill();  // Ensure process is terminated on timeout
+        process.waitForFinished(1000);  // Wait for cleanup
         m_realROS2Available = false;
         m_isConnected = false;
         emit connectionChanged();
@@ -368,32 +367,38 @@ void ROS2Interface::detectRealROS2Topics() {
 
 void ROS2Interface::startRealTopicSubscription(const QString& topic) {
     qCInfo(ros2Interface) << "Starting real ROS2 subscription to:" << topic;
-    
+
     // Stop any existing topic process
     if (m_topicProcess) {
         m_topicProcess->kill();
-        m_topicProcess->deleteLater();
-        m_topicProcess = nullptr;
+        m_topicProcess->waitForFinished(1000);
+        m_topicProcess.reset();
     }
-    
+
     // Start ros2 topic echo to get real data
-    m_topicProcess = new QProcess(this);
+    m_topicProcess = std::make_unique<QProcess>(this);
     m_topicProcess->setProgram("ros2");
     m_topicProcess->setArguments({"topic", "echo", topic, "--qos-profile", "sensor_data"});
-    
-    connect(m_topicProcess, &QProcess::readyReadStandardOutput, [this, topic]() {
-        QByteArray data = m_topicProcess->readAllStandardOutput();
-        parseRealScanData(QString::fromUtf8(data), topic);
+
+    // Store raw pointer for lambda capture (safe because we control lifetime)
+    QProcess* processPtr = m_topicProcess.get();
+
+    connect(processPtr, &QProcess::readyReadStandardOutput, this, [this, processPtr, topic]() {
+        // Verify process is still valid before reading
+        if (m_topicProcess.get() == processPtr) {
+            QByteArray data = processPtr->readAllStandardOutput();
+            parseRealScanData(QString::fromUtf8(data), topic);
+        }
     });
-    
-    connect(m_topicProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-        [this, topic](int exitCode, QProcess::ExitStatus exitStatus) {
-            qCWarning(ros2Interface) << "ROS2 topic echo process finished for" << topic 
+
+    connect(processPtr, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+        this, [this, topic](int exitCode, QProcess::ExitStatus /*exitStatus*/) {
+            qCWarning(ros2Interface) << "ROS2 topic echo process finished for" << topic
                                      << "with exit code" << exitCode;
         });
-    
+
     m_topicProcess->start();
-    
+
     if (m_topicProcess->waitForStarted(3000)) {
         qCInfo(ros2Interface) << "Real ROS2 subscription active for" << topic;
     } else {
@@ -405,28 +410,30 @@ void ROS2Interface::startRealTopicSubscription(const QString& topic) {
 // Real-style mock data generation removed - only real ROS2 data supported
 
 void ROS2Interface::parseRealScanData(const QString& yamlData, const QString& topic) {
+    QMutexLocker locker(&m_yamlBufferMutex);
+
     m_yamlBuffer += yamlData;
-    
+
     // Look for complete YAML messages (separated by "---")
     QStringList messages = m_yamlBuffer.split("---", Qt::SkipEmptyParts);
-    
+
     if (messages.size() < 2) {
         // Not a complete message yet, keep buffering
         return;
     }
-    
+
     // Process all complete messages except the last (which might be partial)
     for (int i = 0; i < messages.size() - 1; ++i) {
         QString message = messages[i].trimmed();
         if (message.isEmpty()) continue;
-        
+
         // Parse the YAML LaserScan message
         QVariantList scanData = parseYamlLaserScan(message);
         if (!scanData.isEmpty()) {
             emit scanDataReceived(topic, scanData);
         }
     }
-    
+
     // Keep the last (potentially incomplete) message in buffer
     m_yamlBuffer = messages.last();
 }
@@ -444,19 +451,33 @@ QVariantList ROS2Interface::parseYamlLaserScan(const QString& yamlMessage) {
     
     bool inRanges = false, inIntensities = false;
     
+    // Helper lambda for safe value extraction
+    auto extractValue = [](const QString& line) -> QString {
+        QStringList parts = line.split(':');
+        if (parts.size() >= 2) {
+            return parts.mid(1).join(':').trimmed();  // Handle values that may contain ':'
+        }
+        return QString();
+    };
+
     for (const QString& line : lines) {
         QString trimmed = line.trimmed();
-        
+
         if (trimmed.startsWith("angle_min:")) {
-            angle_min = trimmed.split(':')[1].trimmed().toDouble();
+            QString value = extractValue(trimmed);
+            if (!value.isEmpty()) angle_min = value.toDouble();
         } else if (trimmed.startsWith("angle_max:")) {
-            angle_max = trimmed.split(':')[1].trimmed().toDouble();
+            QString value = extractValue(trimmed);
+            if (!value.isEmpty()) angle_max = value.toDouble();
         } else if (trimmed.startsWith("angle_increment:")) {
-            angle_increment = trimmed.split(':')[1].trimmed().toDouble();
+            QString value = extractValue(trimmed);
+            if (!value.isEmpty()) angle_increment = value.toDouble();
         } else if (trimmed.startsWith("range_min:")) {
-            range_min = trimmed.split(':')[1].trimmed().toDouble();
+            QString value = extractValue(trimmed);
+            if (!value.isEmpty()) range_min = value.toDouble();
         } else if (trimmed.startsWith("range_max:")) {
-            range_max = trimmed.split(':')[1].trimmed().toDouble();
+            QString value = extractValue(trimmed);
+            if (!value.isEmpty()) range_max = value.toDouble();
         } else if (trimmed.startsWith("ranges:")) {
             inRanges = true;
             inIntensities = false;

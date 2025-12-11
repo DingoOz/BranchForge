@@ -50,8 +50,6 @@ private:
     QString m_projectName;
     QJsonObject m_behaviorTree;
     QJsonObject m_projectSettings;
-    
-    static ProjectManager* s_instance;
 };
 
 } // namespace BranchForge::Project

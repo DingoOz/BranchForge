@@ -8,6 +8,7 @@
 #include <QThread>
 #include <QCoreApplication>
 #include <algorithm>
+#include <limits>
 
 Q_LOGGING_CATEGORY(btMonitor, "branchforge.monitoring.btexecution")
 
@@ -201,18 +202,22 @@ double BTExecutionMonitor::getAverageTickTime() const {
 }
 
 QMap<QString, int> BTExecutionMonitor::getNodeExecutionCounts() const {
+    QMutexLocker locker(&m_eventsMutex);
     return m_nodeExecutionCounts;
 }
 
 QMap<QString, qint64> BTExecutionMonitor::getNodeExecutionTimes() const {
+    QMutexLocker locker(&m_eventsMutex);
     return m_nodeExecutionTimes;
 }
 
 QMap<QString, BTNodeState> BTExecutionMonitor::getCurrentNodeStates() const {
+    QMutexLocker locker(&m_eventsMutex);
     return m_currentNodeStates;
 }
 
 QVariantMap BTExecutionMonitor::getCurrentBlackboard() const {
+    QMutexLocker locker(&m_eventsMutex);
     return m_currentBlackboard;
 }
 
@@ -408,9 +413,23 @@ void BTExecutionMonitor::initializeSession() {
 }
 
 void BTExecutionMonitor::updateNodeStatistics(const BTExecutionEvent& event) {
-    m_nodeExecutionCounts[event.nodeId]++;
-    m_nodeExecutionTimes[event.nodeId] += event.executionTimeMs;
-    m_totalExecutionTime += event.executionTimeMs;
+    // Note: This is called from processEventQueue which already holds m_eventsMutex
+    // Use saturating arithmetic to prevent overflow
+    auto& count = m_nodeExecutionCounts[event.nodeId];
+    if (count < std::numeric_limits<int>::max()) {
+        count++;
+    }
+
+    auto& nodeTime = m_nodeExecutionTimes[event.nodeId];
+    qint64 maxTime = std::numeric_limits<qint64>::max() - event.executionTimeMs;
+    if (nodeTime < maxTime) {
+        nodeTime += event.executionTimeMs;
+    }
+
+    maxTime = std::numeric_limits<qint64>::max() - event.executionTimeMs;
+    if (m_totalExecutionTime < maxTime) {
+        m_totalExecutionTime += event.executionTimeMs;
+    }
 }
 
 void BTExecutionMonitor::emitStatisticsUpdate() {
@@ -435,8 +454,14 @@ BTPerformanceAnalyzer::~BTPerformanceAnalyzer() = default;
 
 BTPerformanceAnalyzer::PerformanceMetrics BTPerformanceAnalyzer::analyzeCurrentSession() const {
     QMutexLocker locker(&m_analysisMutex);
-    
+
     PerformanceMetrics metrics;
+
+    // Check if monitor is still valid (QPointer becomes null if object deleted)
+    if (!m_monitor) {
+        return metrics;
+    }
+
     auto events = m_monitor->getRecentEvents(10000); // Analyze last 10k events
     
     if (events.isEmpty()) {
@@ -593,6 +618,11 @@ BTExecutionTimeline::BTExecutionTimeline(BTExecutionMonitor* monitor, QObject* p
 BTExecutionTimeline::~BTExecutionTimeline() = default;
 
 QList<BTExecutionTimeline::TimelineEntry> BTExecutionTimeline::generateTimeline(const QDateTime& start, const QDateTime& end) const {
+    // Check if monitor is still valid
+    if (!m_monitor) {
+        return {};
+    }
+
     auto events = m_monitor->getEventsByTimeRange(start, end);
     QList<TimelineEntry> timeline;
     
