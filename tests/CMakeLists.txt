@@ -3,21 +3,24 @@
 # Helper function to create tests
 function(add_branchforge_test test_name test_file)
     add_executable(${test_name} ${test_file})
-    
+
     target_link_libraries(${test_name}
         branchforge_test_lib
         gtest
         gtest_main
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
     )
-    
+
     target_include_directories(${test_name} PRIVATE
         ${CMAKE_SOURCE_DIR}/include
         ${CMAKE_SOURCE_DIR}/tests
     )
-    
+
     # Add test to CTest
     add_test(NAME ${test_name} COMMAND ${test_name})
-    
+
     # Set test properties
     set_tests_properties(${test_name} PROPERTIES
         TIMEOUT 60
