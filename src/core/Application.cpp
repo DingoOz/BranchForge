@@ -42,7 +42,16 @@ Application::Application(int argc, char* argv[])
     initializeROS2();
 }
 
-Application::~Application() = default;
+Application::~Application() {
+    // Clean up QML engine first to release all QML objects
+    // This ensures proper destruction order before singletons are destroyed
+#ifdef QT6_QML_AVAILABLE
+    m_engine.reset();
+#endif
+
+    // Note: Static singletons (ROS2Interface, ProjectManager) will be destroyed
+    // after QApplication, but they should handle this gracefully
+}
 
 int Application::run() {
     qCInfo(appCore) << "Starting BranchForge application";

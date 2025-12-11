@@ -10,7 +10,7 @@ Q_LOGGING_CATEGORY(chartDataLog, "branchforge.charting.data")
 
 namespace BranchForge::Charting {
 
-ChartDataManager* ChartDataManager::s_instance = nullptr;
+// Note: Using Meyer's singleton pattern (static local) for proper destruction order
 
 void TopicChartData::addDataPoint(double value) {
     qint64 timestamp = QDateTime::currentMSecsSinceEpoch();
@@ -59,10 +59,8 @@ void TopicChartData::trimOldData(qint64 maxAge) {
 }
 
 ChartDataManager* ChartDataManager::instance() {
-    if (!s_instance) {
-        s_instance = new ChartDataManager();
-    }
-    return s_instance;
+    static ChartDataManager s_instance;
+    return &s_instance;
 }
 
 ChartDataManager* ChartDataManager::create(QQmlEngine* qmlEngine, QJSEngine* jsEngine) {
@@ -94,7 +92,12 @@ ChartDataManager::ChartDataManager(QObject* parent)
     updateAvailableTopics();
 }
 
-ChartDataManager::~ChartDataManager() = default;
+ChartDataManager::~ChartDataManager() {
+    // Stop cleanup timer to prevent callbacks during destruction
+    if (m_cleanupTimer) {
+        m_cleanupTimer->stop();
+    }
+}
 
 void ChartDataManager::connectToROS2Interface() {
     auto& ros2Interface = BranchForge::ROS2::ROS2Interface::instance();

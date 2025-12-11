@@ -4,6 +4,8 @@
 #include <QTimer>
 #include <QQueue>
 #include <QMutex>
+#include <QMutexLocker>
+#include <QPointer>
 #include <QDateTime>
 #include <QStringList>
 #include <memory>
@@ -205,7 +207,7 @@ private slots:
     void onEventRecorded(const BTExecutionEvent& event);
 
 private:
-    BTExecutionMonitor* m_monitor;
+    QPointer<BTExecutionMonitor> m_monitor;  // Safe pointer that becomes null if monitor is deleted
     mutable QMutex m_analysisMutex;
     
     // Cached analysis data
@@ -261,7 +263,7 @@ private slots:
     void updatePlayback();
 
 private:
-    BTExecutionMonitor* m_monitor;
+    QPointer<BTExecutionMonitor> m_monitor;  // Safe pointer that becomes null if monitor is deleted
     QDateTime m_currentTime;
     bool m_isPlaying{false};
     double m_playbackSpeed{1.0};

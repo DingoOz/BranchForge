@@ -286,22 +286,22 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d");
                 ctx.clearRect(0, 0, width, height);
-                
+
                 ctx.strokeStyle = "#333333";
                 ctx.lineWidth = 1;
-                
-                var gridSize = 20;
-                
+
+                var gs = root.gridSize;
+
                 // Vertical lines
-                for (var x = 0; x < width; x += gridSize) {
+                for (var x = 0; x < width; x += gs) {
                     ctx.beginPath();
                     ctx.moveTo(x, 0);
                     ctx.lineTo(x, height);
                     ctx.stroke();
                 }
-                
+
                 // Horizontal lines
-                for (var y = 0; y < height; y += gridSize) {
+                for (var y = 0; y < height; y += gs) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(width, y);
@@ -495,14 +495,22 @@ Rectangle {
     }
     
     
-    // Dynamic nodes container
+    // Dynamic nodes container - stores references to created node objects
     property var dynamicNodes: []
-    
+
     // Connection management
     property var connections: []
     property int nextNodeId: 1
     property bool isConnecting: false
     property var connectionStart: null
+
+    // Constants for magic numbers
+    readonly property int gridSize: 20
+    readonly property int connectionTolerance: 8  // pixels tolerance for clicking near a connection line
+    readonly property int nodeWidth: 120
+    readonly property int nodeHeight: 60
+    readonly property int connectionPortSize: 16
+    readonly property int animationDuration: 200
     
     function getNodeColor(nodeType) {
         switch(nodeType) {
@@ -766,18 +774,32 @@ Rectangle {
             }
         }
         connections = newConnections;
-        
-        // Remove from dynamic nodes array
+
+        // Remove from dynamic nodes array and clean up stale references
         var newDynamicNodes = [];
         for (var j = 0; j < dynamicNodes.length; j++) {
-            if (dynamicNodes[j].nodeId !== nodeId) {
-                newDynamicNodes.push(dynamicNodes[j]);
+            var node = dynamicNodes[j];
+            // Skip null/undefined nodes (already destroyed) and the node being removed
+            if (node && node.nodeId !== nodeId) {
+                newDynamicNodes.push(node);
             }
         }
         dynamicNodes = newDynamicNodes;
-        
+
         // Repaint connections
         connectionCanvas.requestPaint();
+    }
+
+    // Clean up stale node references (call periodically or before operations)
+    function cleanupStaleNodes() {
+        var validNodes = [];
+        for (var i = 0; i < dynamicNodes.length; i++) {
+            // Check if node still exists and hasn't been destroyed
+            if (dynamicNodes[i] && dynamicNodes[i].parent !== null) {
+                validNodes.push(dynamicNodes[i]);
+            }
+        }
+        dynamicNodes = validNodes;
     }
     
     function updateConnectionsForNode(nodeId) {
@@ -823,8 +845,8 @@ Rectangle {
     
     // Find which connection (if any) is near the given point
     function getConnectionAtPoint(x, y) {
-        var tolerance = 8; // pixels tolerance for clicking near a line
-        
+        var tolerance = root.connectionTolerance;
+
         for (var i = 0; i < connections.length; i++) {
             var conn = connections[i];
             if (conn.from && conn.to) {
@@ -983,10 +1005,12 @@ Rectangle {
     }
     
     function showScreenshotNotification(message) {
-        // Create a temporary notification
+        // Create a temporary notification with proper cleanup
+        var animDuration = root.animationDuration;
         var notificationComponent = Qt.createQmlObject(`
             import QtQuick 2.15
             Rectangle {
+                id: notificationRect
                 width: 300
                 height: 40
                 color: "#4CAF50"
@@ -999,26 +1023,32 @@ Rectangle {
                 anchors.topMargin: 50
                 anchors.rightMargin: 20
                 opacity: 0
-                
+
                 Text {
                     anchors.centerIn: parent
                     text: "${message}"
                     color: "#ffffff"
                     font.bold: true
                 }
-                
+
                 SequentialAnimation {
+                    id: notificationAnim
                     running: true
                     ParallelAnimation {
-                        NumberAnimation { target: parent; property: "opacity"; to: 1.0; duration: 200 }
-                        NumberAnimation { target: parent; property: "anchors.topMargin"; to: 70; duration: 200; easing.type: Easing.OutBack }
+                        NumberAnimation { target: notificationRect; property: "opacity"; to: 1.0; duration: ${animDuration} }
+                        NumberAnimation { target: notificationRect; property: "anchors.topMargin"; to: 70; duration: ${animDuration}; easing.type: Easing.OutBack }
                     }
                     PauseAnimation { duration: 2000 }
                     ParallelAnimation {
-                        NumberAnimation { target: parent; property: "opacity"; to: 0.0; duration: 200 }
-                        NumberAnimation { target: parent; property: "anchors.topMargin"; to: 50; duration: 200 }
+                        NumberAnimation { target: notificationRect; property: "opacity"; to: 0.0; duration: ${animDuration} }
+                        NumberAnimation { target: notificationRect; property: "anchors.topMargin"; to: 50; duration: ${animDuration} }
                     }
-                    ScriptAction { script: parent.destroy() }
+                    ScriptAction { script: notificationRect.destroy() }
+                }
+
+                // Ensure cleanup even if animation is interrupted
+                Component.onDestruction: {
+                    notificationAnim.stop();
                 }
             }
         `, root, "screenshotNotification");

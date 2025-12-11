@@ -4,178 +4,107 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-BranchForge is an open-source, comprehensive development platform for designing, visualizing, testing, and debugging Behaviour Trees (BTs) specifically tailored for ROS2 robotics applications. Built on modern C++20/Qt6 architecture with Ubuntu-first design.
+BranchForge is an open-source development platform for designing, visualizing, testing, and debugging Behaviour Trees (BTs) for ROS2 robotics applications. Built with C++20 and Qt6 QML on Ubuntu.
 
-## Technology Stack
+## Build Commands
 
-- **Language**: Modern C++20 throughout the entire codebase
-- **UI Framework**: Qt6.4+ with QML and Qt Quick for hardware-accelerated interfaces
-- **Target Platform**: Ubuntu 22.04 LTS and newer (primary focus)
-- **Build System**: CMake 3.20+ with C++20 module support
-- **ROS2 Integration**: Native rclcpp integration with Humble, Iron, Jazzy, and Rolling
-- **Graphics**: Qt6.4+ Quick with OpenGL/Vulkan backend for visualization
-- **Extensions**: Dual Python/C++ hot-reload system for community development
-
-## Essential Commands
-
-### Build System
 ```bash
-# Basic build (from project root)
-mkdir build && cd build
-cmake ..
-make -j$(nproc)
-
-# Clean rebuild
-rm -rf build && mkdir build && cd build
-cmake .. && make -j$(nproc)
+# Build (from project root)
+mkdir -p build && cd build && cmake .. && make -j$(nproc)
 
 # Run the application
-./branchforge_enhanced
-```
+./build/branchforge_enhanced
 
-### Testing
-```bash
-# Build with tests enabled (default)
-cmake -DBUILD_TESTING=ON ..
-make -j$(nproc)
+# Build with tests
+cmake -DBUILD_TESTING=ON .. && make -j$(nproc)
 
 # Run all tests
 ctest
 
-# Run specific test
-./test_behavior_tree_xml
+# Run a specific test
+./build/tests/unit/test_behavior_tree_xml
 
 # Run tests with verbose output
 ctest --verbose
 ```
 
-### Development Dependencies
+## Dependencies
+
 ```bash
-# Install Qt6 dependencies on Ubuntu
+# Qt6 (required)
 sudo apt install -y qt6-base-dev qt6-declarative-dev qt6-quick3d-dev
 
-# Install build tools
+# Build tools
 sudo apt install -y cmake build-essential pkg-config
 
-# Install testing framework
+# Testing (optional)
 sudo apt install -y libgtest-dev
 ```
 
-## Architecture Components
+## Architecture
 
-### Core Application Structure
-- **`src/core/Application.cpp`**: Main application class with conditional QML/Qt6 support
-- **`src/ui/MainWindow.cpp`**: Primary UI controller bridging C++ and QML
-- **`qml/main.qml`**: Main QML interface with SplitView layout for panels
-- **`qml/components/`**: Modular QML components for each UI panel
+### Application Startup Flow
+1. `src/main.cpp` → Creates `Application` instance
+2. `src/core/Application.cpp` → Initializes Qt, registers QML types, loads QML engine
+3. `qml/main.qml` → Main window with three-panel SplitView layout
+4. QML components communicate with C++ singletons (ROS2Interface, ProjectManager, BTSerializer)
 
-### Key Design Patterns
+### QML-C++ Bridge
+C++ classes are exposed to QML via `qmlRegisterType` and `qmlRegisterSingletonType` in `Application::setupQmlTypes()`:
+- **Singletons**: ROS2Interface, ProjectManager, BTSerializer, ChartDataManager
+- **Types**: MainWindow, CodeGenOptions
 
-#### Conditional Compilation
-The codebase uses extensive conditional compilation to support different Qt6 configurations:
+### Conditional Compilation
+The codebase supports systems with/without QML:
 ```cpp
-#ifdef QT6_QML_AVAILABLE
-    // QML-based UI code
-#else
-    // Fallback widget-based UI
-#endif
+#ifdef QT6_QML_AVAILABLE  // QML-based UI
+#ifdef QT6_QUICK_AVAILABLE
+#ifdef QT6_XML_AVAILABLE
+#ifdef QT6_CHARTS_AVAILABLE
+#ifdef HAVE_ROS2  // ROS2 integration
 ```
 
-#### QML-C++ Integration
-- C++ classes are registered with QML using `qmlRegisterType` and `qmlRegisterSingletonType`
-- Singletons are used for cross-component communication (ROS2Interface, ProjectManager)
-- Properties and signals enable bidirectional communication between QML and C++
+### Key Components
 
-#### Resource Management
-- QML files are embedded using Qt's resource system (`resources.qrc`)
-- Conditional resource compilation based on Qt6 component availability
-- Graceful fallback when QML components are not available
+| Component | Purpose |
+|-----------|---------|
+| `src/core/Application.cpp` | Application bootstrap, QML type registration |
+| `src/ui/MainWindow.cpp` | C++ backend for main window (exposed to QML) |
+| `src/project/BTSerializer.cpp` | Converts QML editor state to BehaviorTreeXML |
+| `src/project/CodeGenerator.cpp` | Generates C++20 ROS2 code from behavior trees |
+| `src/project/BehaviorTreeXML.cpp` | BT XML parsing and validation |
+| `qml/components/NodeEditor.qml` | Visual node editor with zoom/pan/connections |
+| `qml/components/NodeLibraryPanel.qml` | Draggable node palette |
+| `qml/components/PropertiesPanel.qml` | Node property editor |
 
-### UI Architecture
-- **Three-panel layout**: Node Library (left), Node Editor (center), Properties (right)
-- **Panel visibility**: Controlled via boolean properties with View menu integration
-- **Component isolation**: Each panel is a self-contained QML component
-- **State persistence**: UI layouts and panel visibility saved/restored
+### Data Flow: Visual Editor → Code Generation
+1. User creates nodes in `NodeEditor.qml` (stored in `dynamicNodes` array)
+2. User connects nodes (stored in `connections` array)
+3. `getEditorState()` exports to QVariantMap format
+4. `BTSerializer.convertToBehaviorTreeXML()` creates BehaviorTreeXML structure
+5. `CodeGenerator.generate()` produces C++20 ROS2 code
 
-### Project Structure
+### Test Structure
 ```
-include/
-├── core/           # Application framework
-├── ui/             # User interface components
-├── project/        # Project management and serialization
-├── nodes/          # Behavior tree node system
-├── monitoring/     # Runtime monitoring and debugging
-├── recording/      # Data recording and playback
-├── ros2/           # ROS2 integration layer
-└── visualization/  # 3D visualization and sensor data
-
-qml/
-├── main.qml        # Main application window
-└── components/     # Reusable UI components
-```
-
-## Development Phases
-
-The project is structured into 4 main phases:
-
-1. **Phase 1 (Months 1-3)**: Foundation - Basic BT Visual Editor, Qt6.4+ UI Framework, ROS2 Integration Layer, C++20 Code Generation
-2. **Phase 2 (Months 4-6)**: Core Features - Integrated 3D Visualization Engine, Real-time BT Monitoring, Data Recording/Playback, Advanced Node System
-3. **Phase 3 (Months 7-9)**: Advanced Integration & Testing - Automated Testing Framework, Extension System, Performance Analytics, Simulation Integration
-4. **Phase 4 (Months 10-12)**: Intelligence & Optimization - AI-Powered BT Analysis, Advanced Collaboration Features, Production Deployment Tools, Community Platform
-
-## Standards Compliance Plan
-
-### Current Status
-- **Overall Compliance**: ~51% against sw_standards.txt requirements
-- **Critical Issues**: File naming conventions, missing documentation, code quality violations
-
-### Phase 1 Standards Alignment (Immediate - 2-3 weeks)
-**Priority**: High - Foundation quality standards
-
-#### Week 1: Documentation & Constants
-- Add Doxygen documentation for all public APIs
-- Create file headers with @brief, @author, @date
-- Replace magic numbers with named constants
-- Document core classes: Application, MainWindow, ProjectManager, ROS2Interface
-
-#### Week 2: Code Quality 
-- Refactor functions >60 lines (Application::run(), BehaviorTreeXML::validateTree())
-- Fix all compiler warnings
-- Implement const correctness throughout codebase
-- Add input validation and error handling
-
-#### Week 3: Structure & Naming
-- Create priv_include/ directory structure
-- Rename files: PascalCase → snake_case, .h → .hpp
-- Update member variables: m_prefix → _prefix
-- Rename structs to snake_case with _t suffix
-
-### Phase 2-4 Standards Integration
-- **Phase 2**: Maintain standards during feature development
-- **Phase 3**: Automated standards checking (linting, formatting)
-- **Phase 4**: Code review processes and community guidelines
-
-### Standards Enforcement Tools
-```bash
-# Code formatting
-clang-format --style=Google --dump-config > .clang-format
-# Modify: UseTab: Never, IndentWidth: 4, BreakBeforeBraces: Allman
-
-# Documentation generation
-doxygen -g Doxyfile
-# Configure for C++20, Qt6 integration
-
-# Static analysis
-cppcheck --enable=all --std=c++20 src/ include/
+tests/
+├── unit/
+│   ├── core/test_application.cpp
+│   └── project/
+│       ├── test_behavior_tree_xml.cpp
+│       ├── test_bt_serializer.cpp
+│       ├── test_code_generator.cpp
+│       └── test_project_manager.cpp
+├── integration/
+│   └── test_visual_to_code_pipeline.cpp
+└── data/          # Test XML fixtures
 ```
 
-## Key Design Principles
+## Code Style Notes
 
-- **No External Dependencies**: Built-in 3D visualization eliminates RViz2 complexity
-- **Hot-Reload Development**: Both Python and C++ extensions support live reloading
-- **Professional Performance**: Enterprise-grade reliability with modern C++20 architecture
-- **Community-Driven**: Open source with comprehensive extension API
-- **All-in-One Solution**: Design, visualize, test, and optimize in a single application
+- Namespaces: `BranchForge::Core`, `BranchForge::UI`, `BranchForge::Project`, `BranchForge::ROS2`
+- Member variables: `m_` prefix (e.g., `m_codeGenOptions`)
+- Qt logging: Use `Q_LOGGING_CATEGORY` and `qCInfo`/`qCWarning`/`qCCritical`
+- QML files use Qt Quick 2.15 imports
 
 ## important-instruction-reminders
 Do what has been asked; nothing more, nothing less.

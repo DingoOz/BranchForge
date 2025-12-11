@@ -12,13 +12,9 @@ Q_LOGGING_CATEGORY(projectManager, "branchforge.project.manager")
 
 namespace BranchForge::Project {
 
-ProjectManager* ProjectManager::s_instance = nullptr;
-
 ProjectManager& ProjectManager::instance() {
-    if (!s_instance) {
-        s_instance = new ProjectManager();
-    }
-    return *s_instance;
+    static ProjectManager s_instance;
+    return s_instance;
 }
 
 ProjectManager::ProjectManager(QObject* parent)
@@ -31,9 +27,25 @@ ProjectManager::~ProjectManager() = default;
 
 bool ProjectManager::createProject(const QString& path, const QString& name) {
     qCInfo(projectManager) << "Creating new project:" << name << "at" << path;
-    
+
+    // Validate path to prevent directory traversal attacks
     QFileInfo fileInfo(path);
-    
+    QString canonicalPath = fileInfo.absoluteFilePath();
+
+    // Check for path traversal attempts (.. in path)
+    if (path.contains("..")) {
+        qCWarning(projectManager) << "Invalid path: contains directory traversal";
+        emit errorOccurred("Invalid path: directory traversal not allowed");
+        return false;
+    }
+
+    // Validate name doesn't contain dangerous characters
+    if (name.contains('/') || name.contains('\\') || name.contains("..")) {
+        qCWarning(projectManager) << "Invalid project name: contains path separators";
+        emit errorOccurred("Invalid project name");
+        return false;
+    }
+
     // Create directory if it doesn't exist
     QDir dir = fileInfo.absoluteDir();
     if (!dir.exists()) {
@@ -43,8 +55,8 @@ bool ProjectManager::createProject(const QString& path, const QString& name) {
             return false;
         }
     }
-    
-    m_projectPath = path;
+
+    m_projectPath = canonicalPath;  // Use canonical path
     m_projectName = name;
     
     // Initialize default project structure
@@ -80,12 +92,33 @@ bool ProjectManager::createProject(const QString& path, const QString& name) {
 
 bool ProjectManager::loadProject(const QString& path) {
     qCInfo(projectManager) << "Loading project from:" << path;
-    
-    if (!loadProjectFromFile(path)) {
+
+    // Validate path to prevent directory traversal attacks
+    if (path.contains("..")) {
+        qCWarning(projectManager) << "Invalid path: contains directory traversal";
+        emit errorOccurred("Invalid path: directory traversal not allowed");
         return false;
     }
-    
-    m_projectPath = path;
+
+    QFileInfo fileInfo(path);
+    if (!fileInfo.exists()) {
+        qCWarning(projectManager) << "Project file does not exist:" << path;
+        emit errorOccurred("Project file does not exist");
+        return false;
+    }
+
+    QString canonicalPath = fileInfo.canonicalFilePath();
+    if (canonicalPath.isEmpty()) {
+        qCWarning(projectManager) << "Cannot resolve canonical path for:" << path;
+        emit errorOccurred("Invalid project path");
+        return false;
+    }
+
+    if (!loadProjectFromFile(canonicalPath)) {
+        return false;
+    }
+
+    m_projectPath = canonicalPath;
     emit projectChanged();
     qCInfo(projectManager) << "Project loaded successfully";
     return true;
