@@ -41,6 +41,18 @@ ROS2Interface::ROS2Interface(QObject* parent)
 }
 
 ROS2Interface::~ROS2Interface() {
+    // Stop discovery timer first
+    if (m_discoveryTimer) {
+        m_discoveryTimer->stop();
+    }
+
+    // Clean up topic process
+    if (m_topicProcess) {
+        m_topicProcess->kill();
+        m_topicProcess->waitForFinished(1000);
+        m_topicProcess.reset();
+    }
+
     shutdownNode();
 }
 

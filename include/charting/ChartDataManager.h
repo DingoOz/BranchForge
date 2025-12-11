@@ -103,8 +103,6 @@ private:
     QVariant getNestedValue(const QVariant& data, const QStringList& path) const;
     void updateAvailableTopics();
     
-    static ChartDataManager* s_instance;
-    
     QHash<QString, TopicChartData> m_chartData;
     QStringList m_availableTopics;
     QStringList m_activeCharts;
