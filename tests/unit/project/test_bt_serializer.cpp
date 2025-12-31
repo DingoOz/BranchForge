@@ -5,6 +5,12 @@
 #include <QVariantMap>
 #include <QVariantList>
 #include <QTemporaryDir>
+#include <algorithm>
+
+// Helper function to check if a QStringList contains a string
+inline bool containsString(const QStringList& list, const QString& str) {
+    return std::find(list.begin(), list.end(), str) != list.end();
+}
 
 using namespace BranchForge::Project;
 
@@ -29,39 +35,36 @@ protected:
         QVariantMap state;
         state["treeName"] = "SimpleTest";
         state["treeDescription"] = "Simple test tree";
-        
+
         // Create nodes array
         QVariantList nodes;
-        
+
         // Root sequence node
         QVariantMap rootNode;
-        rootNode["id"] = "root_seq";
-        rootNode["type"] = "sequence";
-        rootNode["name"] = "Root Sequence";
-        rootNode["x"] = 100.0;
-        rootNode["y"] = 50.0;
+        rootNode["nodeId"] = "root_seq";
+        rootNode["nodeType"] = "sequence";
+        rootNode["nodeName"] = "Root Sequence";
+        rootNode["position"] = QVariantMap{{"x", 100.0}, {"y", 50.0}};
         nodes.append(rootNode);
-        
+
         // Action node
         QVariantMap actionNode;
-        actionNode["id"] = "move_action";
-        actionNode["type"] = "move_to";
-        actionNode["name"] = "Move Forward";
-        actionNode["x"] = 100.0;
-        actionNode["y"] = 150.0;
+        actionNode["nodeId"] = "move_action";
+        actionNode["nodeType"] = "move_to";
+        actionNode["nodeName"] = "Move Forward";
+        actionNode["position"] = QVariantMap{{"x", 100.0}, {"y", 150.0}};
         QVariantMap actionParams;
         actionParams["distance"] = "2.0";
         actionParams["speed"] = "0.8";
         actionNode["parameters"] = actionParams;
         nodes.append(actionNode);
-        
+
         // Condition node
         QVariantMap conditionNode;
-        conditionNode["id"] = "goal_condition";
-        conditionNode["type"] = "at_goal";
-        conditionNode["name"] = "At Goal";
-        conditionNode["x"] = 200.0;
-        conditionNode["y"] = 150.0;
+        conditionNode["nodeId"] = "goal_condition";
+        conditionNode["nodeType"] = "at_goal";
+        conditionNode["nodeName"] = "At Goal";
+        conditionNode["position"] = QVariantMap{{"x", 200.0}, {"y", 150.0}};
         QVariantMap conditionParams;
         conditionParams["tolerance"] = "0.2";
         conditionNode["parameters"] = conditionParams;
@@ -73,13 +76,13 @@ protected:
         QVariantList connections;
         
         QVariantMap conn1;
-        conn1["source"] = "root_seq";
-        conn1["target"] = "move_action";
+        conn1["fromId"] = "root_seq";
+        conn1["toId"] = "move_action";
         connections.append(conn1);
-        
+
         QVariantMap conn2;
-        conn2["source"] = "root_seq";
-        conn2["target"] = "goal_condition";
+        conn2["fromId"] = "root_seq";
+        conn2["toId"] = "goal_condition";
         connections.append(conn2);
         
         state["connections"] = connections;
@@ -180,15 +183,16 @@ TEST_F(BTSerializerTest, GenerateCode_InvalidOutputDirectory_ReturnsFalse) {
 }
 
 // Validation tests
-TEST_F(BTSerializerTest, ValidateEditorState_ValidState_ReturnsEmpty) {
+TEST_F(BTSerializerTest, ValidateEditorState_ValidState_ReturnsTrue) {
     // Arrange
     QVariantMap editorState = createSimpleEditorState();
-    
+
     // Act
-    QString validation = serializer->validateEditorState(editorState);
-    
+    bool isValid = serializer->validateEditorState(editorState);
+
     // Assert
-    EXPECT_TRUE(validation.isEmpty());
+    EXPECT_TRUE(isValid);
+    EXPECT_TRUE(serializer->getValidationErrors().isEmpty());
 }
 
 TEST_F(BTSerializerTest, ValidateEditorState_MissingNodes_ReturnsError) {
@@ -196,61 +200,68 @@ TEST_F(BTSerializerTest, ValidateEditorState_MissingNodes_ReturnsError) {
     QVariantMap invalidState;
     invalidState["treeName"] = "Test";
     // Missing nodes array
-    
+
     // Act
-    QString validation = serializer->validateEditorState(invalidState);
-    
+    bool isValid = serializer->validateEditorState(invalidState);
+    QStringList errors = serializer->getValidationErrors();
+
     // Assert
-    EXPECT_FALSE(validation.isEmpty());
-    EXPECT_TRUE(validation.contains("nodes"));
+    EXPECT_FALSE(isValid);
+    EXPECT_FALSE(errors.isEmpty());
+    EXPECT_TRUE(errors.join(" ").contains("nodes"));
 }
 
 TEST_F(BTSerializerTest, ValidateEditorState_NodesWithoutIds_ReturnsError) {
     // Arrange
     QVariantMap invalidState;
     invalidState["treeName"] = "Test";
-    
+    invalidState["connections"] = QVariantList();
+
     QVariantList nodes;
     QVariantMap nodeWithoutId;
-    nodeWithoutId["type"] = "action";
-    nodeWithoutId["name"] = "Test Action";
-    // Missing id field
+    nodeWithoutId["nodeType"] = "action";
+    nodeWithoutId["nodeName"] = "Test Action";
+    // Missing nodeId field
     nodes.append(nodeWithoutId);
-    
+
     invalidState["nodes"] = nodes;
-    
+
     // Act
-    QString validation = serializer->validateEditorState(invalidState);
-    
+    bool isValid = serializer->validateEditorState(invalidState);
+    QStringList errors = serializer->getValidationErrors();
+
     // Assert
-    EXPECT_FALSE(validation.isEmpty());
-    EXPECT_TRUE(validation.contains("id"));
+    EXPECT_FALSE(isValid);
+    EXPECT_FALSE(errors.isEmpty());
 }
 
 // Node conversion tests
 TEST_F(BTSerializerTest, ConvertQVariantToNode_ValidVariant_CreatesCorrectNode) {
     // Arrange
     QVariantMap nodeVariant;
-    nodeVariant["id"] = "test_node";
-    nodeVariant["type"] = "action";
-    nodeVariant["name"] = "Test Action";
-    nodeVariant["x"] = 150.0;
-    nodeVariant["y"] = 200.0;
-    
+    nodeVariant["nodeId"] = "test_node";
+    nodeVariant["nodeType"] = "action";
+    nodeVariant["nodeName"] = "Test Action";
+
+    QVariantMap position;
+    position["x"] = 150.0;
+    position["y"] = 200.0;
+    nodeVariant["position"] = position;
+
     QVariantMap params;
     params["param1"] = "value1";
     params["param2"] = "value2";
     nodeVariant["parameters"] = params;
-    
+
     // Act
     BTXMLNode node = serializer->convertQVariantToNode(nodeVariant);
-    
+
     // Assert
     EXPECT_EQ(node.id, "test_node");
     EXPECT_EQ(node.type, "action");
     EXPECT_EQ(node.name, "Test Action");
-    EXPECT_EQ(node.position.x(), 150.0);
-    EXPECT_EQ(node.position.y(), 200.0);
+    EXPECT_DOUBLE_EQ(node.position.x(), 150.0);
+    EXPECT_DOUBLE_EQ(node.position.y(), 200.0);
     EXPECT_EQ(node.parameters["param1"], "value1");
     EXPECT_EQ(node.parameters["param2"], "value2");
 }
@@ -258,12 +269,12 @@ TEST_F(BTSerializerTest, ConvertQVariantToNode_ValidVariant_CreatesCorrectNode) 
 TEST_F(BTSerializerTest, ConvertQVariantToNode_MissingFields_HandlesGracefully) {
     // Arrange - Minimal node variant
     QVariantMap nodeVariant;
-    nodeVariant["id"] = "minimal_node";
-    nodeVariant["type"] = "condition";
-    
+    nodeVariant["nodeId"] = "minimal_node";
+    nodeVariant["nodeType"] = "condition";
+
     // Act
     BTXMLNode node = serializer->convertQVariantToNode(nodeVariant);
-    
+
     // Assert
     EXPECT_EQ(node.id, "minimal_node");
     EXPECT_EQ(node.type, "condition");
@@ -283,8 +294,8 @@ TEST_F(BTSerializerTest, ProcessConnections_ValidConnections_SetsParentChildRela
     BTXMLNode* rootNode = behaviorTree.findNode("root_seq");
     ASSERT_NE(rootNode, nullptr);
     EXPECT_EQ(rootNode->children.size(), 2);
-    EXPECT_THAT(rootNode->children, Contains(QString("move_action")));
-    EXPECT_THAT(rootNode->children, Contains(QString("goal_condition")));
+    EXPECT_TRUE(containsString(rootNode->children, QString("move_action")));
+    EXPECT_TRUE(containsString(rootNode->children, QString("goal_condition")));
     
     BTXMLNode* actionNode = behaviorTree.findNode("move_action");
     ASSERT_NE(actionNode, nullptr);
@@ -306,62 +317,57 @@ TEST_F(BTSerializerTest, SerializeComplexTree_MultiLevelHierarchy_ProducesCorrec
     
     // Root selector
     QVariantMap rootSelector;
-    rootSelector["id"] = "root_selector";
-    rootSelector["type"] = "selector";
-    rootSelector["name"] = "Root Selector";
-    rootSelector["x"] = 200.0;
-    rootSelector["y"] = 50.0;
+    rootSelector["nodeId"] = "root_selector";
+    rootSelector["nodeType"] = "selector";
+    rootSelector["nodeName"] = "Root Selector";
+    rootSelector["position"] = QVariantMap{{"x", 200.0}, {"y", 50.0}};
     nodes.append(rootSelector);
-    
+
     // First branch - sequence
     QVariantMap sequence1;
-    sequence1["id"] = "seq1";
-    sequence1["type"] = "sequence";
-    sequence1["name"] = "Sequence 1";
-    sequence1["x"] = 100.0;
-    sequence1["y"] = 150.0;
+    sequence1["nodeId"] = "seq1";
+    sequence1["nodeType"] = "sequence";
+    sequence1["nodeName"] = "Sequence 1";
+    sequence1["position"] = QVariantMap{{"x", 100.0}, {"y", 150.0}};
     nodes.append(sequence1);
-    
+
     // Second branch - parallel
     QVariantMap parallel1;
-    parallel1["id"] = "par1";
-    parallel1["type"] = "parallel";
-    parallel1["name"] = "Parallel 1";
-    parallel1["x"] = 300.0;
-    parallel1["y"] = 150.0;
+    parallel1["nodeId"] = "par1";
+    parallel1["nodeType"] = "parallel";
+    parallel1["nodeName"] = "Parallel 1";
+    parallel1["position"] = QVariantMap{{"x", 300.0}, {"y", 150.0}};
     nodes.append(parallel1);
-    
+
     // Actions under sequence
     QVariantMap action1;
-    action1["id"] = "action1";
-    action1["type"] = "move_to";
-    action1["name"] = "Move Action 1";
-    action1["x"] = 100.0;
-    action1["y"] = 250.0;
+    action1["nodeId"] = "action1";
+    action1["nodeType"] = "move_to";
+    action1["nodeName"] = "Move Action 1";
+    action1["position"] = QVariantMap{{"x", 100.0}, {"y", 250.0}};
     nodes.append(action1);
-    
+
     QVariantMap action2;
-    action2["id"] = "action2";
-    action2["type"] = "rotate";
-    action2["name"] = "Rotate Action";
-    action2["x"] = 150.0;
-    action2["y"] = 250.0;
+    action2["nodeId"] = "action2";
+    action2["nodeType"] = "rotate";
+    action2["nodeName"] = "Rotate Action";
+    action2["position"] = QVariantMap{{"x", 150.0}, {"y", 250.0}};
     nodes.append(action2);
     
     complexState["nodes"] = nodes;
     
     // Connections for hierarchy
     QVariantList connections;
-    connections.append(QVariantMap{{"source", "root_selector"}, {"target", "seq1"}});
-    connections.append(QVariantMap{{"source", "root_selector"}, {"target", "par1"}});
-    connections.append(QVariantMap{{"source", "seq1"}, {"target", "action1"}});
-    connections.append(QVariantMap{{"source", "seq1"}, {"target", "action2"}});
-    
+    connections.append(QVariantMap{{"fromId", "root_selector"}, {"toId", "seq1"}});
+    connections.append(QVariantMap{{"fromId", "root_selector"}, {"toId", "par1"}});
+    connections.append(QVariantMap{{"fromId", "seq1"}, {"toId", "action1"}});
+    connections.append(QVariantMap{{"fromId", "seq1"}, {"toId", "action2"}});
+
     complexState["connections"] = connections;
-    
+
     // Act
     BehaviorTreeXML behaviorTree = serializer->convertToBehaviorTreeXML(complexState);
-    QString xmlContent = serializer->serializeToXML(complexState);
+    QString xmlContent = serializer->serializeToString(complexState);
     
     // Assert
     EXPECT_EQ(behaviorTree.getAllNodes().size(), 5);
@@ -389,20 +395,20 @@ TEST_F(BTSerializerTest, SerializeToXML_InvalidNodeTypes_HandlesGracefully) {
     // Arrange
     QVariantMap invalidState;
     invalidState["treeName"] = "InvalidTest";
-    
+
     QVariantList nodes;
     QVariantMap invalidNode;
-    invalidNode["id"] = "invalid_node";
-    invalidNode["type"] = "unknown_type";
-    invalidNode["name"] = "Invalid Node";
+    invalidNode["nodeId"] = "invalid_node";
+    invalidNode["nodeType"] = "unknown_type";
+    invalidNode["nodeName"] = "Invalid Node";
     nodes.append(invalidNode);
-    
+
     invalidState["nodes"] = nodes;
     invalidState["connections"] = QVariantList();
-    
+
     // Act
     QString xmlContent = serializer->serializeToString(invalidState);
-    
+
     // Assert
     EXPECT_FALSE(xmlContent.isEmpty());
     EXPECT_TRUE(xmlContent.contains("unknown_type"));

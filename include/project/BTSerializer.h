@@ -31,20 +31,30 @@ public:
     explicit BTSerializer(const CodeGenOptions& options, QObject* parent = nullptr);
     ~BTSerializer() override;
 
-    // QML accessible methods
-#ifdef QT6_QML_AVAILABLE
-    Q_INVOKABLE bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
-    Q_INVOKABLE QString serializeToString(const QVariantMap& editorState);
-    Q_INVOKABLE bool generateCode(const QVariantMap& editorState, const QString& outputDir);
-    Q_INVOKABLE bool generateCodeFromXML(const QString& xmlFilePath, const QString& outputDir);
-    
+    // Core serialization methods (always available)
+    bool serializeToXML(const QVariantMap& editorState, const QString& filePath);
+    QString serializeToString(const QVariantMap& editorState);
+    bool generateCode(const QVariantMap& editorState, const QString& outputDir);
+    bool generateCodeFromXML(const QString& xmlFilePath, const QString& outputDir);
+
     // Configuration
-    Q_INVOKABLE void setCodeGenOptions(const QVariantMap& options);
-    Q_INVOKABLE QVariantMap getCodeGenOptions() const;
-    
+    void setCodeGenOptions(const QVariantMap& options);
+    QVariantMap getCodeGenOptions() const;
+
     // Validation
-    Q_INVOKABLE bool validateEditorState(const QVariantMap& editorState);
-    Q_INVOKABLE QStringList getValidationErrors() const;
+    bool validateEditorState(const QVariantMap& editorState);
+    QStringList getValidationErrors() const;
+
+#ifdef QT6_QML_AVAILABLE
+    // QML-accessible wrappers (same methods, Q_INVOKABLE for QML)
+    Q_INVOKABLE bool qmlSerializeToXML(const QVariantMap& editorState, const QString& filePath) { return serializeToXML(editorState, filePath); }
+    Q_INVOKABLE QString qmlSerializeToString(const QVariantMap& editorState) { return serializeToString(editorState); }
+    Q_INVOKABLE bool qmlGenerateCode(const QVariantMap& editorState, const QString& outputDir) { return generateCode(editorState, outputDir); }
+    Q_INVOKABLE bool qmlGenerateCodeFromXML(const QString& xmlFilePath, const QString& outputDir) { return generateCodeFromXML(xmlFilePath, outputDir); }
+    Q_INVOKABLE void qmlSetCodeGenOptions(const QVariantMap& options) { setCodeGenOptions(options); }
+    Q_INVOKABLE QVariantMap qmlGetCodeGenOptions() const { return getCodeGenOptions(); }
+    Q_INVOKABLE bool qmlValidateEditorState(const QVariantMap& editorState) { return validateEditorState(editorState); }
+    Q_INVOKABLE QStringList qmlGetValidationErrors() const { return getValidationErrors(); }
 #endif
     
     // Test-accessible methods
