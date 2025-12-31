@@ -37,6 +37,11 @@ BTSerializer::BTSerializer(const CodeGenOptions& options, QObject* parent)
 
 BTSerializer::~BTSerializer() = default;
 
+BTXMLNode BTSerializer::convertQVariantToNode(const QVariantMap& nodeData) {
+    // Public wrapper for test accessibility - delegates to private convertNode
+    return convertNode(nodeData);
+}
+
 bool BTSerializer::serializeToXML(const QVariantMap& editorState, const QString& filePath) {
     qCInfo(btSerializer) << "Serializing to XML file:" << filePath;
     

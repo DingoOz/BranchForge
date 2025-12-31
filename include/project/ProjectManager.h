@@ -1,7 +1,9 @@
 #pragma once
 
 #include <QObject>
+#ifdef QT6_QML_AVAILABLE
 #include <QQmlEngine>
+#endif
 #include <QString>
 #include <QJsonObject>
 #include <QJsonDocument>
@@ -10,8 +12,10 @@ namespace BranchForge::Project {
 
 class ProjectManager : public QObject {
     Q_OBJECT
+#ifdef QT6_QML_AVAILABLE
     QML_ELEMENT
     QML_SINGLETON
+#endif
 
     Q_PROPERTY(bool hasProject READ hasProject NOTIFY projectChanged)
     Q_PROPERTY(QString projectName READ projectName NOTIFY projectChanged)

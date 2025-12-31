@@ -159,10 +159,10 @@ QVariantList ChartDataManager::getChartData(const QString& topicName, qint64 tim
         return result;
     }
     
-    const auto& chartDataLog = m_chartData[topicName];
+    const auto& topicData = m_chartData[topicName];
     qint64 cutoffTime = QDateTime::currentMSecsSinceEpoch() - timeRange;
-    
-    for (const auto& point : chartDataLog.dataPoints) {
+
+    for (const auto& point : topicData.dataPoints) {
         if (point.timestamp >= cutoffTime) {
             QVariantMap pointMap;
             pointMap["timestamp"] = point.timestamp;
@@ -183,8 +183,8 @@ QVariantList ChartDataManager::getAverageData(const QString& topicName, int wind
         return result;
     }
     
-    const auto& chartDataLog = m_chartData[topicName];
-    const auto& points = chartDataLog.dataPoints;
+    const auto& topicData = m_chartData[topicName];
+    const auto& points = topicData.dataPoints;
     
     if (points.size() < windowSize) {
         return result;
@@ -228,17 +228,17 @@ QVariantMap ChartDataManager::getTopicStatistics(const QString& topicName) const
         return stats;
     }
     
-    const auto& chartDataLog = m_chartData[topicName];
-    
-    stats["topicName"] = chartDataLog.topicName;
-    stats["messageType"] = chartDataLog.messageType;
-    stats["fieldPath"] = chartDataLog.fieldPath;
-    stats["dataPointCount"] = chartDataLog.dataPoints.size();
-    stats["updateRate"] = chartDataLog.getUpdateRate();
-    stats["minValue"] = chartDataLog.minValue;
-    stats["maxValue"] = chartDataLog.maxValue;
-    stats["average"] = chartDataLog.average;
-    stats["isActive"] = chartDataLog.isActive;
+    const auto& topicData = m_chartData[topicName];
+
+    stats["topicName"] = topicData.topicName;
+    stats["messageType"] = topicData.messageType;
+    stats["fieldPath"] = topicData.fieldPath;
+    stats["dataPointCount"] = topicData.dataPoints.size();
+    stats["updateRate"] = topicData.getUpdateRate();
+    stats["minValue"] = topicData.minValue;
+    stats["maxValue"] = topicData.maxValue;
+    stats["average"] = topicData.average;
+    stats["isActive"] = topicData.isActive;
     
     return stats;
 }
@@ -256,11 +256,11 @@ void ChartDataManager::setMaxDataPoints(const QString& topicName, int maxPoints)
     QMutexLocker locker(const_cast<QMutex*>(&m_dataMutex));
     
     if (m_chartData.contains(topicName)) {
-        auto& chartDataLog = m_chartData[topicName];
-        while (chartDataLog.dataPoints.size() > maxPoints) {
-            chartDataLog.dataPoints.dequeue();
+        auto& topicData = m_chartData[topicName];
+        while (topicData.dataPoints.size() > maxPoints) {
+            topicData.dataPoints.dequeue();
         }
-        chartDataLog.updateStatistics();
+        topicData.updateStatistics();
         emit chartDataUpdated(topicName);
     }
 }
@@ -272,14 +272,14 @@ void ChartDataManager::parseAndAddData(const QString& topicName, const QString& 
         return;
     }
     
-    auto& chartDataLog = m_chartData[topicName];
-    chartDataLog.messageType = messageType;
-    
+    auto& topicData = m_chartData[topicName];
+    topicData.messageType = messageType;
+
     // Extract numeric value based on field path
-    double value = extractNumericValue(data, chartDataLog.fieldPath);
-    
+    double value = extractNumericValue(data, topicData.fieldPath);
+
     if (!qIsNaN(value)) {
-        chartDataLog.addDataPoint(value);
+        topicData.addDataPoint(value);
         emit chartDataUpdated(topicName);
         emit topicStatisticsChanged(topicName);
     }
